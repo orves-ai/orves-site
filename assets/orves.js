@@ -82,6 +82,7 @@
   }
   function toKnowledge(big) {
     setTimeout(function () {
+      if (!groups.c2b || !groups.c2b.length) { serveFromKnowledge(); return; }
       spawn('c2b', pick('c2b'), big ? 'big' : 'small', serveFromKnowledge);
     }, 100 + Math.random() * 220);
   }
