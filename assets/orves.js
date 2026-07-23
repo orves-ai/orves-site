@@ -247,7 +247,7 @@
     { l: 'Market',     x: 306, y: 102 }
   ];
   var hubs = [], sats = [], edges = [], pulses = [];
-  var MAXSAT = 200;
+  var MAXSAT = 240;
   var focus = null;
 
   function link(a, b, kind, g, style0) {
@@ -299,9 +299,10 @@
     link(a, b, 'cross', gX);
   }
 
-  for (var i = 0; i < 5; i++) addHub(HUB_DEFS[i]);
-  for (i = 0; i < 48; i++) addSat(hubs[Math.floor(Math.random() * hubs.length)], Math.random() < 0.2);
-  for (i = 0; i < 14; i++) addCross();
+  // warm start: nasce no estado denso (~209 objetos · ~419 relações) e segue crescendo
+  for (var i = 0; i < HUB_DEFS.length; i++) addHub(HUB_DEFS[i]);
+  for (i = 0; i < 200; i++) addSat(hubs[Math.floor(Math.random() * hubs.length)], Math.random() < 0.2);
+  for (i = 0; i < 900 && edges.length < 419; i++) addCross();
 
   function wave() {
     var n = 1 + Math.floor(Math.random() * 5);
