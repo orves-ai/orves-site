@@ -695,3 +695,22 @@ html.js .finale .rv.in .l4{animation:finIn .8s 3.1s ease forwards}
 /* footer = assinatura: o manifesto ecoa o finale */
 .ftsig{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.015em;line-height:1.5;color:var(--fg);margin-top:18px}
 .ftsig span{color:var(--acc2)}
+
+/* ponte de produtos: a empresa inteira numa linha, montada em ~4s (one-shot) */
+@keyframes ppIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes ppLn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+html.js .flowart .pp1,html.js .flowart .pp2,html.js .flowart .pp3,html.js .flowart .pp4,html.js .flowart .pp5{opacity:0}
+html.js .flowart .ppl{transform:scaleX(0);transform-origin:left center}
+html.js .flowart.rv.in .pp1{animation:ppIn .5s .1s ease forwards}
+html.js .flowart.rv.in .pl1{animation:ppLn .4s .55s ease forwards}
+html.js .flowart.rv.in .pp2{animation:ppIn .5s .85s ease forwards}
+html.js .flowart.rv.in .pl2{animation:ppLn .4s 1.3s ease forwards}
+html.js .flowart.rv.in .pp3{animation:ppIn .5s 1.6s ease forwards}
+html.js .flowart.rv.in .pl3{animation:ppLn .4s 2.1s ease forwards}
+html.js .flowart.rv.in .pp4{animation:ppIn .6s 2.4s ease forwards}
+html.js .flowart.rv.in .pl4{animation:ppLn .4s 3.05s ease forwards}
+html.js .flowart.rv.in .pp5{animation:ppIn .5s 3.35s ease forwards}
+@media(prefers-reduced-motion:reduce){
+  html.js .flowart .pp1,html.js .flowart .pp2,html.js .flowart .pp3,html.js .flowart .pp4,html.js .flowart .pp5{opacity:1;animation:none!important}
+  html.js .flowart .ppl{transform:none;animation:none!important}
+}
