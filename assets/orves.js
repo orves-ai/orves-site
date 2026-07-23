@@ -41,10 +41,10 @@
   // ambiente mais quieto nos estágios internos (as cadeias causais geram o
   // grosso do tráfego); fan-out vivo por regra própria
   var CONF = {
-    in:       { chance: .30, cool: 220,  max: 5, dur: [1100, 2200], col: '#4FD69B', op: .8  },
+    in:       { chance: .30, cool: 220,  max: 5, dur: [1100, 2200], col: '#E8ECF4', op: .7  },
     p2c:      { chance: .16, cool: 850,  max: 2, dur: [900, 1700],  col: '#22C07E', op: .95 },
     c2b:      { chance: .15, cool: 900,  max: 2, dur: [900, 1700],  col: '#22C07E', op: .95 },
-    out:      { chance: .32, cool: 180,  max: 5, dur: [750, 1500],  col: '#E8ECF4', op: .75 },
+    out:      { chance: .32, cool: 180,  max: 5, dur: [750, 1500],  col: '#4FD69B', op: .9  },
     watch:    { chance: .012, cool: 7000, max: 1, dur: [2800, 4200], col: '#4FD69B', op: .65 },
     evidence: { chance: 0,    cool: 0,    max: 4, dur: [1500, 2200], col: '#4FD69B', op: .95 }
   };
