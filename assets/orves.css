@@ -716,13 +716,14 @@ html.js .flowart.rv.in .pp5{animation:ppIn .5s 3.35s ease forwards}
 @keyframes ppSplit{0%,76%{offset-distance:0%;opacity:0}79%{opacity:.9}92%{offset-distance:100%;opacity:.9}96%,100%{offset-distance:100%;opacity:0}}
 @keyframes ppG1{0%,13%,25%,100%{filter:none}19%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
 @keyframes ppG2{0%,34%,48%,100%{filter:none}41%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
-@keyframes ppG3{0%,58%,76%,100%{filter:none}67%{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--acc) 55%,transparent))}}
+@keyframes ppG3{0%,58%,76%,100%{filter:none;transform:scale(1)}67%{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--acc) 55%,transparent));transform:scale(1.02)}}
 @keyframes ppG4{0%,86%,100%{filter:none}92%{filter:drop-shadow(0 0 5px color-mix(in srgb,var(--acc) 40%,transparent))}}
 html.js .flowart .ppd,html.js .flowart .pps{opacity:0;fill:#4FD69B}
 html.js .flowart.rv.in .ppd{animation:ppTravel 6.5s 4s linear infinite}
 html.js .flowart.rv.in .pps{animation:ppSplit 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb1{animation:ppG1 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb2{animation:ppG2 6.5s 4s linear infinite}
+html.js .flowart .ppb3{transform-box:fill-box;transform-origin:center}
 html.js .flowart.rv.in .ppb3{animation:ppG3 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 @media(prefers-reduced-motion:reduce){
