@@ -521,3 +521,16 @@
     }, 3400);
   }
 })();
+
+// ── menu mobile ──
+(function () {
+  var btn = document.querySelector('.menubtn');
+  var panel = document.querySelector('.mnav');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', function () {
+    var open = panel.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  panel.addEventListener('click', function (e) { if (e.target.tagName === 'A') panel.classList.remove('open'); });
+})();

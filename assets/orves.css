@@ -560,3 +560,43 @@ html.js .dcard:nth-child(8){animation-delay:14s}
 .kxobj{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 30%,transparent);border-radius:7px;padding:3px 10px;cursor:pointer;transition:background .15s}
 .kxobj:hover{background:color-mix(in srgb,var(--acc) 9%,transparent)}
 .kxobj.dim{color:var(--fg3);border-color:var(--line)}
+
+/* ═══ RESPONSIVE PASS ═══ */
+.menubtn{display:none;background:none;border:1px solid var(--line2);border-radius:8px;width:38px;height:34px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:0}
+.menubtn span{display:block;width:16px;height:1.6px;background:var(--fg);transition:transform .2s,opacity .2s}
+.menubtn.open span:nth-child(1){transform:translateY(5.6px) rotate(45deg)}
+.menubtn.open span:nth-child(2){opacity:0}
+.menubtn.open span:nth-child(3){transform:translateY(-5.6px) rotate(-45deg)}
+.mnav{display:none;border-top:1px solid var(--line);background:var(--ink);padding:10px 20px 16px;flex-direction:column}
+.mnav.open{display:flex}
+.mnav a{padding:11px 4px;font-size:15px;color:var(--fg);border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.mnav a.sub{font-size:13.5px;color:var(--fg2);padding-left:20px}
+.mnav a:last-child{border-bottom:0}
+@media(max-width:960px){
+  .menubtn{display:flex}
+  nav .si{display:none}
+}
+@media(max-width:900px){
+  .hero[style]{grid-template-columns:1fr!important;gap:28px}
+  .wrap{padding:0 18px}
+  section{padding:52px 0}
+  section.tight{padding:36px 0}
+  .pchap{padding:42px 0;gap:24px}
+  .pchap h3{font-size:24px}
+  .bignum{font-size:32px}
+  .flowart{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .flowart svg{min-width:680px}
+  .kxstat{flex-wrap:wrap;row-gap:4px}
+  .hero .sub{font-size:16px}
+  .auth{padding:28px 22px}
+}
+@media(max-width:640px){
+  h2{font-size:26px!important}
+  .h1b{font-size:28px}
+  h1{font-size:34px}
+  .manif{font-size:24px}
+  .btn{padding:11px 15px;font-size:13.5px}
+  .ftgrid{gap:22px}
+  .ftstate{white-space:normal;font-size:16px}
+  .vcard{width:100%;max-width:340px}
+}
