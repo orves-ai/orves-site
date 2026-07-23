@@ -676,57 +676,33 @@ html.js .mo-canon .ckCap{opacity:0;animation:ckIn81_86 9s linear infinite}
   html.js .mo-canon .ckNq{animation:none}
 }
 
-/* SHOW ME WHY v2 — 7 estados, 14s, pausas de valor, loop com fade.
-   infraestrutura e rastreabilidade; nada de particulas ou AI-magic. */
-@keyframes skW2_5{0%,2%{opacity:0}5%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW7_11{0%,7%{opacity:0}11%,96%{opacity:1}100%{opacity:0}}
-@keyframes skChip{0%,12%{opacity:0}15%{opacity:1}17%{opacity:.55}19%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW17_20{0%,17%{opacity:0}20%,50%{opacity:1}56%,96%{opacity:.45}100%{opacity:0}}
-@keyframes skW20_25{0%,20%{opacity:0}25%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW26_31{0%,26%{opacity:0}31%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW29_33{0%,29%{opacity:0}33%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW33_36{0%,33%{opacity:0}36%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW36_39{0%,36%{opacity:0}39%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW39_42{0%,39%{opacity:0}42%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW42_45{0%,42%{opacity:0}45%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW44_47{0%,44%{opacity:0}47%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW48_53{0%,48%{opacity:0}53%,96%{opacity:1}100%{opacity:0}}
-@keyframes skDraw{0%,51%{stroke-dashoffset:80;opacity:0}53%{opacity:1}58%,96%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
-@keyframes skW54_58{0%,54%{opacity:0}58%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW58_61{0%,58%{opacity:0}61%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW70_75{0%,70%{opacity:0}75%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW75_78{0%,75%{opacity:0}78%,96%{opacity:1}100%{opacity:0}}
-@keyframes skW84_88{0%,84%{opacity:0}88%,96%{opacity:1}100%{opacity:0}}
-@keyframes skMsg1{0%,71%{opacity:0}74%,83%{opacity:.8}86%,100%{opacity:0}}
-@keyframes skMsg2{0%,87%{opacity:0}91%,96%{opacity:1}100%{opacity:0}}
-html.js .mo-smw .skU{opacity:0;animation:skW2_5 14s linear infinite}
-html.js .mo-smw .skA{opacity:0;animation:skW7_11 14s linear infinite}
-html.js .mo-smw .skC{opacity:0;animation:skChip 14s linear infinite}
-html.js .mo-smw .skHl{opacity:0;animation:skW17_20 14s linear infinite}
-html.js .mo-smw .skClaim{opacity:0;animation:skW20_25 14s linear infinite}
-html.js .mo-smw .skKO{opacity:0;animation:skW26_31 14s linear infinite}
-html.js .mo-smw .skRails{opacity:0;animation:skW29_33 14s linear infinite}
-html.js .mo-smw .skEv1{opacity:0;animation:skW33_36 14s linear infinite}
-html.js .mo-smw .skEv2{opacity:0;animation:skW36_39 14s linear infinite}
-html.js .mo-smw .skEv3{opacity:0;animation:skW39_42 14s linear infinite}
-html.js .mo-smw .skEvLn{opacity:0;animation:skW42_45 14s linear infinite}
-html.js .mo-smw .skSup{opacity:0;animation:skW44_47 14s linear infinite}
-html.js .mo-smw .skDoc{opacity:0;animation:skW48_53 14s linear infinite}
-html.js .mo-smw .skPath{stroke-dasharray:80;animation:skDraw 14s linear infinite}
-html.js .mo-smw .skSpan{opacity:0;animation:skW54_58 14s linear infinite}
-html.js .mo-smw .skMeta{opacity:0;animation:skW58_61 14s linear infinite}
-html.js .mo-smw .skTl{opacity:0;animation:skW70_75 14s linear infinite}
-html.js .mo-smw .skTl4{opacity:0;animation:skW75_78 14s linear infinite}
-html.js .mo-smw .skBadge{opacity:0;animation:skW84_88 14s linear infinite}
-html.js .mo-smw .skW1{opacity:0;animation:skMsg1 14s linear infinite}
-html.js .mo-smw .skW2{opacity:0;animation:skMsg2 14s linear infinite}
+/* SHOW ME WHY v3 — investigação: uma linha, revelação progressiva.
+   14s; a linha desce conectando cada passo; pausas na citação e no fim. */
+@keyframes svLineK{0%,2%{stroke-dashoffset:322}78%,96%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes svA2_5{0%,2%{opacity:0}5%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA8_12{0%,8%{opacity:0}12%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA15_19{0%,15%{opacity:0}18%{opacity:1}20%{opacity:.55}22%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA26_32{0%,26%{opacity:0}32%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA42_46{0%,42%{opacity:0}46%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA48_52{0%,48%{opacity:0}52%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA56_60{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA66_71{0%,66%{opacity:0}71%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA76_80{0%,76%{opacity:0}80%,96%{opacity:1}100%{opacity:0}}
+@keyframes svA84_89{0%,84%{opacity:0}89%,96%{opacity:1}100%{opacity:0}}
+html.js .mo-smw .svLine{stroke-dasharray:322;animation:svLineK 14s linear infinite}
+html.js .mo-smw .svQ{opacity:0;animation:svA2_5 14s linear infinite}
+html.js .mo-smw .svA{opacity:0;animation:svA8_12 14s linear infinite}
+html.js .mo-smw .svC{opacity:0;animation:svA15_19 14s linear infinite}
+html.js .mo-smw .svQt{opacity:0;animation:svA26_32 14s linear infinite}
+html.js .mo-smw .svS2{opacity:0;animation:svA42_46 14s linear infinite}
+html.js .mo-smw .svS3{opacity:0;animation:svA48_52 14s linear infinite}
+html.js .mo-smw .svSup{opacity:0;animation:svA56_60 14s linear infinite}
+html.js .mo-smw .svV{opacity:0;animation:svA66_71 14s linear infinite}
+html.js .mo-smw .svOk{opacity:0;animation:svA76_80 14s linear infinite}
+html.js .mo-smw .svEnd{opacity:0;animation:svA84_89 14s linear infinite}
 @media(prefers-reduced-motion:reduce){
-  html.js .mo-smw .skU,html.js .mo-smw .skA,html.js .mo-smw .skC,html.js .mo-smw .skHl,
-  html.js .mo-smw .skClaim,html.js .mo-smw .skKO,html.js .mo-smw .skRails,
-  html.js .mo-smw .skEv1,html.js .mo-smw .skEv2,html.js .mo-smw .skEv3,
-  html.js .mo-smw .skEvLn,html.js .mo-smw .skSup,html.js .mo-smw .skDoc,
-  html.js .mo-smw .skSpan,html.js .mo-smw .skMeta,html.js .mo-smw .skTl,
-  html.js .mo-smw .skTl4,html.js .mo-smw .skBadge,html.js .mo-smw .skW2{animation:none;opacity:1}
-  html.js .mo-smw .skPath{animation:none;stroke-dasharray:none}
-  html.js .mo-smw .skW1{animation:none;opacity:0}
+  html.js .mo-smw .svLine{animation:none;stroke-dasharray:none}
+  html.js .mo-smw .svQ,html.js .mo-smw .svA,html.js .mo-smw .svC,html.js .mo-smw .svQt,
+  html.js .mo-smw .svS2,html.js .mo-smw .svS3,html.js .mo-smw .svSup,html.js .mo-smw .svV,
+  html.js .mo-smw .svOk,html.js .mo-smw .svEnd{animation:none;opacity:1}
 }
