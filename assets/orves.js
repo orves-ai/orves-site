@@ -486,7 +486,16 @@
       if (!avail.length) return;
       var next = avail[Math.floor(Math.random() * avail.length)];
       ch.classList.add('fade');
-      setTimeout(function () { ch.textContent = next; ch.classList.remove('fade'); }, 360);
+      setTimeout(function () {
+        var prev = ch.textContent;
+        ch.textContent = next;
+        // garantia de 1 linha: se quebrou, reverte
+        var tops = {}; var n = 0;
+        chips.concat([pinned]).forEach(function (c) { tops[Math.round(c.getBoundingClientRect().top)] = 1; });
+        for (var k in tops) n++;
+        if (n > 1) ch.textContent = prev;
+        ch.classList.remove('fade');
+      }, 360);
     }, ms);
   }
   rotator('.srcchips', ['PDFs', 'Word', 'Excel', 'PowerPoint', 'scans', 'spreadsheets', 'websites', 'images', 'audio', 'video', 'email', 'Slack', 'Teams', 'GitHub', 'Jira', 'Notion', 'Confluence', 'databases', 'APIs', 'logs', 'sensors', 'IoT', 'CRM', 'ERP', 'books', 'research', 'contracts', 'policies', 'SQL', 'JSON', 'XML', 'Parquet'], 2400);
