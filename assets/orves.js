@@ -413,54 +413,92 @@
   requestAnimationFrame(frame);
 })();
 
-// ── Domains: o domínio gira, a infraestrutura não ──
+// ── Domains: tudo gira — setores, bullets, fontes, modelos — menos o pipeline ──
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var POOL = [
-    ['Healthcare', ['Clinical guidelines', 'Medical records', 'Drug labels']],
-    ['Legal', ['Contracts', 'Case law', 'Regulations']],
-    ['Finance', ['Filings', 'Statements', 'Market data']],
-    ['Science', ['Papers', 'Experiments', 'Protocols']],
-    ['Government', ['Laws', 'Public records', 'Rulings']],
-    ['Manufacturing', ['Manuals', 'Specifications', 'Quality']],
-    ['Insurance', ['Policies', 'Claims', 'Evidence']],
-    ['Energy', ['Operations', 'Compliance', 'Inspections']],
-    ['Pharma', ['Trial protocols', 'Submissions', 'Labels']],
-    ['Aerospace', ['Maintenance docs', 'Certifications', 'Telemetry']],
-    ['Telecom', ['Network specs', 'Contracts', 'Tickets']],
-    ['Education', ['Curricula', 'Research', 'Records']],
-    ['Media', ['Archives', 'Transcripts', 'Rights']],
-    ['Retail', ['Catalogs', 'Suppliers', 'Reviews']],
-    ['Logistics', ['Manifests', 'Customs', 'Tracking']]
+    ['Healthcare', [['Clinical guidelines', 'Medical records', 'Drug labels'], ['MRI scans', 'Radiology', 'Prescriptions'], ['Genomics', 'Trials', 'Diagnoses']]],
+    ['Legal', [['Contracts', 'Case law', 'Regulations'], ['Litigation', 'Patents', 'Compliance'], ['Depositions', 'Filings', 'Opinions']]],
+    ['Finance', [['Filings', 'Statements', 'Market data'], ['Research', 'Portfolios', 'Risk models'], ['Invoices', 'Audits', 'Transactions']]],
+    ['Science', [['Papers', 'Experiments', 'Protocols'], ['Datasets', 'Lab notes', 'Peer reviews'], ['Preprints', 'Citations', 'Methods']]],
+    ['Government', [['Laws', 'Public records', 'Rulings'], ['Budgets', 'Census data', 'Permits'], ['Hearings', 'Treaties', 'Gazettes']]],
+    ['Manufacturing', [['Manuals', 'Specifications', 'Quality'], ['Work orders', 'Inspections', 'BOMs'], ['Safety sheets', 'Calibration', 'Audits']]],
+    ['Insurance', [['Policies', 'Claims', 'Evidence'], ['Adjusters', 'Actuarial tables', 'Fraud signals'], ['Underwriting', 'Renewals', 'Losses']]],
+    ['Energy', [['Operations', 'Compliance', 'Inspections'], ['Grid data', 'Permits', 'Assets'], ['Sensors', 'Maintenance', 'Emissions']]],
+    ['Pharma', [['Trial protocols', 'Submissions', 'Labels'], ['Adverse events', 'Formulations', 'Patents']]],
+    ['Aerospace', [['Maintenance docs', 'Certifications', 'Telemetry'], ['Flight manuals', 'Incidents', 'Parts']]],
+    ['Telecom', [['Network specs', 'Contracts', 'Tickets'], ['Coverage maps', 'Outages', 'Billing']]],
+    ['Education', [['Curricula', 'Research', 'Records'], ['Syllabi', 'Assessments', 'Accreditation']]],
+    ['Media', [['Archives', 'Transcripts', 'Rights'], ['Footage', 'Scripts', 'Licensing']]],
+    ['Retail', [['Catalogs', 'Suppliers', 'Reviews'], ['Inventory', 'Pricing', 'Returns']]],
+    ['Logistics', [['Manifests', 'Customs', 'Tracking'], ['Routes', 'Fleet data', 'Incidents']]]
   ];
   var cards = Array.prototype.slice.call(document.querySelectorAll('.dgrid .dcard'));
   if (cards.length) {
     cards.forEach(function (c) { c.classList.add('swap'); });
     var shown = cards.map(function (c) { return c.querySelector('h4').textContent; });
+    var variant = cards.map(function () { return 0; });
+    function setCard(card, name, items) {
+      card.querySelector('h4').textContent = name;
+      var lis = card.querySelectorAll('li');
+      for (var k = 0; k < lis.length; k++) lis[k].textContent = items[k] || '';
+    }
     setInterval(function () {
       var i = Math.floor(Math.random() * cards.length);
-      var avail = POOL.filter(function (d) { return shown.indexOf(d[0]) < 0; });
+      var card = cards[i];
+      if (Math.random() < 0.5) {
+        // troca o SETOR por um não visível
+        var avail = POOL.filter(function (d) { return shown.indexOf(d[0]) < 0; });
+        if (!avail.length) return;
+        var next = avail[Math.floor(Math.random() * avail.length)];
+        card.classList.add('fade');
+        setTimeout(function () {
+          shown[i] = next[0]; variant[i] = 0;
+          setCard(card, next[0], next[1][0]);
+          card.classList.remove('fade');
+        }, 460);
+      } else {
+        // gira os BULLETS do mesmo setor
+        var dom = null;
+        for (var q = 0; q < POOL.length; q++) if (POOL[q][0] === shown[i]) dom = POOL[q];
+        if (!dom || dom[1].length < 2) return;
+        variant[i] = (variant[i] + 1) % dom[1].length;
+        card.classList.add('fade');
+        setTimeout(function () {
+          setCard(card, dom[0], dom[1][variant[i]]);
+          card.classList.remove('fade');
+        }, 460);
+      }
+    }, 3200);
+  }
+  // chips rotativos: fontes e modelos (último chip fica fixo)
+  function rotator(sel, pool, ms) {
+    var box = document.querySelector(sel);
+    if (!box) return;
+    var chips = Array.prototype.slice.call(box.querySelectorAll('.chip'));
+    var pinned = chips.pop(); // "+ anything" / "your own model"
+    chips.forEach(function (ch) { ch.classList.add('rotchip'); });
+    setInterval(function () {
+      var ch = chips[Math.floor(Math.random() * chips.length)];
+      var visible = chips.map(function (c) { return c.textContent; });
+      visible.push(pinned.textContent);
+      var avail = pool.filter(function (s) { return visible.indexOf(s) < 0; });
       if (!avail.length) return;
       var next = avail[Math.floor(Math.random() * avail.length)];
-      var card = cards[i];
-      card.classList.add('fade');
-      setTimeout(function () {
-        shown[i] = next[0];
-        card.querySelector('h4').textContent = next[0];
-        var lis = card.querySelectorAll('li');
-        for (var k = 0; k < lis.length; k++) lis[k].textContent = next[1][k] || '';
-        card.classList.remove('fade');
-      }, 460);
-    }, 4600);
+      ch.classList.add('fade');
+      setTimeout(function () { ch.textContent = next; ch.classList.remove('fade'); }, 360);
+    }, ms);
   }
+  rotator('.srcchips', ['PDFs', 'Word', 'Excel', 'PowerPoint', 'scans', 'spreadsheets', 'websites', 'images', 'audio', 'video', 'email', 'Slack', 'Teams', 'GitHub', 'Jira', 'Notion', 'Confluence', 'databases', 'APIs', 'logs', 'sensors', 'IoT', 'CRM', 'ERP', 'books', 'research', 'contracts', 'policies', 'SQL', 'JSON', 'XML', 'Parquet'], 2400);
+  rotator('.aichips', ['ChatGPT', 'Claude', 'Gemini', 'Llama', 'Mistral', 'DeepSeek', 'Qwen', 'Kimi', 'agents', 'copilots', 'internal AI', 'Claude Code', 'Cursor', 'CrewAI', 'LangGraph', 'OpenAI', 'Anthropic', 'Google', 'Meta'], 2900);
   // linha de convergência: par domínio/fonte gira; o pipeline permanece
   var flow = document.querySelector('.dflow');
   if (flow) {
     var PAIRS = [
-      ['Healthcare', 'medical record'], ['Legal', 'contract'], ['Manufacturing', 'maintenance manual'],
+      ['Healthcare', 'MRI report'], ['Legal', 'contract'], ['Manufacturing', 'maintenance manual'],
       ['Science', 'research paper'], ['Finance', 'SEC filing'], ['Government', 'regulation'],
       ['Insurance', 'claim file'], ['Pharma', 'trial protocol'], ['Media', 'transcript'],
-      ['Energy', 'inspection report']
+      ['Energy', 'inspection report'], ['Aerospace', 'flight manual'], ['Retail', 'supplier catalog']
     ];
     var pi = 0;
     setInterval(function () {
@@ -471,6 +509,6 @@
         flow.querySelector('.dfs').textContent = PAIRS[pi][1];
         flow.classList.remove('fade');
       }, 420);
-    }, 3600);
+    }, 3400);
   }
 })();

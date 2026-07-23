@@ -550,3 +550,7 @@ html.js .dcard:nth-child(8){animation-delay:14s}
 .dcard.fade{opacity:0}
 .dflow .dfd,.dflow .dfs{transition:opacity .4s}
 .dflow.fade .dfd,.dflow.fade .dfs{opacity:0}
+
+.dcard .dsub{display:block;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);opacity:.7;margin:2px 0 6px}
+.rotchip{transition:opacity .35s}
+.rotchip.fade{opacity:0}
