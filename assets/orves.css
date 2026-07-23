@@ -693,8 +693,7 @@ html.js .finale .rv.in .l4{animation:finIn .8s 3.1s ease forwards}
 }
 
 /* footer = assinatura: o manifesto ecoa o finale */
-.ftsig{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.015em;line-height:1.5;color:var(--fg);margin-top:18px}
-.ftsig span{color:var(--acc2)}
+.ftsig{font-family:var(--disp);font-weight:500;font-size:13.5px;letter-spacing:-.01em;color:var(--fg2);margin-top:14px;white-space:nowrap}
 
 /* ponte de produtos: a empresa numa linha — monta em ~4s (one-shot),
    depois a particula vive: cinza ate o VK, verde ao sair, e SE DIVIDE em
