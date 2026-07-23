@@ -447,8 +447,6 @@ html.js .flowart .obsnode{animation:obsBreath 4s ease-in-out infinite, obsMarch 
 /* fronteira PERSISTENTE da camada — a infra inteira, Observatory incluso */
 .flowart .layerbox{fill:color-mix(in srgb,var(--acc) 3%,transparent);stroke:color-mix(in srgb,var(--acc) 22%,transparent);stroke-width:1.2}
 
-/* Brain: o ativo permanente — tudo converge aqui (enfase sutil) */
-.flowart .brainbox{stroke:color-mix(in srgb,var(--acc) 75%,transparent);stroke-width:1.6;filter:drop-shadow(0 0 9px color-mix(in srgb,var(--acc) 28%,transparent))}
 
 /* footer v3 — esquerda = marca (Stripe); direita = colunas magras */
 footer{padding:88px 0 44px}
