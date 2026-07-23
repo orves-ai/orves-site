@@ -691,3 +691,7 @@ html.js .finale .rv.in .l4{animation:finIn .8s 3.1s ease forwards}
   html.js .finale .fl{opacity:1;animation:none!important}
   html.js .finale .fu{transform:none;animation:none!important}
 }
+
+/* footer = assinatura: o manifesto ecoa o finale */
+.ftsig{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.015em;line-height:1.5;color:var(--fg);margin-top:18px}
+.ftsig span{color:var(--acc2)}
