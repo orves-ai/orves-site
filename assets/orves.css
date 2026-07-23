@@ -453,7 +453,7 @@ footer{padding:88px 0 44px}
 .ftgrid{display:grid;grid-template-columns:1.9fr .72fr .72fr .78fr .72fr;gap:30px}
 @media(max-width:960px){.ftgrid{grid-template-columns:1fr 1fr}.ftbrand{grid-column:1/-1}}
 .ftbrand{text-align:left}
-.ftstate{font-family:'Space Grotesk',sans-serif;font-size:17px;white-space:nowrap;font-weight:600;letter-spacing:-.02em;line-height:1.25;color:var(--fg);margin-top:18px}
+.ftstate{font-family:'Space Grotesk',sans-serif;font-size:14.5px;font-weight:500;color:var(--fg2);white-space:nowrap;font-weight:600;letter-spacing:-.02em;line-height:1.25;color:var(--fg);margin-top:18px}
 .ftflow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--fg2);margin-top:16px;letter-spacing:.02em}
 .ftflow span{color:var(--fg3)}
 .ftflow b{color:var(--acc2);font-weight:500}
