@@ -412,3 +412,65 @@
   }
   requestAnimationFrame(frame);
 })();
+
+// ── Domains: o domínio gira, a infraestrutura não ──
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var POOL = [
+    ['Healthcare', ['Clinical guidelines', 'Medical records', 'Drug labels']],
+    ['Legal', ['Contracts', 'Case law', 'Regulations']],
+    ['Finance', ['Filings', 'Statements', 'Market data']],
+    ['Science', ['Papers', 'Experiments', 'Protocols']],
+    ['Government', ['Laws', 'Public records', 'Rulings']],
+    ['Manufacturing', ['Manuals', 'Specifications', 'Quality']],
+    ['Insurance', ['Policies', 'Claims', 'Evidence']],
+    ['Energy', ['Operations', 'Compliance', 'Inspections']],
+    ['Pharma', ['Trial protocols', 'Submissions', 'Labels']],
+    ['Aerospace', ['Maintenance docs', 'Certifications', 'Telemetry']],
+    ['Telecom', ['Network specs', 'Contracts', 'Tickets']],
+    ['Education', ['Curricula', 'Research', 'Records']],
+    ['Media', ['Archives', 'Transcripts', 'Rights']],
+    ['Retail', ['Catalogs', 'Suppliers', 'Reviews']],
+    ['Logistics', ['Manifests', 'Customs', 'Tracking']]
+  ];
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.dgrid .dcard'));
+  if (cards.length) {
+    cards.forEach(function (c) { c.classList.add('swap'); });
+    var shown = cards.map(function (c) { return c.querySelector('h4').textContent; });
+    setInterval(function () {
+      var i = Math.floor(Math.random() * cards.length);
+      var avail = POOL.filter(function (d) { return shown.indexOf(d[0]) < 0; });
+      if (!avail.length) return;
+      var next = avail[Math.floor(Math.random() * avail.length)];
+      var card = cards[i];
+      card.classList.add('fade');
+      setTimeout(function () {
+        shown[i] = next[0];
+        card.querySelector('h4').textContent = next[0];
+        var lis = card.querySelectorAll('li');
+        for (var k = 0; k < lis.length; k++) lis[k].textContent = next[1][k] || '';
+        card.classList.remove('fade');
+      }, 460);
+    }, 4600);
+  }
+  // linha de convergência: par domínio/fonte gira; o pipeline permanece
+  var flow = document.querySelector('.dflow');
+  if (flow) {
+    var PAIRS = [
+      ['Healthcare', 'medical record'], ['Legal', 'contract'], ['Manufacturing', 'maintenance manual'],
+      ['Science', 'research paper'], ['Finance', 'SEC filing'], ['Government', 'regulation'],
+      ['Insurance', 'claim file'], ['Pharma', 'trial protocol'], ['Media', 'transcript'],
+      ['Energy', 'inspection report']
+    ];
+    var pi = 0;
+    setInterval(function () {
+      flow.classList.add('fade');
+      setTimeout(function () {
+        pi = (pi + 1) % PAIRS.length;
+        flow.querySelector('.dfd').textContent = PAIRS[pi][0];
+        flow.querySelector('.dfs').textContent = PAIRS[pi][1];
+        flow.classList.remove('fade');
+      }, 420);
+    }, 3600);
+  }
+})();
