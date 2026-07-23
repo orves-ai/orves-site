@@ -696,7 +696,9 @@ html.js .finale .rv.in .l4{animation:finIn .8s 3.1s ease forwards}
 .ftsig{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.015em;line-height:1.5;color:var(--fg);margin-top:18px}
 .ftsig span{color:var(--acc2)}
 
-/* ponte de produtos: a empresa inteira numa linha, montada em ~4s (one-shot) */
+/* ponte de produtos: a empresa numa linha — monta em ~4s (one-shot),
+   depois a particula vive: cinza ate o VK, verde ao sair, e SE DIVIDE em
+   tres rumo a Agents/Models/Applications. Boxes acendem na passagem. */
 @keyframes ppIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes ppLn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 html.js .flowart .pp1,html.js .flowart .pp2,html.js .flowart .pp3,html.js .flowart .pp4,html.js .flowart .pp5{opacity:0}
@@ -708,27 +710,24 @@ html.js .flowart.rv.in .pl2{animation:ppLn .4s 1.3s ease forwards}
 html.js .flowart.rv.in .pp3{animation:ppIn .5s 1.6s ease forwards}
 html.js .flowart.rv.in .pl3{animation:ppLn .4s 2.1s ease forwards}
 html.js .flowart.rv.in .pp4{animation:ppIn .6s 2.4s ease forwards}
-html.js .flowart.rv.in .pl4{animation:ppLn .4s 3.05s ease forwards}
+html.js .flowart.rv.in .pl4a,html.js .flowart.rv.in .pl4b,html.js .flowart.rv.in .pl4c{animation:ppLn .4s 3.05s ease forwards}
 html.js .flowart.rv.in .pp5{animation:ppIn .5s 3.35s ease forwards}
-@media(prefers-reduced-motion:reduce){
-  html.js .flowart .pp1,html.js .flowart .pp2,html.js .flowart .pp3,html.js .flowart .pp4,html.js .flowart .pp5{opacity:1;animation:none!important}
-  html.js .flowart .ppl{transform:none;animation:none!important}
-}
-
-/* pipeline vivo: particula percorre a linha (cinza -> verde ao atravessar o
-   VK) sob os boxes; cada box acende na passagem. inicia apos a montagem. */
-@keyframes ppTravel{0%{offset-distance:0%;fill:#AEB7C7;opacity:0}4%{opacity:.9}58%{fill:#AEB7C7}68%{fill:#22C07E}96%{opacity:.9}100%{offset-distance:100%;fill:#4FD69B;opacity:0}}
-@keyframes ppG1{0%,14%,26%,100%{filter:none}20%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
-@keyframes ppG2{0%,38%,50%,100%{filter:none}44%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
-@keyframes ppG3{0%,60%,80%,100%{filter:none}70%{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--acc) 55%,transparent))}}
-@keyframes ppG4{0%,90%,100%{filter:none}96%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
-html.js .flowart .ppd{opacity:0}
+@keyframes ppTravel{0%{offset-distance:0%;fill:#AEB7C7;opacity:0}4%{opacity:.9}50%{fill:#AEB7C7}58%{fill:#22C07E}73%{opacity:.9}76%,100%{offset-distance:100%;fill:#4FD69B;opacity:0}}
+@keyframes ppSplit{0%,76%{offset-distance:0%;opacity:0}79%{opacity:.9}92%{offset-distance:100%;opacity:.9}96%,100%{offset-distance:100%;opacity:0}}
+@keyframes ppG1{0%,13%,25%,100%{filter:none}19%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
+@keyframes ppG2{0%,34%,48%,100%{filter:none}41%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--acc) 40%,transparent))}}
+@keyframes ppG3{0%,58%,76%,100%{filter:none}67%{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--acc) 55%,transparent))}}
+@keyframes ppG4{0%,86%,100%{filter:none}92%{filter:drop-shadow(0 0 5px color-mix(in srgb,var(--acc) 40%,transparent))}}
+html.js .flowart .ppd,html.js .flowart .pps{opacity:0;fill:#4FD69B}
 html.js .flowart.rv.in .ppd{animation:ppTravel 6.5s 4s linear infinite}
+html.js .flowart.rv.in .pps{animation:ppSplit 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb1{animation:ppG1 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb2{animation:ppG2 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb3{animation:ppG3 6.5s 4s linear infinite}
 html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 @media(prefers-reduced-motion:reduce){
-  html.js .flowart .ppd{animation:none!important;opacity:0}
+  html.js .flowart .pp1,html.js .flowart .pp2,html.js .flowart .pp3,html.js .flowart .pp4,html.js .flowart .pp5{opacity:1;animation:none!important}
+  html.js .flowart .ppl{transform:none;animation:none!important}
+  html.js .flowart .ppd,html.js .flowart .pps{animation:none!important;opacity:0}
   html.js .flowart .ppb1,html.js .flowart .ppb2,html.js .flowart .ppb3,html.js .flowart .ppb4{animation:none!important}
 }
