@@ -450,7 +450,7 @@ html.js .flowart .obsnode{animation:obsBreath 4s ease-in-out infinite, obsMarch 
 
 /* footer v3 — esquerda = marca (Stripe); direita = colunas magras */
 footer{padding:88px 0 44px}
-.ftgrid{display:grid;grid-template-columns:1.9fr .72fr .72fr .78fr .72fr;gap:30px}
+.ftgrid{display:grid;grid-template-columns:1.7fr .72fr .95fr .72fr .78fr .72fr;gap:26px}
 @media(max-width:960px){.ftgrid{grid-template-columns:1fr 1fr}.ftbrand{grid-column:1/-1}}
 .ftbrand{text-align:left}
 .ftstate{font-family:'Space Grotesk',sans-serif;font-size:14.5px;font-weight:500;color:var(--fg2);white-space:nowrap;font-weight:600;letter-spacing:-.02em;line-height:1.25;color:var(--fg);margin-top:18px}
