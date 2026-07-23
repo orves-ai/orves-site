@@ -199,13 +199,17 @@
 
 <section class="center tight">
   <span class="eye">Why this layer exists</span>
-  <h2 style="max-width:26ch;margin-left:auto;margin-right:auto">AI is only as trustworthy as the knowledge beneath it.</h2>
-  <p class="lead center" style="margin-top:14px">AI today consumes PDFs, chunks, embeddings, raw databases and search results. None of them preserve knowledge — none preserve provenance, history or governance. And the generator cannot be its own auditor. The problem is not intelligence. It is knowledge infrastructure.</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px">
-    <span class="chip bad">PDFs</span><span class="chip bad">chunks</span><span class="chip bad">embeddings</span><span class="chip bad">raw databases</span><span class="chip bad">search results</span>
-    <span class="chip" style="color:var(--acc2);border-color:color-mix(in srgb,var(--acc) 40%,transparent)">→ a verifiable knowledge layer between reality and intelligent systems</span>
+  <h2 style="max-width:24ch;margin-left:auto;margin-right:auto">Every AI system has the same blind spot.</h2>
+  <div class="chips rv" style="justify-content:center;align-items:center;margin-top:26px">
+    <span class="mono" style="font-size:10.5px;letter-spacing:.12em;color:var(--fg3);margin-right:6px">AI CONSUMES</span>
+    <span class="chip">PDFs</span><span class="chip">chunks</span><span class="chip">embeddings</span><span class="chip">search</span><span class="chip">databases</span>
   </div>
-  <p class="mono rv" style="margin-top:22px;font-size:13.5px;letter-spacing:.03em">Models generate. <span style="color:var(--acc2)">Orves preserves the path to proof.</span></p>
+  <div class="chips rv" style="justify-content:center;align-items:center;margin-top:12px">
+    <span class="mono" style="font-size:10.5px;letter-spacing:.12em;color:var(--fg3);margin-right:6px">NONE PRESERVE</span>
+    <span class="chip bad">✕ provenance</span><span class="chip bad">✕ history</span><span class="chip bad">✕ governance</span><span class="chip bad">✕ relationships</span>
+  </div>
+  <p class="lead center rv" style="margin-top:26px;font-size:17px"><b style="color:var(--fg)">The problem is not intelligence.</b> The problem is knowledge infrastructure.</p>
+  <p class="mono rv" style="margin-top:16px;font-size:13.5px;letter-spacing:.03em">Models generate. <span style="color:var(--acc2)">Orves preserves the path to proof.</span></p>
 </section>
 
 
@@ -214,64 +218,20 @@
 <h2>Why verifiable knowledge changes everything.</h2>
 <p class="lead center">Raw text, chunks and embeddings all lose the same four things. The Verifiable Knowledge Layer preserves them — by construction.</p>
   <div class="g4 rv" style="margin-top:30px">
-    <div class="card"><h4>Provenance</h4><p>Every fact traces to its exact source — page, position, version. “Where did this come from?” always has an answer.</p></div>
-    <div class="card"><h4>Relationships</h4><p>Facts stay connected to everything they touch — entities, contracts, events — in one governed graph.</p></div>
-    <div class="card"><h4>History</h4><p>What was known, when, on which evidence. Change creates versions; nothing is silently overwritten.</p></div>
-    <div class="card"><h4>Governance</h4><p>Nothing enters or changes without a decision — adjudication, permissions and an immutable audit trail.</p></div>
+    <div class="card"><h4>Provenance</h4><p>Every fact traces to its exact source — page, position, version. “Where did this come from?” always has an answer.</p><p class="mono" style="font-size:10.5px;color:var(--acc2);margin-top:12px;opacity:.8">source → fact → answer</p></div>
+    <div class="card"><h4>Relationships</h4><p>Facts stay connected to everything they touch — entities, contracts, events — in one governed graph.</p><p class="mono" style="font-size:10.5px;color:var(--acc2);margin-top:12px;opacity:.8">company → contract → revenue</p></div>
+    <div class="card"><h4>History</h4><p>What was known, when, on which evidence. Change creates versions; nothing is silently overwritten.</p><p class="mono" style="font-size:10.5px;color:var(--acc2);margin-top:12px;opacity:.8">v1 → v2 → v3 ✓ current</p></div>
+    <div class="card"><h4>Governance</h4><p>Nothing enters or changes without a decision — adjudication, permissions and an immutable audit trail.</p><p class="mono" style="font-size:10.5px;color:var(--acc2);margin-top:12px;opacity:.8">draft → adjudicated → certified</p></div>
   </div>
   <p class="mono rv" style="margin-top:24px;font-size:12.5px;color:var(--fg3)">retrieval finds text · <span style="color:var(--acc2)">the layer preserves why it is true</span></p>
 </section>
 
 
-<section>
-  <div class="hero" style="padding:24px 0 0;border-top:0;grid-template-columns:.72fr 1.28fr">
-    <div>
-      <span class="eye">Show me why</span>
-      <h2 style="margin-top:12px">Every answer, one question away from its proof.</h2>
-      <p class="lead" style="font-size:15px">AI doesn&rsquo;t receive text — it receives knowledge objects. Select any claim and ask <b style="color:var(--fg)">Show me why</b>: the drill-down runs from the answer to the exact source span.</p>
-      <p class="mono" style="font-size:11.5px;color:var(--fg3);margin-top:16px;line-height:2">answer → claim → knowledge object<br>→ evidence → source span → version<br>→ acquisition event</p>
-      <div class="cta" style="margin-top:22px">
-        <a class="btn gh" href="developers.html">Read the docs</a>
-        <a class="btn gh" href="developers.html">View API reference</a>
-      </div>
-    </div>
-    <div class="kx rv">
-      <div class="kxhead mono">GET /v1/knowledge/objects/kn_842<span class="kxpill">pilot</span></div>
-      <div class="kxclaim mono">Contract renewal <span style="color:var(--fg3)">·</span> <span style="color:var(--acc2)">Sep 1, 2026</span></div>
-      <div class="kxstat mono"><span class="ok">● SUPPORTED</span><span>v4</span><span>updated 2h ago</span><span class="kxver">✓ verified</span></div>
-      <details>
-        <summary class="mono">Evidence<span class="n">3</span></summary>
-        <div class="kxrow mono"><span class="y">✓</span> amendment_v2.pdf · page 4</div>
-        <div class="kxrow mono"><span class="y">✓</span> board_minutes.pdf · page 7</div>
-        <div class="kxrow mono"><span class="y">✓</span> earnings_call.mp3 · 12:48</div>
-      </details>
-      <details>
-        <summary class="mono">Contradictions<span class="n">1</span></summary>
-        <div class="kxrow mono"><span class="x">✕</span> contract_v1.pdf · page 2 — superseded by v4</div>
-      </details>
-      <details open>
-        <summary class="mono">Relationships<span class="n">21</span></summary>
-        <div class="kxrow kxrel">
-          <span class="kxobj">Company</span><span class="kxobj">Supplier</span><span class="kxobj">Invoice</span><span class="kxobj">Policy</span><span class="kxobj">Regulation</span><span class="kxobj dim">+16 more</span>
-        </div>
-      </details>
-      <details>
-        <summary class="mono">History<span class="n">4 versions</span></summary>
-        <div class="kxrow mono">v4 ← v3 ← v2 ← v1 · nothing overwritten</div>
-      </details>
-      <details>
-        <summary class="mono">Verification</summary>
-        <div class="kxrow mono">last verified today · abstains when evidence is insufficient</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-
 <section style="padding:52px 0 0">
   <div class="center" style="margin-bottom:56px">
-    <span class="eye">The products</span>
+    <span class="eye">What you buy</span>
     <h2 style="margin:22px 0 0">Two products. One transformation.</h2>
+    <p class="lead center" style="margin-top:14px">Both are APIs, available in pilot — <b style="color:var(--fg)">Parser</b> priced per page, <b style="color:var(--fg)">Verifiable Knowledge</b> per knowledge operation. Start with either. <a href="pricing.html">See pricing →</a></p>
   </div>
 
   
@@ -405,6 +365,51 @@
     </div>
   </div>
 
+</section>
+
+
+<section>
+  <div class="hero" style="padding:24px 0 0;border-top:0;grid-template-columns:.72fr 1.28fr">
+    <div>
+      <span class="eye">Show me why</span>
+      <h2 style="margin-top:12px">Every answer, one question away from its proof.</h2>
+      <p class="lead" style="font-size:15px">AI doesn&rsquo;t receive text — it receives knowledge objects. Every claim answers <b style="color:var(--fg)">Show me why</b>: the drill-down runs from the answer to the exact source span.</p>
+      <p class="mono" style="font-size:11.5px;color:var(--fg3);margin-top:16px;line-height:2">answer → claim → knowledge object<br>→ evidence → source span → version<br>→ acquisition event</p>
+      <div class="cta" style="margin-top:22px">
+        <a class="btn gh" href="developers.html">Read the docs</a>
+        <a class="btn gh" href="developers.html">View API reference</a>
+      </div>
+    </div>
+    <div class="kx rv">
+      <div class="kxhead mono">GET /v1/knowledge/objects/kn_842<span class="kxpill">pilot</span></div>
+      <div class="kxclaim mono">Contract renewal <span style="color:var(--fg3)">·</span> <span style="color:var(--acc2)">Sep 1, 2026</span></div>
+      <div class="kxstat mono"><span class="ok">● SUPPORTED</span><span>v4</span><span>updated 2h ago</span><span class="kxver">✓ verified</span></div>
+      <details>
+        <summary class="mono">Evidence<span class="n">3</span></summary>
+        <div class="kxrow mono"><span class="y">✓</span> amendment_v2.pdf · page 4</div>
+        <div class="kxrow mono"><span class="y">✓</span> board_minutes.pdf · page 7</div>
+        <div class="kxrow mono"><span class="y">✓</span> earnings_call.mp3 · 12:48</div>
+      </details>
+      <details>
+        <summary class="mono">Contradictions<span class="n">1</span></summary>
+        <div class="kxrow mono"><span class="x">✕</span> contract_v1.pdf · page 2 — superseded by v4</div>
+      </details>
+      <details open>
+        <summary class="mono">Relationships<span class="n">21</span></summary>
+        <div class="kxrow kxrel">
+          <span class="kxobj">Company</span><span class="kxobj">Supplier</span><span class="kxobj">Invoice</span><span class="kxobj">Policy</span><span class="kxobj">Regulation</span><span class="kxobj dim">+16 more</span>
+        </div>
+      </details>
+      <details>
+        <summary class="mono">History<span class="n">4 versions</span></summary>
+        <div class="kxrow mono">v4 ← v3 ← v2 ← v1 · nothing overwritten</div>
+      </details>
+      <details>
+        <summary class="mono">Verification</summary>
+        <div class="kxrow mono">last verified today · abstains when evidence is insufficient</div>
+      </details>
+    </div>
+  </div>
 </section>
 
 
