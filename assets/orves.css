@@ -675,34 +675,3 @@ html.js .mo-canon .ckCap{opacity:0;animation:ckIn81_86 9s linear infinite}
   html.js .mo-canon .ckSt1,html.js .mo-canon .ckD1,html.js .mo-canon .ckD2,html.js .mo-canon .ckD3{animation:none;opacity:0}
   html.js .mo-canon .ckNq{animation:none}
 }
-
-/* SHOW ME WHY v3 — investigação: uma linha, revelação progressiva.
-   14s; a linha desce conectando cada passo; pausas na citação e no fim. */
-@keyframes svLineK{0%,2%{stroke-dashoffset:322}78%,96%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
-@keyframes svA2_5{0%,2%{opacity:0}5%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA8_12{0%,8%{opacity:0}12%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA15_19{0%,15%{opacity:0}18%{opacity:1}20%{opacity:.55}22%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA26_32{0%,26%{opacity:0}32%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA42_46{0%,42%{opacity:0}46%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA48_52{0%,48%{opacity:0}52%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA56_60{0%,56%{opacity:0}60%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA66_71{0%,66%{opacity:0}71%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA76_80{0%,76%{opacity:0}80%,96%{opacity:1}100%{opacity:0}}
-@keyframes svA84_89{0%,84%{opacity:0}89%,96%{opacity:1}100%{opacity:0}}
-html.js .mo-smw .svLine{stroke-dasharray:322;animation:svLineK 14s linear infinite}
-html.js .mo-smw .svQ{opacity:0;animation:svA2_5 14s linear infinite}
-html.js .mo-smw .svA{opacity:0;animation:svA8_12 14s linear infinite}
-html.js .mo-smw .svC{opacity:0;animation:svA15_19 14s linear infinite}
-html.js .mo-smw .svQt{opacity:0;animation:svA26_32 14s linear infinite}
-html.js .mo-smw .svS2{opacity:0;animation:svA42_46 14s linear infinite}
-html.js .mo-smw .svS3{opacity:0;animation:svA48_52 14s linear infinite}
-html.js .mo-smw .svSup{opacity:0;animation:svA56_60 14s linear infinite}
-html.js .mo-smw .svV{opacity:0;animation:svA66_71 14s linear infinite}
-html.js .mo-smw .svOk{opacity:0;animation:svA76_80 14s linear infinite}
-html.js .mo-smw .svEnd{opacity:0;animation:svA84_89 14s linear infinite}
-@media(prefers-reduced-motion:reduce){
-  html.js .mo-smw .svLine{animation:none;stroke-dasharray:none}
-  html.js .mo-smw .svQ,html.js .mo-smw .svA,html.js .mo-smw .svC,html.js .mo-smw .svQt,
-  html.js .mo-smw .svS2,html.js .mo-smw .svS3,html.js .mo-smw .svSup,html.js .mo-smw .svV,
-  html.js .mo-smw .svOk,html.js .mo-smw .svEnd{animation:none;opacity:1}
-}
