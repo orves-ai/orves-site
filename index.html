@@ -74,7 +74,7 @@
       <g class="schip" style="animation-delay:.5s"><rect class="fnode" x="36" y="236" width="96" height="30" rx="8"/><text class="flbl" x="84" y="255" text-anchor="middle">Video</text></g>
       <g class="schip" style="animation-delay:.6s"><rect class="fnode" x="36" y="284" width="96" height="30" rx="8"/><text class="flbl" x="84" y="303" text-anchor="middle">APIs</text></g>
       <g class="schip" style="animation-delay:.7s"><rect class="fnode" x="36" y="332" width="96" height="30" rx="8"/><text class="flbl" x="84" y="351" text-anchor="middle">+ others</text></g>
-      <!-- fan-in: fontes → Parser -->
+      <!-- fan-in: sources → Parser -->
       <path class="fpath" data-flow="in" d="M 132 59  C 200 59  230 150 258 172"/>
       <path class="fpath" data-flow="in" d="M 132 107 C 200 107 230 160 258 180"/>
       <path class="fpath" data-flow="in" d="M 132 155 C 200 155 230 172 258 188"/>
@@ -82,7 +82,7 @@
       <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
       <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- A CAMADA: halo abraça os três estágios -->
+      <!-- the layer: boundary embraces all stages -->
       <rect class="layerbox" x="240" y="128" width="502" height="292" rx="20"/>
       <text class="m-t" x="491" y="122" text-anchor="middle" style="letter-spacing:.16em;opacity:.85">VERIFIABLE KNOWLEDGE LAYER</text>
       <!-- Parser -->
@@ -99,7 +99,7 @@
       <rect class="fnode main" x="590" y="150" width="136" height="90" rx="14"/>
       <text class="flbl b" x="658" y="188" text-anchor="middle" style="font-size:17px">Brain</text>
       <text class="flbl dim" x="658" y="210" text-anchor="middle" style="font-size:10.5px">Memory</text>
-      <!-- fan-out: Brain → sistemas de IA -->
+      <!-- fan-out: Brain → AI systems -->
       <path class="fpath" data-flow="out" d="M 726 170 C 790 140 810 92  866 76"/>
       <path class="fpath" data-flow="out" d="M 726 182 C 790 168 810 140 866 130"/>
       <path class="fpath" data-flow="out" d="M 726 194 C 790 194 810 188 866 184"/>
@@ -113,12 +113,12 @@
       <rect class="fnode" x="866" y="222" width="110" height="30" rx="8"/><text class="flbl" x="921" y="241" text-anchor="middle">Kimi</text>
       <rect class="fnode" x="866" y="276" width="110" height="30" rx="8"/><text class="flbl" x="921" y="295" text-anchor="middle">any model</text>
       <rect class="fnode" x="866" y="330" width="110" height="30" rx="8"/><text class="flbl" x="921" y="349" text-anchor="middle">others</text>
-      <!-- Observatory: ciclo — watch scope do Brain, nova evidência re-entra pelo Parser -->
+      <!-- Observatory cycle: watch scope from Brain; new evidence re-enters through Parser -->
       <rect class="fnode obsnode" x="402" y="368" width="180" height="40" rx="12"/>
       <text class="flbl" x="492" y="393" text-anchor="middle" style="font-size:13px">Observatory</text>
       <path class="fpath dash obs" data-flow="watch" d="M 658 244 C 658 310 620 372 582 382"/>
       <path class="fpath dash obs" data-flow="evidence" d="M 402 382 C 352 374 326 300 326 244"/>
-      <!-- pulsos -->
+      <!-- pulses -->
       <circle class="fdot" r="3"   style="offset-path:path('M 132 59 C 200 59 230 150 258 172');animation-delay:0s"/>
       <circle class="fdot" r="3"   style="offset-path:path('M 132 203 C 200 203 232 198 258 196');animation-delay:-3s"/>
       <circle class="fdot" r="3"   style="offset-path:path('M 132 347 C 200 347 230 250 258 220');animation-delay:-6s"/>
