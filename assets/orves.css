@@ -527,3 +527,18 @@ html.js .mo-brain .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .af input::placeholder{color:var(--fg3);opacity:.7}
 .authdiv{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--fg3);font-size:11.5px;font-family:JetBrains Mono,monospace}
 .authdiv::before,.authdiv::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* domains: grade universal com ciclo de destaque lento */
+.dcard{border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 70%,transparent);padding:16px 18px;text-align:left}
+.dcard h4{font-size:15px;margin-bottom:6px}
+.dcard p.mono{font-size:10.5px;color:var(--fg3);line-height:1.7}
+@keyframes domGlow{0%,100%{border-color:var(--line)}5%,9%{border-color:color-mix(in srgb,var(--acc) 55%,transparent)}14%{border-color:var(--line)}}
+html.js .dcard{animation:domGlow 16s ease-in-out infinite}
+html.js .dcard:nth-child(2){animation-delay:2s}
+html.js .dcard:nth-child(3){animation-delay:4s}
+html.js .dcard:nth-child(4){animation-delay:6s}
+html.js .dcard:nth-child(5){animation-delay:8s}
+html.js .dcard:nth-child(6){animation-delay:10s}
+html.js .dcard:nth-child(7){animation-delay:12s}
+html.js .dcard:nth-child(8){animation-delay:14s}
+@media(prefers-reduced-motion:reduce){html.js .dcard{animation:none}}
