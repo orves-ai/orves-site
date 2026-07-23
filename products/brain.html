@@ -52,24 +52,23 @@
 <section class="hero" style="border-top:0">
   <div>
     <span class="eyepill"><span class="d"></span>intelligence · brain</span>
-    <h1>Where your knowledge <span class="accent-tx">lives.</span></h1>
-    <p class="sub">Your living memory — for a person, a team or a whole company: where knowledge lives, governed by evidence, connected to any model. Built on the Knowledge Engine. Not a chatbot you rent.</p>
+    <h1>AI forgets. <span class="accent-tx">Brain doesn&rsquo;t.</span></h1>
+    <p class="sub">Persistent knowledge that survives conversations, sessions, models and agents — served as knowledge objects with evidence, relationships and versions. Built on the Knowledge Engine. Not a chatbot you rent.</p>
     <div class="cta">
       <a class="btn" href="../pricing.html">Buy credits</a>
       <a class="btn gh" href="../benchmarks.html">See benchmarks</a>
     </div>
     <div class="chips"><span class="chip">governed memory</span><span class="chip">claims + evidence</span><span class="chip">grounded reasoning</span><span class="chip">ABSTAINED</span><span class="chip">model-agnostic</span><span class="chip">white-label</span></div>
   </div>
-  <div class="code rv"><div class="codehd">POST /v1/brain/reason</div>
-<pre><span class="cm"># reasoning grounded in certified claims</span>
-<span class="k">POST</span> <span class="s">/v1/brain/reason</span>
-{ <span class="k">"task"</span>: <span class="s">"compare renewal terms across 2023–2026 policies"</span> }
+  <div class="code rv"><div class="codehd">GET /v1/brain/objects/br_842</div>
+<pre><span class="cm"># a knowledge object — not text</span>
+<span class="k">GET</span> <span class="s">/v1/brain/objects/br_842</span>
 
 <span class="cm"># 200 OK</span>
-{ <span class="k">"answer"</span>: <span class="s">"…"</span>,
-  <span class="k">"grounded_on"</span>: [<span class="g">"clm_204"</span>, <span class="g">"clm_388"</span>],
-  <span class="k">"abstained"</span>: [{ <span class="k">"claim"</span>: <span class="r">"policy_2024_term"</span>, <span class="k">"reason"</span>: <span class="r">"insufficient_evidence"</span> }],
-  <span class="k">"certificate"</span>: <span class="s">"cert_b77…"</span> }</pre></div>
+{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
+  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
+  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
+  <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
 </section>
 
 <section class="center">
@@ -125,7 +124,7 @@
     <a class="fcol orves hot" href="../products/brain.html">
       <div class="fhead">Continue with Orves</div>
       <div class="fbig">Brain</div>
-      <div class="fbody">where your knowledge lives — governed, current, connected to any model</div>
+      <div class="fbody">persistent knowledge objects — governed, current, connected to any model</div>
       <div class="fnote">built on the Knowledge Engine</div>
     </a>
   </div>
@@ -193,7 +192,7 @@
 
   <div class="rv" style="max-width:760px;margin:26px auto 0;text-align:left">
 <details><summary>Why is this Brain different from any other knowledge system?</summary><p>Because of what it stands on. Every fact in the Brain lives on a canonical, verifiable substrate: structured losslessly by Parser, made deterministic and reconstructible by Canonical, kept synchronized with reality by the Observatory. Other systems store what you tell them; this one can prove what it knows.</p></details>
-<details><summary>Does Brain compete with GPT or Claude?</summary><p>No — it feeds them. Brain is where your knowledge lives; models are interfaces that connect to it. Swap the model, keep the Brain. That is the point.</p></details>
+<details><summary>Does Brain compete with GPT or Claude?</summary><p>No — it feeds them. Brain is where your knowledge persists; models are interfaces that connect to it. Swap the model, keep the Brain. That is the point.</p></details>
 <details><summary>What happened to the Knowledge Engine?</summary><p>It is inside the Brain — the engine that governs claims, evidence and versions. You never buy it separately, the same way you never buy a database's storage engine. Brain: built on the Knowledge Engine.</p></details>
 <details><summary>Which model does the Brain use?</summary><p>Any. Providers are measured and swappable, never hardcoded. Your knowledge stays independent of the model that reads it.</p></details>
 <details><summary>Is my Brain shared?</summary><p>No. Each Brain instance is isolated by construction and reasons only over your governed knowledge. Nothing you ingest trains shared models.</p></details>

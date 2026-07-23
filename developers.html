@@ -60,7 +60,7 @@
     </div>
     <div class="chips"><span class="chip">REST</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">OpenAPI</span></div>
   </div>
-  <div class="code rv"><div class="codehd">quickstart · parse → canonical → ask</div>
+  <div class="code rv"><div class="codehd">quickstart · parse → canonicalize → serve knowledge objects</div>
 <pre><span class="cm"># 1 · parse</span>
 <span class="k">POST</span> <span class="s">/v1/parse</span>          { <span class="k">"document"</span>: <span class="s">"s3://acme/contract.pdf"</span> }
 
@@ -70,8 +70,8 @@
 <span class="cm"># 3a · your AI: export model-ready projections</span>
 <span class="k">GET</span>  <span class="s">/v1/canonical/can_31a…/projections?type=chunks</span>
 
-<span class="cm"># 3b · or Orves Brain</span>
-<span class="k">POST</span> <span class="s">/v1/brain/reason</span>   { <span class="k">"task"</span>: <span class="s">"compare renewal terms"</span> }</pre></div>
+<span class="cm"># 3b · or serve knowledge objects from Brain</span>
+<span class="k">GET</span>  <span class="s">/v1/brain/objects/br_842</span></pre></div>
 </section>
 
 <section class="center">
