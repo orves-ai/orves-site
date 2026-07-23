@@ -554,3 +554,9 @@ html.js .dcard:nth-child(8){animation-delay:14s}
 .dcard .dsub{display:block;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);opacity:.7;margin:2px 0 6px}
 .rotchip{transition:opacity .35s}
 .rotchip.fade{opacity:0}
+
+/* brain objects: relacionamentos como objetos navegáveis */
+.kxrel{display:flex;flex-wrap:wrap;gap:7px;padding:9px 16px 12px 34px}
+.kxobj{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 30%,transparent);border-radius:7px;padding:3px 10px;cursor:pointer;transition:background .15s}
+.kxobj:hover{background:color-mix(in srgb,var(--acc) 9%,transparent)}
+.kxobj.dim{color:var(--fg3);border-color:var(--line)}
