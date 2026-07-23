@@ -202,154 +202,212 @@
   }, 4200);
 })();
 
-// ── Brain: rede semântica VIVA — simulação, não loop ──
-// Conhecimento não cresce em árvore: cresce em REDE. Nós nascem já
-// conectados (preferential attachment → hubs emergem sozinhos), a maioria
-// dos eventos cria RELAÇÕES entre nós antigos, clusters se unem, pulsos
-// percorrem arestas (conhecimento sendo servido). Nada some, nada repete.
-// Fallback sem JS / reduced-motion: o grafo estático do SVG permanece.
+// ── Brain: galáxia de conhecimento — densa, rotativa, explorável ──
+// Clusters radiais; satélites entram continuamente; conexões cruzadas
+// entre clusters. A rede gira devagar e o HOVER num nó acende suas
+// relações DIRETAS (forte) e INDIRETAS (médio), apagando o resto —
+// exatamente o que o Brain faz: rastrear relações. Nada some; o
+// contador só sobe. Sem JS / reduced-motion: grafo estático permanece.
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var svg = document.querySelector('svg.mo-brain');
   if (!svg) return;
   var NS = 'http://www.w3.org/2000/svg';
   svg.innerHTML = '';
+  svg.style.cursor = 'crosshair';
   var gE = document.createElementNS(NS, 'g');
+  var gX = document.createElementNS(NS, 'g');
   var gN = document.createElementNS(NS, 'g');
   var gL = document.createElementNS(NS, 'g');
-  svg.appendChild(gE); svg.appendChild(gN); svg.appendChild(gL);
-  var caption = document.createElementNS(NS, 'text');
-  caption.setAttribute('x', 170); caption.setAttribute('y', 200);
+  svg.appendChild(gE); svg.appendChild(gX); svg.appendChild(gN); svg.appendChild(gL);
+  function el(t) { return document.createElementNS(NS, t); }
+  var caption = el('text');
+  caption.setAttribute('x', 170); caption.setAttribute('y', 202);
   caption.setAttribute('text-anchor', 'middle');
   caption.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:9px;fill:var(--fg3);opacity:.75');
   caption.textContent = 'knowledge compounds · nothing resets';
   svg.appendChild(caption);
-  var counter = document.createElementNS(NS, 'text');
-  counter.setAttribute('x', 326); counter.setAttribute('y', 18);
+  var counter = el('text');
+  counter.setAttribute('x', 326); counter.setAttribute('y', 16);
   counter.setAttribute('text-anchor', 'end');
-  counter.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:8px;fill:var(--fg3);opacity:.8');
+  counter.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:7.5px;fill:var(--fg3);opacity:.85');
   svg.appendChild(counter);
 
-  var LABELS = ['Company', 'Revenue', 'Contract', 'CEO', 'Product', 'Customer', 'Project', 'Regulation', 'Earnings', 'Renewal'];
-  var nodes = [], edges = [], MAXN = 46;
+  var CX = 170;
+  var HUB_DEFS = [
+    { l: 'Company',    x: 170, y: 100 },
+    { l: 'Revenue',    x: 92,  y: 64 },
+    { l: 'Contract',   x: 252, y: 62 },
+    { l: 'People',     x: 82,  y: 142 },
+    { l: 'Product',    x: 252, y: 144 },
+    { l: 'Regulation', x: 168, y: 44 },
+    { l: 'Customer',   x: 168, y: 162 },
+    { l: 'Project',    x: 34,  y: 100 },
+    { l: 'Market',     x: 306, y: 102 }
+  ];
+  var hubs = [], sats = [], edges = [], pulses = [];
+  var MAXSAT = 200;
+  var focus = null;
 
-  function el(tag, attrs) {
-    var e = document.createElementNS(NS, tag);
-    for (var k in attrs) e.setAttribute(k, attrs[k]);
+  function link(a, b, kind, g, style0) {
+    var e = { a: a, b: b, kind: kind, born: performance.now(), el: el('line') };
+    e.el.setAttribute('style', style0 || '');
+    g.appendChild(e.el);
+    a.adj.push(b); b.adj.push(a);
+    edges.push(e);
     return e;
   }
-  function addNode(x, y, label) {
-    var c = el('circle', { r: 3 });
-    c.setAttribute('style', 'fill:var(--acc2)');
-    gN.appendChild(c);
-    var t = null;
-    if (label) {
-      t = el('text', { 'text-anchor': 'middle' });
-      t.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:8px;fill:var(--fg2)');
-      t.textContent = label;
-      gL.appendChild(t);
-    }
-    var n = { x: x, y: y, vx: 0, vy: 0, deg: 0, el: c, lab: t, born: performance.now() };
-    nodes.push(n);
-    return n;
+  function addHub(def) {
+    var c = el('circle'); c.setAttribute('r', 4); gN.appendChild(c);
+    var t = el('text');
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:7.5px;fill:var(--fg2);opacity:.9');
+    t.textContent = def.l;
+    gL.appendChild(t);
+    var h = { hub: true, x: def.x, y: def.y, sats: 0, el: c, lab: t, adj: [], lvl: 3 };
+    hubs.push(h);
+    if (hubs.length > 1) link(hubs[0], h, 'hub', gX);
+    return h;
   }
-  function addEdge(a, b) {
-    if (a === b) return null;
-    for (var i = 0; i < edges.length; i++) {
-      var e = edges[i];
-      if ((e.a === a && e.b === b) || (e.a === b && e.b === a)) return null;
-    }
-    var l = el('line', {});
-    l.setAttribute('style', 'stroke:var(--fg3);stroke-width:1;opacity:0');
-    gE.appendChild(l);
-    var e2 = { a: a, b: b, el: l, born: performance.now() };
-    edges.push(e2);
-    a.deg++; b.deg++;
-    return e2;
+  function addSat(h, far) {
+    var c = el('circle'); c.setAttribute('r', 1.4); gN.appendChild(c);
+    var s = {
+      hub: false, h: h,
+      r: far ? 34 + Math.random() * 24 : 10 + Math.random() * 25,
+      th: Math.random() * 6.2832,
+      dr: (Math.random() - 0.5) * 0.0024,
+      sz: 1 + Math.random() * 1.4,
+      born: performance.now(),
+      x: h.x, y: h.y, adj: [], lvl: 3,
+      col: Math.random() < 0.7 ? 'var(--acc2)' : 'var(--fg3)',
+      op: 0.35 + Math.random() * 0.45,
+      el: c
+    };
+    h.sats++;
+    sats.push(s);
+    link(s, h, 'radial', gE);
+    return s;
   }
-  function pickHub() {
-    var tot = 0, i;
-    for (i = 0; i < nodes.length; i++) tot += nodes[i].deg + 1;
-    var r = Math.random() * tot;
-    for (i = 0; i < nodes.length; i++) { r -= nodes[i].deg + 1; if (r <= 0) return nodes[i]; }
-    return nodes[nodes.length - 1];
+  function anyNode() {
+    var all = hubs.length + sats.length, i = Math.floor(Math.random() * all);
+    return i < hubs.length ? hubs[i] : sats[i - hubs.length];
   }
-  function rnd(a, b) { return a + Math.random() * (b - a); }
+  function addCross() {
+    var a = anyNode(), b = anyNode();
+    if (a === b || a.adj.indexOf(b) >= 0) return;
+    link(a, b, 'cross', gX);
+  }
 
-  // estado inicial: pequena rede já viva (nunca começa vazia)
-  var seed = [];
-  for (var i = 0; i < 10; i++) {
-    seed.push(addNode(rnd(80, 260), rnd(55, 150), LABELS[i]));
-  }
-  for (i = 1; i < seed.length; i++) addEdge(seed[i], seed[Math.floor(Math.random() * i)]);
-  addEdge(seed[0], seed[3]); addEdge(seed[1], seed[8]); addEdge(seed[2], seed[9]); addEdge(seed[0], seed[4]);
+  for (var i = 0; i < 5; i++) addHub(HUB_DEFS[i]);
+  for (i = 0; i < 48; i++) addSat(hubs[Math.floor(Math.random() * hubs.length)], Math.random() < 0.2);
+  for (i = 0; i < 14; i++) addCross();
 
-  // ondas de eventos: relações crescem mais que nós
-  var pulses = [];
-  function event() {
-    var r = Math.random();
-    if (r < 0.28 && nodes.length < MAXN) {
-      var anchor = pickHub();
-      var n = addNode(anchor.x + rnd(-26, 26), anchor.y + rnd(-22, 22),
-        null);
-      addEdge(n, anchor);
-      if (Math.random() < 0.6) addEdge(n, pickHub());
-    } else if (r < 0.8) {
-      addEdge(pickHub(), pickHub());
-    } else {
-      var e = edges[Math.floor(Math.random() * edges.length)];
-      if (e) pulses.push({ e: e, t0: performance.now(), el: (function () { var c = el('circle', { r: 2.2 }); c.setAttribute('style', 'fill:var(--acc)'); svg.appendChild(c); return c; })() });
-    }
-    // próxima onda: quiet irregular
-    setTimeout(event, rnd(700, 2600));
-  }
-  setTimeout(event, 1200);
-
-  function frame(now) {
-    var i, j, a, b, dx, dy, d2, d, f;
-    // física leve: repulsão + molas + centro fraco
-    for (i = 0; i < nodes.length; i++) {
-      a = nodes[i];
-      for (j = i + 1; j < nodes.length; j++) {
-        b = nodes[j];
-        dx = a.x - b.x; dy = a.y - b.y; d2 = dx * dx + dy * dy + 0.01;
-        if (d2 < 3600) { f = 42 / d2; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; }
+  function wave() {
+    var n = 1 + Math.floor(Math.random() * 5);
+    for (var k = 0; k < n; k++) {
+      var r = Math.random();
+      if (r < 0.5 && sats.length < MAXSAT) {
+        addSat(hubs[Math.floor(Math.random() * hubs.length)], Math.random() < 0.25);
+      } else if (r < 0.85) {
+        addCross();
+      } else if (hubs.length < HUB_DEFS.length && sats.length > hubs.length * 16) {
+        var h = addHub(HUB_DEFS[hubs.length]);
+        for (var m = 0; m < 6; m++) addSat(h, false);
+      } else if (edges.length) {
+        var e = edges[Math.floor(Math.random() * edges.length)];
+        var p = el('circle'); p.setAttribute('r', 2); p.setAttribute('style', 'fill:var(--acc)');
+        svg.appendChild(p);
+        pulses.push({ e: e, t0: performance.now(), el: p });
       }
-      a.vx += (170 - a.x) * 0.0012; a.vy += (102 - a.y) * 0.0016;
+    }
+    setTimeout(wave, 400 + Math.random() * 1800);
+  }
+  setTimeout(wave, 900);
+
+  // ── exploração: hover acende relações diretas e indiretas ──
+  var mx = -999, my = -999, spin = 0.00045, spinT = 0.00045;
+  function setFocus(n) {
+    if (focus === n) return;
+    focus = n;
+    var i;
+    for (i = 0; i < hubs.length; i++) hubs[i].lvl = focus ? 3 : 3;
+    for (i = 0; i < sats.length; i++) sats[i].lvl = 3;
+    if (!focus) { caption.textContent = 'knowledge compounds · nothing resets'; return; }
+    focus.lvl = 0;
+    var d1 = focus.adj, d2c = 0;
+    for (i = 0; i < d1.length; i++) if (d1[i].lvl > 1) d1[i].lvl = 1;
+    for (i = 0; i < d1.length; i++) {
+      var aa = d1[i].adj;
+      for (var q = 0; q < aa.length; q++) if (aa[q].lvl > 2) { aa[q].lvl = 2; d2c++; }
+    }
+    caption.textContent = 'tracing: ' + d1.length + ' direct · ' + d2c + ' indirect relationships';
+  }
+  svg.addEventListener('mousemove', function (ev) {
+    var rc = svg.getBoundingClientRect();
+    mx = (ev.clientX - rc.left) / rc.width * 340;
+    my = (ev.clientY - rc.top) / rc.height * 210;
+    spinT = 0.0008 * ((mx - CX) / 170) + 0.00045;
+    var best = null, bd = 200, i, n, dx, dy, dd;
+    for (i = 0; i < hubs.length; i++) { n = hubs[i]; dx = n.x - mx; dy = n.y - my; dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; best = n; } }
+    for (i = 0; i < sats.length; i++) { n = sats[i]; dx = n.x - mx; dy = n.y - my; dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; best = n; } }
+    setFocus(best);
+  });
+  svg.addEventListener('mouseleave', function () { mx = -999; my = -999; spinT = 0.00045; setFocus(null); });
+
+  var NOP = [1, 0.95, 0.55, 0.1];       // opacidade por nível (com foco)
+  var EOPS = { radial: 0.14, hub: 0.22, cross: 0.2 };
+  var G = 0;
+  function frame(now) {
+    spin += (spinT - spin) * 0.04;
+    G += spin * 16;
+    var i, s, age, x, y;
+    var hasFocus = !!focus;
+    for (i = 0; i < sats.length; i++) {
+      s = sats[i];
+      s.th += s.dr;
+      age = Math.min(1, (now - s.born) / 600);
+      x = s.h.x + Math.cos(s.th + G) * s.r;
+      y = s.h.y + Math.sin(s.th + G) * s.r * 0.62;
+      s.x = Math.max(8, Math.min(332, x));
+      s.y = Math.max(26, Math.min(184, y));
+      var op = hasFocus ? NOP[s.lvl] : s.op;
+      var rr = s.sz * age * (s.lvl === 0 ? 2.4 : s.lvl === 1 ? 1.5 : 1);
+      s.el.setAttribute('cx', s.x); s.el.setAttribute('cy', s.y); s.el.setAttribute('r', rr);
+      s.el.setAttribute('style', 'fill:' + (s.lvl <= 1 && hasFocus ? 'var(--acc)' : s.col) + ';opacity:' + (op * age));
+    }
+    for (i = 0; i < hubs.length; i++) {
+      var h = hubs[i];
+      var hr = (3.5 + Math.min(4.5, h.sats * 0.12)) * (h.lvl === 0 ? 1.5 : 1);
+      var hop = hasFocus ? Math.max(NOP[h.lvl], 0.25) : 1;
+      h.el.setAttribute('cx', h.x); h.el.setAttribute('cy', h.y); h.el.setAttribute('r', hr);
+      h.el.setAttribute('style', 'fill:var(--acc);opacity:' + hop);
+      h.lab.setAttribute('x', h.x); h.lab.setAttribute('y', h.y - hr - 3);
+      h.lab.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:7.5px;fill:var(--fg2);opacity:' + (hasFocus ? Math.max(NOP[h.lvl], 0.2) : 0.9));
     }
     for (i = 0; i < edges.length; i++) {
-      var e = edges[i]; a = e.a; b = e.b;
-      dx = b.x - a.x; dy = b.y - a.y; d = Math.sqrt(dx * dx + dy * dy) + 0.01;
-      f = (d - 46) * 0.0035;
-      a.vx += dx / d * f * 46; a.vy += dy / d * f * 46;
-      b.vx -= dx / d * f * 46; b.vy -= dy / d * f * 46;
-    }
-    for (i = 0; i < nodes.length; i++) {
-      a = nodes[i];
-      a.vx *= 0.82; a.vy *= 0.82;
-      a.x = Math.max(18, Math.min(322, a.x + a.vx));
-      a.y = Math.max(34, Math.min(176, a.y + a.vy));
-      var age = Math.min(1, (now - a.born) / 500);
-      var r = (3 + Math.min(6, a.deg * 0.55)) * age;
-      a.el.setAttribute('cx', a.x); a.el.setAttribute('cy', a.y); a.el.setAttribute('r', r);
-      a.el.setAttribute('style', 'fill:' + (a.deg >= 5 ? 'var(--acc)' : 'var(--acc2)') + ';opacity:' + (0.55 + Math.min(0.45, a.deg * 0.1)));
-      if (a.lab) { a.lab.setAttribute('x', a.x); a.lab.setAttribute('y', a.y - r - 4); }
-    }
-    for (i = 0; i < edges.length; i++) {
-      var e2 = edges[i];
-      var o = Math.min(0.4, (now - e2.born) / 900 * 0.4);
-      e2.el.setAttribute('x1', e2.a.x); e2.el.setAttribute('y1', e2.a.y);
-      e2.el.setAttribute('x2', e2.b.x); e2.el.setAttribute('y2', e2.b.y);
-      e2.el.setAttribute('style', 'stroke:var(--fg3);stroke-width:1;opacity:' + o);
+      var e = edges[i];
+      var lv = Math.max(e.a.lvl, e.b.lvl);
+      var eo, ec = 'var(--fg3)', ew = e.kind === 'hub' ? 0.7 : 0.5;
+      if (hasFocus) {
+        if (e.a.lvl === 0 || e.b.lvl === 0) { eo = 0.9; ec = 'var(--acc)'; ew = 1; }
+        else if (lv <= 2 && (e.a.lvl <= 1 || e.b.lvl <= 1)) { eo = 0.4; ec = 'var(--acc2)'; }
+        else eo = 0.03;
+      } else {
+        eo = Math.min(EOPS[e.kind], (now - e.born) / 900 * EOPS[e.kind]);
+        if (e.kind === 'cross') ec = 'var(--acc2)';
+      }
+      e.el.setAttribute('x1', e.a.x); e.el.setAttribute('y1', e.a.y);
+      e.el.setAttribute('x2', e.b.x); e.el.setAttribute('y2', e.b.y);
+      e.el.setAttribute('style', 'stroke:' + ec + ';stroke-width:' + ew + ';opacity:' + eo);
     }
     for (i = pulses.length - 1; i >= 0; i--) {
-      var p = pulses[i], t = (now - p.t0) / 700;
+      var p = pulses[i], t = (now - p.t0) / 650;
       if (t >= 1) { svg.removeChild(p.el); pulses.splice(i, 1); continue; }
       p.el.setAttribute('cx', p.e.a.x + (p.e.b.x - p.e.a.x) * t);
       p.el.setAttribute('cy', p.e.a.y + (p.e.b.y - p.e.a.y) * t);
-      p.el.setAttribute('opacity', 1 - Math.abs(t - 0.5) * 1.6);
+      p.el.setAttribute('opacity', 1 - Math.abs(t - 0.5) * 1.7);
     }
-    counter.textContent = 'objects ' + nodes.length + ' · relationships ' + edges.length;
+    counter.textContent = 'objects ' + (hubs.length + sats.length) + ' · relationships ' + edges.length;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
