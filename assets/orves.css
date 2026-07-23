@@ -600,3 +600,22 @@ html.js .dcard:nth-child(8){animation-delay:14s}
   .ftstate{white-space:normal;font-size:16px}
   .vcard{width:100%;max-width:340px}
 }
+
+/* parser: 4 atos — entende, organiza, ancora, entrega (ciclo 14s) */
+@keyframes phWin{0%,3%{opacity:0}6%,22%{opacity:1}25%,100%{opacity:0}}
+html.js .mo-parser .ph{opacity:0;animation:phWin 14s ease-in-out infinite}
+html.js .mo-parser .ph2{animation-delay:3.5s}
+html.js .mo-parser .ph3{animation-delay:7s}
+html.js .mo-parser .ph4{animation-delay:10.5s}
+@keyframes loA{0%,3%{opacity:0}6%,95%{opacity:1}100%{opacity:0}}
+@keyframes loB{0%,27%{opacity:0}31%,95%{opacity:1}100%{opacity:0}}
+@keyframes loC{0%,52%{opacity:0}56%,95%{opacity:1}100%{opacity:0}}
+html.js .mo-parser .lo{opacity:0}
+html.js .mo-parser .lo1{animation:loA 14s ease-in-out infinite}
+html.js .mo-parser .lo2{animation:loB 14s ease-in-out infinite}
+html.js .mo-parser .lo3{animation:loC 14s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){
+  html.js .mo-parser .ph{animation:none;opacity:0}
+  html.js .mo-parser .ph4{opacity:1}
+  html.js .mo-parser .lo{animation:none;opacity:1}
+}
