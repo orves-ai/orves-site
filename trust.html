@@ -89,6 +89,20 @@
 </section>
 
 <section class="center">
+  <span class="eye">Integrity architecture</span>
+<h2>How provenance survives scrutiny.</h2>
+<p class="lead center">The properties below are how the platform is built — each mechanism exists so that evidence, once captured, cannot silently change.</p>
+  <div class="g3 rv" style="margin-top:28px">
+    <div class="card"><h4>Dual hash</h4><p>Every evidence object carries two fingerprints — one of the source bytes, one of the derived object. Alter either side and the mismatch is detectable.</p></div>
+    <div class="card"><h4>Evidence anchoring</h4><p>Page, bounding box, offset and timestamp bind every element to its exact place in the original source.</p></div>
+    <div class="card"><h4>Immutable references</h4><p>Objects reference each other by content-derived identity — a claim cannot quietly point somewhere else.</p></div>
+    <div class="card"><h4>Version graph</h4><p>Change creates a new version linked to its predecessor. History is preserved, never overwritten.</p></div>
+    <div class="card"><h4>Tamper detection</h4><p>Recomputing fingerprints against stored ones surfaces any alteration — in sources, objects or lineage.</p></div>
+    <div class="card"><h4>Replayability</h4><p>The canonical model is reconstructible: re-derive the same outputs from the same inputs, and compare.</p></div>
+  </div>
+</section>
+
+<section class="ruled center">
   <span class="eye">How it works</span>
 <h2>Emit. Record. Verify.</h2>
 
