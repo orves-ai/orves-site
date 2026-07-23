@@ -413,44 +413,94 @@
   requestAnimationFrame(frame);
 })();
 
-// ── Domains: tudo gira — setores, bullets, fontes, modelos — menos o pipeline ──
+// ── Domains: 48 setores, 8 por visita, sem repetição na sessão ──
+// Cada visita sorteia 8; a rotação percorre TODO o catálogo antes de
+// repetir qualquer setor (~5 min de ciclo). Bullets giram por variante.
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var POOL = [
-    ['Healthcare', [['Clinical guidelines', 'Medical records', 'Drug labels'], ['MRI scans', 'Radiology', 'Prescriptions'], ['Genomics', 'Trials', 'Diagnoses']]],
-    ['Legal', [['Contracts', 'Case law', 'Regulations'], ['Litigation', 'Patents', 'Compliance'], ['Depositions', 'Filings', 'Opinions']]],
-    ['Finance', [['Filings', 'Statements', 'Market data'], ['Research', 'Portfolios', 'Risk models'], ['Invoices', 'Audits', 'Transactions']]],
-    ['Science', [['Papers', 'Experiments', 'Protocols'], ['Datasets', 'Lab notes', 'Peer reviews'], ['Preprints', 'Citations', 'Methods']]],
-    ['Government', [['Laws', 'Public records', 'Rulings'], ['Budgets', 'Census data', 'Permits'], ['Hearings', 'Treaties', 'Gazettes']]],
-    ['Manufacturing', [['Manuals', 'Specifications', 'Quality'], ['Work orders', 'Inspections', 'BOMs'], ['Safety sheets', 'Calibration', 'Audits']]],
-    ['Insurance', [['Policies', 'Claims', 'Evidence'], ['Adjusters', 'Actuarial tables', 'Fraud signals'], ['Underwriting', 'Renewals', 'Losses']]],
-    ['Energy', [['Operations', 'Compliance', 'Inspections'], ['Grid data', 'Permits', 'Assets'], ['Sensors', 'Maintenance', 'Emissions']]],
-    ['Pharma', [['Trial protocols', 'Submissions', 'Labels'], ['Adverse events', 'Formulations', 'Patents']]],
-    ['Aerospace', [['Maintenance docs', 'Certifications', 'Telemetry'], ['Flight manuals', 'Incidents', 'Parts']]],
-    ['Telecom', [['Network specs', 'Contracts', 'Tickets'], ['Coverage maps', 'Outages', 'Billing']]],
-    ['Education', [['Curricula', 'Research', 'Records'], ['Syllabi', 'Assessments', 'Accreditation']]],
-    ['Media', [['Archives', 'Transcripts', 'Rights'], ['Footage', 'Scripts', 'Licensing']]],
-    ['Retail', [['Catalogs', 'Suppliers', 'Reviews'], ['Inventory', 'Pricing', 'Returns']]],
-    ['Logistics', [['Manifests', 'Customs', 'Tracking'], ['Routes', 'Fleet data', 'Incidents']]]
+    ['Healthcare', [['Clinical guidelines', 'Medical records', 'Drug labels'], ['MRI scans', 'Radiology', 'Prescriptions']]],
+    ['Legal', [['Contracts', 'Case law', 'Regulations'], ['Litigation', 'Patents', 'Depositions']]],
+    ['Finance', [['Filings', 'Statements', 'Market data'], ['Portfolios', 'Risk models', 'Audits']]],
+    ['Science', [['Papers', 'Experiments', 'Protocols'], ['Datasets', 'Lab notes', 'Peer reviews']]],
+    ['Government', [['Laws', 'Public records', 'Rulings'], ['Budgets', 'Census data', 'Permits']]],
+    ['Manufacturing', [['Manuals', 'Specifications', 'Quality'], ['Work orders', 'Inspections', 'BOMs']]],
+    ['Insurance', [['Policies', 'Claims', 'Evidence'], ['Underwriting', 'Actuarial tables', 'Losses']]],
+    ['Energy', [['Operations', 'Compliance', 'Inspections'], ['Grid data', 'Permits', 'Assets']]],
+    ['Pharma', [['Trial protocols', 'Submissions', 'Labels']]],
+    ['Biotech', [['Sequences', 'Assays', 'Lab records']]],
+    ['Genomics', [['Genomes', 'Variants', 'Annotations']]],
+    ['Diagnostics', [['Test results', 'Panels', 'Reference ranges']]],
+    ['Banking', [['Loan files', 'KYC records', 'Statements']]],
+    ['Asset Management', [['Mandates', 'Holdings', 'Research']]],
+    ['Fintech', [['Transactions', 'Disputes', 'Onboarding']]],
+    ['Courts', [['Dockets', 'Opinions', 'Evidence']]],
+    ['Compliance', [['Audits', 'Controls', 'Attestations']]],
+    ['Intellectual Property', [['Patents', 'Trademarks', 'Prior art']]],
+    ['Defense', [['Doctrine', 'Logistics', 'Intelligence']]],
+    ['Public Safety', [['Incidents', 'Dispatch logs', 'Reports']]],
+    ['Aerospace', [['Maintenance docs', 'Certifications', 'Telemetry']]],
+    ['Space', [['Mission data', 'Telemetry', 'Payload specs']]],
+    ['Aviation', [['Flight manuals', 'Incidents', 'Parts']]],
+    ['Maritime', [['Charters', 'Port logs', 'Surveys']]],
+    ['Rail', [['Timetables', 'Inspections', 'Signaling']]],
+    ['Logistics', [['Manifests', 'Customs', 'Tracking']]],
+    ['Supply Chain', [['Suppliers', 'Orders', 'Audits']]],
+    ['Automotive', [['Service manuals', 'Recalls', 'Telematics']]],
+    ['Semiconductor', [['Process specs', 'Yield data', 'Errata']]],
+    ['Robotics', [['Sensor logs', 'Behaviors', 'Safety cases']]],
+    ['Software', [['Codebases', 'Issues', 'Runbooks']]],
+    ['Cloud', [['Configs', 'Incidents', 'SLAs']]],
+    ['Cybersecurity', [['Threat intel', 'Incidents', 'Policies']]],
+    ['Telecom', [['Network specs', 'Contracts', 'Tickets']]],
+    ['Utilities', [['Meters', 'Outages', 'Maintenance']]],
+    ['Oil & Gas', [['Well logs', 'Leases', 'Inspections']]],
+    ['Mining', [['Surveys', 'Assays', 'Permits']]],
+    ['Chemicals', [['Formulations', 'Safety sheets', 'Batches']]],
+    ['Agriculture', [['Field data', 'Yields', 'Certifications']]],
+    ['Climate', [['Sensor data', 'Models', 'Disclosures']]],
+    ['Construction', [['Blueprints', 'Permits', 'Inspections']]],
+    ['Real Estate', [['Deeds', 'Leases', 'Appraisals']]],
+    ['Education', [['Curricula', 'Research', 'Records']]],
+    ['Academia', [['Theses', 'Grants', 'Citations']]],
+    ['Media', [['Archives', 'Transcripts', 'Rights']]],
+    ['Publishing', [['Manuscripts', 'Rights', 'Editions']]],
+    ['Retail', [['Catalogs', 'Suppliers', 'Reviews']]],
+    ['Hospitality', [['Bookings', 'Reviews', 'Operations']]]
   ];
   var cards = Array.prototype.slice.call(document.querySelectorAll('.dgrid .dcard'));
   if (cards.length) {
     cards.forEach(function (c) { c.classList.add('swap'); });
-    var shown = cards.map(function (c) { return c.querySelector('h4').textContent; });
-    var variant = cards.map(function () { return 0; });
     function setCard(card, name, items) {
       card.querySelector('h4').textContent = name;
       var lis = card.querySelectorAll('li');
       for (var k = 0; k < lis.length; k++) lis[k].textContent = items[k] || '';
     }
+    // sorteio inicial: 8 aleatórios do catálogo
+    var order = POOL.slice();
+    for (var s = order.length - 1; s > 0; s--) { var r2 = Math.floor(Math.random() * (s + 1)); var tmp = order[s]; order[s] = order[r2]; order[r2] = tmp; }
+    var shown = [], variant = [], cursor = 8;
+    for (var ci = 0; ci < cards.length; ci++) {
+      shown.push(order[ci][0]); variant.push(0);
+      setCard(cards[ci], order[ci][0], order[ci][1][0]);
+    }
+    function nextDomain() {
+      // percorre o catálogo inteiro antes de repetir qualquer setor
+      for (var tries = 0; tries < POOL.length; tries++) {
+        var d = order[cursor % order.length]; cursor++;
+        if (shown.indexOf(d[0]) < 0) return d;
+      }
+      return null;
+    }
+    function domOf(name) { for (var q = 0; q < POOL.length; q++) if (POOL[q][0] === name) return POOL[q]; return null; }
     setInterval(function () {
       var i = Math.floor(Math.random() * cards.length);
       var card = cards[i];
-      if (Math.random() < 0.5) {
-        // troca o SETOR por um não visível
-        var avail = POOL.filter(function (d) { return shown.indexOf(d[0]) < 0; });
-        if (!avail.length) return;
-        var next = avail[Math.floor(Math.random() * avail.length)];
+      var cur = domOf(shown[i]);
+      var swapDomain = Math.random() < 0.5 || !cur || cur[1].length < 2;
+      if (swapDomain) {
+        var next = nextDomain();
+        if (!next) return;
         card.classList.add('fade');
         setTimeout(function () {
           shown[i] = next[0]; variant[i] = 0;
@@ -458,25 +508,21 @@
           card.classList.remove('fade');
         }, 460);
       } else {
-        // gira os BULLETS do mesmo setor
-        var dom = null;
-        for (var q = 0; q < POOL.length; q++) if (POOL[q][0] === shown[i]) dom = POOL[q];
-        if (!dom || dom[1].length < 2) return;
-        variant[i] = (variant[i] + 1) % dom[1].length;
+        variant[i] = (variant[i] + 1) % cur[1].length;
         card.classList.add('fade');
         setTimeout(function () {
-          setCard(card, dom[0], dom[1][variant[i]]);
+          setCard(card, cur[0], cur[1][variant[i]]);
           card.classList.remove('fade');
         }, 460);
       }
-    }, 3200);
+    }, 3500);
   }
-  // chips rotativos: fontes e modelos (último chip fica fixo)
+  // chips rotativos: fontes e modelos (último chip fixo; nunca quebra linha)
   function rotator(sel, pool, ms) {
     var box = document.querySelector(sel);
     if (!box) return;
     var chips = Array.prototype.slice.call(box.querySelectorAll('.chip'));
-    var pinned = chips.pop(); // "+ anything" / "your own model"
+    var pinned = chips.pop();
     chips.forEach(function (ch) { ch.classList.add('rotchip'); });
     setInterval(function () {
       var ch = chips[Math.floor(Math.random() * chips.length)];
@@ -489,7 +535,6 @@
       setTimeout(function () {
         var prev = ch.textContent;
         ch.textContent = next;
-        // garantia de 1 linha: se quebrou, reverte
         var tops = {}; var n = 0;
         chips.concat([pinned]).forEach(function (c) { tops[Math.round(c.getBoundingClientRect().top)] = 1; });
         for (var k in tops) n++;
@@ -500,16 +545,18 @@
   }
   rotator('.srcchips', ['PDFs', 'Word', 'Excel', 'PowerPoint', 'scans', 'spreadsheets', 'websites', 'images', 'audio', 'video', 'email', 'Slack', 'Teams', 'GitHub', 'Jira', 'Notion', 'Confluence', 'databases', 'APIs', 'logs', 'sensors', 'IoT', 'CRM', 'ERP', 'books', 'research', 'contracts', 'policies', 'SQL', 'JSON', 'XML', 'Parquet'], 2400);
   rotator('.aichips', ['ChatGPT', 'Claude', 'Gemini', 'Llama', 'Mistral', 'DeepSeek', 'Qwen', 'Kimi', 'agents', 'copilots', 'internal AI', 'Claude Code', 'Cursor', 'CrewAI', 'LangGraph', 'OpenAI', 'Anthropic', 'Google', 'Meta'], 2900);
-  // linha de convergência: par domínio/fonte gira; o pipeline permanece
+  // linha de convergência
   var flow = document.querySelector('.dflow');
   if (flow) {
     var PAIRS = [
       ['Healthcare', 'MRI report'], ['Legal', 'contract'], ['Manufacturing', 'maintenance manual'],
       ['Science', 'research paper'], ['Finance', 'SEC filing'], ['Government', 'regulation'],
       ['Insurance', 'claim file'], ['Pharma', 'trial protocol'], ['Media', 'transcript'],
-      ['Energy', 'inspection report'], ['Aerospace', 'flight manual'], ['Retail', 'supplier catalog']
+      ['Energy', 'inspection report'], ['Aerospace', 'flight manual'], ['Retail', 'supplier catalog'],
+      ['Semiconductor', 'process spec'], ['Mining', 'geological survey'], ['Maritime', 'charter party'],
+      ['Genomics', 'variant report'], ['Defense', 'logistics order'], ['Agriculture', 'field report']
     ];
-    var pi = 0;
+    var pi = Math.floor(Math.random() * PAIRS.length);
     setInterval(function () {
       flow.classList.add('fade');
       setTimeout(function () {
@@ -521,7 +568,6 @@
     }, 3400);
   }
 })();
-
 // ── menu mobile ──
 (function () {
   var btn = document.querySelector('.menubtn');
