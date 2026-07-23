@@ -201,3 +201,156 @@
     cycling = false;
   }, 4200);
 })();
+
+// ── Brain: rede semântica VIVA — simulação, não loop ──
+// Conhecimento não cresce em árvore: cresce em REDE. Nós nascem já
+// conectados (preferential attachment → hubs emergem sozinhos), a maioria
+// dos eventos cria RELAÇÕES entre nós antigos, clusters se unem, pulsos
+// percorrem arestas (conhecimento sendo servido). Nada some, nada repete.
+// Fallback sem JS / reduced-motion: o grafo estático do SVG permanece.
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var svg = document.querySelector('svg.mo-brain');
+  if (!svg) return;
+  var NS = 'http://www.w3.org/2000/svg';
+  svg.innerHTML = '';
+  var gE = document.createElementNS(NS, 'g');
+  var gN = document.createElementNS(NS, 'g');
+  var gL = document.createElementNS(NS, 'g');
+  svg.appendChild(gE); svg.appendChild(gN); svg.appendChild(gL);
+  var caption = document.createElementNS(NS, 'text');
+  caption.setAttribute('x', 170); caption.setAttribute('y', 200);
+  caption.setAttribute('text-anchor', 'middle');
+  caption.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:9px;fill:var(--fg3);opacity:.75');
+  caption.textContent = 'knowledge compounds · nothing resets';
+  svg.appendChild(caption);
+  var counter = document.createElementNS(NS, 'text');
+  counter.setAttribute('x', 326); counter.setAttribute('y', 18);
+  counter.setAttribute('text-anchor', 'end');
+  counter.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:8px;fill:var(--fg3);opacity:.8');
+  svg.appendChild(counter);
+
+  var LABELS = ['Company', 'Revenue', 'Contract', 'CEO', 'Product', 'Customer', 'Project', 'Regulation', 'Earnings', 'Renewal'];
+  var nodes = [], edges = [], MAXN = 46;
+
+  function el(tag, attrs) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function addNode(x, y, label) {
+    var c = el('circle', { r: 3 });
+    c.setAttribute('style', 'fill:var(--acc2)');
+    gN.appendChild(c);
+    var t = null;
+    if (label) {
+      t = el('text', { 'text-anchor': 'middle' });
+      t.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:8px;fill:var(--fg2)');
+      t.textContent = label;
+      gL.appendChild(t);
+    }
+    var n = { x: x, y: y, vx: 0, vy: 0, deg: 0, el: c, lab: t, born: performance.now() };
+    nodes.push(n);
+    return n;
+  }
+  function addEdge(a, b) {
+    if (a === b) return null;
+    for (var i = 0; i < edges.length; i++) {
+      var e = edges[i];
+      if ((e.a === a && e.b === b) || (e.a === b && e.b === a)) return null;
+    }
+    var l = el('line', {});
+    l.setAttribute('style', 'stroke:var(--fg3);stroke-width:1;opacity:0');
+    gE.appendChild(l);
+    var e2 = { a: a, b: b, el: l, born: performance.now() };
+    edges.push(e2);
+    a.deg++; b.deg++;
+    return e2;
+  }
+  function pickHub() {
+    var tot = 0, i;
+    for (i = 0; i < nodes.length; i++) tot += nodes[i].deg + 1;
+    var r = Math.random() * tot;
+    for (i = 0; i < nodes.length; i++) { r -= nodes[i].deg + 1; if (r <= 0) return nodes[i]; }
+    return nodes[nodes.length - 1];
+  }
+  function rnd(a, b) { return a + Math.random() * (b - a); }
+
+  // estado inicial: pequena rede já viva (nunca começa vazia)
+  var seed = [];
+  for (var i = 0; i < 10; i++) {
+    seed.push(addNode(rnd(80, 260), rnd(55, 150), LABELS[i]));
+  }
+  for (i = 1; i < seed.length; i++) addEdge(seed[i], seed[Math.floor(Math.random() * i)]);
+  addEdge(seed[0], seed[3]); addEdge(seed[1], seed[8]); addEdge(seed[2], seed[9]); addEdge(seed[0], seed[4]);
+
+  // ondas de eventos: relações crescem mais que nós
+  var pulses = [];
+  function event() {
+    var r = Math.random();
+    if (r < 0.28 && nodes.length < MAXN) {
+      var anchor = pickHub();
+      var n = addNode(anchor.x + rnd(-26, 26), anchor.y + rnd(-22, 22),
+        null);
+      addEdge(n, anchor);
+      if (Math.random() < 0.6) addEdge(n, pickHub());
+    } else if (r < 0.8) {
+      addEdge(pickHub(), pickHub());
+    } else {
+      var e = edges[Math.floor(Math.random() * edges.length)];
+      if (e) pulses.push({ e: e, t0: performance.now(), el: (function () { var c = el('circle', { r: 2.2 }); c.setAttribute('style', 'fill:var(--acc)'); svg.appendChild(c); return c; })() });
+    }
+    // próxima onda: quiet irregular
+    setTimeout(event, rnd(700, 2600));
+  }
+  setTimeout(event, 1200);
+
+  function frame(now) {
+    var i, j, a, b, dx, dy, d2, d, f;
+    // física leve: repulsão + molas + centro fraco
+    for (i = 0; i < nodes.length; i++) {
+      a = nodes[i];
+      for (j = i + 1; j < nodes.length; j++) {
+        b = nodes[j];
+        dx = a.x - b.x; dy = a.y - b.y; d2 = dx * dx + dy * dy + 0.01;
+        if (d2 < 3600) { f = 42 / d2; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; }
+      }
+      a.vx += (170 - a.x) * 0.0012; a.vy += (102 - a.y) * 0.0016;
+    }
+    for (i = 0; i < edges.length; i++) {
+      var e = edges[i]; a = e.a; b = e.b;
+      dx = b.x - a.x; dy = b.y - a.y; d = Math.sqrt(dx * dx + dy * dy) + 0.01;
+      f = (d - 46) * 0.0035;
+      a.vx += dx / d * f * 46; a.vy += dy / d * f * 46;
+      b.vx -= dx / d * f * 46; b.vy -= dy / d * f * 46;
+    }
+    for (i = 0; i < nodes.length; i++) {
+      a = nodes[i];
+      a.vx *= 0.82; a.vy *= 0.82;
+      a.x = Math.max(18, Math.min(322, a.x + a.vx));
+      a.y = Math.max(34, Math.min(176, a.y + a.vy));
+      var age = Math.min(1, (now - a.born) / 500);
+      var r = (3 + Math.min(6, a.deg * 0.55)) * age;
+      a.el.setAttribute('cx', a.x); a.el.setAttribute('cy', a.y); a.el.setAttribute('r', r);
+      a.el.setAttribute('style', 'fill:' + (a.deg >= 5 ? 'var(--acc)' : 'var(--acc2)') + ';opacity:' + (0.55 + Math.min(0.45, a.deg * 0.1)));
+      if (a.lab) { a.lab.setAttribute('x', a.x); a.lab.setAttribute('y', a.y - r - 4); }
+    }
+    for (i = 0; i < edges.length; i++) {
+      var e2 = edges[i];
+      var o = Math.min(0.4, (now - e2.born) / 900 * 0.4);
+      e2.el.setAttribute('x1', e2.a.x); e2.el.setAttribute('y1', e2.a.y);
+      e2.el.setAttribute('x2', e2.b.x); e2.el.setAttribute('y2', e2.b.y);
+      e2.el.setAttribute('style', 'stroke:var(--fg3);stroke-width:1;opacity:' + o);
+    }
+    for (i = pulses.length - 1; i >= 0; i--) {
+      var p = pulses[i], t = (now - p.t0) / 700;
+      if (t >= 1) { svg.removeChild(p.el); pulses.splice(i, 1); continue; }
+      p.el.setAttribute('cx', p.e.a.x + (p.e.b.x - p.e.a.x) * t);
+      p.el.setAttribute('cy', p.e.a.y + (p.e.b.y - p.e.a.y) * t);
+      p.el.setAttribute('opacity', 1 - Math.abs(t - 0.5) * 1.6);
+    }
+    counter.textContent = 'objects ' + nodes.length + ' · relationships ' + edges.length;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
