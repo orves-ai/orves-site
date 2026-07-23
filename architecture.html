@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Orves — Architecture</title>
-<meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Brain and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
+<meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Knowledge and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetKnowledges+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/orves.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
         <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
         <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
         <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
-        <a href="products/brain.html">Brain <em>Persistent knowledge &amp; memory for AI</em></a>
+        <a href="products/knowledge.html">Knowledge <em>Persistent knowledge &amp; memory for AI</em></a>
         <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
       </span></span>
     </span>
@@ -37,7 +37,7 @@
   <a href="products.html">Products</a>
   <a href="products/parser.html" class="sub">Parser</a>
   <a href="products/canonical.html" class="sub">Canonical</a>
-  <a href="products/brain.html" class="sub">Brain</a>
+  <a href="products/knowledge.html" class="sub">Knowledge</a>
   <a href="products/observatory.html" class="sub">Observatory</a>
   <a href="developers.html">Developers</a>
   <a href="research.html">Research</a>
@@ -64,7 +64,7 @@
   <div class="g4 rv" style="margin-top:28px">
     <a class="card" href="products/parser.html"><h4>Parser</h4><p>Understand reality — documents and media into structured, grounded information.</p><span class="k">available in pilot →</span></a>
     <a class="card" href="products/canonical.html"><h4>Canonical</h4><p>Structure knowledge — consistent, versioned, auditable; the asset you own.</p><span class="k">available in pilot →</span></a>
-    <a class="card" href="products/brain.html"><h4>Brain</h4><p>Remember — persistent memory any AI can use.</p><span class="k">private pilot →</span></a>
+    <a class="card" href="products/knowledge.html"><h4>Knowledge</h4><p>Remember — persistent memory any AI can use.</p><span class="k">private pilot →</span></a>
     <a class="card" href="products/observatory.html"><h4>Observatory</h4><p>Stay correct — sources watched, change governed, history preserved.</p><span class="k">rolling out →</span></a>
   </div>
 </section>
@@ -72,14 +72,14 @@
 <section class="center tight">
   <div style="max-width:600px;margin:0 auto">
     <p class="mono" style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg3)">Architectural invariant</p>
-    <p style="font-size:15px;color:var(--fg2);margin-top:8px">The Brain is never edited directly. Every change re-enters through Parser and is adjudicated in Canonical — with versions, contradictions and history preserved.</p>
+    <p style="font-size:15px;color:var(--fg2);margin-top:8px">Knowledge is never edited directly. Every change re-enters through Parser and is adjudicated in Canonical — with versions, contradictions and history preserved.</p>
   </div>
 </section>
 
 <section class="center">
   <span class="eye">The flow</span>
 <h2>Structure. Decide. Stay correct.</h2>
-<p class="lead center">Parser and Canonical end in an asset you own. The fork is architectural, not marketing: your canonical substrate feeds any model — or the Orves Brain. The Observatory keeps the substrate current either way.</p>
+<p class="lead center">Parser and Canonical end in an asset you own. The fork is architectural, not marketing: your canonical substrate feeds any model — or the Orves Knowledge. The Observatory keeps the substrate current either way.</p>
   <div class="pipe rv">
   <div class="pnode src"><b>Sources</b><span>documents · databases · APIs · feeds · events · audio</span></div>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
@@ -94,9 +94,9 @@
       <div class="fnote">your canonical asset — no lock-in</div>
     </div>
     <div class="forx">or</div>
-    <a class="fcol orves" href="products/brain.html">
+    <a class="fcol orves" href="products/knowledge.html">
       <div class="fhead">Continue with Orves</div>
-      <div class="fbig">Brain</div>
+      <div class="fbig">Knowledge</div>
       <div class="fbody">persistent knowledge objects — governed, current, connected to any model</div>
       <div class="fnote">built on the Knowledge Engine</div>
     </a>
@@ -114,7 +114,7 @@
     <tbody>
       <tr><td><b>Parser</b></td><td>documents · sources</td><td>canonical text · structure atoms · spans</td><td><span class="st live"><span class="d"></span>always</span></td></tr>
       <tr><td><b>Canonical</b></td><td>certified parses</td><td>canonical units · model-ready projections · version graph</td><td><span class="st live"><span class="d"></span>always</span></td></tr>
-      <tr><td><b>Brain</b></td><td>canonical units</td><td>governed claims · grounded answers · abstentions</td><td><span class="st live"><span class="d"></span>always</span></td></tr>
+      <tr><td><b>Knowledge</b></td><td>canonical units</td><td>governed claims · grounded answers · abstentions</td><td><span class="st live"><span class="d"></span>always</span></td></tr>
       <tr><td><b>Observatory</b></td><td>declared sources</td><td>admission decisions · governed updates</td><td><span class="st draft"><span class="d"></span>rolling out</span></td></tr>
     </tbody>
   </table></div>
@@ -125,7 +125,7 @@
 <h2>Products are what you buy. Engines are how they work.</h2>
 <p class="lead center">Internally, the platform runs specialized engines — you never buy them, and you never have to understand them. The distinction is deliberate: product ≠ implementation.</p>
   <div class="g2 rv" style="max-width:860px;margin:30px auto 0">
-    <div class="card"><h4>Inside Brain</h4><p><span class="mono" style="font-size:12px">Knowledge Engine · memory · claims · resolution · reasoning · retrieval · context · policies</span></p><p style="margin-top:8px">The Knowledge Engine governs claims, evidence and versions — it is the core Brain is built on. One line you will see in our docs: <b>Brain — built on the Knowledge Engine.</b></p></div>
+    <div class="card"><h4>Inside Knowledge</h4><p><span class="mono" style="font-size:12px">Knowledge Engine · memory · claims · resolution · reasoning · retrieval · context · policies</span></p><p style="margin-top:8px">The Knowledge Engine governs claims, evidence and versions — it is the core Knowledge is built on. One line you will see in our docs: <b>Knowledge — built on the Knowledge Engine.</b></p></div>
     <div class="card"><h4>Across everything</h4><p><span class="mono" style="font-size:12px">certification · provenance · lineage · versioning · governance · IDs · hashes · resolution states</span></p><p style="margin-top:8px">Trust capabilities are transversal — properties of every artifact, not features of one product. <a href="trust.html">How trust works →</a></p></div>
   </div>
 </section>
@@ -139,7 +139,7 @@
     <div class="card"><h4>Determinism</h4><p>Same input, same version, same output. Replay is a feature of the architecture, which is what makes audits possible at all.</p></div>
     <div class="card"><h4>Evidence is primary</h4><p>Knowledge is derived. No claim exists without an evidence chain reaching back to a source span and a file hash.</p></div>
     <div class="card"><h4>UNKNOWN ≠ PASS</h4><p>Uncertainty is a first-class state that propagates. Nothing turns green by default, and abstention is measured like any other outcome.</p></div>
-    <div class="card"><h4>No lock-in</h4><p>The canonical substrate is model-ready by design. Your knowledge works with any AI — Brain has to win on merit, not on capture.</p></div>
+    <div class="card"><h4>No lock-in</h4><p>The canonical substrate is model-ready by design. Your knowledge works with any AI — Orves has to win on merit, not on capture.</p></div>
     <div class="card"><h4>Immutable ledger</h4><p>Every artifact, every version, every transformation recorded append-only. Corrections are new entries with lineage — never rewrites.</p></div>
   </div>
 </section>
@@ -182,12 +182,12 @@
     <div class="ftbrand">
       <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
       <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
-      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Brain <span>→</span> Observatory</p>
+      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Knowledge <span>→</span> Observatory</p>
     </div>
     <div class="ftcol"><div class="h">Products</div>
       <a href="products/parser.html">Parser</a>
       <a href="products/canonical.html">Canonical</a>
-      <a href="products/brain.html">Brain</a>
+      <a href="products/knowledge.html">Knowledge</a>
       <a href="products/observatory.html">Observatory</a>
     </div>
     <div class="ftcol"><div class="h">Platform</div>

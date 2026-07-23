@@ -2,7 +2,7 @@
    ORVES — design system ORIGINAL ink-electric (02–03-jul-2026),
    reaplicado fielmente ao conteúdo atual por decisão de BP (22-jul):
    "quero as cores antigas... design antigo". Fonte da verdade visual:
-   CSS das páginas G1/G2 da Macro (orves_platform/cleanbrain/pricing).
+   CSS das páginas G1/G2 da Macro (orves_platform/platform/pricing).
    Home/site = DARK. Tema light (body[data-base="light"]) reservado ao
    produto (dashboard = light default com opção dark).
    Logo: docs/brand/APERTURE_SYSTEM.md (A-Preserve).
@@ -263,7 +263,7 @@ html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
 @keyframes layerpulse{0%,100%{opacity:.45;stroke-width:1}50%{opacity:1;stroke-width:2}}
 .flowart .llayer-word{font-family:var(--disp);font-size:30px;font-weight:700;letter-spacing:.18em;fill:var(--fg)}
 .flowart .fpath.obs{stroke:color-mix(in srgb,var(--acc) 40%,var(--line2));opacity:.8}
-/* palavras internas do Brain (hero visual — sutis) */
+/* internal words (hero visual - subtle) */
 .flowart .bword{font-family:var(--mono);font-size:10px;fill:var(--fg3);opacity:.55}
 /* fontes em cascata (uma vez, ao entrar) */
 html.js .flowart .schip{opacity:0;animation:srcin .5s ease forwards}
@@ -292,12 +292,12 @@ html.js .flowart .schip{opacity:0;animation:srcin .5s ease forwards}
 .divide .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3)}
 .divide .lbl.top{margin-bottom:14px}.divide .lbl.bot{margin-top:14px;color:var(--acc2)}
 .divide hr{border:0;border-top:1px solid var(--acc);opacity:.7;box-shadow:0 0 18px color-mix(in srgb,var(--acc) 35%,transparent);margin:0}
-/* Brain como ecossistema */
-.brainmap{max-width:760px;margin:36px auto 0;text-align:center}
-.brainmap .core{font-family:var(--disp);font-size:clamp(44px,7vw,84px);font-weight:700;letter-spacing:-.03em;color:var(--fg)}
-.brainmap .orbit{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:20px;font-family:var(--mono);font-size:13px;color:var(--fg2)}
-.brainmap .orbit span{opacity:.85}
-.brainmap .orbit b{color:var(--acc2);font-weight:500}
+/* knowledge ecosystem map */
+.kmap{max-width:760px;margin:36px auto 0;text-align:center}
+.kmap .core{font-family:var(--disp);font-size:clamp(44px,7vw,84px);font-weight:700;letter-spacing:-.03em;color:var(--fg)}
+.kmap .orbit{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:20px;font-family:var(--mono);font-size:13px;color:var(--fg2)}
+.kmap .orbit span{opacity:.85}
+.kmap .orbit b{color:var(--acc2);font-weight:500}
 /* índice tipográfico de produtos (substitui grade de cards) */
 .prodindex{max-width:860px;margin:36px auto 0;text-align:left}
 .prow{display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--line)}
@@ -356,11 +356,11 @@ html.js .mo-canon .lyr:nth-child(2){animation-delay:.5s}
 html.js .mo-canon .lyr:nth-child(3){animation-delay:1s}
 html.js .mo-canon .lyr:nth-child(4){animation-delay:1.5s}
 
-/* Brain: grafo que cresce e persiste */
+/* Knowledge: graph that grows and persists */
 @keyframes mNode{0%{opacity:0;r:0}12%,90%{opacity:1}100%{opacity:1}}
 @keyframes mEdge{0%{stroke-dashoffset:80}18%,100%{stroke-dashoffset:0}}
-html.js .mo-brain circle.n{animation:mNode 12s ease-out infinite}
-html.js .mo-brain path.e{stroke-dasharray:80;animation:mEdge 12s ease-out infinite}
+html.js .mo-know circle.n{animation:mNode 12s ease-out infinite}
+html.js .mo-know path.e{stroke-dasharray:80;animation:mEdge 12s ease-out infinite}
 
 /* Observatory: varredura + delta admitido */
 @keyframes mSweep{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
@@ -387,7 +387,7 @@ html.js .mo-obs .delta{animation:mDelta 7s ease-in-out infinite}
 
 @media(prefers-reduced-motion:reduce){
   html.js .mo-parser .chaos line,html.js .mo-parser .grid line,html.js .mo-parser .scan,
-  html.js .mo-canon .lyr,html.js .mo-brain circle.n,html.js .mo-brain path.e,
+  html.js .mo-canon .lyr,html.js .mo-know circle.n,html.js .mo-know path.e,
   html.js .mo-obs .sweep,html.js .mo-obs .ring,html.js .mo-obs .delta{animation:none}
   html.js .mo-parser .grid line{opacity:.95}html.js .mo-parser .chaos line{opacity:0}
 }
@@ -491,10 +491,10 @@ footer{padding:88px 0 44px}
 html.js .mo-parser .sb,html.js .mo-canon .sb{opacity:0;animation:sbIn 9s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){html.js .mo-parser .sb,html.js .mo-canon .sb{animation:none;opacity:1}}
 
-/* brain: sessões vêm e vão; a memória acumula e não reseta */
+/* knowledge: sessions come and go; memory accumulates */
 @keyframes bsIn{0%{opacity:0}6%,94%{opacity:1}100%{opacity:0}}
-html.js .mo-brain .bs{opacity:0;animation:bsIn 13s ease-out infinite}
-@media(prefers-reduced-motion:reduce){html.js .mo-brain .bs{animation:none;opacity:1}}
+html.js .mo-know .bs{opacity:0;animation:bsIn 13s ease-out infinite}
+@media(prefers-reduced-motion:reduce){html.js .mo-know .bs{animation:none;opacity:1}}
 
 /* observatory: a mudança se propaga em cascata e persiste */
 @keyframes osIn{0%{opacity:0}7%,93%{opacity:1}100%{opacity:0}}
@@ -506,10 +506,10 @@ html.js .mo-obs .os{opacity:0;animation:osIn 11s ease-out infinite}
 html.js .mo-parser .dl{animation:dlPulse 9s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){html.js .mo-parser .dl{animation:none}}
 
-/* brain v2: sistemas conectam e viram fantasmas; a memória fica e cresce */
+/* knowledge v2: systems connect and fade; memory stays and grows */
 @keyframes bcGhost{0%{opacity:0}5%,20%{opacity:1}28%,93%{opacity:.22}100%{opacity:0}}
-html.js .mo-brain .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
-@media(prefers-reduced-motion:reduce){html.js .mo-brain .bc{animation:none;opacity:.6}}
+html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
+@media(prefers-reduced-motion:reduce){html.js .mo-know .bc{animation:none;opacity:.6}}
 
 .kxstat .kxver{margin-left:auto;color:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 35%,transparent);border-radius:99px;padding:1px 9px;font-size:10px}
 
@@ -555,7 +555,7 @@ html.js .dcard:nth-child(8){animation-delay:14s}
 .rotchip{transition:opacity .35s}
 .rotchip.fade{opacity:0}
 
-/* brain objects: relacionamentos como objetos navegáveis */
+/* knowledge objects: relationships as navigable objects */
 .kxrel{display:flex;flex-wrap:wrap;gap:7px;padding:9px 16px 12px 34px}
 .kxobj{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 30%,transparent);border-radius:7px;padding:3px 10px;cursor:pointer;transition:background .15s}
 .kxobj:hover{background:color-mix(in srgb,var(--acc) 9%,transparent)}

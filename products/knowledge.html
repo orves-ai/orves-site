@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Orves Parser — Understand reality.</title>
+<title>Orves Knowledge — Persistent memory for AI.</title>
 <meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Knowledge and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetKnowledges+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -51,42 +51,40 @@
 
 <section class="hero" style="border-top:0">
   <div>
-    <span class="eyepill"><span class="d"></span>infrastructure · parser</span>
-    <h1>Unstructured in. <span class="accent-tx">Evidence out.</span></h1>
-    <p class="sub">Converts documents, scans, images, audio and video into structured, machine-readable evidence — layout, meaning, exact location and provenance. Standalone API, available in pilot.</p>
+    <span class="eyepill"><span class="d"></span>intelligence · knowledge</span>
+    <h1>AI forgets. <span class="accent-tx">Knowledge doesn&rsquo;t.</span></h1>
+    <p class="sub">Persistent knowledge that survives conversations, sessions, models and agents — served as knowledge objects with evidence, relationships and versions. Built on the Knowledge Engine. Not a chatbot you rent.</p>
     <div class="cta">
       <a class="btn" href="../pricing.html">Buy credits</a>
       <a class="btn gh" href="../benchmarks.html">See benchmarks</a>
     </div>
-    <div class="chips"><span class="chip">PDF</span><span class="chip">DOCX</span><span class="chip">XLSX</span><span class="chip">HTML</span><span class="chip">images</span><span class="chip">audio</span><span class="chip">+ any source</span></div>
+    <div class="chips"><span class="chip">governed memory</span><span class="chip">claims + evidence</span><span class="chip">grounded reasoning</span><span class="chip">ABSTAINED</span><span class="chip">model-agnostic</span><span class="chip">white-label</span></div>
   </div>
-  <div class="code rv"><div class="codehd">POST /v1/parse</div>
-<pre><span class="cm"># parse a document, keep every span</span>
-<span class="k">POST</span> <span class="s">/v1/parse</span>
-{ <span class="k">"document"</span>: <span class="s">"s3://acme/contract_2024.pdf"</span>,
-  <span class="k">"outputs"</span>: [<span class="s">"canonical_text"</span>, <span class="s">"structure"</span>, <span class="s">"spans"</span>] }
+  <div class="code rv"><div class="codehd">GET /v1/knowledge/objects/kn_842</div>
+<pre><span class="cm"># a knowledge object — not text</span>
+<span class="k">GET</span> <span class="s">/v1/knowledge/objects/kn_842</span>
 
 <span class="cm"># 200 OK</span>
-{ <span class="k">"atoms"</span>: <span class="g">1284</span>, <span class="k">"tables"</span>: <span class="g">17</span>,
-  <span class="k">"reading_order"</span>: <span class="g">"resolved"</span>,
-  <span class="k">"source_spans"</span>: <span class="g">true</span>,
-  <span class="k">"certificate"</span>: <span class="s">"cert_9f2…"</span> }</pre></div>
+{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
+  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
+  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
+  <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
 </section>
 
 <section class="center">
   <span class="eye">The problem</span>
-<h2>Parsing is where AI systems start lying.</h2>
+<h2>Chatbots answer questions. Knowledges accumulate knowledge.</h2>
 
-  <p class="lead center">Most parsers flatten documents into a string. Structure, geometry, tables and provenance are destroyed before any model sees the content — and no downstream step can recover what parsing lost.</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">flattened tables</span><span class="chip bad">lost reading order</span><span class="chip bad">orphan footnotes</span><span class="chip bad">no source spans</span><span class="chip bad">silent OCR errors</span></div>
+  <p class="lead center">Prompting a model over raw files produces fluent answers with invisible foundations — and knowledge bases store conclusions while discarding the evidence. The Knowledge keeps living, governed memory and reasons only over certified claims.</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">invisible foundations</span><span class="chip bad">stale silently</span><span class="chip bad">no provenance</span><span class="chip bad">confident hallucination</span></div>
 </section>
 
 <section class="center">
   <span class="eye">What it produces</span>
-<h2>Artifacts, not strings.</h2>
+<h2>Memory that governs. Answers that carry their audit.</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>Canonical Text</h4><p>Deterministic text with stable coordinates — the same document always yields the same text.</p></div><div class="card"><h4>Structure atoms</h4><p>Tables, boxes, notes, headers, reading order — every element typed and addressable.</p></div><div class="card"><h4>Built for verification</h4><p>Every parse carries engine version, inputs, outputs and spans back to the page. Certificates in pilot; public verification endpoint at launch.</p></div>
+    <div class="card"><h4>Governed memory</h4><p>Claims with evidence, versions and resolution states — CERTIFIED, ABSTAINED, UNKNOWN. Living memory that never goes stale silently. (Built on the Knowledge Engine.)</p></div><div class="card"><h4>Grounded reasoning</h4><p>Every answer lists the claims it stands on — including the ones the Knowledge refused to use.</p></div><div class="card"><h4>A compounding asset</h4><p>The Knowledge deepens as your knowledge grows — and stays yours. White-label it, build products on it. Models are just the interface.</p></div>
   </div>
 </section>
 
@@ -96,11 +94,11 @@
 
   <div class="g3 rv" style="margin-top:26px">
     
-    <div class="card"><span class="pnum">01</span><h4>Submit</h4><p>Send a document or point the API at a source. Nothing to install, nothing to host.</p></div>
+    <div class="card"><span class="pnum">01</span><h4>Connect</h4><p>Point Knowledge at your sources — drives, wikis, mail, repos, databases, APIs. No manual writing, no manual organizing: it is born nearly ready.</p></div>
     
-    <div class="card"><span class="pnum">02</span><h4>Parse</h4><p>The measured champion stack for your document family runs — versioned and swappable.</p></div>
+    <div class="card"><span class="pnum">02</span><h4>Govern</h4><p>Claims are resolved against evidence; contradictions surfaced; insufficient evidence means ABSTAINED, never a guess. The Observatory keeps it all current.</p></div>
     
-    <div class="card"><span class="pnum">03</span><h4>Verify</h4><p>Receive artifacts plus a certificate. Every element traces to its exact position in the source.</p></div>
+    <div class="card"><span class="pnum">03</span><h4>Serve</h4><p>Ask anything — or connect your AI via API and MCP. Answers return with grounding, abstentions and a certificate.</p></div>
     
   </div>
 </section>
@@ -112,7 +110,7 @@
   <div class="pipe rv">
   <div class="pnode src"><b>Sources</b><span>documents · databases · APIs · feeds · events · audio</span></div>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode hot" href="../products/parser.html"><b>Parser</b><span>structure in, nothing lost</span></a>
+  <a class="pnode" href="../products/parser.html"><b>Parser</b><span>structure in, nothing lost</span></a>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
   <a class="pnode" href="../products/canonical.html"><b>Canonical</b><span>one universal, model-ready representation</span></a>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
@@ -141,15 +139,14 @@
   <div class="tblwrap rv"><table class="tbl">
 <thead><tr><th>Dimension</th><th>Unit</th><th>Status</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td><b>Reading order</b></td><td><span class="u">F1 vs gold</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>publication after pre-registered eval</td></tr>
-<tr><td><b>Tables</b></td><td><span class="u">structure F1</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>gold set expanding — n reported with every number</td></tr>
-<tr><td><b>OCR</b></td><td><span class="u">CER / WER</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>champions measured per document family</td></tr>
-<tr><td><b>Forms</b></td><td><span class="u">field F1</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>gold set in construction</td></tr>
-<tr><td><b>Long documents</b></td><td><span class="u">fidelity at 60+ pages</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>long-document bench in progress</td></tr>
-<tr><td><b>Charts</b></td><td><span class="u">chart-to-table</span></td><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>the engine abstains instead of guessing</td></tr>
+<tr><td><b>Claim extraction</b></td><td><span class="u">precision / recall vs gold</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>publication after pre-registered eval</td></tr>
+<tr><td><b>Abstention calibration</b></td><td><span class="u">abstains when evidence is insufficient</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>UNKNOWN counted, never hidden</td></tr>
+<tr><td><b>Grounding fidelity</b></td><td><span class="u">answers traceable to claims</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>measured on adversarial sets</td></tr>
+<tr><td><b>Staleness detection</b></td><td><span class="u">source-change propagation</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>paired with the Observatory</td></tr>
+<tr><td><b>Model portability</b></td><td><span class="u">same knowledge, any model</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>GPT · Claude · Gemini · Llama</td></tr>
 
 </tbody></table></div>
-  <p class="lead center" style="margin-top:18px;font-size:14px">Charts are the honest row: today the engine abstains rather than fabricate a table. <a href="../benchmarks.html" style="color:var(--acc2)">Continuous benchmark →</a></p>
+  <p class="lead center" style="margin-top:18px;font-size:14px">A Knowledge that cannot show its grounding is measured as wrong — fluency does not count. <a href="../benchmarks.html" style="color:var(--acc2)">Continuous benchmark →</a></p>
 </section>
 
 
@@ -159,8 +156,8 @@
 
   <div class="stats rv" style="grid-template-columns:repeat(2,1fr);max-width:400px;margin-left:auto;margin-right:auto">
     
-    <div class="stat"><span class="v mono" style="font-size:20px">1 page</span><span class="l">unit</span></div>
-    <div class="stat"><span class="v" style="color:var(--acc2)">1 credit</span><span class="l"><span class="st draft"><span class="d"></span>draft ratio</span></span></div>
+    <div class="stat"><span class="v mono" style="font-size:20px">1 knowledge operation — ingest · update · retrieve · consolidate</span><span class="l">unit</span></div>
+    <div class="stat"><span class="v" style="color:var(--acc2)">5 credits</span><span class="l"><span class="st draft"><span class="d"></span>draft ratio</span></span></div>
     
   </div>
   <p class="lead center" style="margin-top:18px;font-size:14px">Certificates included with every artifact. <a href="../pricing.html" style="color:var(--acc2)">How pricing works →</a></p>
@@ -194,9 +191,11 @@
 <h2>FAQ</h2>
 
   <div class="rv" style="max-width:760px;margin:26px auto 0;text-align:left">
-<details><summary>Which formats are supported?</summary><p>PDF, DOCX, XLSX, PPTX, HTML, images, scans and audio — plus databases, APIs and event streams through connectors. If a family is not yet measured, the API says so instead of silently degrading.</p></details>
-<details><summary>What happens when parsing is uncertain?</summary><p>The element is returned with an abstained state and the reason. UNKNOWN is a decision, not an error — nothing is fabricated.</p></details>
-<details><summary>Can I use the Parser alone?</summary><p>Yes. Every product is independent, with its own API and benchmarks. Most teams start here and add Canonical when they need a model-ready asset.</p></details>
+<details><summary>Why is this Knowledge different from any other knowledge system?</summary><p>Because of what it stands on. Every fact lives on a canonical, verifiable substrate: structured losslessly by Parser, made deterministic and reconstructible by Canonical, kept synchronized with reality by the Observatory. Other systems store what you tell them; this one can prove what it knows.</p></details>
+<details><summary>Does Knowledge compete with GPT or Claude?</summary><p>No — it feeds them. Knowledge is where your knowledge persists; models are interfaces that connect to it. Swap the model, keep the Knowledge. That is the point.</p></details>
+<details><summary>What happened to the Knowledge Engine?</summary><p>It is inside the Knowledge — the engine that governs claims, evidence and versions. You never buy it separately, the same way you never buy a database's storage engine. Knowledge: built on the Knowledge Engine.</p></details>
+<details><summary>Which model does the Knowledge use?</summary><p>Any. Providers are measured and swappable, never hardcoded. Your knowledge stays independent of the model that reads it.</p></details>
+<details><summary>Is my Knowledge shared?</summary><p>No. Each Knowledge instance is isolated by construction and reasons only over your governed knowledge. Nothing you ingest trains shared models.</p></details>
 
 </div>
 </section>

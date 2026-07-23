@@ -23,9 +23,9 @@
 
 // ── Live-flow v2: grafo causal de eventos no diagrama da camada ──
 // Não é loop nem só aleatoriedade: eventos GERAM o estágio seguinte
-// (fonte→Parser→Canonical→Brain→IA), com rejeições silenciosas no
-// Canonical e "hub pause" no Brain antes de servir. O fan-out do Brain
-// tem warm start + garantia de atividade (nunca >1.8s sem pulso — Brain
+// (source-Parser-Canonical-Knowledge-AI), with silent rejections in
+// Canonical and a "hub pause" in Knowledge before serving. Its fan-out
+// has warm start + activity guarantee (never >1.8s without a pulse —
 // sempre pronto e servindo; o Observatory é que espera o mundo mudar).
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -49,7 +49,7 @@
     evidence: { chance: 0,    cool: 0,    max: 4, dur: [1500, 2200], col: '#4FD69B', op: .95 }
   };
   // regra: nunca menos de 4 pulsos no diagrama, nunca menos de 2 saindo do
-  // Brain — aleatoriedade decide ONDE e COMO, nunca se o sistema parece ligado
+  // randomness decides WHERE and HOW, never whether the system looks alive
   var MIN_ACTIVE = { in: 1, p2c: 1, c2b: 1, out: 2 };
   var pulses = [], MAXP = 24, lastOut = performance.now();
   function pick(k) { var g = groups[k]; return g && g[Math.floor(Math.random() * g.length)]; }
@@ -73,22 +73,22 @@
     });
   }
   // ── cadeia causal ──────────────────────────────────────────────────
-  function serveFromBrain() {
-    // hub pause: o Brain "processa" antes de servir (120–340ms)
+  function serveFromKnowledge() {
+    // hub pause: Knowledge "processes" before serving (120-340ms)
     setTimeout(function () {
       spawn('out', pick('out'), Math.random() < .12 ? 'big' : 'small');
       if (Math.random() < .45) setTimeout(function () { spawn('out', pick('out'), 'small'); }, 160 + Math.random() * 260);
     }, 120 + Math.random() * 220);
   }
-  function toBrain(big) {
+  function toKnowledge(big) {
     setTimeout(function () {
-      spawn('c2b', pick('c2b'), big ? 'big' : 'small', serveFromBrain);
+      spawn('c2b', pick('c2b'), big ? 'big' : 'small', serveFromKnowledge);
     }, 100 + Math.random() * 220);
   }
   function toCanonical(big) {
     setTimeout(function () {
       spawn('p2c', pick('p2c'), big ? 'big' : 'small', function () {
-        if (Math.random() < .7) toBrain(big); // senão: Canonical rejeitou (quiet confidence)
+        if (Math.random() < .7) toKnowledge(big); // else: Canonical rejected (quiet confidence)
       });
     }, 90 + Math.random() * 200);
   }
@@ -112,7 +112,7 @@
     });
   }
   // Observatory: silêncio longo → rajada de evidências; a primeira
-  // evidência da rajada dispara uma cadeia importante até o Brain
+  // burst evidence fires an important chain up to Knowledge
   function scheduleBurst() {
     setTimeout(function () {
       var g = groups.evidence;
@@ -202,15 +202,15 @@
   }, 4200);
 })();
 
-// ── Brain: galáxia de conhecimento — densa, rotativa, explorável ──
+// -- Knowledge: knowledge galaxy - dense, rotating, explorable --
 // Clusters radiais; satélites entram continuamente; conexões cruzadas
 // entre clusters. A rede gira devagar e o HOVER num nó acende suas
 // relações DIRETAS (forte) e INDIRETAS (médio), apagando o resto —
-// exatamente o que o Brain faz: rastrear relações. Nada some; o
+// exactly what Knowledge does: trace relationships. Nothing vanishes;
 // contador só sobe. Sem JS / reduced-motion: grafo estático permanece.
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var svg = document.querySelector('svg.mo-brain');
+  var svg = document.querySelector('svg.mo-know');
   if (!svg) return;
   var NS = 'http://www.w3.org/2000/svg';
   svg.innerHTML = '';
@@ -372,14 +372,14 @@
       s.y = Math.max(26, Math.min(184, y));
       var op = hasFocus ? NOP[s.lvl] : s.op;
       var rr = s.sz * age * (s.lvl === 0 ? 2.4 : s.lvl === 1 ? 1.5 : 1);
-      s.el.setAttribute('cx', s.x); s.el.setAttribute('cy', s.y); s.el.setAttribute('r', rr);
+      s.el.setAttribute('cx', s.x); s.el.setAttribute('cy', s.y); s.el.setAttribute('r', Math.max(0.05, rr));
       s.el.setAttribute('style', 'fill:' + (s.lvl <= 1 && hasFocus ? 'var(--acc)' : s.col) + ';opacity:' + (op * age));
     }
     for (i = 0; i < hubs.length; i++) {
       var h = hubs[i];
       var hr = (3.5 + Math.min(4.5, h.sats * 0.12)) * (h.lvl === 0 ? 1.5 : 1);
       var hop = hasFocus ? Math.max(NOP[h.lvl], 0.25) : 1;
-      h.el.setAttribute('cx', h.x); h.el.setAttribute('cy', h.y); h.el.setAttribute('r', hr);
+      h.el.setAttribute('cx', h.x); h.el.setAttribute('cy', h.y); h.el.setAttribute('r', Math.max(0.05, hr));
       h.el.setAttribute('style', 'fill:var(--acc);opacity:' + hop);
       h.lab.setAttribute('x', h.x); h.lab.setAttribute('y', h.y - hr - 3);
       h.lab.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:7.5px;fill:var(--fg2);opacity:' + (hasFocus ? Math.max(NOP[h.lvl], 0.2) : 0.9));
