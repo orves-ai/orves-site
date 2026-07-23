@@ -83,18 +83,24 @@
 
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
-    <svg viewBox="0 0 1000 640" role="img" aria-label="Architectural stack: reality — documents, web, images, audio, video, APIs and other sources — flows up through Parser into The Verifiable Knowledge Layer, which adds provenance, relationships, history and governance. AI applications, AI agents, any model and people build on top of the layer.">
-      <!-- topo: quem constrói sobre a camada -->
-      <text class="m-t" x="500" y="64" text-anchor="middle" style="letter-spacing:.14em">ENTERPRISE AI</text>
-      <rect class="fnode" x="195" y="96" width="150" height="34" rx="9"/><text class="flbl" x="270" y="117" text-anchor="middle">AI applications</text>
-      <rect class="fnode" x="385" y="96" width="120" height="34" rx="9"/><text class="flbl" x="445" y="117" text-anchor="middle">AI agents</text>
-      <rect class="fnode" x="545" y="96" width="120" height="34" rx="9"/><text class="flbl" x="605" y="117" text-anchor="middle">Any model</text>
-      <rect class="fnode" x="705" y="96" width="100" height="34" rx="9"/><text class="flbl" x="755" y="117" text-anchor="middle">People</text>
-      <!-- fan-out: a camada serve tudo acima -->
-      <path class="fpath" data-flow="out" d="M 340 252 C 300 210 270 180 270 130"/>
-      <path class="fpath" data-flow="out" d="M 470 252 C 455 210 445 180 445 130"/>
-      <path class="fpath" data-flow="out" d="M 560 252 C 590 210 605 180 605 130"/>
-      <path class="fpath" data-flow="out" d="M 680 252 C 720 210 755 180 755 130"/>
+    <svg viewBox="0 0 1000 640" role="img" aria-label="Architectural stack: reality — documents, web, images, audio, video, APIs and other sources — flows up through Parser into The Verifiable Knowledge Layer, which adds provenance, relationships, history and governance. the modern AI stack — LLMs, agents, AI memory, MCP servers, workflows and applications — builds on top of the layer.">
+      <!-- topo: a stack de IA que consome a camada -->
+      <text class="m-t" x="500" y="64" text-anchor="middle" style="letter-spacing:.14em">AI CONSUMERS</text>
+      <rect class="fnode" x="55"  y="96" width="80"  height="34" rx="9"/><text class="flbl" x="95"  y="117" text-anchor="middle">LLMs</text>
+      <rect class="fnode" x="155" y="96" width="100" height="34" rx="9"/><text class="flbl" x="205" y="117" text-anchor="middle">Agents</text>
+      <rect class="fnode" x="275" y="96" width="120" height="34" rx="9"/><text class="flbl" x="335" y="117" text-anchor="middle">AI Memory</text>
+      <rect class="fnode" x="415" y="96" width="130" height="34" rx="9"/><text class="flbl" x="480" y="117" text-anchor="middle">MCP Servers</text>
+      <rect class="fnode" x="565" y="96" width="120" height="34" rx="9"/><text class="flbl" x="625" y="117" text-anchor="middle">Workflows</text>
+      <rect class="fnode" x="705" y="96" width="130" height="34" rx="9"/><text class="flbl" x="770" y="117" text-anchor="middle">Applications</text>
+      <rect class="fnode" x="855" y="96" width="90"  height="34" rx="9"/><text class="flbl" x="900" y="117" text-anchor="middle">Others</text>
+      <!-- fan-out: a camada serve toda a stack -->
+      <path class="fpath" data-flow="out" d="M 240 252 C 160 210 95 180 95 130"/>
+      <path class="fpath" data-flow="out" d="M 330 252 C 270 210 205 180 205 130"/>
+      <path class="fpath" data-flow="out" d="M 420 252 C 380 210 335 180 335 130"/>
+      <path class="fpath" data-flow="out" d="M 500 252 C 495 210 480 180 480 130"/>
+      <path class="fpath" data-flow="out" d="M 580 252 C 610 210 625 180 625 130"/>
+      <path class="fpath" data-flow="out" d="M 670 252 C 730 210 770 180 770 130"/>
+      <path class="fpath" data-flow="out" d="M 760 252 C 840 210 900 180 900 130"/>
       <!-- A CAMADA -->
       <rect class="fnode main" x="170" y="252" width="660" height="108" rx="16" style="fill:color-mix(in srgb,var(--acc) 5%,var(--panel))"/>
       <text class="flbl b" x="500" y="300" text-anchor="middle" style="font-size:16.5px;letter-spacing:.09em">THE VERIFIABLE KNOWLEDGE LAYER</text>
@@ -122,15 +128,15 @@
       <g class="schip" style="animation-delay:.4s"><rect class="fnode" x="441" y="546" width="118" height="30" rx="8"/><text class="flbl" x="500" y="565" text-anchor="middle">Audio</text></g>
       <g class="schip" style="animation-delay:.5s"><rect class="fnode" x="577" y="546" width="118" height="30" rx="8"/><text class="flbl" x="636" y="565" text-anchor="middle">Video</text></g>
       <g class="schip" style="animation-delay:.6s"><rect class="fnode" x="713" y="546" width="118" height="30" rx="8"/><text class="flbl" x="772" y="565" text-anchor="middle">APIs</text></g>
-      <g class="schip" style="animation-delay:.7s"><rect class="fnode" x="849" y="546" width="118" height="30" rx="8"/><text class="flbl" x="908" y="565" text-anchor="middle">+ others</text></g>
+      <g class="schip" style="animation-delay:.7s"><rect class="fnode" x="849" y="546" width="118" height="30" rx="8"/><text class="flbl" x="908" y="565" text-anchor="middle">Others</text></g>
       <text class="m-t" x="500" y="614" text-anchor="middle" style="letter-spacing:.14em">REALITY</text>
       <!-- pulsos estáticos (fallback prefers-reduced-motion usa opacidade 0) -->
       <circle class="fdot" r="3"   style="offset-path:path('M 92 546 C 92 510 380 510 380 478');animation-delay:0s"/>
       <circle class="fdot" r="3"   style="offset-path:path('M 500 546 L 500 478');animation-delay:-3s"/>
       <circle class="fdot" r="3"   style="offset-path:path('M 908 546 C 908 510 620 510 620 478');animation-delay:-6s"/>
       <circle class="fdot" r="3"   style="offset-path:path('M 500 422 L 500 360');animation-delay:-2s"/>
-      <circle class="fdot" r="3.2" style="offset-path:path('M 470 252 C 455 210 445 180 445 130');animation-delay:-1.5s"/>
-      <circle class="fdot" r="3.2" style="offset-path:path('M 680 252 C 720 210 755 180 755 130');animation-delay:-4.5s"/>
+      <circle class="fdot" r="3.2" style="offset-path:path('M 420 252 C 380 210 335 180 335 130');animation-delay:-1.5s"/>
+      <circle class="fdot" r="3.2" style="offset-path:path('M 670 252 C 730 210 770 180 770 130');animation-delay:-4.5s"/>
     </svg>
   </div>
 </section>
