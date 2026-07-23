@@ -432,9 +432,9 @@ html.js .mo-obs .delta{animation:mDelta 7s ease-in-out infinite}
 @media(max-width:900px){.h1b{font-size:30px}}
 
 /* fluxo legível: entrada mais verde, conectores internos mais fortes, saída neutra */
-.flowart path[data-flow="in"]{stroke:color-mix(in srgb,var(--acc) 22%,var(--line2))}
+.flowart path[data-flow="in"]{stroke:var(--line2)}
 .flowart path[data-flow="p2c"],.flowart path[data-flow="c2b"]{stroke:color-mix(in srgb,var(--acc) 40%,var(--line2));stroke-width:1.6}
-.flowart path[data-flow="out"]{stroke:var(--line2)}
+.flowart path[data-flow="out"]{stroke:color-mix(in srgb,var(--acc) 30%,var(--line2))}
 
 /* Observatory: observa, nao processa — contorno tracejado que respira */
 .flowart .obsnode{stroke:color-mix(in srgb,var(--acc) 45%,transparent);stroke-dasharray:5 4}
