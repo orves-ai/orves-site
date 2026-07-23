@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Orves — The Verifiable Knowledge Layer for AI</title>
+<meta name="description" content="Orves is verifiable knowledge infrastructure for AI: four composable products — Parser, Canonical, Brain and Observatory — to acquire, structure, persist and continuously verify the knowledge AI systems rely on."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a href="products.html" class="">Products <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
+        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
+        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
+        <a href="products/brain.html">Brain <em>Persistent knowledge &amp; memory for AI</em></a>
+        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+      </span></span>
+    </span>
+    <a href="developers.html" class="">Developers</a>
+    <a href="research.html" class="">Research</a>
+    <a href="pricing.html" class="">Pricing</a>
+    <a href="why-orves.html" class="">Company</a>
+  </div>
+  <span class="sp"></span>
+  <a class="si" href="signin.html">Sign in</a>
+  <a class="btn" href="signup.html">Request access</a>
+</div></nav>
+
+<main class="wrap">
+
+
+
+<section class="hero solo" style="padding:100px 0 52px;border-top:0">
+  <div>
+    <h1 class="h1b" style="margin-left:auto;margin-right:auto">AI learned to answer.<br>It never learned to build knowledge you can trust.</h1>
+    <p class="mono" style="font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin:14px 0 22px">The Verifiable Knowledge Layer for AI</p>
+    <p class="sub" style="max-width:56ch;margin-top:0"><b style="color:var(--fg)">Four independent products. One knowledge infrastructure.</b><br>Turning evidence into persistent, governed, trusted knowledge for AI.</p>
+    <div class="cta" style="margin-top:6px">
+      <a class="btn" href="products.html">Explore the platform</a>
+      <a class="btn gh" href="architecture.html">See the architecture</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="center" style="border-top:0;padding-top:26px">
+  <div class="flowart rv">
+    <svg viewBox="0 0 1000 470" role="img" aria-label="Sources flow through Parser, Canonical and Brain — the verifiable knowledge layer — and AI systems draw from it. The Brain gives the Observatory its watch scope; the Observatory watches sources, and when it detects new evidence, the change re-enters through Parser and is adjudicated in Canonical before the Brain serves the new state.">
+      <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">SOURCES</text>
+      <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">PDFs</text></g>
+      <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">Web</text></g>
+      <g class="schip" style="animation-delay:.3s"><rect class="fnode" x="36" y="140" width="96" height="30" rx="8"/><text class="flbl" x="84" y="159" text-anchor="middle">Images</text></g>
+      <g class="schip" style="animation-delay:.4s"><rect class="fnode" x="36" y="188" width="96" height="30" rx="8"/><text class="flbl" x="84" y="207" text-anchor="middle">Audio</text></g>
+      <g class="schip" style="animation-delay:.5s"><rect class="fnode" x="36" y="236" width="96" height="30" rx="8"/><text class="flbl" x="84" y="255" text-anchor="middle">Video</text></g>
+      <g class="schip" style="animation-delay:.6s"><rect class="fnode" x="36" y="284" width="96" height="30" rx="8"/><text class="flbl" x="84" y="303" text-anchor="middle">APIs</text></g>
+      <g class="schip" style="animation-delay:.7s"><rect class="fnode" x="36" y="332" width="96" height="30" rx="8"/><text class="flbl" x="84" y="351" text-anchor="middle">+ others</text></g>
+      <!-- fan-in: fontes → Parser -->
+      <path class="fpath" data-flow="in" d="M 132 59  C 200 59  230 150 258 172"/>
+      <path class="fpath" data-flow="in" d="M 132 107 C 200 107 230 160 258 180"/>
+      <path class="fpath" data-flow="in" d="M 132 155 C 200 155 230 172 258 188"/>
+      <path class="fpath" data-flow="in" d="M 132 203 C 200 203 232 198 258 196"/>
+      <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
+      <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
+      <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
+      <!-- A CAMADA: halo abraça os três estágios -->
+      <rect class="layerbox" x="240" y="128" width="502" height="292" rx="20"/>
+      <text class="m-t" x="491" y="122" text-anchor="middle" style="letter-spacing:.16em;opacity:.85">VERIFIABLE KNOWLEDGE LAYER</text>
+      <!-- Parser -->
+      <rect class="fnode main" x="258" y="150" width="136" height="90" rx="14"/>
+      <text class="flbl b" x="326" y="188" text-anchor="middle" style="font-size:17px">Parser</text>
+      <text class="flbl dim" x="326" y="210" text-anchor="middle" style="font-size:10.5px">Evidence</text>
+      <path class="fpath" data-flow="p2c" d="M 394 195 L 424 195"/>
+      <!-- Canonical -->
+      <rect class="fnode main" x="424" y="150" width="136" height="90" rx="14"/>
+      <text class="flbl b" x="492" y="188" text-anchor="middle" style="font-size:17px">Canonical</text>
+      <text class="flbl dim" x="492" y="210" text-anchor="middle" style="font-size:10.5px">Knowledge</text>
+      <path class="fpath" data-flow="c2b" d="M 560 195 L 590 195"/>
+      <!-- Brain -->
+      <rect class="fnode main brainbox" x="590" y="150" width="136" height="90" rx="14"/>
+      <text class="flbl b" x="658" y="188" text-anchor="middle" style="font-size:17px">Brain</text>
+      <text class="flbl dim" x="658" y="210" text-anchor="middle" style="font-size:10.5px">Memory</text>
+      <!-- fan-out: Brain → sistemas de IA -->
+      <path class="fpath" data-flow="out" d="M 726 170 C 790 140 810 92  866 76"/>
+      <path class="fpath" data-flow="out" d="M 726 182 C 790 168 810 140 866 130"/>
+      <path class="fpath" data-flow="out" d="M 726 194 C 790 194 810 188 866 184"/>
+      <path class="fpath" data-flow="out" d="M 726 206 C 790 222 810 232 866 238"/>
+      <path class="fpath" data-flow="out" d="M 726 218 C 790 260 810 284 866 292"/>
+      <path class="fpath" data-flow="out" d="M 726 228 C 790 300 810 334 866 346"/>
+      <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">AI SYSTEMS</text>
+      <rect class="fnode" x="866" y="60"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="79"  text-anchor="middle">ChatGPT</text>
+      <rect class="fnode" x="866" y="114" width="110" height="30" rx="8"/><text class="flbl" x="921" y="133" text-anchor="middle">Claude</text>
+      <rect class="fnode" x="866" y="168" width="110" height="30" rx="8"/><text class="flbl" x="921" y="187" text-anchor="middle">Gemini</text>
+      <rect class="fnode" x="866" y="222" width="110" height="30" rx="8"/><text class="flbl" x="921" y="241" text-anchor="middle">Kimi</text>
+      <rect class="fnode" x="866" y="276" width="110" height="30" rx="8"/><text class="flbl" x="921" y="295" text-anchor="middle">any model</text>
+      <rect class="fnode" x="866" y="330" width="110" height="30" rx="8"/><text class="flbl" x="921" y="349" text-anchor="middle">others</text>
+      <!-- Observatory: ciclo — watch scope do Brain, nova evidência re-entra pelo Parser -->
+      <rect class="fnode obsnode" x="402" y="368" width="180" height="40" rx="12"/>
+      <text class="flbl" x="492" y="393" text-anchor="middle" style="font-size:13px">Observatory</text>
+      <path class="fpath dash obs" data-flow="watch" d="M 658 244 C 658 310 620 372 582 382"/>
+      <path class="fpath dash obs" data-flow="evidence" d="M 402 382 C 352 374 326 300 326 244"/>
+      <!-- pulsos -->
+      <circle class="fdot" r="3"   style="offset-path:path('M 132 59 C 200 59 230 150 258 172');animation-delay:0s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 132 203 C 200 203 232 198 258 196');animation-delay:-3s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 132 347 C 200 347 230 250 258 220');animation-delay:-6s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 394 195 L 424 195');animation-delay:-2s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 560 195 L 590 195');animation-delay:-5s"/>
+      <circle class="fdot" r="3.2" style="offset-path:path('M 726 182 C 790 168 810 140 866 130');animation-delay:-1.5s"/>
+      <circle class="fdot" r="3.2" style="offset-path:path('M 726 218 C 790 260 810 284 866 292');animation-delay:-4.5s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 658 244 C 658 310 620 372 582 382');animation-delay:-2.5s"/>
+      <circle class="fdot" r="3"   style="offset-path:path('M 402 382 C 352 374 326 300 326 244');animation-delay:-5.5s"/>
+    </svg>
+  </div>
+</section>
+
+
+<section style="padding:52px 0 0">
+  <div class="center" style="margin-bottom:56px">
+    <span class="eye">The products</span>
+    <h2 style="margin:22px 0 0">Four products. One knowledge infrastructure.</h2>
+  </div>
+
+  
+  <div class="pchap rv">
+    <div>
+      <span class="bignum">01</span><span class="pq">Parser</span>
+      <h3>Turn unstructured content into structured evidence.</h3>
+      <p class="d">Converts documents, scans, images, audio and video into structured, machine-readable evidence with provenance.</p>
+      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
+      <a href="products/parser.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Parser →</a>
+    </div>
+    <div class="pmotif">
+      <svg class="mo-parser" viewBox="0 0 340 210" role="img" aria-label="Animation: a real document — title, paragraphs, table, chart, signature — is scanned; on the right, its structure is detected element by element, with reading order and provenance.">
+        <rect class="m-box" x="14" y="18" width="140" height="174" rx="10"/>
+        <text class="m-t" x="26" y="36">q2_report.pdf</text>
+        <g class="dl" style="animation-delay:.0s"><rect x="26" y="46" width="78" height="9" rx="3" style="fill:var(--fg3);opacity:.55"/></g>
+        <line class="m-l" x1="26" y1="66" x2="140" y2="66"/>
+        <line class="m-l" x1="26" y1="74" x2="128" y2="74"/>
+        <line class="m-l" x1="26" y1="82" x2="136" y2="82"/>
+        <g class="dl" style="animation-delay:.5s">
+          <rect x="26" y="92" width="114" height="28" rx="3" style="fill:none;stroke:var(--fg3);opacity:.55"/>
+          <line x1="26" y1="106" x2="140" y2="106" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
+          <line x1="64" y1="92" x2="64" y2="120" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
+          <line x1="102" y1="92" x2="102" y2="120" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
+        </g>
+        <g class="dl" style="animation-delay:1s">
+          <rect x="26" y="130" width="8" height="26" style="fill:var(--fg3);opacity:.45"/>
+          <rect x="38" y="140" width="8" height="16" style="fill:var(--fg3);opacity:.45"/>
+          <rect x="50" y="134" width="8" height="22" style="fill:var(--fg3);opacity:.45"/>
+        </g>
+        <path class="m-l" d="M 96 176 C 104 168 112 182 120 172 C 126 166 132 176 138 170" style="opacity:.5"/>
+        <line class="scan m-l acc" x1="160" y1="24" x2="160" y2="186" style="opacity:.35"/>
+        <rect class="m-box" x="186" y="18" width="140" height="174" rx="10"/>
+        <text class="m-t acc" x="198" y="36">structured</text>
+        <g class="sb" style="animation-delay:.0s">
+          <rect x="198" y="44" width="60" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
+          <text class="m-t acc" x="204" y="54" style="font-size:8.5px">TITLE</text>
+        </g>
+        <g class="sb" style="animation-delay:.5s">
+          <rect x="198" y="64" width="116" height="28" rx="4" style="fill:none;stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
+          <text class="m-t acc" x="204" y="74" style="font-size:8.5px">TABLE</text>
+          <line class="m-l acc" x1="204" y1="82" x2="306" y2="82" style="opacity:.5"/>
+          <line class="m-l acc" x1="204" y1="87" x2="306" y2="87" style="opacity:.5"/>
+        </g>
+        <g class="sb" style="animation-delay:1s">
+          <rect x="198" y="100" width="52" height="26" rx="4" style="fill:none;stroke:color-mix(in srgb,var(--hold) 50%,transparent)"/>
+          <text class="m-t" x="204" y="111" style="font-size:8.5px;fill:var(--hold)">FIGURE</text>
+        </g>
+        <g class="sb" style="animation-delay:1.3s">
+          <rect x="258" y="100" width="56" height="12" rx="4" style="fill:none;stroke:var(--line2)"/>
+          <text class="m-t" x="263" y="109" style="font-size:8px">ENTITIES</text>
+          <rect x="258" y="116" width="56" height="12" rx="4" style="fill:none;stroke:var(--line2)"/>
+          <text class="m-t" x="263" y="125" style="font-size:8px">RELATIONS</text>
+        </g>
+        <g class="sb" style="animation-delay:1.7s">
+          <rect x="198" y="136" width="88" height="14" rx="7" style="fill:color-mix(in srgb,var(--acc) 9%,transparent);stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
+          <text class="m-t acc" x="205" y="146" style="font-size:8px">READING ORDER ✓</text>
+          <rect x="198" y="155" width="80" height="14" rx="7" style="fill:color-mix(in srgb,var(--acc) 9%,transparent);stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
+          <text class="m-t acc" x="205" y="165" style="font-size:8px">PROVENANCE ✓</text>
+        </g>
+        <g class="sb" style="animation-delay:2s">
+          <text class="m-t" x="198" y="184" style="font-size:8.5px">ev_84f2 · page 4 · bbox ✓</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  
+  <div class="pchap flip rv">
+    <div class="pmotif">
+      <svg class="mo-canon" viewBox="0 0 340 210" role="img" aria-label="Animation: three conflicting claims about a contract renewal date enter Canonical, which adjudicates them into one governed knowledge object — supported, version 3, with history preserved.">
+        <g class="sb" style="animation-delay:0s">
+          <rect x="10" y="30" width="108" height="24" rx="6" class="m-box" transform="rotate(-2 64 42)"/>
+          <text class="m-t" x="20" y="46" transform="rotate(-2 64 42)">Renewal · Jun 30</text>
+        </g>
+        <g class="sb" style="animation-delay:.35s">
+          <rect x="22" y="64" width="108" height="24" rx="6" class="m-box"/>
+          <text class="m-t" x="32" y="80">Renewal · Sep 1</text>
+        </g>
+        <g class="sb" style="animation-delay:.7s">
+          <rect x="12" y="100" width="108" height="24" rx="6" class="m-box" transform="rotate(2 66 112)"/>
+          <text class="m-t" x="22" y="116" transform="rotate(2 66 112)">Renewal · Jul 15</text>
+        </g>
+        <text class="m-t" x="66" y="148" text-anchor="middle" style="opacity:.65">conflicting claims</text>
+        <line class="m-l" x1="116" y1="40" x2="148" y2="68"/>
+        <line class="m-l" x1="130" y1="76" x2="148" y2="78"/>
+        <line class="m-l" x1="118" y1="114" x2="148" y2="88"/>
+        <rect x="148" y="56" width="76" height="44" rx="10" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
+        <text class="m-t acc" x="186" y="75" text-anchor="middle">Canonical</text>
+        <text class="m-t" x="186" y="89" text-anchor="middle" style="font-size:8px;opacity:.75">adjudicates</text>
+        <line class="m-l acc" x1="224" y1="78" x2="246" y2="78"/>
+        <g class="sb" style="animation-delay:1.3s">
+          <rect x="246" y="46" width="82" height="64" rx="8" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/>
+          <text class="m-t" x="254" y="63" style="font-size:8.5px;opacity:.8">Contract renewal</text>
+          <text class="m-t acc" x="254" y="79" style="font-weight:600;font-size:11px">Sep 1</text>
+          <text class="m-t" x="254" y="97" style="font-size:8.5px"><tspan style="fill:var(--acc2)">Supported</tspan> · v3</text>
+        </g>
+        <g class="sb" style="animation-delay:1.7s">
+          <text class="m-t" x="246" y="130" style="font-size:8.5px">v1 · v2 · <tspan style="fill:var(--acc2)">v3</tspan></text>
+          <text class="m-t" x="246" y="144" style="font-size:8.5px;opacity:.7">history preserved</text>
+        </g>
+        <text class="m-t" x="170" y="186" text-anchor="middle" style="opacity:.7">decided · versioned · never overwritten</text>
+      </svg>
+    </div>
+    <div>
+      <span class="bignum">02</span><span class="pq">Canonical</span>
+      <h3>Turn evidence into consistent, verifiable knowledge.</h3>
+      <p class="d">Multiple conflicting representations become one governed knowledge object. Every change creates a new version — nothing is ever overwritten.</p>
+      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
+      <a href="products/canonical.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Canonical →</a>
+    </div>
+  </div>
+
+  
+  <div class="pchap rv">
+    <div>
+      <span class="bignum">03</span><span class="pq">Brain</span>
+      <h3>AI forgets. Brain doesn&rsquo;t.</h3>
+      <p class="d"><b style="color:var(--fg)">Brain</b> is persistent knowledge that survives conversations, sessions, models and agents — memory that accumulates instead of vanishing.</p>
+      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
+      <a href="products/brain.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Brain →</a>
+    </div>
+    <div class="pmotif">
+      <svg class="mo-brain" viewBox="0 0 340 210" role="img" aria-label="Animation: AI systems connect and disconnect — ChatGPT, Claude, an agent, Gemini — while the Brain underneath keeps every contribution: its memory only grows.">
+        <text class="m-t" x="14" y="24" style="letter-spacing:.1em;opacity:.65">AI SYSTEMS</text>
+        <g class="bc" style="animation-delay:0s">
+          <rect x="14" y="34" width="72" height="24" rx="7" class="m-box"/>
+          <text class="m-t" x="50" y="50" text-anchor="middle">ChatGPT</text>
+          <line class="m-l" x1="50" y1="58" x2="50" y2="112" stroke-dasharray="3 3"/>
+        </g>
+        <g class="bc" style="animation-delay:2.6s">
+          <rect x="94" y="34" width="72" height="24" rx="7" class="m-box"/>
+          <text class="m-t" x="130" y="50" text-anchor="middle">Claude</text>
+          <line class="m-l" x1="130" y1="58" x2="130" y2="112" stroke-dasharray="3 3"/>
+        </g>
+        <g class="bc" style="animation-delay:5.2s">
+          <rect x="174" y="34" width="72" height="24" rx="7" class="m-box"/>
+          <text class="m-t" x="210" y="50" text-anchor="middle">agent</text>
+          <line class="m-l" x1="210" y1="58" x2="210" y2="112" stroke-dasharray="3 3"/>
+        </g>
+        <g class="bc" style="animation-delay:7.8s">
+          <rect x="254" y="34" width="72" height="24" rx="7" class="m-box"/>
+          <text class="m-t" x="290" y="50" text-anchor="middle">Gemini</text>
+          <line class="m-l" x1="290" y1="58" x2="290" y2="112" stroke-dasharray="3 3"/>
+        </g>
+        <rect x="14" y="112" width="312" height="48" rx="12" style="fill:color-mix(in srgb,var(--acc) 5%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
+        <text class="m-t acc" x="24" y="130">Brain</text>
+        <g class="bs" style="animation-delay:.6s">
+          <rect x="24" y="138" width="48" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 30%,transparent)"/>
+          <text class="m-t" x="30" y="148" style="font-size:7.5px;fill:var(--fg)">claims</text>
+        </g>
+        <g class="bs" style="animation-delay:3.2s">
+          <rect x="80" y="138" width="62" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 30%,transparent)"/>
+          <text class="m-t" x="86" y="148" style="font-size:7.5px;fill:var(--fg)">evidence</text>
+        </g>
+        <g class="bs" style="animation-delay:5.8s">
+          <rect x="150" y="138" width="74" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 30%,transparent)"/>
+          <text class="m-t" x="156" y="148" style="font-size:7.5px;fill:var(--fg)">decisions</text>
+        </g>
+        <g class="bs" style="animation-delay:8.4s">
+          <rect x="232" y="138" width="86" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 30%,transparent)"/>
+          <text class="m-t" x="238" y="148" style="font-size:7.5px;fill:var(--fg)">relationships</text>
+        </g>
+        <text class="m-t" x="170" y="192" text-anchor="middle" style="opacity:.7">models change · memory remains</text>
+      </svg>
+    </div>
+  </div>
+
+  
+  <div class="pchap flip rv" style="border-bottom:1px solid var(--line)">
+    <div class="pmotif">
+      <svg class="mo-obs" viewBox="0 0 340 210" role="img" aria-label="Animation: a watched SEC filing changes; the Observatory compares what the Brain knows against reality, detects the mismatch, and the change flows through Parser and Canonical into a new version the Brain serves.">
+        <g class="os" style="animation-delay:0s">
+          <rect x="14" y="20" width="120" height="26" rx="7" class="m-box"/>
+          <text class="m-t" x="24" y="37">SEC filing</text>
+          <rect x="140" y="20" width="66" height="26" rx="7" style="fill:color-mix(in srgb,var(--hold) 10%,transparent);stroke:color-mix(in srgb,var(--hold) 50%,transparent)"/>
+          <text class="m-t" x="150" y="37" style="fill:var(--hold)">changed</text>
+        </g>
+        <g class="os" style="animation-delay:1.6s">
+          <line class="m-l" x1="60" y1="46" x2="60" y2="62" stroke-dasharray="3 3"/>
+          <rect x="14" y="64" width="204" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
+          <text class="m-t" x="24" y="81"><tspan style="fill:var(--acc2)">Observatory</tspan> · Brain v3 <tspan style="fill:var(--hold)">≠</tspan> reality</text>
+        </g>
+        <g class="os" style="animation-delay:3.2s">
+          <line class="m-l" x1="60" y1="90" x2="60" y2="106" stroke-dasharray="3 3"/>
+          <rect x="14" y="108" width="150" height="26" rx="7" class="m-box"/>
+          <text class="m-t" x="24" y="125">Parser → Canonical</text>
+          <rect x="170" y="108" width="80" height="26" rx="13" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
+          <text class="m-t acc" x="180" y="125" style="font-size:8.5px">new version</text>
+        </g>
+        <g class="os" style="animation-delay:4.8s">
+          <line class="m-l" x1="60" y1="134" x2="60" y2="150" stroke-dasharray="3 3"/>
+          <rect x="14" y="152" width="160" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/>
+          <text class="m-t acc" x="24" y="169">Brain updated · v4</text>
+        </g>
+        <text class="m-t" x="170" y="200" text-anchor="middle" style="opacity:.7">the world moved — the knowledge followed</text>
+      </svg>
+    </div>
+    <div>
+      <span class="bignum">04</span><span class="pq">Observatory</span>
+      <h3>Reality changes. Knowledge should too.</h3>
+      <p class="d">Watches what your Brain knows against reality. When reality changes, knowledge updates — through Parser and Canonical, never by editing the Brain.</p>
+      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
+      <a href="products/observatory.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Observatory →</a>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="hero" style="padding:24px 0 0;border-top:0;grid-template-columns:.72fr 1.28fr">
+    <div>
+      <span class="eye">Verification · API</span>
+      <h2 style="margin-top:12px">Ask for answers.<br>Receive evidence.</h2>
+      <p class="lead" style="font-size:15px">Every answer is a verifiable knowledge object — evidence, contradictions, versions and verification state, one GET away.</p>
+      <div class="cta" style="margin-top:22px">
+        <a class="btn gh" href="developers.html">Read the docs</a>
+        <a class="btn gh" href="developers.html">View API reference</a>
+      </div>
+    </div>
+    <div class="kx rv">
+      <div class="kxhead mono">GET /v1/knowledge/kn_842<span class="kxpill">pilot</span></div>
+      <div class="kxclaim mono">Contract renewal date moved to 2026-09-01</div>
+      <div class="kxstat mono"><span class="ok">● SUPPORTED</span><span>v4</span><span>supersedes kn_841</span><span class="kxver">✓ verified</span></div>
+      <details open>
+        <summary class="mono">Evidence<span class="n">3</span></summary>
+        <div class="kxrow mono"><span class="y">✓</span> amendment_v2.pdf · page 4</div>
+        <div class="kxrow mono"><span class="y">✓</span> board_minutes.pdf · page 7</div>
+        <div class="kxrow mono"><span class="y">✓</span> earnings_call.mp3 · 12:48</div>
+      </details>
+      <details>
+        <summary class="mono">Contradictions<span class="n">1</span></summary>
+        <div class="kxrow mono"><span class="x">✕</span> contract_v1.pdf · page 2 — superseded by v4</div>
+      </details>
+      <details>
+        <summary class="mono">History<span class="n">4 versions</span></summary>
+        <div class="kxrow mono">v4 ← v3 ← v2 ← v1 · nothing overwritten</div>
+      </details>
+      <details>
+        <summary class="mono">Verification</summary>
+        <div class="kxrow mono">last verified 2026-07-21 · abstains when evidence is insufficient</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:24ch;margin:0 auto 16px">Build AI systems that know where every answer came from.</h2>
+  <p class="mono" style="font-size:12px;letter-spacing:.05em;color:var(--fg3);margin-bottom:14px">Evidence <span style="color:var(--fg3)">→</span> Knowledge <span style="color:var(--fg3)">→</span> Memory <span style="color:var(--fg3)">→</span> Living knowledge <span style="color:var(--fg3)">→</span> <span style="color:var(--acc2)">AI</span></p>
+  <p class="lead center" style="margin-bottom:28px">From evidence to trusted AI — one product or the complete infrastructure.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="products.html">Explore the products</a>
+    <a class="btn gh" href="research.html">Read the research</a>
+  </div>
+</section>
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
+      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Brain <span>→</span> <b>Observatory</b></p>
+    </div>
+    <div class="ftcol"><div class="h">Products</div>
+      <a href="products/parser.html">Parser</a>
+      <a href="products/canonical.html">Canonical</a>
+      <a href="products/brain.html">Brain</a>
+      <a href="products/observatory.html">Observatory</a>
+    </div>
+    <div class="ftcol"><div class="h">Platform</div>
+      <a href="architecture.html">Architecture</a>
+      <a href="trust.html">Verification</a>
+      <a href="how-it-works.html">How it works</a>
+    </div>
+    <div class="ftcol"><div class="h">Resources</div>
+      <a href="developers.html">Developers</a>
+      <a href="research.html">Research</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="use-cases.html">Use cases</a>
+    </div>
+    <div class="ftcol"><div class="h">Company</div>
+      <a href="why-orves.html">About</a>
+      <a href="mailto:pilot@orves.ai">Contact</a>
+      <a>Terms <span class="st soon"><span class="d"></span>soon</span></a>
+      <a>Privacy <span class="st soon"><span class="d"></span>soon</span></a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span><span class="cat">Verifiable Knowledge Infrastructure</span></div>
+</div></footer>
+</div>
+<script src="assets/orves.js"></script>
+</body></html>

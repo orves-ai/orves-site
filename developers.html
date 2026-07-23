@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Orves — Developers</title>
+<meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Brain and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a href="products.html" class="">Products <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
+        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
+        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
+        <a href="products/brain.html">Brain <em>Persistent knowledge &amp; memory for AI</em></a>
+        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+      </span></span>
+    </span>
+    <a href="developers.html" class="on">Developers</a>
+    <a href="research.html" class="">Research</a>
+    <a href="pricing.html" class="">Pricing</a>
+    <a href="why-orves.html" class="">Company</a>
+  </div>
+  <span class="sp"></span>
+  <a class="si" href="signin.html">Sign in</a>
+  <a class="btn" href="signup.html">Request access</a>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eye">Developers</span>
+    <h1>Integrate in <span class="accent-tx">minutes.</span></h1>
+    <p class="sub">Everything is delivered through the API — nothing to install, nothing to host. Thin SDKs for convenience; the platform lives server-side.</p>
+    <div class="cta">
+      <a class="btn" href="pricing.html">Get credits</a>
+      <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20sandbox">Get sandbox keys</a>
+    </div>
+    <div class="chips"><span class="chip">REST</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">OpenAPI</span></div>
+  </div>
+  <div class="code rv"><div class="codehd">quickstart · parse → canonical → ask</div>
+<pre><span class="cm"># 1 · parse</span>
+<span class="k">POST</span> <span class="s">/v1/parse</span>          { <span class="k">"document"</span>: <span class="s">"s3://acme/contract.pdf"</span> }
+
+<span class="cm"># 2 · canonicalize</span>
+<span class="k">POST</span> <span class="s">/v1/canonical</span>      { <span class="k">"parse_id"</span>: <span class="s">"prs_7d1…"</span> }
+
+<span class="cm"># 3a · your AI: export model-ready projections</span>
+<span class="k">GET</span>  <span class="s">/v1/canonical/can_31a…/projections?type=chunks</span>
+
+<span class="cm"># 3b · or Orves Brain</span>
+<span class="k">POST</span> <span class="s">/v1/brain/reason</span>   { <span class="k">"task"</span>: <span class="s">"compare renewal terms"</span> }</pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">Surface</span>
+<h2>Small API. Deep guarantees.</h2>
+
+  <div class="tblwrap rv" style="max-width:820px;margin-left:auto;margin-right:auto"><table class="tbl">
+    <thead><tr><th>Area</th><th>What you get</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><b>REST API</b></td><td>parse · canonical · brain · observatory · verify</td><td><span class="st live"><span class="d"></span>pilot</span></td></tr>
+      <tr><td><b>Sandbox</b></td><td>test keys, sample corpus, full surface, rate-limited — free</td><td><span class="st live"><span class="d"></span>free</span></td></tr>
+      <tr><td><b>SDKs</b></td><td>Python · TypeScript (thin, disposable by design)</td><td><span class="st pend"><span class="d"></span>publication pending</span></td></tr>
+      <tr><td><b>OpenAPI spec</b></td><td>generated from the live surface</td><td><span class="st pend"><span class="d"></span>publication pending</span></td></tr>
+      <tr><td><b>Docs &amp; API reference</b></td><td>markdown-first, agent-readable</td><td><span class="st soon"><span class="d"></span>soon</span></td></tr>
+      <tr><td><b>Playground</b></td><td>run real documents in the browser</td><td><span class="st soon"><span class="d"></span>soon</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="center">
+  <span class="eye">Guarantees</span>
+<h2>What the API promises — and shows.</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>Deterministic</h4><p>Same input, same version, same output. Idempotency keys on every mutating call.</p></div>
+    <div class="card"><h4>Honest states</h4><p>UNKNOWN and ABSTAINED are first-class API states with reasons — never silent nulls.</p></div>
+    <div class="card"><h4>Certified responses</h4><p>Every artifact returns with a certificate ID. Verify it on the public endpoint — no account needed.</p></div>
+  </div>
+</section>
+
+
+</main>
+
+<section class="center">
+  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">Build AI systems that know where every answer came from.</h2>
+  <p class="lead center" style="margin-bottom:26px">Free sandbox — real API, sample corpus, verify a real certificate. Buy credits when it earns it.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="mailto:pilot@orves.ai?subject=Orves%20sandbox%20access">Start building — free</a>
+    <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
+      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Brain <span>→</span> <b>Observatory</b></p>
+    </div>
+    <div class="ftcol"><div class="h">Products</div>
+      <a href="products/parser.html">Parser</a>
+      <a href="products/canonical.html">Canonical</a>
+      <a href="products/brain.html">Brain</a>
+      <a href="products/observatory.html">Observatory</a>
+    </div>
+    <div class="ftcol"><div class="h">Platform</div>
+      <a href="architecture.html">Architecture</a>
+      <a href="trust.html">Verification</a>
+      <a href="how-it-works.html">How it works</a>
+    </div>
+    <div class="ftcol"><div class="h">Resources</div>
+      <a href="developers.html">Developers</a>
+      <a href="research.html">Research</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="use-cases.html">Use cases</a>
+    </div>
+    <div class="ftcol"><div class="h">Company</div>
+      <a href="why-orves.html">About</a>
+      <a href="mailto:pilot@orves.ai">Contact</a>
+      <a>Terms <span class="st soon"><span class="d"></span>soon</span></a>
+      <a>Privacy <span class="st soon"><span class="d"></span>soon</span></a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span><span class="cat">Verifiable Knowledge Infrastructure</span></div>
+</div></footer>
+</div>
+<script src="assets/orves.js"></script>
+</body></html>

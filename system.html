@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Orves — Design System (internal)</title>
+<meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Brain and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a href="products.html" class="">Products <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
+        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
+        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
+        <a href="products/brain.html">Brain <em>Persistent knowledge &amp; memory for AI</em></a>
+        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+      </span></span>
+    </span>
+    <a href="developers.html" class="">Developers</a>
+    <a href="research.html" class="">Research</a>
+    <a href="pricing.html" class="">Pricing</a>
+    <a href="why-orves.html" class="">Company</a>
+  </div>
+  <span class="sp"></span>
+  <a class="si" href="signin.html">Sign in</a>
+  <a class="btn" href="signup.html">Request access</a>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="hero solo" style="padding-bottom:24px">
+  <div>
+    <span class="eye">internal · design system</span>
+    <h1 style="max-width:16ch;margin-left:auto;margin-right:auto">One system. Every page.</h1>
+    <p class="sub">Ink-electric dark (v2.3) — paleta original, Space Grotesk display, painéis, eyepills, mono labels. The architecture diagram is the brand. Reference: NARRATIVE.md §7 + DESIGN_CONSTITUTION changelog.</p>
+  </div>
+</section>
+
+<section class="ruled">
+  <span class="eye">Type scale</span>
+  <h1 style="margin-top:18px">Display / clamp 42–76</h1>
+  <h2>Heading 2 / clamp 28–44</h2>
+  <h3>Heading 3 / 21</h3>
+  <h4>Heading 4 / 16.5</h4>
+  <p class="lead" style="margin-top:14px">Lead — 18px, fg2, 64ch max. Body is 16px/1.6.</p>
+  <p style="margin-top:10px"><span class="eye">eyebrow — mono 11.5 uppercase</span> · <span class="mono" style="font-size:12.5px">mono 12.5 for data</span> · <a href="#">link uses the one primary</a></p>
+</section>
+
+<section class="ruled">
+  <span class="eye">Color</span>
+  <div class="chips" style="margin-top:20px">
+    <span class="chip">--bg #FFFFFF</span><span class="chip">--bg2 #FAFAF9</span>
+    <span class="chip">--line #E9EAE8</span><span class="chip">--fg #131417</span>
+    <span class="chip">--fg2 #54565C</span><span class="chip">--fg3 #6E7176</span>
+    <span class="chip" style="color:var(--acc);border-color:var(--acc)">--acc #0B8152 (the one primary)</span>
+    <span class="chip bad">--hold #966807 (held / UNKNOWN only)</span>
+    <span class="chip">--brand · logo-only · incumbent pending F5</span>
+  </div>
+  <p style="font-size:13.5px;color:var(--fg2);margin-top:14px">Rule: the primary appears only in links, buttons, active states and small details. Amber only for held/abstained. Never as page lighting. No gradients, no glow.</p>
+</section>
+
+<section class="ruled">
+  <span class="eye">Buttons · badges · chips</span>
+  <div class="cta" style="margin-top:20px"><a class="btn" href="#">Primary</a><a class="btn gh" href="#">Ghost</a></div>
+  <p style="margin-top:18px">
+    <span class="st live"><span class="d"></span>published</span> &nbsp; <span class="st int"><span class="d"></span>measured · internal</span> &nbsp; <span class="st pend"><span class="d"></span>publication pending</span> &nbsp; <span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span> &nbsp; <span class="st draft"><span class="d"></span>draft ratio</span> &nbsp; <span class="st soon"><span class="d"></span>soon</span>
+  </p>
+  <div class="chips"><span class="chip">neutral chip</span><span class="chip bad">failure chip</span></div>
+</section>
+
+<section class="ruled">
+  <span class="eye">Table — paper style</span>
+  <div class="tblwrap rv"><table class="tbl">
+<thead><tr><th>Dimension</th><th>Unit</th><th>Status</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>Sample dimension</b></td><td><span class="u">metric / unit</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>notes column, quiet</td></tr>
+<tr><td><b>Second dimension</b></td><td><span class="u">F1 vs gold</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>gold set in construction</td></tr>
+<tr><td><b>Honest row</b></td><td><span class="u">capability</span></td><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>abstains instead of guessing</td></tr>
+
+</tbody></table></div>
+</section>
+
+<section class="ruled">
+  <span class="eye">Code — always dark, both surfaces</span>
+  <div style="max-width:560px;margin-top:20px">
+  <div class="code rv"><div class="codehd">POST /v1/example</div>
+<pre><span class="cm"># request</span>
+{ <span class="k">"document"</span>: <span class="s">"s3://bucket/file.pdf"</span> }
+
+<span class="cm"># response</span>
+{ <span class="k">"state"</span>: <span class="g">"CERTIFIED"</span>, <span class="k">"abstained"</span>: <span class="r">"never fabricated"</span> }</pre></div>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">Pipeline — the diagram is the brand</span>
+  <div class="pipe rv">
+  <div class="pnode src"><b>Sources</b><span>documents · databases · APIs · feeds · events · audio</span></div>
+  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
+  <a class="pnode" href="products/parser.html"><b>Parser</b><span>structure in, nothing lost</span></a>
+  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
+  <a class="pnode hot" href="products/canonical.html"><b>Canonical</b><span>one universal, model-ready representation</span></a>
+  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
+  <div class="fork">
+    <div class="fcol byo">
+      <div class="fhead">Bring your own AI</div>
+      <div class="fbody">GPT · Claude · Gemini · your own model<br>embeddings · retrieval · fine-tuning · training data · agents</div>
+      <div class="fnote">your canonical asset — no lock-in</div>
+    </div>
+    <div class="forx">or</div>
+    <a class="fcol orves" href="products/brain.html">
+      <div class="fhead">Continue with Orves</div>
+      <div class="fbig">Brain</div>
+      <div class="fbody">where your knowledge lives — governed, current, connected to any model</div>
+      <div class="fnote">built on the Knowledge Engine</div>
+    </a>
+  </div>
+  <a class="obsloop" href="products/observatory.html"><b>⟲ Observatory</b><span>keeps the substrate alive — observe · acquire · validate · update</span><span class="st draft"><span class="d"></span>rolling out</span></a>
+</div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">Composition ladder</span>
+  <div class="lad rv">
+  <div class="lrow"><span class="lcombo"><b>Parser</b></span><span class="ar">→</span><span class="lout">structured information</span></div>
+  <div class="lrow"><span class="lcombo">+ <b>Canonical</b></span><span class="ar">→</span><span class="lout">a model-ready asset you own</span></div>
+  <div class="lrow"><span class="lcombo">+ <b>Brain</b></span><span class="ar">→</span><span class="lout">governed intelligence</span></div>
+  <div class="lrow"><span class="lcombo">+ <b>Observatory</b></span><span class="ar">→</span><span class="lout">intelligence that stays current</span></div>
+  <div class="lrow top"><span class="lcombo">every step <b>certified</b></span><span class="ar">→</span><span class="lout">verifiable cognitive assets</span></div>
+</div>
+</section>
+
+<section class="ruled">
+  <span class="eye">Stats · timeline</span>
+  <div class="stats" style="grid-template-columns:repeat(3,1fr);max-width:640px">
+    <div class="stat"><span class="v">4</span><span class="l">products</span></div>
+    <div class="stat"><span class="v">1</span><span class="l">primary color</span></div>
+    <div class="stat"><span class="v">0</span><span class="l">gradients</span></div>
+  </div>
+  <div class="tline" style="max-width:560px;margin-top:36px">
+    <div class="tev"><span class="tt">event</span><div class="th">Timeline entry</div><p>Body copy for the event.</p></div>
+    <div class="tev dim"><span class="tt">upcoming</span><div class="th">Dimmed entry</div><p>Future state.</p></div>
+  </div>
+</section>
+
+
+</main>
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
+      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Brain <span>→</span> <b>Observatory</b></p>
+    </div>
+    <div class="ftcol"><div class="h">Products</div>
+      <a href="products/parser.html">Parser</a>
+      <a href="products/canonical.html">Canonical</a>
+      <a href="products/brain.html">Brain</a>
+      <a href="products/observatory.html">Observatory</a>
+    </div>
+    <div class="ftcol"><div class="h">Platform</div>
+      <a href="architecture.html">Architecture</a>
+      <a href="trust.html">Verification</a>
+      <a href="how-it-works.html">How it works</a>
+    </div>
+    <div class="ftcol"><div class="h">Resources</div>
+      <a href="developers.html">Developers</a>
+      <a href="research.html">Research</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="use-cases.html">Use cases</a>
+    </div>
+    <div class="ftcol"><div class="h">Company</div>
+      <a href="why-orves.html">About</a>
+      <a href="mailto:pilot@orves.ai">Contact</a>
+      <a>Terms <span class="st soon"><span class="d"></span>soon</span></a>
+      <a>Privacy <span class="st soon"><span class="d"></span>soon</span></a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span><span class="cat">Verifiable Knowledge Infrastructure</span></div>
+</div></footer>
+</div>
+<script src="assets/orves.js"></script>
+</body></html>

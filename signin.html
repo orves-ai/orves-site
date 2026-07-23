@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Orves — Sign in</title>
+<meta name="description" content="Sign in to the Orves console. The console ships with the private pilot — partners receive credentials by email."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a href="products.html" class="">Products <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
+        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
+        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
+        <a href="products/brain.html">Brain <em>Persistent knowledge &amp; memory for AI</em></a>
+        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+      </span></span>
+    </span>
+    <a href="developers.html" class="">Developers</a>
+    <a href="research.html" class="">Research</a>
+    <a href="pricing.html" class="">Pricing</a>
+    <a href="why-orves.html" class="">Company</a>
+  </div>
+  <span class="sp"></span>
+  <a class="si" href="signin.html">Sign in</a>
+  <a class="btn" href="signup.html">Request access</a>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="center" style="border-top:0;padding:90px 0 40px">
+  <div class="auth rv">
+    <div style="display:flex;justify-content:center;margin-bottom:18px"><svg width="40" height="40" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg></div>
+    <h2 style="font-size:26px;margin:0 0 6px">Sign in to Orves</h2>
+    <p style="font-size:13.5px;color:var(--fg2);margin-bottom:26px">The console for your knowledge infrastructure.</p>
+
+    <form class="authform" onsubmit="return false">
+      <label class="af">
+        <span>Email</span>
+        <input type="email" placeholder="you@company.com" autocomplete="email"/>
+      </label>
+      <label class="af">
+        <span style="display:flex;justify-content:space-between">Password <a href="forgot-password.html" style="color:var(--acc2);text-transform:none;letter-spacing:0">Forgot password?</a></span>
+        <input type="password" placeholder="••••••••••" autocomplete="current-password"/>
+      </label>
+      <button class="btn" type="submit" style="width:100%;margin-top:6px">Sign in</button>
+    </form>
+
+    <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px">
+      <span class="st soon"><span class="d"></span>console in development</span> <span>pilot partners receive credentials by email</span>
+    </p>
+
+    <div class="authdiv"><span>no account yet?</span></div>
+
+    <a class="btn gh" style="width:100%;text-align:center" href="signup.html">Create account</a>
+    <p style="font-size:12.5px;color:var(--fg3);margin-top:18px"><a href="index.html" style="color:var(--fg3)">← Back to orves.ai</a></p>
+  </div>
+</section>
+
+
+</main>
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
+      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Brain <span>→</span> <b>Observatory</b></p>
+    </div>
+    <div class="ftcol"><div class="h">Products</div>
+      <a href="products/parser.html">Parser</a>
+      <a href="products/canonical.html">Canonical</a>
+      <a href="products/brain.html">Brain</a>
+      <a href="products/observatory.html">Observatory</a>
+    </div>
+    <div class="ftcol"><div class="h">Platform</div>
+      <a href="architecture.html">Architecture</a>
+      <a href="trust.html">Verification</a>
+      <a href="how-it-works.html">How it works</a>
+    </div>
+    <div class="ftcol"><div class="h">Resources</div>
+      <a href="developers.html">Developers</a>
+      <a href="research.html">Research</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="use-cases.html">Use cases</a>
+    </div>
+    <div class="ftcol"><div class="h">Company</div>
+      <a href="why-orves.html">About</a>
+      <a href="mailto:pilot@orves.ai">Contact</a>
+      <a>Terms <span class="st soon"><span class="d"></span>soon</span></a>
+      <a>Privacy <span class="st soon"><span class="d"></span>soon</span></a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span><span class="cat">Verifiable Knowledge Infrastructure</span></div>
+</div></footer>
+</div>
+<script src="assets/orves.js"></script>
+</body></html>
