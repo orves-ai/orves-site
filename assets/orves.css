@@ -619,3 +619,9 @@ html.js .mo-parser .lo3{animation:loC 14s ease-in-out infinite}
   html.js .mo-parser .ph4{opacity:1}
   html.js .mo-parser .lo{animation:none;opacity:1}
 }
+
+/* anti layout-shift: alturas reservadas pelo pior caso medido */
+.kx{min-height:600px;display:flex;flex-direction:column}
+.kx details:last-child{border-bottom:0}
+.dcard{min-height:148px}
+@media(max-width:900px){.kx{min-height:0}}
