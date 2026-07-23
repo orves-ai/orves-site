@@ -225,7 +225,7 @@
   caption.setAttribute('x', 170); caption.setAttribute('y', 202);
   caption.setAttribute('text-anchor', 'middle');
   caption.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:9px;fill:var(--fg3);opacity:.75');
-  caption.textContent = 'knowledge compounds · nothing resets';
+  caption.textContent = 'knowledge grows · evidence stays connected';
   svg.appendChild(caption);
   var counter = el('text');
   counter.setAttribute('x', 326); counter.setAttribute('y', 16);
@@ -332,7 +332,7 @@
     var i;
     for (i = 0; i < hubs.length; i++) hubs[i].lvl = focus ? 3 : 3;
     for (i = 0; i < sats.length; i++) sats[i].lvl = 3;
-    if (!focus) { caption.textContent = 'knowledge compounds · nothing resets'; return; }
+    if (!focus) { caption.textContent = 'knowledge grows · evidence stays connected'; return; }
     focus.lvl = 0;
     var d1 = focus.adj, d2c = 0;
     for (i = 0; i < d1.length; i++) if (d1[i].lvl > 1) d1[i].lvl = 1;
