@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Orves — Design System (internal)</title>
-<meta name="description" content="Orves builds the verifiable knowledge layer for AI — Parser, Canonical, Knowledge and Observatory: infrastructure for persistent, verifiable, continuously updated knowledge."/>
+<meta name="description" content="Orves builds Verifiable Knowledge Infrastructure — Parser, Verifiable Knowledge and Observatory: every fact with origin, context, history, versions and evidence."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/orves.css">
@@ -16,11 +16,10 @@
     <span class="ndd">
       <a href="products.html" class="">Products <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
-        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
-        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
-        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
-        <a href="products/knowledge.html">Knowledge <em>Persistent knowledge &amp; memory for AI</em></a>
-        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+        <a href="products.html">Overview <em>Three products, one transformation</em></a>
+        <a href="products/parser.html">Parser <em>Any document into structured data</em></a>
+        <a href="products/verifiable-knowledge.html">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
+        <a href="products/observatory.html">Observatory <em>Keeps your knowledge alive</em></a>
       </span></span>
     </span>
     <a href="developers.html" class="">Developers</a>
@@ -36,8 +35,7 @@
 <div class="mnav">
   <a href="products.html">Products</a>
   <a href="products/parser.html" class="sub">Parser</a>
-  <a href="products/canonical.html" class="sub">Canonical</a>
-  <a href="products/knowledge.html" class="sub">Knowledge</a>
+  <a href="products/verifiable-knowledge.html" class="sub">Verifiable Knowledge</a>
   <a href="products/observatory.html" class="sub">Observatory</a>
   <a href="developers.html">Developers</a>
   <a href="research.html">Research</a>
@@ -116,38 +114,37 @@
 <section class="ruled center">
   <span class="eye">Pipeline — the diagram is the brand</span>
   <div class="pipe rv">
-  <div class="pnode src"><b>Sources</b><span>documents · databases · APIs · feeds · events · audio</span></div>
+  <div class="pnode src"><b>Reality</b><span>documents · databases · APIs · feeds · events · audio</span></div>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
   <a class="pnode" href="products/parser.html"><b>Parser</b><span>structure in, nothing lost</span></a>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode hot" href="products/canonical.html"><b>Canonical</b><span>one universal, model-ready representation</span></a>
+  <a class="pnode hot" href="products/verifiable-knowledge.html"><b>Verifiable Knowledge</b><span>origin · context · history · versions · evidence</span></a>
   <div class="parr"><span class="v"></span><span class="t">▾</span></div>
   <div class="fork">
     <div class="fcol byo">
       <div class="fhead">Bring your own AI</div>
       <div class="fbody">GPT · Claude · Gemini · your own model<br>embeddings · retrieval · fine-tuning · training data · agents</div>
-      <div class="fnote">your canonical asset — no lock-in</div>
+      <div class="fnote">your knowledge asset — no lock-in</div>
     </div>
     <div class="forx">or</div>
-    <a class="fcol orves" href="products/knowledge.html">
-      <div class="fhead">Continue with Orves</div>
-      <div class="fbig">Knowledge</div>
-      <div class="fbody">persistent knowledge objects — governed, current, connected to any model</div>
-      <div class="fnote">built on the Knowledge Engine</div>
+    <a class="fcol orves hot" href="products/verifiable-knowledge.html">
+      <div class="fhead">Served by Orves</div>
+      <div class="fbig">Knowledge APIs · MCP</div>
+      <div class="fbody">knowledge objects — evidence, citations, versions — for apps, agents and people</div>
+      <div class="fnote">same asset, either way</div>
     </a>
   </div>
-  <a class="obsloop" href="products/observatory.html"><b>⟲ Observatory</b><span>keeps the substrate alive — observe · acquire · validate · update</span><span class="st draft"><span class="d"></span>rolling out</span></a>
+  <a class="obsloop" href="products/observatory.html"><b>⟲ Observatory</b><span>keeps your knowledge alive — observe · detect · update</span><span class="st draft"><span class="d"></span>rolling out</span></a>
 </div>
 </section>
 
 <section class="ruled center">
   <span class="eye">Composition ladder</span>
   <div class="lad rv">
-  <div class="lrow"><span class="lcombo"><b>Parser</b></span><span class="ar">→</span><span class="lout">structured information</span></div>
-  <div class="lrow"><span class="lcombo">+ <b>Canonical</b></span><span class="ar">→</span><span class="lout">a model-ready asset you own</span></div>
-  <div class="lrow"><span class="lcombo">+ <b>Knowledge</b></span><span class="ar">→</span><span class="lout">governed intelligence</span></div>
-  <div class="lrow"><span class="lcombo">+ <b>Observatory</b></span><span class="ar">→</span><span class="lout">intelligence that stays current</span></div>
-  <div class="lrow top"><span class="lcombo">every step <b>certified</b></span><span class="ar">→</span><span class="lout">verifiable cognitive assets</span></div>
+  <div class="lrow"><span class="lcombo"><b>Parser</b></span><span class="ar">→</span><span class="lout">high-fidelity structured data</span></div>
+  <div class="lrow"><span class="lcombo">+ <b>Verifiable Knowledge</b></span><span class="ar">→</span><span class="lout">a knowledge base you can prove</span></div>
+  <div class="lrow"><span class="lcombo">+ <b>Observatory</b></span><span class="ar">→</span><span class="lout">knowledge that stays current</span></div>
+  <div class="lrow top"><span class="lcombo">every step <b>certified</b></span><span class="ar">→</span><span class="lout">knowledge any AI can trust</span></div>
 </div>
 </section>
 
@@ -173,13 +170,12 @@
   <div class="ftgrid">
     <div class="ftbrand">
       <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
-      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
-      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Knowledge <span>→</span> Observatory</p>
+      <p class="ftstate">We don&rsquo;t build AI. We build knowledge AI can trust.</p>
+      <p class="ftflow">Reality <span>→</span> Parser <span>→</span> Verifiable Knowledge <span>→</span> agents · models · people</p>
     </div>
     <div class="ftcol"><div class="h">Products</div>
       <a href="products/parser.html">Parser</a>
-      <a href="products/canonical.html">Canonical</a>
-      <a href="products/knowledge.html">Knowledge</a>
+      <a href="products/verifiable-knowledge.html">Verifiable Knowledge</a>
       <a href="products/observatory.html">Observatory</a>
     </div>
     <div class="ftcol"><div class="h">Platform</div>

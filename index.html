@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Orves — The Verifiable Knowledge Layer for AI</title>
-<meta name="description" content="Orves is verifiable knowledge infrastructure for AI: four composable products — Parser, Canonical, Knowledge and Observatory — to acquire, structure, persist and continuously verify the knowledge AI systems rely on."/>
+<title>Orves — Knowledge you can prove</title>
+<meta name="description" content="Orves builds Verifiable Knowledge Infrastructure: Parser, Verifiable Knowledge and Observatory — every fact with origin, context, history, versions and evidence, verifiable down to the source."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/orves.css">
@@ -16,11 +16,10 @@
     <span class="ndd">
       <a href="products.html" class="">Products <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
-        <a href="products.html">Overview <em>Four products, one knowledge layer</em></a>
-        <a href="products/parser.html">Parser <em>Turn sources into structured information</em></a>
-        <a href="products/canonical.html">Canonical <em>Consistent, verifiable knowledge</em></a>
-        <a href="products/knowledge.html">Knowledge <em>Persistent knowledge &amp; memory for AI</em></a>
-        <a href="products/observatory.html">Observatory <em>Detects knowledge drift</em></a>
+        <a href="products.html">Overview <em>Three products, one transformation</em></a>
+        <a href="products/parser.html">Parser <em>Any document into structured data</em></a>
+        <a href="products/verifiable-knowledge.html">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
+        <a href="products/observatory.html">Observatory <em>Keeps your knowledge alive</em></a>
       </span></span>
     </span>
     <a href="developers.html" class="">Developers</a>
@@ -36,8 +35,7 @@
 <div class="mnav">
   <a href="products.html">Products</a>
   <a href="products/parser.html" class="sub">Parser</a>
-  <a href="products/canonical.html" class="sub">Canonical</a>
-  <a href="products/knowledge.html" class="sub">Knowledge</a>
+  <a href="products/verifiable-knowledge.html" class="sub">Verifiable Knowledge</a>
   <a href="products/observatory.html" class="sub">Observatory</a>
   <a href="developers.html">Developers</a>
   <a href="research.html">Research</a>
@@ -52,9 +50,9 @@
 
 <section class="hero solo" style="padding:100px 0 52px;border-top:0">
   <div>
-    <h1 class="h1b" style="margin-left:auto;margin-right:auto">AI learned to answer.<br>It never learned to build knowledge you can trust.</h1>
-    <p class="mono" style="font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin:14px 0 22px">The Verifiable Knowledge Layer for AI</p>
-    <p class="sub" style="max-width:58ch;margin-top:0"><b style="color:var(--fg)">Infrastructure: Parser &amp; Canonical. Intelligence: Knowledge &amp; Observatory.</b><br>Turning information into verifiable knowledge any AI can use.</p>
+    <h1 class="h1b" style="margin-left:auto;margin-right:auto">Knowledge you can prove.</h1>
+    <p class="mono" style="font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin:14px 0 22px">Verifiable Knowledge Infrastructure</p>
+    <p class="sub" style="max-width:58ch;margin-top:0"><b style="color:var(--fg)">We don&rsquo;t build AI. We build knowledge AI can trust.</b><br>Every fact carries origin, context, history, versions and evidence — verifiable down to the source.</p>
     <div class="cta" style="margin-top:6px">
       <a class="btn" href="products.html">Explore the platform</a>
       <a class="btn gh" href="architecture.html">See the architecture</a>
@@ -65,8 +63,8 @@
 
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
-    <svg viewBox="0 0 1000 470" role="img" aria-label="Sources flow through Parser, Canonical and Knowledge — the verifiable knowledge layer — and AI systems draw from it. Knowledge gives the Observatory its watch scope; the Observatory watches sources, and when it detects new evidence, the change re-enters through Parser and is adjudicated in Canonical before Knowledge serves the new state.">
-      <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">SOURCES</text>
+    <svg viewBox="0 0 1000 470" role="img" aria-label="Reality flows through Parser into Verifiable Knowledge, and applications, agents, models and people draw from it. The knowledge base gives the Observatory its watch scope; the Observatory watches sources, and when it detects new evidence, the change re-enters through Parser and is adjudicated and versioned before the new state is served.">
+      <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">REALITY</text>
       <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">PDFs</text></g>
       <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">Web</text></g>
       <g class="schip" style="animation-delay:.3s"><rect class="fnode" x="36" y="140" width="96" height="30" rx="8"/><text class="flbl" x="84" y="159" text-anchor="middle">Images</text></g>
@@ -84,21 +82,17 @@
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
       <!-- the layer: boundary embraces all stages -->
       <rect class="layerbox" x="240" y="128" width="502" height="292" rx="20"/>
-      <text class="m-t" x="491" y="122" text-anchor="middle" style="letter-spacing:.16em;opacity:.85">VERIFIABLE KNOWLEDGE LAYER</text>
+      <text class="m-t" x="491" y="122" text-anchor="middle" style="letter-spacing:.16em;opacity:.85">ORVES · VERIFIABLE KNOWLEDGE INFRASTRUCTURE</text>
       <!-- Parser -->
       <rect class="fnode main" x="258" y="150" width="136" height="90" rx="14"/>
       <text class="flbl b" x="326" y="188" text-anchor="middle" style="font-size:17px">Parser</text>
-      <text class="flbl dim" x="326" y="210" text-anchor="middle" style="font-size:10.5px">Evidence</text>
+      <text class="flbl dim" x="326" y="210" text-anchor="middle" style="font-size:10.5px">Structured data</text>
       <path class="fpath" data-flow="p2c" d="M 394 195 L 424 195"/>
-      <!-- Canonical -->
-      <rect class="fnode main" x="424" y="150" width="136" height="90" rx="14"/>
-      <text class="flbl b" x="492" y="188" text-anchor="middle" style="font-size:17px">Canonical</text>
-      <text class="flbl dim" x="492" y="210" text-anchor="middle" style="font-size:10.5px">Knowledge</text>
-      <path class="fpath" data-flow="c2b" d="M 560 195 L 590 195"/>
-      <!-- Knowledge -->
-      <rect class="fnode main" x="590" y="150" width="136" height="90" rx="14"/>
-      <text class="flbl b" x="658" y="188" text-anchor="middle" style="font-size:17px">Knowledge</text>
-      <text class="flbl dim" x="658" y="210" text-anchor="middle" style="font-size:10.5px">Memory</text>
+      <!-- Verifiable Knowledge (produto central) -->
+      <rect class="fnode main" x="424" y="150" width="302" height="90" rx="14"/>
+      <text class="flbl b" x="575" y="188" text-anchor="middle" style="font-size:17px">Verifiable Knowledge</text>
+      <text class="flbl dim" x="575" y="210" text-anchor="middle" style="font-size:10.5px">origin · versions · evidence · graph</text>
+      <path class="fpath" data-flow="c2b" d="M 560 195 L 590 195" style="opacity:0"/>
       <!-- fan-out: Knowledge → AI systems -->
       <path class="fpath" data-flow="out" d="M 726 170 C 790 140 810 92  866 76"/>
       <path class="fpath" data-flow="out" d="M 726 182 C 790 168 810 140 866 130"/>
@@ -106,13 +100,13 @@
       <path class="fpath" data-flow="out" d="M 726 206 C 790 222 810 232 866 238"/>
       <path class="fpath" data-flow="out" d="M 726 218 C 790 260 810 284 866 292"/>
       <path class="fpath" data-flow="out" d="M 726 228 C 790 300 810 334 866 346"/>
-      <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">AI SYSTEMS</text>
-      <rect class="fnode" x="866" y="60"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="79"  text-anchor="middle">ChatGPT</text>
-      <rect class="fnode" x="866" y="114" width="110" height="30" rx="8"/><text class="flbl" x="921" y="133" text-anchor="middle">Claude</text>
-      <rect class="fnode" x="866" y="168" width="110" height="30" rx="8"/><text class="flbl" x="921" y="187" text-anchor="middle">Gemini</text>
-      <rect class="fnode" x="866" y="222" width="110" height="30" rx="8"/><text class="flbl" x="921" y="241" text-anchor="middle">Kimi</text>
+      <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">CONSUMERS</text>
+      <rect class="fnode" x="866" y="60"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="79"  text-anchor="middle">Apps</text>
+      <rect class="fnode" x="866" y="114" width="110" height="30" rx="8"/><text class="flbl" x="921" y="133" text-anchor="middle">Agents</text>
+      <rect class="fnode" x="866" y="168" width="110" height="30" rx="8"/><text class="flbl" x="921" y="187" text-anchor="middle">ChatGPT</text>
+      <rect class="fnode" x="866" y="222" width="110" height="30" rx="8"/><text class="flbl" x="921" y="241" text-anchor="middle">Claude</text>
       <rect class="fnode" x="866" y="276" width="110" height="30" rx="8"/><text class="flbl" x="921" y="295" text-anchor="middle">any model</text>
-      <rect class="fnode" x="866" y="330" width="110" height="30" rx="8"/><text class="flbl" x="921" y="349" text-anchor="middle">others</text>
+      <rect class="fnode" x="866" y="330" width="110" height="30" rx="8"/><text class="flbl" x="921" y="349" text-anchor="middle">People</text>
       <!-- Observatory cycle: watch scope from Knowledge; new evidence re-enters through Parser -->
       <rect class="fnode obsnode" x="402" y="368" width="180" height="40" rx="12"/>
       <text class="flbl" x="492" y="393" text-anchor="middle" style="font-size:13px">Observatory</text>
@@ -136,15 +130,15 @@
 <section style="padding:52px 0 0">
   <div class="center" style="margin-bottom:56px">
     <span class="eye">The products</span>
-    <h2 style="margin:22px 0 0">Infrastructure builds knowledge. Intelligence puts it to work.</h2>
+    <h2 style="margin:22px 0 0">Three products. One transformation.</h2>
   </div>
 
   
   <div class="pchap rv">
     <div>
-      <span class="bignum">01</span><span class="pq">Infrastructure · Parser</span>
-      <h3>Turn unstructured content into structured evidence.</h3>
-      <p class="d">Converts documents, scans, images, audio and video into structured, machine-readable evidence with provenance.</p>
+      <span class="bignum">01</span><span class="pq">Parser · Infrastructure</span>
+      <h3>Turn any document into high-fidelity structured data.</h3>
+      <p class="d">Documents, scans, images, audio and video become structured, machine-readable data with provenance — for your own pipelines and RAG, or as the entry to Orves.</p>
       <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
       <a href="products/parser.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Parser →</a>
       <a href="trust.html" class="mono" style="display:inline-block;margin-top:14px;margin-left:18px;font-size:12px;color:var(--fg3)">How provenance works →</a>
@@ -224,7 +218,7 @@
   
   <div class="pchap flip rv">
     <div class="pmotif">
-      <svg class="mo-canon" viewBox="0 0 340 210" role="img" aria-label="Animation: conflicting claims from different domains — revenue figures, who the CEO is, a contract status — enter Canonical, which decides and produces one governed knowledge object with evidence, provenance, versions and relationships. Older versions remain.">
+      <svg class="mo-canon" viewBox="0 0 340 210" role="img" aria-label="Animation: conflicting claims from different domains — revenue figures, who the CEO is, a contract status — enter Verifiable Knowledge, which adjudicates and produces one governed knowledge object with evidence, provenance, versions and relationships. Older versions remain.">
         <g class="sb" style="animation-delay:0s">
           <rect x="14" y="36" width="128" height="22" rx="6" class="m-box" style="opacity:.85"/>
           <text class="m-t" x="22" y="51" style="font-size:8px">Revenue · 100 <tspan style="fill:var(--hold)">≠</tspan> 105 <tspan style="fill:var(--hold)">≠</tspan> 102</text>
@@ -242,8 +236,9 @@
         <line class="m-l" x1="142" y1="77" x2="158" y2="79"/>
         <line class="m-l" x1="142" y1="107" x2="158" y2="88"/>
         <rect x="158" y="58" width="64" height="42" rx="10" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
-        <text class="m-t acc" x="190" y="76" text-anchor="middle" style="font-size:9px">Canonical</text>
-        <text class="m-t" x="190" y="90" text-anchor="middle" style="font-size:8px;opacity:.75">decides</text>
+        <text class="m-t acc" x="190" y="74" text-anchor="middle" style="font-size:8px">Verifiable</text>
+        <text class="m-t acc" x="190" y="84" text-anchor="middle" style="font-size:8px">Knowledge</text>
+        <text class="m-t" x="190" y="95" text-anchor="middle" style="font-size:7px;opacity:.75">adjudicates</text>
         <line class="m-l acc" x1="222" y1="79" x2="228" y2="79" style="stroke-width:1.6"/>
         <g class="sb" style="animation-delay:1.3s">
           <rect x="228" y="40" width="100" height="78" rx="9" style="fill:color-mix(in srgb,var(--acc) 13%,transparent);stroke:color-mix(in srgb,var(--acc) 60%,transparent);filter:drop-shadow(0 0 7px color-mix(in srgb,var(--acc) 22%,transparent))"/>
@@ -261,25 +256,61 @@
       </svg>
     </div>
     <div>
-      <span class="bignum">02</span><span class="pq">Infrastructure · Canonical</span>
-      <h3>Turn evidence into consistent, verifiable knowledge.</h3>
-      <p class="d">Multiple conflicting representations become one governed knowledge object. Every change creates a new version — nothing is ever overwritten.</p>
+      <span class="bignum">02</span><span class="pq">Verifiable Knowledge · The core</span>
+      <h3>Turn information into knowledge you can prove.</h3>
+      <p class="d">Conflicting evidence becomes one governed knowledge base — origin, citations, versions, lineage and a knowledge graph, served to people, agents and any model via API and MCP.</p>
       <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
-      <a href="products/canonical.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Canonical →</a>
+      <a href="products/verifiable-knowledge.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Verifiable Knowledge →</a>
     </div>
   </div>
 
   
-  <div class="pchap rv">
-    <div>
-      <span class="bignum">03</span><span class="pq">Intelligence · Knowledge</span>
-      <h3>AI forgets. Knowledge doesn&rsquo;t.</h3>
-      <p class="d"><b style="color:var(--fg)">Knowledge</b> is where your verified knowledge lives and works — served to people, agents and any model as objects that survive conversations, sessions and providers.</p>
-      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
-      <a href="products/knowledge.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Knowledge →</a>
-    </div>
+  <div class="pchap flip rv" style="border-bottom:1px solid var(--line)">
     <div class="pmotif">
-      <svg class="mo-know" viewBox="0 0 340 210" role="img" aria-label="Animation: a living knowledge graph grows inside Knowledge — Company, Revenue, Contract, CEO, Earnings, Renewal — nodes and relationships keep appearing and never disappear. Knowledge compounds.">
+      <svg class="mo-obs" viewBox="0 0 340 210" role="img" aria-label="Animation: a watched SEC filing changes; the Observatory compares your knowledge against reality, detects the mismatch, and the change flows through Parser and adjudication into a new version that is served.">
+        <g class="os" style="animation-delay:0s">
+          <rect x="14" y="20" width="120" height="26" rx="7" class="m-box"/>
+          <text class="m-t" x="24" y="37">SEC filing</text>
+          <rect x="140" y="20" width="66" height="26" rx="7" style="fill:color-mix(in srgb,var(--hold) 10%,transparent);stroke:color-mix(in srgb,var(--hold) 50%,transparent)"/>
+          <text class="m-t" x="150" y="37" style="fill:var(--hold)">changed</text>
+        </g>
+        <g class="os" style="animation-delay:1.6s">
+          <line class="m-l" x1="60" y1="46" x2="60" y2="62" stroke-dasharray="3 3"/>
+          <rect x="14" y="64" width="204" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
+          <text class="m-t" x="24" y="81"><tspan style="fill:var(--acc2)">Observatory</tspan> · knowledge v3 <tspan style="fill:var(--hold)">≠</tspan> reality</text>
+        </g>
+        <g class="os" style="animation-delay:3.2s">
+          <line class="m-l" x1="60" y1="90" x2="60" y2="106" stroke-dasharray="3 3"/>
+          <rect x="14" y="108" width="150" height="26" rx="7" class="m-box"/>
+          <text class="m-t" x="24" y="125">Parser → adjudication</text>
+          <rect x="170" y="108" width="80" height="26" rx="13" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
+          <text class="m-t acc" x="180" y="125" style="font-size:8.5px">new version</text>
+        </g>
+        <g class="os" style="animation-delay:4.8s">
+          <line class="m-l" x1="60" y1="134" x2="60" y2="150" stroke-dasharray="3 3"/>
+          <rect x="14" y="152" width="160" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/>
+          <text class="m-t acc" x="24" y="169">knowledge updated · v4</text>
+        </g>
+        <text class="m-t" x="170" y="200" text-anchor="middle" style="opacity:.7">the world moved — the knowledge followed</text>
+      </svg>
+    </div>
+    <div>
+      <span class="bignum">03</span><span class="pq">Observatory · Living knowledge</span>
+      <h3>Keep your knowledge alive.</h3>
+      <p class="d">Monitors sources, detects changes, shows what they impact and updates your knowledge through the flow — with diffs and history. Never a direct edit.</p>
+      <span class="standalone"><span class="dt"></span>continuous service · recurring</span><br>
+      <a href="products/observatory.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Observatory →</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="center">
+  <span class="eye">Inside Verifiable Knowledge</span>
+<h2>Knowledge compounds. Nothing resets.</h2>
+<p class="lead center">Every fact connects to everything it touches — hover a node to trace its direct and indirect relationships.</p>
+  <div class="rv" style="max-width:680px;margin:30px auto 0">
+    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="Animation: a living knowledge graph grows inside Knowledge — Company, Revenue, Contract, CEO, Earnings, Renewal — nodes and relationships keep appearing and never disappear. Knowledge compounds.">
         <g class="bs" style="animation-delay:0s">
           <circle cx="170" cy="92" r="7" style="fill:var(--acc)"/>
           <text class="m-t" x="170" y="76" text-anchor="middle" style="font-size:8.5px;fill:var(--fg)">Company</text>
@@ -329,46 +360,6 @@
         </g>
         <text class="m-t" x="170" y="196" text-anchor="middle" style="opacity:.7">knowledge compounds · nothing resets</text>
       </svg>
-    </div>
-  </div>
-
-  
-  <div class="pchap flip rv" style="border-bottom:1px solid var(--line)">
-    <div class="pmotif">
-      <svg class="mo-obs" viewBox="0 0 340 210" role="img" aria-label="Animation: a watched SEC filing changes; the Observatory compares your knowledge against reality, detects the mismatch, and the change flows through Parser and Canonical into a new version Knowledge serves.">
-        <g class="os" style="animation-delay:0s">
-          <rect x="14" y="20" width="120" height="26" rx="7" class="m-box"/>
-          <text class="m-t" x="24" y="37">SEC filing</text>
-          <rect x="140" y="20" width="66" height="26" rx="7" style="fill:color-mix(in srgb,var(--hold) 10%,transparent);stroke:color-mix(in srgb,var(--hold) 50%,transparent)"/>
-          <text class="m-t" x="150" y="37" style="fill:var(--hold)">changed</text>
-        </g>
-        <g class="os" style="animation-delay:1.6s">
-          <line class="m-l" x1="60" y1="46" x2="60" y2="62" stroke-dasharray="3 3"/>
-          <rect x="14" y="64" width="204" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
-          <text class="m-t" x="24" y="81"><tspan style="fill:var(--acc2)">Observatory</tspan> · Knowledge v3 <tspan style="fill:var(--hold)">≠</tspan> reality</text>
-        </g>
-        <g class="os" style="animation-delay:3.2s">
-          <line class="m-l" x1="60" y1="90" x2="60" y2="106" stroke-dasharray="3 3"/>
-          <rect x="14" y="108" width="150" height="26" rx="7" class="m-box"/>
-          <text class="m-t" x="24" y="125">Parser → Canonical</text>
-          <rect x="170" y="108" width="80" height="26" rx="13" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 40%,transparent)"/>
-          <text class="m-t acc" x="180" y="125" style="font-size:8.5px">new version</text>
-        </g>
-        <g class="os" style="animation-delay:4.8s">
-          <line class="m-l" x1="60" y1="134" x2="60" y2="150" stroke-dasharray="3 3"/>
-          <rect x="14" y="152" width="160" height="26" rx="7" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/>
-          <text class="m-t acc" x="24" y="169">Knowledge updated · v4</text>
-        </g>
-        <text class="m-t" x="170" y="200" text-anchor="middle" style="opacity:.7">the world moved — the knowledge followed</text>
-      </svg>
-    </div>
-    <div>
-      <span class="bignum">04</span><span class="pq">Intelligence · Observatory</span>
-      <h3>Reality changes. Knowledge should too.</h3>
-      <p class="d">Watches your knowledge against reality. When reality changes, it updates — through Parser and Canonical, never by direct edits.</p>
-      <span class="standalone"><span class="dt"></span>standalone API · usage-based</span><br>
-      <a href="products/observatory.html" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Observatory →</a>
-    </div>
   </div>
 </section>
 
@@ -437,7 +428,7 @@
   <div class="chips rv aichips" style="justify-content:center;margin-top:10px">
     <span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Llama</span><span class="chip">agents</span><span class="chip">copilots</span><span class="chip">internal AI</span><span class="chip">your own model</span>
   </div>
-  <p class="mono rv dflow" style="margin-top:28px;font-size:12.5px;color:var(--fg3)"><span class="dfd" style="color:var(--fg)">Healthcare</span> · <span class="dfs" style="color:var(--fg)">medical record</span> → Parser → Canonical → Knowledge</p>
+  <p class="mono rv dflow" style="margin-top:28px;font-size:12.5px;color:var(--fg3)"><span class="dfd" style="color:var(--fg)">Healthcare</span> · <span class="dfs" style="color:var(--fg)">medical record</span> → Parser → Verifiable Knowledge</p>
   <p class="mono rv" style="margin-top:18px;font-size:13.5px;letter-spacing:.04em"><b style="color:var(--fg)">Every industry.</b> <b style="color:var(--fg)">Every source.</b> <b style="color:var(--acc2)">One knowledge infrastructure.</b></p>
   <p class="lead center rv" style="margin-top:14px;font-size:14px"><a href="use-cases.html">See use cases →</a></p>
 </section>
@@ -448,8 +439,8 @@
 
 <section class="center">
   <h2 style="font-size:38px;max-width:24ch;margin:0 auto 16px">Build AI systems that know where every answer came from.</h2>
-  <p class="mono" style="font-size:12px;letter-spacing:.05em;color:var(--fg3);margin-bottom:14px">Evidence <span style="color:var(--fg3)">→</span> Knowledge <span style="color:var(--fg3)">→</span> Memory <span style="color:var(--fg3)">→</span> Living knowledge <span style="color:var(--fg3)">→</span> <span style="color:var(--acc2)">AI</span></p>
-  <p class="lead center" style="margin-bottom:28px">From evidence to trusted AI — one product or the complete infrastructure.</p>
+  <p class="mono" style="font-size:12px;letter-spacing:.05em;color:var(--fg3);margin-bottom:14px">Reality <span style="color:var(--fg3)">→</span> Parser <span style="color:var(--fg3)">→</span> Verifiable Knowledge <span style="color:var(--fg3)">→</span> <span style="color:var(--acc2)">agents · models · people</span></p>
+  <p class="lead center" style="margin-bottom:28px">From reality to knowledge you can prove — one product or the complete infrastructure.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="products.html">Explore the products</a>
     <a class="btn gh" href="research.html">Read the research</a>
@@ -461,13 +452,12 @@
   <div class="ftgrid">
     <div class="ftbrand">
       <span class="brand ftlogo"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
-      <p class="ftstate">The Verifiable Knowledge Infrastructure for AI.</p>
-      <p class="ftflow">Parser <span>→</span> Canonical <span>→</span> Knowledge <span>→</span> Observatory</p>
+      <p class="ftstate">We don&rsquo;t build AI. We build knowledge AI can trust.</p>
+      <p class="ftflow">Reality <span>→</span> Parser <span>→</span> Verifiable Knowledge <span>→</span> agents · models · people</p>
     </div>
     <div class="ftcol"><div class="h">Products</div>
       <a href="products/parser.html">Parser</a>
-      <a href="products/canonical.html">Canonical</a>
-      <a href="products/knowledge.html">Knowledge</a>
+      <a href="products/verifiable-knowledge.html">Verifiable Knowledge</a>
       <a href="products/observatory.html">Observatory</a>
     </div>
     <div class="ftcol"><div class="h">Platform</div>

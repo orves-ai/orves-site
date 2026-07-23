@@ -23,8 +23,8 @@
 
 // ── Live-flow v2: grafo causal de eventos no diagrama da camada ──
 // Não é loop nem só aleatoriedade: eventos GERAM o estágio seguinte
-// (source-Parser-Canonical-Knowledge-AI), with silent rejections in
-// Canonical and a "hub pause" in Knowledge before serving. Its fan-out
+// (reality-Parser-VerifiableKnowledge-consumers), with silent rejections
+// during adjudication and a "hub pause" before serving. Its fan-out
 // has warm start + activity guarantee (never >1.8s without a pulse —
 // sempre pronto e servindo; o Observatory é que espera o mundo mudar).
 (function () {
