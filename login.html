@@ -32,25 +32,30 @@
     <div style="display:flex;justify-content:center;margin-bottom:18px"><svg width="40" height="40" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg></div>
     <h2 style="font-size:26px;margin:0 0 6px">Log in to Orves</h2>
     <p style="font-size:13.5px;color:var(--fg2);margin-bottom:26px">The console for your knowledge infrastructure.</p>
-    <form class="authform" onsubmit="return false">
+    <div id="autherr" style="display:none;border:1px solid color-mix(in srgb,var(--hold) 50%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--hold);margin-bottom:14px"></div>
+    <form class="authform" method="post" action="https://app.orves.ai/api/login">
       <label class="af">
         <span>Email</span>
-        <input type="email" placeholder="you@company.com" autocomplete="email"/>
+        <input type="email" name="email" required placeholder="you@company.com" autocomplete="email"/>
       </label>
       <label class="af">
         <span style="display:flex;justify-content:space-between">Password <a href="forgot-password" style="color:var(--acc2);text-transform:none;letter-spacing:0">Forgot password?</a></span>
-        <input type="password" placeholder="••••••••••" autocomplete="current-password"/>
+        <input type="password" name="password" required placeholder="••••••••••" autocomplete="current-password"/>
       </label>
       <button class="btn" type="submit" style="width:100%;margin-top:6px">Log in</button>
     </form>
-    <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px">
-      <span class="st soon"><span class="d"></span>console in final development</span>
-    </p>
     <div class="authdiv"><span>no account yet?</span></div>
     <a class="btn gh" style="width:100%;text-align:center" href="create-account">Create free account</a>
   </div>
 </section>
 
+<script>
+(function(){
+  var e = new URLSearchParams(location.search).get('error');
+  if(!e) return;
+  var el = document.getElementById('autherr'); el.textContent = 'Wrong email or password.'; el.style.display = 'block';
+})();
+</script>
 
 </main>
 
