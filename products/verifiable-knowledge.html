@@ -132,32 +132,152 @@
 
 
 <section class="center">
-  <span class="eye">Where it sits</span>
-<h2>The architecture — and this product's place in it.</h2>
-
-  <div class="pipe rv">
-  <div class="pnode src"><b>Reality</b><span>documents · databases · APIs · feeds · events · audio</span></div>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode" href="../products/parser"><b>Parser</b><span>structure in, nothing lost</span></a>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode hot" href="../products/verifiable-knowledge"><b>Verifiable Knowledge</b><span>origin · context · history · versions · evidence</span></a>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <div class="fork">
-    <div class="fcol byo">
-      <div class="fhead">Bring your own AI</div>
-      <div class="fbody">GPT · Claude · Gemini · your own model<br>embeddings · retrieval · fine-tuning · training data · agents</div>
-      <div class="fnote">your knowledge asset — no lock-in</div>
-    </div>
-    <div class="forx">or</div>
-    <a class="fcol orves hot" href="../products/verifiable-knowledge">
-      <div class="fhead">Served by Orves</div>
-      <div class="fbig">Knowledge APIs · MCP</div>
-      <div class="fbody">knowledge objects — evidence, citations, versions — for apps, agents and people</div>
-      <div class="fnote">same asset, either way</div>
-    </a>
+  <span class="eye">Inside the product</span>
+<h2>From evidence to knowledge, stage by stage.</h2>
+<p class="lead center">Each stage is measured, versioned and deterministic — change enters through the flow, never by edit.</p>
+  <div class="deep rv">
+    
+    
+    <div class="dstage"><b>Structured evidence</b><span>certified parses in — spans, geometry, provenance</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Canonicalization</b><span>deterministic substrate — reconstructible, byte-stable</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Deduplication</b><span>the same fact once — sources merged, none lost</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Claim extraction</b><span>typed claims, each with its evidence attached</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Adjudication</b><span>support vs contradiction — resolved, or ABSTAINED</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Versioning</b><span>every change is a new version; nothing overwritten</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage out"><b>Knowledge objects</b><span>claims + evidence + relationships + history</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage out"><b>Served</b><span>APIs · MCP — people, agents, any model</span></div>
+    
   </div>
-  <a class="obsloop" href="../solutions/living-knowledge"><b>⟲ Living Knowledge</b><span>continuous monitoring — observe · detect · update</span><span class="st draft"><span class="d"></span>rolling out</span></a>
-</div>
+  <p class="lead center rv" style="margin-top:20px;font-size:14px">Where this engine sits in the platform → <a href="../architecture" style="color:var(--acc2)">architecture</a></p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Show me</span>
+<h2>Anatomy of a knowledge object.</h2>
+<p class="lead center">Not text — a governed object. Every part below is addressable through the API.</p>
+  <div class="kobj rv">
+    <div class="kohead">
+      <span class="kolab">KNOWLEDGE OBJECT · kn_842 · v4</span>
+      <div class="koclaim">“Contract renewal date moved to 2026-09-01.”</div>
+      <span class="kostate">SUPPORTED</span>
+    </div>
+    <div class="kogrid">
+      <div class="kocol">
+        <h5>Evidence · 3 supporting · 1 contradicting</h5>
+        <div class="koev">amendment_v2.pdf · p.4 ¶3<em>supporting</em></div>
+        <div class="koev">renewal_notice.eml · 2026-06-12<em>supporting</em></div>
+        <div class="koev">board_minutes.pdf · p.2<em>supporting</em></div>
+        <div class="koev bad" style="border-bottom:0">contract_2024.pdf · p.12<em>contradicting · superseded</em></div>
+      </div>
+      <div class="kocol">
+        <h5>Relationships · 21</h5>
+        <div class="koev">renews → Contract #442</div>
+        <div class="koev">party → Supplier XYZ</div>
+        <div class="koev">affects → Invoice #9812</div>
+        <div class="koev" style="border-bottom:0;color:var(--fg3)">+ 18 more</div>
+      </div>
+      <div class="kocol">
+        <h5>History</h5>
+        <div class="koev">v1 · Jun · scheduled Jun 30</div>
+        <div class="koev">v2 · Jul · postponed</div>
+        <div class="koev">v3 · Aug · new date proposed</div>
+        <div class="koev">v4 · Sep · moved to Sep 1<em>current</em></div>
+        <h5 style="margin-top:14px">Certificate</h5>
+        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07<em>verify ✓</em></div>
+      </div>
+    </div>
+    <div class="kograph">
+      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="The claim inside the knowledge graph">
+        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
+        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
+        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
+        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
+        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">party</text>
+        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">claims</text>
+        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">supplies</text>
+        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">bills</text>
+        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
+        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Acme Corp</text>
+        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Contract #442</text>
+        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--acc2)">kn_842 · renewal</text>
+        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Supplier XYZ</text>
+        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Invoice #9812</text>
+        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">the same object, inside the knowledge graph</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">History</span>
+<h2>Watch a claim live.</h2>
+<p class="lead center">New evidence arrives; the claim is re-adjudicated; a new version is written. Nothing is ever overwritten — every state keeps its evidence.</p>
+  <div class="htl rv">
+    
+    
+    <div class="hstop"><span class="tm">JUN</span><span class="tv">v1</span><p>Renewal scheduled for Jun 30</p><span class="te">contract_2024.pdf · p.12</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">JUL</span><span class="tv">v2</span><p>Renewal postponed</p><span class="te">renewal_notice.eml</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">AUG</span><span class="tv">v3</span><p>New date proposed: Aug 15</p><span class="te">draft_amendment.pdf · p.2</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop cur"><span class="tm">SEP</span><span class="tv">v4</span><p>Renewal moved to Sep 1</p><span class="te">amendment_v2.pdf · p.4</span></div>
+    
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">The object above is v4 of this claim — same asset, full history attached.</p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Before × after</span>
+<h2>Retrieval finds text. The layer preserves why it is true.</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0">
+    <div class="card"><h4 style="color:var(--fg2)">Traditional RAG</h4>
+      <ul class="vchain"><li>PDF</li><li class="sep">▾</li><li>chunks</li><li class="sep">▾</li><li>embeddings</li><li class="sep">▾</li><li>top-k</li><li class="sep">▾</li><li>LLM</li><li class="sep">▾</li><li class="bad">answer — origin unknown</li></ul>
+      <p class="kwd" style="margin-top:12px;text-align:center">When the answer is wrong, there is nothing to inspect.</p></div>
+    <div class="card"><h4>On Verifiable Knowledge</h4>
+      <ul class="vchain"><li>PDF</li><li class="sep">▾</li><li>structured evidence</li><li class="sep">▾</li><li>knowledge objects</li><li class="sep">▾</li><li>versions + grounding</li><li class="sep">▾</li><li>LLM</li><li class="sep">▾</li><li class="good">answer — traceable to the page</li></ul>
+      <p class="kwd" style="margin-top:12px;text-align:center">When the answer is challenged, you show why.</p></div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Model agnostic</span>
+<h2>One knowledge asset. Every model.</h2>
+<p class="lead center">Models are interfaces — they change every quarter. Knowledge is the asset that compounds. Build it once, serve it to all of them, swap any of them tomorrow.</p>
+  <div class="chips rv" style="justify-content:center;margin-top:20px">
+    <span class="chip">GPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Llama</span><span class="chip">Mistral</span><span class="chip">DeepSeek</span><span class="chip">your own model</span>
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:14px">Swap the model. Keep the knowledge.</p>
 </section>
 
 
@@ -246,14 +366,16 @@
 </main>
 
 
+
 <section class="center">
-  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">Build AI systems that know where every answer came from.</h2>
-  <p class="lead center" style="margin-bottom:26px">Free sandbox — real API, sample corpus, verify a real certificate. Buy credits when it earns it.</p>
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Turn your documents into knowledge you can prove.</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 free credits · no credit card · knowledge APIs arrive with the pilot.</p>
   <div class="cta" style="justify-content:center">
-    <a class="btn" href="mailto:pilot@orves.ai?subject=Orves%20sandbox%20access">Start building — free</a>
-    <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
+    <a class="btn" href="../create-account">Create free account</a>
+    <a class="btn gh" href="../developers">Read the docs</a>
   </div>
 </section>
+
 
 
 

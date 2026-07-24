@@ -73,17 +73,37 @@
 <section class="hero solo" style="padding-bottom:40px">
   <div>
     <span class="eye">Why Orves</span>
-    <h1 style="max-width:16ch;margin-left:auto;margin-right:auto">A category, not another tool.</h1>
-    <p class="sub">Verifiable Knowledge Infrastructure: the layer under AI systems that makes knowledge provable — where it came from, how it changed, whether it can be trusted.</p>
+    <h1 style="max-width:18ch;margin-left:auto;margin-right:auto">Intelligence became abundant. <span class="accent-tx">Trust did not.</span></h1>
+    <p class="sub" style="max-width:56ch">Verifiable Knowledge Infrastructure — a category, not another tool: the layer under AI systems that makes knowledge provable. Where it came from, how it changed, whether it can be trusted.</p>
   </div>
+</section>
+
+<section class="center" style="border-top:0;padding-top:0">
+  <div class="g2 rv" style="max-width:860px;margin:0 auto">
+    <a class="card" href="products/parser"><h4>Parser</h4><p>Transforms reality into structured evidence.</p><span class="k">product →</span></a>
+    <a class="card" href="products/verifiable-knowledge"><h4>Verifiable Knowledge</h4><p>Transforms evidence into provable knowledge.</p><span class="k">product →</span></a>
+  </div>
+  <p class="lead center rv" style="margin-top:18px;font-size:14px">Two products ship today. Everything else builds on top.</p>
 </section>
 
 <section class="ruled center">
   <span class="eye">The thesis</span>
 <h2>Every major computing wave created new infrastructure.</h2>
-<p class="lead center">Storage. Networking. Payments. Compute. AI created another: knowledge. Reasoning became cheap — knowledge became the bottleneck.</p>
-  <p class="mono rv" style="margin-top:24px;font-size:14px;color:var(--acc2)">We don&rsquo;t build AI. We build knowledge AI can trust.</p>
-  <div class="mono rv" style="margin-top:26px;display:flex;flex-direction:column;gap:12px;font-size:15px">
+<p class="lead center">Reasoning became cheap — knowledge became the bottleneck. Each wave looked optional until it was inevitable.</p>
+  <div class="htl rv" style="margin-top:30px">
+    <div class="hstop"><span class="tm">1980s</span><p>Storage</p><span class="te">data survives the machine</span></div>
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">1990s</span><p>Networking</p><span class="te">machines reach each other</span></div>
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">2000s</span><p>Payments</p><span class="te">money moves as software</span></div>
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">2010s</span><p>Cloud compute</p><span class="te">capacity on demand</span></div>
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">2020s</span><p>Foundation models</p><span class="te">reasoning on demand</span></div>
+    <span class="harr">→</span>
+    <div class="hstop cur"><span class="tm">NOW</span><p>Verifiable knowledge</p><span class="te">what reasoning depends on</span></div>
+  </div>
+  <div class="mono rv" style="margin-top:32px;display:flex;flex-direction:column;gap:12px;font-size:15px">
     <div><b style="color:var(--fg)">Context</b> <span style="color:var(--hold)">≠</span> <b style="color:var(--fg)">Knowledge</b></div>
     <div><b style="color:var(--fg)">Retrieval</b> <span style="color:var(--hold)">≠</span> <b style="color:var(--fg)">Memory</b></div>
     <div><b style="color:var(--fg)">Storage</b> <span style="color:var(--hold)">≠</span> <b style="color:var(--fg)">Understanding</b></div>
@@ -92,19 +112,53 @@
 </section>
 
 <section class="ruled center">
+  <span class="eye">What we believe</span>
+<h2>The credo.</h2>
+
+  <div class="credo rv">
+    <p>Reasoning is becoming free. <b>Knowledge is not.</b></p>
+    <p>Models will change. <b>Knowledge should survive them.</b></p>
+    <p>Answers expire. <b>Evidence remains.</b></p>
+    <p>Trust cannot be prompted. <b>It must be engineered.</b></p>
+    <p>The generator <b>should not be its own auditor.</b></p>
+    <p>Nothing is advanced by narrative. <b>Everything is measured.</b></p>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">See the difference</span>
+<h2>The same question, answered twice.</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0">
+    <div class="card"><h4 style="color:var(--fg2)">A typical AI answer</h4>
+      <p class="mono" style="font-size:12.5px;color:var(--fg3);margin-top:10px">“What is the contract renewal date?”</p>
+      <ul class="vchain"><li>“September.”</li><li class="sep">▾</li><li>confidence: 97%</li><li class="sep">▾</li><li class="bad">nothing to inspect</li></ul>
+      <p class="kwd" style="margin-top:12px;text-align:center">Fluent. Possibly right. Unprovable.</p></div>
+    <div class="card"><h4>The same answer on Orves</h4>
+      <p class="mono" style="font-size:12.5px;color:var(--fg3);margin-top:10px">“What is the contract renewal date?”</p>
+      <ul class="vchain"><li>“September 1, 2026.”</li><li class="sep">▾</li><li>amendment_v2.pdf · p.4 ¶3</li><li class="sep">▾</li><li>version 4 · history attached</li><li class="sep">▾</li><li class="good">certificate — verify it yourself</li></ul>
+      <p class="kwd" style="margin-top:12px;text-align:center">Same answer. Now it can survive an audit.</p></div>
+  </div>
+</section>
+
+<section class="ruled center">
   <span class="eye">The gap</span>
 <h2>Everyone sells answers. Nobody governs knowledge.</h2>
 <p class="lead center">RAG, agents, AI search, knowledge bases — the market optimizes the last step and improvises everything under it. The result is fluent systems standing on unverifiable foundations.</p>
-  <div class="tblwrap rv" style="max-width:820px;margin-left:auto;margin-right:auto"><table class="tbl">
+  <div class="tblwrap rv" style="max-width:860px;margin-left:auto;margin-right:auto"><table class="tbl">
     <thead><tr><th>Question</th><th>Typical stack</th><th>Orves</th></tr></thead>
     <tbody>
       <tr><td><b>Where did this answer come from?</b></td><td>a similarity score</td><td>an evidence chain to a source span and hash</td></tr>
       <tr><td><b>What happens under uncertainty?</b></td><td>the model improvises</td><td>ABSTAINED, with the reason</td></tr>
+      <tr><td><b>Can two runs produce identical output?</b></td><td>no — pipelines drift</td><td>determinism is a platform invariant</td></tr>
       <tr><td><b>Can you rebuild your index after a fix?</b></td><td>re-run and hope</td><td>re-derive from the canonical model, with proof</td></tr>
+      <tr><td><b>Can you prove nothing changed?</b></td><td>trust the vendor</td><td>versioned hashes — check them offline</td></tr>
+      <tr><td><b>Can another model consume it?</b></td><td>rebuild per vendor</td><td>model-agnostic objects via API and MCP</td></tr>
       <tr><td><b>Can an auditor check it?</b></td><td>screenshots</td><td>public certificate verification, free</td></tr>
       <tr><td><b>Who owns the knowledge?</b></td><td>entangled with the vendor</td><td>you — models are just the interface</td></tr>
     </tbody>
   </table></div>
+  <p class="mono rv" style="margin-top:26px;font-size:14px;color:var(--acc2)">The industry built systems that answer. Orves builds the layer that remembers — and proves.</p>
 </section>
 
 <section class="ruled center">
@@ -122,6 +176,13 @@
   <span class="eye">The moat</span>
 <h2>Composition compounds. Benchmarks accumulate.</h2>
 <p class="lead center">Each product is useful alone. Together they produce properties none has individually — and the measurement corpus behind them grows into an asset competitors cannot copy retroactively.</p>
+  <div class="flowchain rv" style="margin-top:26px">
+    <span class="fc" style="animation-delay:0s">every parse</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:1s">more gold data</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:2s">harder benchmarks</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:3s">better champions</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:4s">stronger knowledge</span><span class="a">⟲</span>
+  </div>
   <div class="lad rv">
   <div class="lrow"><span class="lcombo"><b>Parser</b></span><span class="ar">→</span><span class="lout">high-fidelity structured evidence</span></div>
   <div class="lrow"><span class="lcombo">+ <b>Verifiable Knowledge</b></span><span class="ar">→</span><span class="lout">a knowledge base you can prove</span></div>

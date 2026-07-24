@@ -74,55 +74,90 @@
   <div>
     <span class="eye">The products</span>
     <h1 style="max-width:16ch;margin-left:auto;margin-right:auto">Two products. One transformation.</h1>
-    <p class="sub" style="max-width:56ch">Every product solves a pain a buyer recognizes. <b style="color:var(--fg)">Parser</b> gives you structured evidence. <b style="color:var(--fg)">Verifiable Knowledge</b> gives you knowledge you can trust and prove. Need it current every day? The <a href="solutions/living-knowledge" style="color:var(--acc2)">Living Knowledge</a> solution keeps it alive.</p>
+    <p class="sub" style="max-width:52ch">One turns reality into <b style="color:var(--fg)">evidence</b>. The other turns evidence into <b style="color:var(--fg)">knowledge</b>. Need it current every day? The <a href="solutions/living-knowledge" style="color:var(--acc2)">Living Knowledge</a> solution keeps it alive.</p>
+    <div class="flowchain rv" style="margin-top:26px">
+      <span class="fc" style="animation-delay:0s">Reality</span><span class="a">→</span>
+      <span class="fc" style="animation-delay:1s">structured evidence</span><span class="a">→</span>
+      <span class="fc" style="animation-delay:2s">verifiable knowledge</span><span class="a">→</span>
+      <span class="fc" style="animation-delay:3s">apps · agents · models · people</span><span class="a">⟲</span>
+      <span class="fc" style="animation-delay:4s">living knowledge</span>
+    </div>
   </div>
 </section>
 
 <section class="center" style="border-top:0;padding-top:8px">
-  <div class="g2 rv" style="margin-top:10px;max-width:860px;margin-left:auto;margin-right:auto">
+  <div class="g2 rv" style="margin-top:10px;max-width:900px;margin-left:auto;margin-right:auto">
     <a class="card" href="products/parser">
       <span class="pnum">01 · Infrastructure</span>
       <h3 style="margin:6px 0 8px">Parser</h3>
-      <p style="font-size:14.5px">Turn any document into high-fidelity structured evidence — layout, meaning, exact location and provenance. For your pipelines, RAG and ingestion — or as the entry to Orves.</p>
-      <p class="mono" style="font-size:12px;color:var(--fg3);margin-top:12px">standalone API · per page · in pilot</p>
+      <p style="font-size:14px">High-fidelity structured evidence — layout, meaning, exact location and provenance. For your pipelines, RAG and ingestion — or as the entry to Orves.</p>
+      <div class="ioline" style="margin-top:14px"><span class="iolab">IN</span>PDF · DOCX · XLSX · images · scans · audio · video</div>
+      <div class="ioline"><span class="iolab">OUT</span>structure atoms · canonical text · spans · certificate</div>
+      <div class="ioline"><span class="iolab">FOR</span>document AI · RAG pipelines · OCR replacement · ETL · ops teams</div>
+      <p class="mono" style="font-size:12px;color:var(--fg3);margin-top:12px">standalone API · 1 page = 1 credit · in pilot</p>
       <span class="k">View Parser →</span></a>
     <a class="card" href="products/verifiable-knowledge" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)">
       <span class="pnum" style="color:var(--acc2)">02 · The core</span>
       <h3 style="margin:6px 0 8px">Verifiable Knowledge</h3>
-      <p style="font-size:14.5px">A knowledge base you can prove: canonicalized, deduplicated, versioned, evidence-linked — with lineage, citations and a knowledge graph. Served to any AI via API and MCP.</p>
-      <p class="mono" style="font-size:12px;color:var(--fg3);margin-top:12px">the heart of Orves · usage-based · in pilot</p>
+      <p style="font-size:14px">A knowledge base you can prove: canonicalized, deduplicated, versioned, evidence-linked. Served to any AI via API and MCP.</p>
+      <div class="ioline" style="margin-top:14px"><span class="iolab">IN</span>structured evidence — yours or Parser's</div>
+      <div class="ioline"><span class="iolab">OUT</span>knowledge objects · graph · citations · versions · certificate</div>
+      <div class="ioline"><span class="iolab">FOR</span>AI agents · compliance · enterprise search · internal assistants · research</div>
+      <p class="mono" style="font-size:12px;color:var(--fg3);margin-top:12px">the heart of Orves · knowledge operations · in pilot</p>
       <span class="k">View Verifiable Knowledge →</span></a>
   </div>
 </section>
 
 <section class="center">
-  <span class="eye">Adoption</span>
+  <span class="eye">Which product do I need?</span>
 <h2>Start where your problem starts.</h2>
-<p class="lead center">Already have AI? Start with Parser. Need knowledge you can trust? Add Verifiable Knowledge. Knowledge changes daily? Add the Living Knowledge solution.</p>
-  <div class="tchainwrap rv" style="margin-top:30px">
-    <div class="mono" style="font-size:13px;color:var(--fg2);display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <span class="chip">Reality</span><span style="color:var(--fg3)">→</span>
-      <span class="chip">Parser · structured evidence</span><span style="color:var(--fg3)">→</span>
-      <span class="chip" style="color:var(--acc2);border-color:color-mix(in srgb,var(--acc) 40%,transparent)">Verifiable Knowledge</span><span style="color:var(--fg3)">→</span>
-      <span class="chip">apps · agents · models · people</span><span style="color:var(--fg3)">⟲</span>
-      <span class="chip">Living Knowledge · keeps it alive</span>
-    </div>
+
+  <div class="tblwrap rv" style="max-width:680px;margin:26px auto 0"><table class="tbl">
+    <thead><tr><th>You need</th><th>Start with</th></tr></thead>
+    <tbody>
+      <tr><td>Parse documents at scale, keep every span</td><td><a href="products/parser"><b>Parser</b></a></td></tr>
+      <tr><td>Build RAG on clean, located evidence</td><td><a href="products/parser"><b>Parser</b></a></td></tr>
+      <tr><td>Trace every answer to its source</td><td><a href="products/verifiable-knowledge"><b>Verifiable Knowledge</b></a></td></tr>
+      <tr><td>Version facts as they change</td><td><a href="products/verifiable-knowledge"><b>Verifiable Knowledge</b></a></td></tr>
+      <tr><td>A knowledge graph with evidence attached</td><td><a href="products/verifiable-knowledge"><b>Verifiable Knowledge</b></a></td></tr>
+      <tr><td>Knowledge that stays current on its own</td><td><a href="solutions/living-knowledge"><b>Living Knowledge</b></a></td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead center rv" style="margin-top:22px;font-size:14.5px">A bank may want only Parser. A law firm wants knowledge it can prove. A compliance team needs it current every morning. All of them build on the same infrastructure. <a href="architecture">How it fits together →</a></p>
+</section>
+
+<section class="center">
+  <span class="eye">From static to living</span>
+<h2>Knowledge that maintains itself.</h2>
+<p class="lead center">Verifiable Knowledge gives you a provable asset. The Living Knowledge solution keeps that asset true as reality changes — the same loop, running continuously.</p>
+  <div class="flowchain rv" style="margin-top:24px">
+    <span class="fc" style="animation-delay:0s">observe</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:1s">detect</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:2s">update</span><span class="a">→</span>
+    <span class="fc" style="animation-delay:3s">certify</span><span class="a">⟲</span>
   </div>
-  <p class="lead center rv" style="margin-top:24px;font-size:14.5px">A bank may want only Parser. A law firm wants knowledge it can prove. A compliance team needs it current every morning. All of them build on the same infrastructure. <a href="architecture">How it fits together →</a></p>
+  <p class="lead center rv" style="margin-top:18px;font-size:14px"><a href="solutions/living-knowledge" style="color:var(--acc2)">The Living Knowledge solution →</a></p>
 </section>
 
 <section class="center">
   <span class="eye">Buying</span>
 <h2>One wallet. Sold separately, consumed together.</h2>
 
-  <div class="g3 rv" style="margin-top:30px">
+  <div class="flowchain rv" style="margin-top:22px">
+    <span class="fc" style="animation:none;color:var(--acc2);border-color:color-mix(in srgb,var(--acc) 40%,transparent)">Orves Credits</span><span class="a">→</span>
+    <span class="fc" style="animation:none">Parser · pages</span><span class="a">→</span>
+    <span class="fc" style="animation:none">Knowledge · operations</span><span class="a">→</span>
+    <span class="fc" style="animation:none">Living · monitoring</span>
+  </div>
+  <div class="g3 rv" style="margin-top:26px">
     <div class="card"><h4>Orves Credits</h4><p>A single wallet for the whole infrastructure. Each product meters in its own unit — pages, knowledge operations, observed events. Start with 15,000 free credits.</p></div>
     <div class="card"><h4>Value follows the chain</h4><p>The closer a unit sits to provable knowledge, the more it delivers. Verifiable Knowledge meters knowledge operations — never tokens.</p></div>
     <div class="card"><h4>Stages, not lock-in</h4><p>Structured Evidence · Provable Knowledge · Living Knowledge — natural adoption stages. Continuous monitoring is recurring; the rest is usage.</p></div>
   </div>
   <div class="cta rv" style="justify-content:center;margin-top:26px">
-    <a class="btn" href="pricing">Pricing</a>
-    <a class="btn gh" href="developers">For developers</a>
+    <a class="btn" href="products/parser">Explore Parser</a>
+    <a class="btn" href="products/verifiable-knowledge" style="background:var(--panel);color:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 45%,transparent)">Explore Verifiable Knowledge</a>
+    <a class="btn gh" href="pricing">Pricing</a>
   </div>
 </section>
 
