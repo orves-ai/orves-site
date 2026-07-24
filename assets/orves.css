@@ -739,3 +739,29 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 :root[data-base="light"] .grid-bg{opacity:.35}
 .thbtn{background:none;border:1px solid var(--line2);border-radius:8px;color:var(--fg2);font-size:14px;width:32px;height:32px;cursor:pointer;line-height:1}
 .thbtn:hover{color:var(--fg)}
+
+/* ── página de produto: lie-chain, flow, pipeline interno, kw-cards, output demo ── */
+.cmp{max-width:780px;margin:28px auto 0;display:flex;flex-direction:column;gap:12px}
+.cmprow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:center}
+.cmprow .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;min-width:104px;text-align:right;color:var(--fg3)}
+.cmprow .n{font-family:var(--mono);font-size:12px;border:1px solid var(--line2);border-radius:8px;padding:6px 12px;color:var(--fg2);background:var(--panel)}
+.cmprow .a{color:var(--fg3);font-size:12px}
+.cmprow.bad .n.x{border-color:color-mix(in srgb,#E06A5E 50%,transparent);color:#E06A5E}
+.cmprow.good .n.x{border-color:color-mix(in srgb,var(--acc) 50%,transparent);color:var(--acc2)}
+.kwl{list-style:none;margin:0 0 12px;padding:0;font-family:var(--mono);font-size:12.5px;color:var(--fg);display:flex;flex-direction:column;gap:7px}
+.kwl li{border-bottom:1px solid var(--line);padding-bottom:7px}
+.kwd{font-size:12.5px;color:var(--fg3)}
+.flowchain{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:26px auto 6px}
+.flowchain .fc{font-family:var(--mono);font-size:12px;border:1px solid var(--line2);border-radius:8px;padding:7px 13px;color:var(--fg2);background:var(--panel);animation:fcglow 5s infinite}
+.flowchain .a{color:var(--fg3);font-size:12px}
+@keyframes fcglow{0%,100%{border-color:var(--line2);color:var(--fg2)}10%{border-color:var(--acc);color:var(--acc2)}22%{border-color:var(--line2);color:var(--fg2)}}
+.deep{max-width:700px;margin:30px auto 0;display:flex;flex-direction:column;text-align:left}
+.deep .dstage{display:flex;align-items:baseline;gap:14px;padding:11px 18px;border:1px solid var(--line2);border-radius:10px;background:var(--panel)}
+.deep .dstage b{font-family:var(--mono);font-size:13px;min-width:160px;font-weight:500;color:var(--fg)}
+.deep .dstage span{font-family:var(--mono);font-size:11.5px;color:var(--fg3)}
+.deep .darr{color:var(--fg3);font-size:11px;padding:3px 0 3px 28px;line-height:1}
+.deep .dstage.out{border-color:color-mix(in srgb,var(--acc) 42%,transparent)}
+.deep .dstage.out b{color:var(--acc2)}
+.odemo{display:grid;grid-template-columns:252px 1fr;gap:24px;max-width:880px;margin:30px auto 0;align-items:stretch;text-align:left}
+.odemo .pgmock{border:1px solid var(--line2);border-radius:12px;background:var(--panel);padding:14px;display:flex;align-items:center;justify-content:center}
+@media(max-width:780px){.odemo{grid-template-columns:1fr}.odemo .pgmock{max-width:300px;margin:0 auto}}

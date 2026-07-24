@@ -100,6 +100,12 @@
 
   <p class="lead center">Most parsers flatten documents into a string. Structure, geometry, tables and provenance are destroyed before any model sees the content — and no downstream step can recover what parsing lost.</p>
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">flattened tables</span><span class="chip bad">lost reading order</span><span class="chip bad">orphan footnotes</span><span class="chip bad">no source spans</span><span class="chip bad">silent OCR errors</span></div>
+  
+  <div class="cmp rv">
+    <div class="cmprow bad"><span class="lab">the default</span><span class="n">document</span><span class="a">→</span><span class="n">"one long string"</span><span class="a">→</span><span class="n">LLM</span><span class="a">→</span><span class="n x">confident, wrong</span></div>
+    <div class="cmprow good"><span class="lab">with Parser</span><span class="n">document</span><span class="a">→</span><span class="n">artifacts + spans</span><span class="a">→</span><span class="n">LLM</span><span class="a">→</span><span class="n x">grounded, checkable</span></div>
+  </div>
+  
 </section>
 
 <section class="center">
@@ -107,7 +113,13 @@
 <h2>Artifacts, not strings.</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>Canonical Text</h4><p>Deterministic text with stable coordinates — the same document always yields the same text.</p></div><div class="card"><h4>Structure atoms</h4><p>Tables, boxes, notes, headers, reading order — every element typed and addressable.</p></div><div class="card"><h4>Built for verification</h4><p>Every parse carries engine version, inputs, outputs and spans back to the page. Certificates in pilot; public verification endpoint at launch.</p></div>
+    <div class="card"><h4>Canonical text</h4>
+    <ul class="kwl"><li>deterministic</li><li>stable coordinates</li><li>addressable</li></ul><p class="kwd">Same document, same text — always.</p>
+    </div><div class="card"><h4>Structure atoms</h4>
+    <ul class="kwl"><li>tables</li><li>lists · headers</li><li>reading order</li><li>geometry</li></ul><p class="kwd">Every element typed and addressable.</p>
+    </div><div class="card"><h4>Built for verification</h4>
+    <ul class="kwl"><li>certificate</li><li>source spans</li><li>coordinates</li><li>provenance</li></ul><p class="kwd">Certificates in pilot; public verification at launch.</p>
+    </div>
   </div>
 </section>
 
@@ -115,6 +127,9 @@
   <span class="eye">How it works</span>
 <h2>Three moves. Nothing hidden.</h2>
 
+  
+  <div class="flowchain rv"><span class="fc" style="animation-delay:0s">PDF in</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parser</span><span class="a">→</span><span class="fc" style="animation-delay:2s">artifacts</span><span class="a">→</span><span class="fc" style="animation-delay:3s">API response</span><span class="a">→</span><span class="fc" style="animation-delay:4s">certificate</span></div>
+  
   <div class="g3 rv" style="margin-top:26px">
     
     <div class="card"><span class="pnum">01</span><h4>Submit</h4><p>Send a document or point the API at a source. Nothing to install, nothing to host.</p></div>
@@ -126,39 +141,92 @@
   </div>
 </section>
 
-<section class="center">
-  <span class="eye">Where it sits</span>
-<h2>The architecture — and this product's place in it.</h2>
 
-  <div class="pipe rv">
-  <div class="pnode src"><b>Reality</b><span>documents · databases · APIs · feeds · events · audio</span></div>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode hot" href="../products/parser"><b>Parser</b><span>structure in, nothing lost</span></a>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <a class="pnode" href="../products/verifiable-knowledge"><b>Verifiable Knowledge</b><span>origin · context · history · versions · evidence</span></a>
-  <div class="parr"><span class="v"></span><span class="t">▾</span></div>
-  <div class="fork">
-    <div class="fcol byo">
-      <div class="fhead">Bring your own AI</div>
-      <div class="fbody">GPT · Claude · Gemini · your own model<br>embeddings · retrieval · fine-tuning · training data · agents</div>
-      <div class="fnote">your knowledge asset — no lock-in</div>
-    </div>
-    <div class="forx">or</div>
-    <a class="fcol orves" href="../products/verifiable-knowledge">
-      <div class="fhead">Served by Orves</div>
-      <div class="fbig">Knowledge APIs · MCP</div>
-      <div class="fbody">knowledge objects — evidence, citations, versions — for apps, agents and people</div>
-      <div class="fnote">same asset, either way</div>
-    </a>
+<section class="center">
+  <span class="eye">Inside the engine</span>
+<h2>From page to artifact, stage by stage.</h2>
+<p class="lead center">Each stage is run by a measured champion — benchmarked per document family, versioned, and swapped the day a better engine wins.</p>
+  <div class="deep rv">
+    
+    
+    <div class="dstage"><b>Layout detection</b><span>regions, columns, figures — geometry first</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>OCR</b><span>champion engine per document family</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Reading order</b><span>the human path through the page, resolved</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Tables & structure</b><span>cells, headers, spans — typed, not flattened</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage"><b>Canonical text</b><span>deterministic — same document, same bytes</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage out"><b>Structure atoms</b><span>every element addressable by position</span></div>
+    
+    <div class="darr">▾</div>
+    <div class="dstage out"><b>Certificate</b><span>engine version + inputs + outputs + spans, bound</span></div>
+    
   </div>
-  <a class="obsloop" href="../solutions/living-knowledge"><b>⟲ Living Knowledge</b><span>continuous monitoring — observe · detect · update</span><span class="st draft"><span class="d"></span>rolling out</span></a>
-</div>
+  <p class="lead center rv" style="margin-top:20px;font-size:14px">Where this engine sits in the platform → <a href="../architecture" style="color:var(--acc2)">architecture</a></p>
 </section>
+
+
+
+<section class="center">
+  <span class="eye">Show me</span>
+<h2>One artifact, exactly as the API returns it.</h2>
+<p class="lead center">Left: the element on the page. Right: what you receive — typed, located, verifiable.</p>
+  <div class="odemo rv">
+    <div class="pgmock">
+      <svg width="220" height="290" viewBox="0 0 220 290" fill="none" role="img" aria-label="Document page with a parsed table region">
+        <rect x="1" y="1" width="218" height="288" rx="8" stroke="var(--line2)"/>
+        <rect x="20" y="22" width="120" height="7" rx="3.5" fill="var(--fg3)" opacity=".55"/>
+        <rect x="20" y="40" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="50" width="172" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="60" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="70" width="120" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <text x="20" y="98" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--acc2)">table · reading_order 47</text>
+        <rect x="20" y="104" width="180" height="92" rx="4" stroke="var(--acc)" stroke-width="1.3"/>
+        <line x1="20" y1="127" x2="200" y2="127" stroke="var(--line2)"/>
+        <line x1="20" y1="150" x2="200" y2="150" stroke="var(--line2)"/>
+        <line x1="20" y1="173" x2="200" y2="173" stroke="var(--line2)"/>
+        <line x1="80" y1="104" x2="80" y2="196" stroke="var(--line2)"/>
+        <line x1="140" y1="104" x2="140" y2="196" stroke="var(--line2)"/>
+        <text x="20" y="212" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">bbox [143, 220, 502, 640]</text>
+        <rect x="20" y="226" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="236" width="164" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="246" width="176" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <text x="176" y="276" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">p. 12</text>
+      </svg>
+    </div>
+    <div class="code rv"><div class="codehd">structure atom · 47 of 1,284</div>
+<pre><span class="cm"># artifact 47 — table, page 12</span>
+{ <span class="k">"type"</span>: <span class="s">"table"</span>, <span class="k">"page"</span>: <span class="g">12</span>,
+  <span class="k">"bbox"</span>: [<span class="g">143, 220, 502, 640</span>],
+  <span class="k">"reading_order"</span>: <span class="g">47</span>, <span class="k">"cells"</span>: <span class="g">84</span>,
+  <span class="k">"canonical_text"</span>: <span class="s">"Q2 revenue by segment…"</span>,
+  <span class="k">"source_span"</span>: <span class="s">"contract_2024.pdf#p12/143,220,502,640"</span>,
+  <span class="k">"certificate"</span>: <span class="s">"cert_9f2…"</span> }
+
+<span class="cm"># artifact 51 — chart, page 14: the engine abstains</span>
+{ <span class="k">"type"</span>: <span class="s">"chart"</span>, <span class="k">"state"</span>: <span class="r">"ABSTAINED"</span>,
+  <span class="k">"reason"</span>: <span class="s">"chart-to-table below the evidence bar"</span> }</pre></div>
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Representative artifact — the exact response contract is published with the pilot. The abstained chart is not a bug: fabricating a table would be.</p>
+</section>
+
 
 <section class="center">
   <span class="eye">Benchmarks</span>
 <h2>Measured before claimed.</h2>
-<p class="lead center">A number appears here only after it survives pre-registered evaluation. Until then, the honest state is shown.</p>
+
+  <div class="g2 rv" style="max-width:780px;margin:24px auto 0;text-align:left">
+    <div class="card"><h4>Public benchmarks</h4><p>Pre-registered evaluations against named competitors — published with the pilot, every number with its n.</p></div>
+    <div class="card"><h4>Internal evaluation</h4><p>Running today on proprietary gold sets. A number appears below only after it survives its gate — until then, the honest state is shown.</p></div>
+  </div>
   <div class="tblwrap rv"><table class="tbl">
 <thead><tr><th>Dimension</th><th>Unit</th><th>Status</th><th>Notes</th></tr></thead>
 <tbody>
@@ -215,8 +283,15 @@
 <h2>FAQ</h2>
 
   <div class="rv" style="max-width:760px;margin:26px auto 0;text-align:left">
-<details><summary>Which formats are supported?</summary><p>PDF, DOCX, XLSX, PPTX, HTML, images, scans and audio — plus databases, APIs and event streams through connectors. If a family is not yet measured, the API says so instead of silently degrading.</p></details>
+<details><summary>Why not an open-source parser — Docling, Unstructured, LlamaParse?</summary><p>Those are engines. Orves is the measured layer above engines: a permanent championship benchmarks candidates per document family, and the winner ships behind one stable API with determinism, abstention and certificates. Engines keep changing; your contract doesn't — and you never operate, version or re-benchmark them yourself.</p></details>
+<details><summary>How deterministic is parsing?</summary><p>Same document, same engine version — same output, byte for byte. Determinism is a platform invariant, checked with round-trip tests. It is what makes evidence reproducible and certificates meaningful.</p></details>
 <details><summary>What happens when parsing is uncertain?</summary><p>The element is returned with an abstained state and the reason. UNKNOWN is a decision, not an error — nothing is fabricated.</p></details>
+<details><summary>How are tables represented?</summary><p>As structure atoms: typed elements with geometry, cells, headers and reading order, addressable by coordinates. Not markdown soup — a table you can query, cite and verify cell by cell.</p></details>
+<details><summary>How are certificates generated?</summary><p>Every parse records engine version, inputs, outputs and source spans; the certificate binds them, so any artifact traces back to its exact position on the page. Certificates are in pilot; the public verification endpoint ships at launch.</p></details>
+<details><summary>How do you benchmark the engine?</summary><p>Pre-registered evaluations on gold sets, every number published with its n, champions re-measured as engines evolve. A claim appears on this site only after it survives its gate — until then you see the honest state.</p></details>
+<details><summary>How is pricing calculated?</summary><p>1 page = 1 credit — flat. No multipliers for OCR, tables or file type, and certificates are never billed.</p></details>
+<details><summary>Can I self-host?</summary><p>No. Orves is delivered exclusively as an API. Determinism, benchmarks and certificates are properties of the operated platform — we only guarantee them where we run the engines. Nothing to install, nothing to maintain.</p></details>
+<details><summary>Which formats are supported?</summary><p>PDF, DOCX, XLSX, PPTX, HTML, images, scans and audio — plus databases, APIs and event streams through connectors. If a family is not yet measured, the API says so instead of silently degrading.</p></details>
 <details><summary>Can I use the Parser alone?</summary><p>Yes. Parser is a standalone API with its own benchmarks — built for teams that already run their own pipelines, RAG or ingestion. Add Verifiable Knowledge when you need knowledge you can prove.</p></details>
 
 </div>
@@ -225,14 +300,18 @@
 
 </main>
 
+
+
 <section class="center">
-  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">Build AI systems that know where every answer came from.</h2>
-  <p class="lead center" style="margin-bottom:26px">Free sandbox — real API, sample corpus, verify a real certificate. Buy credits when it earns it.</p>
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Turn your first document into structured evidence.</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 free credits · no credit card · the API activates with the pilot.</p>
   <div class="cta" style="justify-content:center">
-    <a class="btn" href="mailto:pilot@orves.ai?subject=Orves%20sandbox%20access">Start building — free</a>
-    <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
+    <a class="btn" href="../create-account">Create free account</a>
+    <a class="btn gh" href="../developers">Read the docs</a>
   </div>
 </section>
+
+
 
 
 <footer><div class="wrap">
