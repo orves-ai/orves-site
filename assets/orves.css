@@ -25,10 +25,10 @@
   --r:9px;--r2:14px;
 }
 /* tema de PRODUTO (dashboard): light default com opção dark */
-body[data-base="light"]{
+:root[data-base="light"]{
   --ink:#FFFFFF;--ink2:#F5F7FA;--panel:#FFFFFF;--panel2:#F6F8FB;
   --line:#E6E9EE;--line2:#D8DDE4;--fg:#0C0F16;--fg2:#42505E;--fg3:#67707E;
-  --acc:#0B8152;--acc2:#22C07E;--hold:#966807;
+  --acc:#0B8152;--acc2:#0A8A58;--hold:#966807;
 }
 
 /* ── Base / tipografia (original) ───────────────────────────────── */
@@ -731,3 +731,11 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
   html.js .flowart .ppd,html.js .flowart .pps{animation:none!important;opacity:0}
   html.js .flowart .ppb1,html.js .flowart .ppb2,html.js .flowart .ppb3,html.js .flowart .ppb4{animation:none!important}
 }
+
+/* tema light: toggle ☀/☾ (persistido em localStorage orves-theme) */
+:root[data-base="light"]{--code-bg:#F3F5F8;--code-line:#D8DDE4;--code-fg:#2A2F3A;--code-dim:#67707E}
+:root[data-base="light"] .btn{color:#fff}
+:root[data-base="light"] .btn.gh{color:var(--fg)}
+:root[data-base="light"] .grid-bg{opacity:.35}
+.thbtn{background:none;border:1px solid var(--line2);border-radius:8px;color:var(--fg2);font-size:14px;width:32px;height:32px;cursor:pointer;line-height:1}
+.thbtn:hover{color:var(--fg)}

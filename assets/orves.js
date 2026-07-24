@@ -41,12 +41,12 @@
   // ambiente mais quieto nos estágios internos (as cadeias causais geram o
   // grosso do tráfego); fan-out vivo por regra própria
   var CONF = {
-    in:       { chance: .30, cool: 220,  max: 5, dur: [1100, 2200], col: '#E8ECF4', op: .7  },
-    p2c:      { chance: .16, cool: 850,  max: 2, dur: [900, 1700],  col: '#22C07E', op: .95 },
-    c2b:      { chance: .15, cool: 900,  max: 2, dur: [900, 1700],  col: '#22C07E', op: .95 },
-    out:      { chance: .32, cool: 180,  max: 5, dur: [750, 1500],  col: '#4FD69B', op: .9  },
+    in:       { chance: .30, cool: 220,  max: 5, dur: [1100, 2200], col: 'var(--fg2)', op: .7  },
+    p2c:      { chance: .16, cool: 850,  max: 2, dur: [900, 1700],  col: 'var(--acc)', op: .95 },
+    c2b:      { chance: .15, cool: 900,  max: 2, dur: [900, 1700],  col: 'var(--acc)', op: .95 },
+    out:      { chance: .32, cool: 180,  max: 5, dur: [750, 1500],  col: 'var(--acc2)', op: .9  },
     watch:    { chance: .012, cool: 7000, max: 1, dur: [2800, 4200], col: '#4FD69B', op: .65 },
-    evidence: { chance: 0,    cool: 0,    max: 4, dur: [1500, 2200], col: '#4FD69B', op: .95 }
+    evidence: { chance: 0,    cool: 0,    max: 4, dur: [1500, 2200], col: 'var(--acc2)', op: .95 }
   };
   // regra: nunca menos de 4 pulsos no diagrama, nunca menos de 2 saindo do
   // randomness decides WHERE and HOW, never whether the system looks alive
@@ -581,4 +581,24 @@
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   panel.addEventListener('click', function (e) { if (e.target.tagName === 'A') panel.classList.remove('open'); });
+})();
+
+// ── tema light/dark: toggle persistido ──
+(function () {
+  var btns = document.querySelectorAll('.thbtn');
+  if (!btns.length) return;
+  function apply() {
+    var l = document.documentElement.dataset.base === 'light';
+    btns.forEach(function (b) { b.textContent = l ? '\u263E' : '\u2600'; });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.documentElement;
+      var toLight = el.dataset.base !== 'light';
+      if (toLight) { el.dataset.base = 'light'; } else { delete el.dataset.base; }
+      try { localStorage.setItem('orves-theme', toLight ? 'light' : 'dark'); } catch (e) {}
+      apply();
+    });
+  });
+  apply();
 })();
