@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Orves — Reset password</title>
-<meta name="description" content="Reset your Orves console password. We send a reset link to your email."/>
-<link rel="canonical" href="https://orves.ai/forgot-password.html"/>
-<meta property="og:title" content="Orves — Reset password"/>
-<meta property="og:description" content="Reset your Orves console password. We send a reset link to your email."/>
+<title>Orves — Log in</title>
+<meta name="description" content="Log in to the Orves console."/>
+<link rel="canonical" href="https://orves.ai/login.html"/>
+<meta property="og:title" content="Orves — Log in"/>
+<meta property="og:description" content="Log in to the Orves console."/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://orves.ai/forgot-password.html"/>
+<meta property="og:url" content="https://orves.ai/login.html"/>
 <meta property="og:site_name" content="Orves"/>
 <meta name="twitter:card" content="summary"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,25 +30,24 @@
 <section class="center" style="border-top:0;padding:90px 0 40px">
   <div class="auth rv">
     <div style="display:flex;justify-content:center;margin-bottom:18px"><svg width="40" height="40" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg></div>
-    <h2 style="font-size:26px;margin:0 0 6px">Reset your password</h2>
-    <p style="font-size:13.5px;color:var(--fg2);margin-bottom:26px">Enter your email and we&rsquo;ll send you a reset link.</p>
-
+    <h2 style="font-size:26px;margin:0 0 6px">Log in to Orves</h2>
+    <p style="font-size:13.5px;color:var(--fg2);margin-bottom:26px">The console for your knowledge infrastructure.</p>
     <form class="authform" onsubmit="return false">
       <label class="af">
         <span>Email</span>
         <input type="email" placeholder="you@company.com" autocomplete="email"/>
       </label>
-      <button class="btn" type="submit" style="width:100%;margin-top:6px">Send reset link</button>
+      <label class="af">
+        <span style="display:flex;justify-content:space-between">Password <a href="forgot-password.html" style="color:var(--acc2);text-transform:none;letter-spacing:0">Forgot password?</a></span>
+        <input type="password" placeholder="••••••••••" autocomplete="current-password"/>
+      </label>
+      <button class="btn" type="submit" style="width:100%;margin-top:6px">Log in</button>
     </form>
-
     <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px">
-      <span class="st soon"><span class="d"></span>console in development</span> <span>pilot partners: reply to your access email</span>
+      <span class="st soon"><span class="d"></span>console in final development</span>
     </p>
-
-    <div class="authdiv"><span>remembered it?</span></div>
-    <a class="btn gh" style="width:100%;text-align:center" href="login.html">Back to log in</a>
-
-    <p style="font-size:12.5px;color:var(--fg3);margin-top:18px"><a href="index.html" style="color:var(--fg3)">← Back to orves.ai</a></p>
+    <div class="authdiv"><span>no account yet?</span></div>
+    <a class="btn gh" style="width:100%;text-align:center" href="create-account.html">Create free account</a>
   </div>
 </section>
 
