@@ -114,17 +114,14 @@
   <span class="eye">The gap</span>
 <h2>Everyone sells answers. Nobody governs knowledge.</h2>
 <p class="lead center">RAG, agents, AI search, knowledge bases — the market optimizes the last step and improvises everything under it. The result is fluent systems standing on unverifiable foundations.</p>
-  <div class="tblwrap rv" style="max-width:880px;margin-left:auto;margin-right:auto"><table class="tbl">
-    <thead><tr><th>Question</th><th>Ad-hoc AI stack</th><th>Orves</th></tr></thead>
+  <div class="tblwrap rv" style="max-width:720px;margin-left:auto;margin-right:auto"><table class="tbl">
+    <thead><tr><th>Question</th><th>Typical AI stack</th><th>Orves</th></tr></thead>
     <tbody>
-      <tr><td><b>Where did this answer come from?</b></td><td>retrieval metadata or a similarity score</td><td>an evidence chain to the exact source span and version</td></tr>
-      <tr><td><b>What happens under uncertainty?</b></td><td>model confidence or application heuristics</td><td>explicit SUPPORTED, CONTRADICTED, UNKNOWN or ABSTAINED states</td></tr>
-      <tr><td><b>Can two runs produce identical output?</b></td><td>not guaranteed across mutable pipelines</td><td>deterministic, versioned transformations</td></tr>
-      <tr><td><b>Can you rebuild your index after a fix?</b></td><td>rerun the pipeline, compare outputs manually</td><td>re-derive from the canonical representation, with recorded lineage</td></tr>
-      <tr><td><b>Can you prove nothing changed?</b></td><td>dependent on vendor logs and retention</td><td>versioned hashes and inspectable history</td></tr>
-      <tr><td><b>Can another model consume it?</b></td><td>model-specific integrations, recreated per vendor</td><td>model-agnostic knowledge objects via API and MCP</td></tr>
-      <tr><td><b>Can an auditor check it?</b></td><td>exports, logs and screenshots assembled after the fact</td><td>inspectable lineage and certificate verification</td></tr>
-      <tr><td><b>Who owns the knowledge?</b></td><td>often coupled to a vendor-specific index or memory layer</td><td>you — models remain interchangeable interfaces</td></tr>
+      <tr><td><b>Where did this answer come from?</b></td><td>similarity score</td><td><span style="color:var(--acc2)">exact source span</span></td></tr>
+      <tr><td><b>What if evidence conflicts?</b></td><td>the model guesses</td><td><span style="color:var(--acc2)">explicit evidence state</span></td></tr>
+      <tr><td><b>Can you reproduce the result?</b></td><td>not guaranteed</td><td><span style="color:var(--acc2)">deterministic</span></td></tr>
+      <tr><td><b>Can an auditor inspect it?</b></td><td>screenshots and logs</td><td><span style="color:var(--acc2)">full audit trail</span></td></tr>
+      <tr><td><b>Who owns the knowledge?</b></td><td>the vendor</td><td><span style="color:var(--acc2)">you</span></td></tr>
     </tbody>
   </table></div>
   <p class="mono rv" style="margin-top:26px;font-size:14px;color:var(--acc2)">The industry built systems that answer. Orves builds the layer that remembers — and proves.</p>
