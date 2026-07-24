@@ -208,21 +208,6 @@
   <p class="lead center rv" style="margin-top:14px;font-size:14px">Public results are released only after pre-registered evaluation — until then, no number appears on this site. <a href="../benchmarks" style="color:var(--acc2)">How we benchmark →</a></p>
 </section>
 
-<section class="center">
-  <span class="eye">Pricing</span>
-<h2>Credits per unit of work.</h2>
-
-  <div class="rv" style="max-width:560px;margin:26px auto 0;display:flex;flex-direction:column;gap:12px">
-    
-    <div class="card" style="display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap;text-align:left">
-      <span style="font-size:14px">1 page</span>
-      <span style="display:flex;align-items:center;gap:10px"><span class="mono" style="font-size:15px;color:var(--acc2);font-weight:600;white-space:nowrap">1 credit</span><span class="st draft"><span class="d"></span>pilot pricing</span></span>
-    </div>
-    
-  </div>
-  <p class="lead center rv" style="margin-top:18px;font-size:14px">Certificates included with every artifact — never billed. <a href="../pricing" style="color:var(--acc2)">How pricing works →</a></p>
-</section>
-
 
 
 <section class="center tight">
@@ -244,25 +229,6 @@
   <div class="bandpills">
     <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">Examples</span>
   </div>
-</div>
-</section>
-
-<section class="center">
-  <span class="eye">Questions</span>
-<h2>FAQ</h2>
-
-  <div class="rv" style="max-width:760px;margin:26px auto 0;text-align:left">
-<details><summary>Why not an open-source parser — Docling, Unstructured, LlamaParse?</summary><p>Those are engines. Orves is the measured layer above engines: a permanent championship benchmarks candidates per document family, and the winner ships behind one stable API with determinism, abstention and certificates. Engines keep changing; your contract doesn't — and you never operate, version or re-benchmark them yourself.</p></details>
-<details><summary>How deterministic is parsing?</summary><p>Same document, same engine version — same output, byte for byte. Determinism is a platform invariant, checked with round-trip tests. It is what makes evidence reproducible and certificates meaningful.</p></details>
-<details><summary>What happens when parsing is uncertain?</summary><p>The element is returned with an abstained state and the reason. UNKNOWN is a decision, not an error — nothing is fabricated.</p></details>
-<details><summary>How are tables represented?</summary><p>As structure atoms: typed elements with geometry, cells, headers and reading order, addressable by coordinates. Not markdown soup — a table you can query, cite and verify cell by cell.</p></details>
-<details><summary>How are certificates generated?</summary><p>Every parse records engine version, inputs, outputs and source spans; the certificate binds them, so any artifact traces back to its exact position on the page. Certificates are in pilot; the public verification endpoint ships at launch.</p></details>
-<details><summary>How do you benchmark the engine?</summary><p>Pre-registered evaluations on gold sets, every number published with its n, champions re-measured as engines evolve. A claim appears on this site only after it survives its gate — until then you see the honest state.</p></details>
-<details><summary>How is pricing calculated?</summary><p>1 page = 1 credit — flat. No multipliers for OCR, tables or file type, and certificates are never billed.</p></details>
-<details><summary>Can I self-host?</summary><p>No. Orves is delivered exclusively as an API. Determinism, benchmarks and certificates are properties of the operated platform — we only guarantee them where we run the engines. Nothing to install, nothing to maintain.</p></details>
-<details><summary>Which formats are supported?</summary><p>PDF, DOCX, XLSX, PPTX, HTML, images, scans and audio — plus databases, APIs and event streams through connectors. If a family is not yet measured, the API says so instead of silently degrading.</p></details>
-<details><summary>Can I use the Parser alone?</summary><p>Yes. Parser is a standalone API with its own benchmarks — built for teams that already run their own pipelines, RAG or ingestion. Add Verifiable Knowledge when you need knowledge you can prove.</p></details>
-
 </div>
 </section>
 
