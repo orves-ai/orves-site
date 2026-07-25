@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>How Orves works</title>
-<meta name="description" content="Orves builds The Verifiable Knowledge Layer — two products, Parser and Verifiable Knowledge: every fact with evidence, provenance, versions and history."/>
-<link rel="canonical" href="https://orves.ai/how-it-works"/>
-<meta property="og:title" content="How Orves works"/>
-<meta property="og:description" content="Orves builds The Verifiable Knowledge Layer — two products, Parser and Verifiable Knowledge: every fact with evidence, provenance, versions and history."/>
+<title>Contact — Orves</title>
+<meta name="description" content="Talk to the Orves team — pilot access, enterprise, partnerships or a question about the Verifiable Knowledge Layer."/>
+<link rel="canonical" href="https://orves.ai/contact"/>
+<meta property="og:title" content="Contact — Orves"/>
+<meta property="og:description" content="Talk to the Orves team — pilot access, enterprise, partnerships or a question about the Verifiable Knowledge Layer."/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://orves.ai/how-it-works"/>
+<meta property="og:url" content="https://orves.ai/contact"/>
 <meta property="og:site_name" content="Orves"/>
 <meta name="twitter:card" content="summary"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,58 +62,38 @@
 <main class="wrap">
 
 
-<section class="hero solo" style="padding:84px 0 40px;border-top:0">
+<section class="hero solo" style="padding-bottom:18px">
   <div>
-    <span class="eye">How it works</span>
-    <h1 style="max-width:15ch;margin-left:auto;margin-right:auto">Three moves. No magic.</h1>
-    <p class="sub" style="max-width:46ch">What you do is simple. What happens underneath is engineering — and it is inspectable.</p>
+    <span class="eye">Contact</span>
+    <h1 style="max-width:14ch;margin-left:auto;margin-right:auto">Talk to the team.</h1>
+    <p class="sub" style="max-width:52ch">Pilot access, enterprise, partnerships, or a question about the platform — send a note and a human replies.</p>
   </div>
 </section>
 
-<section class="center" style="border-top:0">
-  <div class="g3 rv">
-    <div class="card"><span class="pnum">01</span><h4>Connect</h4><p>Files, folders, feeds and systems. Start with one PDF; add sources as you go. Parser turns everything into high-fidelity structured evidence.</p></div>
-    <div class="card"><span class="pnum">02</span><h4>Prove</h4><p>Verifiable Knowledge adjudicates conflicting evidence into one governed knowledge base — origin, citations, versions — served to any model, agent or person.</p></div>
-    <div class="card"><span class="pnum">03</span><h4>Stay correct</h4><p>New evidence creates new versions without overwriting history — it re-enters through Parser and is adjudicated. Never a direct edit.</p></div>
-  </div>
-</section>
-
-<section class="center">
-  <span class="eye">Under the hood</span>
-<h2>The engineering, revealed.</h2>
-
-  <div class="pipe rv" style="max-width:560px">
-    <div class="pnode src"><b>Connect</b><span>your files, sources, systems</span></div>
-    <div class="parr"><span class="v"></span></div>
-    <a class="pnode" href="products/parser"><b>Parser</b><span>understands the source</span></a>
-    <div class="parr"><span class="v"></span></div>
-    <a class="pnode hot" href="products/verifiable-knowledge"><b>Verifiable Knowledge</b><span>proves, versions and serves your knowledge</span></a>
-  </div>
-</section>
-
-<section class="center">
-  <span class="eye">Why it works</span>
-<h2>Two pillars — the reason this is infrastructure, not another chatbot.</h2>
-
-  <div class="g2 rv" style="margin-top:28px;max-width:860px;margin-left:auto;margin-right:auto">
-    <a class="card" href="products/parser"><h4>Parser</h4><p>Understands the source. Tables, structure, reading order, source spans — nothing lost.</p><span class="k">available in pilot →</span></a>
-    <a class="card" href="products/verifiable-knowledge"><h4>Verifiable Knowledge</h4><p>Makes knowledge durable, traceable and provable. One governed base, versioned, reconstructible, yours.</p><span class="k">available in pilot →</span></a>
-  </div>
-</section>
-
-<section class="center">
-  <span class="eye">The honest part</span>
-<h2>What happens when the knowledge base is not sure.</h2>
-
-  <div class="unk rv" style="margin-top:32px;text-align:left">
-    <div class="unkq">
-      <span class="eye">a decision, not an error</span>
-      <div class="claim">When evidence is insufficient, Orves abstains.</div>
-      <p class="why">Every claim carries a resolution state. <b>Verified</b> means the evidence is there — go read it. <b>Abstained</b> means it is not — and no model gets to fill the gap with fluency.</p>
+<section class="center" style="border-top:0;padding-top:8px">
+  <div id="cb" class="cbanner"></div>
+  <form class="cform rv" method="post" action="https://app.orves.ai/api/contact">
+    <div class="fgrid">
+      <label>Name<input name="name" required maxlength="120" autocomplete="name"></label>
+      <label>Work email<input type="email" name="email" required maxlength="200" autocomplete="email"></label>
     </div>
-    <div class="unkc"><span class="cm"># the API, telling the truth (pilot)</span><br>{ <span class="k">"claim"</span>: <span class="s">"renewal_term"</span>,<br>&nbsp;&nbsp;<span class="k">"state"</span>: <span class="r">"ABSTAINED"</span>,<br>&nbsp;&nbsp;<span class="k">"reason"</span>: <span class="r">"insufficient_evidence"</span> }</div>
-  </div>
+    <label>Company <span class="opt">optional</span><input name="company" maxlength="120" autocomplete="organization"></label>
+    <label>How can we help?<textarea name="message" required maxlength="4000" rows="6" placeholder="What are you building, and what would you like from Orves?"></textarea></label>
+    <button class="btn" type="submit">Send message</button>
+    <p class="k" style="text-align:center;margin-top:4px">Prefer email? <a href="mailto:pilot@orves.ai" style="color:var(--acc2)">pilot@orves.ai</a></p>
+  </form>
 </section>
+
+<script>
+(function () {
+  var p = new URLSearchParams(location.search), b = document.getElementById('cb');
+  if (!b) return;
+  if (p.get('sent')) { b.className = 'cbanner ok'; b.textContent = 'Thanks — your message is in. A human will reply soon.'; }
+  else if (p.get('error') === 'invalid') { b.className = 'cbanner err'; b.textContent = 'Please add your name, a valid email and a short message.'; }
+  else if (p.get('error') === 'send') { b.className = 'cbanner err'; b.innerHTML = 'Something went wrong sending your message. Email us at <a href="mailto:pilot@orves.ai">pilot@orves.ai</a>.'; }
+  if (p.get('sent')) { var f = document.querySelector('.cform'); if (f) f.style.display = 'none'; }
+})();
+</script>
 
 
 </main>
