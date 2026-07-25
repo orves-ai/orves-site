@@ -859,3 +859,6 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 .cmptbl .yes{color:var(--acc2)}
 .cmptbl .no{color:var(--fg3);opacity:.5}
 .cmptbl td .val{font-family:var(--mono);font-size:11.5px;color:var(--fg)}
+.plan .prate{font-family:var(--mono);font-size:15px;color:var(--acc2);font-weight:600;margin-top:6px}
+.plan .prate span{color:var(--fg3);font-weight:400;font-size:12px}
+.plan .prate small{color:var(--fg3);font-weight:400;font-size:11px;font-family:var(--sans)}
