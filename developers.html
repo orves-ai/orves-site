@@ -75,18 +75,17 @@
     </div>
     <div class="chips"><span class="chip">REST</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">OpenAPI</span></div>
   </div>
-  <div class="code rv"><div class="codehd">quickstart · parse → prove → serve knowledge objects</div>
-<pre><span class="cm"># 1 · parse</span>
-<span class="k">POST</span> <span class="s">/v1/parse</span>          { <span class="k">"document"</span>: <span class="s">"s3://acme/contract.pdf"</span> }
+  <div class="code rv"><div class="codehd">quickstart · parse → build knowledge → consume</div>
+<pre><span class="cm"># 1 · parse a document into structured evidence</span>
+<span class="k">POST</span> <span class="s">/v1/parse</span>              { <span class="k">"document"</span>: <span class="s">"s3://acme/contract.pdf"</span> }
 
-<span class="cm"># 2 · canonicalize</span>
-<span class="k">POST</span> <span class="s">/v1/canonical</span>      { <span class="k">"parse_id"</span>: <span class="s">"prs_7d1…"</span> }
+<span class="cm"># 2 · build verifiable knowledge from the parse</span>
+<span class="k">POST</span> <span class="s">/v1/knowledge</span>          { <span class="k">"parse_id"</span>: <span class="s">"prs_7d1…"</span> }
 
-<span class="cm"># 3a · your AI: export model-ready projections</span>
-<span class="k">GET</span>  <span class="s">/v1/canonical/can_31a…/projections?type=chunks</span>
-
-<span class="cm"># 3b · or serve knowledge objects from Orves</span>
-<span class="k">GET</span>  <span class="s">/v1/knowledge/objects/kn_842</span></pre></div>
+<span class="cm"># 3 · consume — objects, chunks, graph, evidence</span>
+<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842</span>
+<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842/chunks</span>
+<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842/graph</span></pre></div>
 </section>
 
 <section class="center">
