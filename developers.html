@@ -68,24 +68,24 @@
   <div>
     <span class="eye">Developers</span>
     <h1>Verifiable knowledge, in <span class="accent-tx">minutes.</span></h1>
-    <p class="sub">One small API turns documents into structured evidence and governed knowledge — every result deterministic, traceable and certified. Nothing to install, nothing to host.</p>
+    <p class="sub">One API turns documents into structured evidence and verifiable knowledge — every result traceable, versioned and certified. Nothing to install, nothing to host.</p>
     <div class="cta">
       <a class="btn" href="create-account">Start building — free</a>
       <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20sandbox">Get sandbox keys</a>
     </div>
     <div class="chips"><span class="chip">REST</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">OpenAPI</span></div>
   </div>
-  <div class="code rv"><div class="codehd">quickstart · parse → build knowledge → consume</div>
-<pre><span class="cm"># 1 · parse a document into structured evidence</span>
-<span class="k">POST</span> <span class="s">/v1/parse</span>              { <span class="k">"document"</span>: <span class="s">"s3://acme/contract.pdf"</span> }
+  <div class="code rv"><div class="codehd">quickstart · parse → build knowledge → serve</div>
+<pre><span class="cm"># the API ships with the pilot rollout — this is the contract</span>
+
+<span class="cm"># 1 · parse a document into structured evidence</span>
+<span class="k">POST</span> <span class="s">/v1/parse</span>              { <span class="k">"document"</span>: <span class="s">"contract.pdf"</span> }
 
 <span class="cm"># 2 · build verifiable knowledge from the parse</span>
 <span class="k">POST</span> <span class="s">/v1/knowledge</span>          { <span class="k">"parse_id"</span>: <span class="s">"prs_7d1…"</span> }
 
-<span class="cm"># 3 · consume — objects, chunks, graph, evidence</span>
-<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842</span>
-<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842/chunks</span>
-<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842/graph</span></pre></div>
+<span class="cm"># 3 · retrieve the knowledge object — served to any model</span>
+<span class="k">GET</span>  <span class="s">/v1/knowledge/kn_842</span></pre></div>
 </section>
 
 <section class="center">
