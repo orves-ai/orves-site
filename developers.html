@@ -67,11 +67,11 @@
 <section class="hero" style="border-top:0">
   <div>
     <span class="eye">Developers</span>
-    <h1>Integrate in <span class="accent-tx">minutes.</span></h1>
-    <p class="sub">Everything is delivered through the API — nothing to install, nothing to host. Thin SDKs for convenience; the platform lives server-side.</p>
+    <h1>Verifiable knowledge, in <span class="accent-tx">minutes.</span></h1>
+    <p class="sub">One small API turns documents into structured evidence and governed knowledge — every result deterministic, traceable and certified. Nothing to install, nothing to host.</p>
     <div class="cta">
-      <a class="btn" href="pricing">Get credits</a>
-      <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20sandbox">Get sandbox keys</a>
+      <a class="btn" href="create-account">Start building — free</a>
+      <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20sandbox">Get sandbox keys</a>
     </div>
     <div class="chips"><span class="chip">REST</span><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">OpenAPI</span></div>
   </div>
@@ -98,22 +98,38 @@
     <tbody>
       <tr><td><b>REST API</b></td><td>parse · knowledge · verify</td><td><span class="st live"><span class="d"></span>pilot</span></td></tr>
       <tr><td><b>Sandbox</b></td><td>test keys, sample corpus, full surface, rate-limited — free</td><td><span class="st live"><span class="d"></span>free</span></td></tr>
-      <tr><td><b>SDKs</b></td><td>Python · TypeScript (thin, disposable by design)</td><td><span class="st pend"><span class="d"></span>publication pending</span></td></tr>
-      <tr><td><b>OpenAPI spec</b></td><td>generated from the live surface</td><td><span class="st pend"><span class="d"></span>publication pending</span></td></tr>
-      <tr><td><b>Docs &amp; API reference</b></td><td>markdown-first, agent-readable</td><td><span class="st soon"><span class="d"></span>soon</span></td></tr>
-      <tr><td><b>Playground</b></td><td>run real documents in the browser</td><td><span class="st soon"><span class="d"></span>soon</span></td></tr>
+      <tr><td><b>SDKs</b></td><td>Python · TypeScript (thin, disposable by design)</td><td><span class="st draft"><span class="d"></span>with the pilot</span></td></tr>
+      <tr><td><b>OpenAPI spec</b></td><td>generated from the live surface</td><td><span class="st draft"><span class="d"></span>with the pilot</span></td></tr>
+      <tr><td><b>Docs &amp; API reference</b></td><td>markdown-first, agent-readable</td><td><span class="st soon"><span class="d"></span>rolling out</span></td></tr>
+      <tr><td><b>Playground</b></td><td>run real documents in the browser</td><td><span class="st soon"><span class="d"></span>rolling out</span></td></tr>
     </tbody>
   </table></div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px;color:var(--fg3)">Full status — what's shipped and what's next — on the <a href="roadmap" style="color:var(--acc2)">roadmap</a>.</p>
+</section>
+
+<section class="center">
+  <span class="eye">Why developers switch</span>
+<h2>Most parsers hand you JSON and a shrug.</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">A traditional parser</h4>
+      <ul class="kwl" style="margin-top:14px"><li>document → JSON</li><li class="kwd" style="border:0;padding:0">“trust me”</li><li>no source spans</li><li>no versions, no proof</li></ul>
+      <p class="kwd" style="margin-top:4px">When the output is wrong, you debug blind.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>The Orves API</h4>
+      <ul class="kwl" style="margin-top:14px"><li>document → canonical objects</li><li>evidence + source spans</li><li>versions + resolution states</li><li>certificate + public verification</li></ul>
+      <p class="kwd" style="margin-top:4px">Every response can be traced, reproduced and proven.</p></div>
+  </div>
 </section>
 
 <section class="center">
   <span class="eye">Guarantees</span>
 <h2>What the API promises — and shows.</h2>
 
-  <div class="g3 rv" style="margin-top:26px">
+  <div class="g2 rv" style="margin-top:26px;max-width:900px;margin-left:auto;margin-right:auto">
     <div class="card"><h4>Deterministic</h4><p>Same input, same version, same output. Idempotency keys on every mutating call.</p></div>
+    <div class="card"><h4>Replayable</h4><p>Every result can be re-derived from the canonical model — reproduce exactly what changed, and what did not.</p></div>
     <div class="card"><h4>Honest states</h4><p>UNKNOWN and ABSTAINED are first-class API states with reasons — never silent nulls.</p></div>
-    <div class="card"><h4>Certified responses</h4><p>Every artifact returns with a certificate ID. Verify it on the public endpoint — no account needed.</p></div>
+    <div class="card"><h4>Certified responses</h4><p>Every artifact returns with a certificate ID. Verification is designed to be public and account-free.</p></div>
   </div>
 </section>
 
@@ -125,7 +141,7 @@
   <p class="lead center" style="margin-bottom:26px">Create your account with 15,000 free credits and generate your API keys today. The APIs activate with the pilot rollout.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">Start building — free</a>
-    <a class="btn gh" href="mailto:pilot@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
+    <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
   </div>
 </section>
 
