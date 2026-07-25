@@ -35,6 +35,7 @@
         <a href="benchmarks">Benchmarks <em>How we measure — methodology and results</em></a>
         <a href="research">Research <em>Methods, reports and technical findings</em></a>
         <a href="trust">Trust <em>Certification and verification</em></a>
+        <a href="roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>What's shipped and what's next</em></a>
       </span></span>
     </span>
     <a href="pricing" class="">Pricing</a>
@@ -53,6 +54,7 @@
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
   <a href="trust" class="sub">Trust</a>
+  <a href="roadmap" class="sub">Roadmap</a>
   <a href="pricing">Pricing</a>
   <a href="why-orves">Why Orves</a>
   <a href="login">Log in</a>
@@ -80,7 +82,7 @@
     <label>Company <span class="opt">optional</span><input name="company" maxlength="120" autocomplete="organization"></label>
     <label>How can we help?<textarea name="message" required maxlength="4000" rows="6" placeholder="What are you building, and what would you like from Orves?"></textarea></label>
     <button class="btn" type="submit">Send message</button>
-    <p class="k" style="text-align:center;margin-top:4px">Prefer email? <a href="mailto:pilot@orves.ai" style="color:var(--acc2)">pilot@orves.ai</a></p>
+    <p class="k" style="text-align:center;margin-top:4px">Prefer email? <a href="mailto:hi@orves.ai" style="color:var(--acc2)">hi@orves.ai</a></p>
   </form>
 </section>
 
@@ -90,7 +92,7 @@
   if (!b) return;
   if (p.get('sent')) { b.className = 'cbanner ok'; b.textContent = 'Thanks — your message is in. A human will reply soon.'; }
   else if (p.get('error') === 'invalid') { b.className = 'cbanner err'; b.textContent = 'Please add your name, a valid email and a short message.'; }
-  else if (p.get('error') === 'send') { b.className = 'cbanner err'; b.innerHTML = 'Something went wrong sending your message. Email us at <a href="mailto:pilot@orves.ai">pilot@orves.ai</a>.'; }
+  else if (p.get('error') === 'send') { b.className = 'cbanner err'; b.innerHTML = 'Something went wrong sending your message. Email us at <a href="mailto:hi@orves.ai">hi@orves.ai</a>.'; }
   if (p.get('sent')) { var f = document.querySelector('.cform'); if (f) f.style.display = 'none'; }
 })();
 </script>
@@ -123,6 +125,7 @@
       <a href="benchmarks">Benchmarks</a>
       <a href="research">Research</a>
       <a href="trust">Trust</a>
+      <a href="roadmap">Roadmap</a>
     </div>
     <div class="ftcol"><div class="h">Company</div>
       <a href="why-orves">Why Orves</a>

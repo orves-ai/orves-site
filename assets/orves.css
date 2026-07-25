@@ -824,3 +824,14 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 .cbanner.ok{display:block;background:color-mix(in srgb,var(--acc) 12%,transparent);border:1px solid color-mix(in srgb,var(--acc) 45%,transparent);color:var(--acc2)}
 .cbanner.err{display:block;background:color-mix(in srgb,#E06A5E 14%,transparent);border:1px solid color-mix(in srgb,#E06A5E 45%,transparent);color:#E8A69E}
 .cbanner.err a{color:#E8A69E;text-decoration:underline}
+
+/* roadmap — três estados honestos (available / in progress / planned) */
+.rmap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1040px;margin:26px auto 0;text-align:left}
+@media(max-width:820px){.rmap{grid-template-columns:1fr}}
+.rcol{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:20px}
+.rcol.now{border-color:color-mix(in srgb,var(--acc) 40%,transparent)}
+.rcol h3{font-family:var(--disp);font-size:15px;margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.rcol .rsub{font-size:12px;color:var(--fg3);margin:0 0 10px}
+.ritem{padding:10px 0;border-top:1px solid var(--line)}
+.ritem b{font-size:13.5px;color:var(--fg);font-weight:600}
+.ritem span{display:block;font-size:12px;color:var(--fg2);margin-top:2px;line-height:1.5}
