@@ -548,16 +548,16 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
    ele só aparece quando o DNS confirma que o domínio recebe e-mail. Antes
    disso é spinner. E nem o ✓ significa "verificado": posse só se prova com o
    código enviado ao endereço. */
-.af.st{position:relative}
-.af.st input{padding-right:38px;transition:border-color .15s ease}
+.af-state{position:relative}
+.af-state input{padding-right:38px;transition:border-color .15s ease}
 .emicon{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:13px;line-height:1;
   opacity:0;transition:opacity .15s ease,transform .15s ease;pointer-events:none}
-.af.st.is-good input{border-color:color-mix(in srgb,var(--acc) 60%,transparent)}
-.af.st.is-bad  input{border-color:color-mix(in srgb,#E06A5E 65%,transparent)}
-.af.st.is-good .emicon,.af.st.is-bad .emicon,.af.st.is-wait .emicon{opacity:1}
-.af.st.is-good .emicon::before{content:"✓";color:var(--acc2)}
-.af.st.is-bad  .emicon::before{content:"✕";color:#E06A5E}
-.af.st.is-wait .emicon::before{content:"";display:block;width:12px;height:12px;
+.af-state.is-good input{border-color:color-mix(in srgb,var(--acc) 60%,transparent)}
+.af-state.is-bad  input{border-color:color-mix(in srgb,#E06A5E 65%,transparent)}
+.af-state.is-good .emicon,.af-state.is-bad .emicon,.af-state.is-wait .emicon{opacity:1}
+.af-state.is-good .emicon::before{content:"✓";color:var(--acc2)}
+.af-state.is-bad  .emicon::before{content:"✕";color:#E06A5E}
+.af-state.is-wait .emicon::before{content:"";display:block;width:12px;height:12px;
   border:1.5px solid var(--line2);border-top-color:var(--acc);border-radius:50%;
   animation:emspin .7s linear infinite}
 
