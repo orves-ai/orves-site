@@ -569,11 +569,25 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
    lista de pendências responde melhor, e sem ocupar altura.
    Campo vazio não mostra NADA: a tela é de criar conta, não de ensinar
    política de senha. */
-.pwreq{margin-top:2px}
 /* Sem CAPS, sem tracking, sem fonte condensada: "GOOD" saía como
    G O O D e obrigava o cérebro a decodificar um status importante. */
 .pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:0 0 5px;color:var(--fg3)}
-.pwreq:not(.typing){display:none}
+/* Recolhe com transição em vez de sumir de uma vez: sem isto o formulário
+   SALTA no instante em que o usuário confirma a senha, e o botão muda de lugar
+   debaixo do cursor. grid-template-rows anima altura AUTOMÁTICA, coisa que
+   `height` não faz — e exige exatamente um filho com overflow:hidden, daí o
+   .pwinner e o .pwlist. */
+.pwreq{margin-top:2px;display:grid;grid-template-rows:1fr;opacity:1;
+  transition:grid-template-rows .18s ease,opacity .18s ease}
+.pwreq>.pwinner{overflow:hidden;min-height:0}
+.pwreq:not(.typing){grid-template-rows:0fr;opacity:0;pointer-events:none}
+/* Tudo válido: a lista recolhe, o rótulo fica. */
+.pwlist{display:grid;grid-template-rows:1fr;transition:grid-template-rows .18s ease}
+.pwlist>ul{overflow:hidden;min-height:0}
+.pwreq.ready .pwlist{grid-template-rows:0fr}
+@media (prefers-reduced-motion: reduce){
+  .pwreq,.pwlist{transition:none}
+}
 .pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
 .authform .btn.ready{background:var(--acc2)}
 .pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:3px;text-align:left}
@@ -596,7 +610,7 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
    ação principal. A lista mostra só o que falta e encolhe conforme ele digita. */
 .pwreq li.on{display:none}
 /* Tudo fechado: nem lista, nem cabeçalho. Fica a barra e "Strong password". */
-.pwreq.ready ul{display:none}
+/* o recolhimento da lista é animado no bloco .pwlist, acima */
 /* As duas checagens que o sistema faz por trás viram UMA linha quando passam. */
 .pwreq li.off::before{content:"✕";color:var(--hold)}
 .authform .btn[disabled]{opacity:.45;cursor:not-allowed}
