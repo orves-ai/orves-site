@@ -519,25 +519,32 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 @media(max-width:960px){.ftstate{white-space:normal}}
 
 /* auth: signin / create account */
-.auth{max-width:400px;margin:0 auto;background:var(--panel);border:1px solid var(--line2);border-radius:16px;padding:36px 34px;text-align:center}
-.authform{display:flex;flex-direction:column;gap:14px;text-align:left}
+.auth{max-width:400px;margin:0 auto;background:var(--panel);border:1px solid var(--line2);border-radius:16px;padding:30px 32px;text-align:center}
+.authform{display:flex;flex-direction:column;gap:11px;text-align:left}
 .af span{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--fg3);margin-bottom:6px}
-.af input{width:100%;background:var(--ink2);border:1px solid var(--line2);border-radius:9px;padding:11px 13px;font-size:14px;color:var(--fg);font-family:Inter,system-ui,sans-serif;outline:none;transition:border-color .15s}
+.af input{width:100%;background:var(--ink2);border:1px solid var(--line2);border-radius:9px;padding:10px 13px;font-size:14px;color:var(--fg);font-family:Inter,system-ui,sans-serif;outline:none;transition:border-color .15s}
 .af input:focus{border-color:color-mix(in srgb,var(--acc) 55%,transparent)}
 .af input::placeholder{color:var(--fg3);opacity:.7}
-.capswarn{display:flex;align-items:center;gap:6px;font-family:JetBrains Mono,monospace;font-size:11px;color:var(--hold);border:1px solid color-mix(in srgb,var(--hold) 40%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:7px 10px}
+.capswarn{display:flex;align-items:center;gap:6px;font-family:JetBrains Mono,monospace;font-size:10.5px;color:var(--hold);border:1px solid color-mix(in srgb,var(--hold) 40%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:5px 9px}
 .capswarn[hidden]{display:none}
 
 /* checklist de senha — estado por requisito, ao vivo */
 .pweye{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--fg3);font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;padding:4px 6px}
 .pweye:hover{color:var(--fg2)}
-.pwreq{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:color-mix(in srgb,var(--ink2) 60%,transparent)}
-.pwbar{height:4px;border-radius:3px;background:var(--line2);overflow:hidden}
+/* Sem card dentro de card: a borda interna engordava sem informar nada.
+   Checklist em DUAS colunas e progressiva — só uma linha de dica até o
+   usuário começar a digitar. Sem isso o botão primário caía fora do viewport. */
+.pwreq{margin-top:2px}
+.pwbar{height:3px;border-radius:3px;background:var(--line2);overflow:hidden}
 .pwbar i{display:block;height:100%;width:0;border-radius:3px;transition:width .18s ease,background .18s ease}
-.pwlab{font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;margin:8px 0 10px;color:var(--fg3)}
-.pwreq ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
-.pwreq li{font-size:12px;color:var(--fg3);padding-left:20px;position:relative;transition:color .15s}
-.pwreq li::before{content:"○";position:absolute;left:0;top:-1px;font-size:12px;color:var(--fg3)}
+.pwlab{font-family:JetBrains Mono,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin:7px 0 8px;color:var(--fg3)}
+.pwhint{font-size:11.5px;color:var(--fg3);line-height:1.5;margin:6px 0 0;text-align:left}
+.pwreq.typing .pwhint{display:none}
+.pwreq:not(.typing) .pwbar,.pwreq:not(.typing) .pwlab,.pwreq:not(.typing) ul{display:none}
+.pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;text-align:left}
+.pwreq li{font-size:11.5px;color:var(--fg3);padding-left:16px;position:relative;transition:color .15s}
+.pwreq li:last-child{grid-column:1 / -1}
+.pwreq li::before{content:"○";position:absolute;left:0;top:-1px;font-size:11px;color:var(--fg3)}
 .pwreq li.on{color:var(--acc2)}
 .pwreq li.on::before{content:"✓";color:var(--acc2)}
 .pwreq li.off::before{content:"✕";color:var(--hold)}

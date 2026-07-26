@@ -27,8 +27,8 @@
 <main class="wrap">
 
 
-<section style="border-top:0;padding:70px 0 60px">
-  <div class="hero" style="padding:0;border-top:0;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+<section style="border-top:0;padding:44px 0 44px">
+  <div class="hero" style="padding:0;border-top:0;grid-template-columns:1fr 1fr;gap:60px;align-items:start">
     <div class="rv">
       <span class="eye">Free tier</span>
       <h1 style="font-size:36px;max-width:14ch;margin:14px 0 12px">Start building on Orves.</h1>
@@ -48,8 +48,8 @@
       </svg>
     </div>
     <div class="auth rv" style="margin:0">
-      <h2 style="font-size:24px;margin:0 0 6px">Create your account</h2>
-      <p style="font-size:13.5px;color:var(--fg2);margin-bottom:24px">Free plan · 15,000 credits included.</p>
+      <h2 style="font-size:22px;margin:0 0 5px">Create your account</h2>
+      <p style="font-size:13px;color:var(--fg2);margin-bottom:18px">Free plan · 15,000 credits included.</p>
       <div id="autherr" style="display:none;border:1px solid color-mix(in srgb,var(--hold) 50%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--hold);margin-bottom:14px"></div>
       <form class="authform" method="post" action="https://app.orves.ai/api/signup">
         <label class="af"><input type="text" name="name" required placeholder="Full name" autocomplete="name" style="margin-top:0"/></label>
@@ -60,23 +60,24 @@
         <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
         <div class="pwreq" id="pwreq">
           <div class="pwbar"><i id="pwbari"></i></div>
-          <div class="pwlab" id="pwlab">Enter a password</div>
+          <div class="pwlab" id="pwlab">Password strength</div>
+          <p class="pwhint">Use 12+ characters with uppercase, lowercase, a number and a symbol.</p>
           <ul>
-            <li data-k="len">12 or more characters</li>
-            <li data-k="up">Uppercase letter</li>
-            <li data-k="lo">Lowercase letter</li>
+            <li data-k="len">12+ characters</li>
+            <li data-k="up">Uppercase</li>
+            <li data-k="lo">Lowercase</li>
             <li data-k="num">Number</li>
             <li data-k="sp">Special character</li>
-            <li data-k="cmn">Not commonly used or predictable</li>
+            <li data-k="cmn">Not predictable</li>
             <li data-k="match">Passwords match</li>
           </ul>
         </div>
         <button class="btn" type="submit" id="pwsubmit" disabled style="width:100%;margin-top:6px">Create free account</button>
       </form>
-      <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:16px;line-height:1.9">
+      <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:12px;line-height:1.7">
         <span style="color:var(--acc2)">✓</span> 15,000 free credits&nbsp;&nbsp;<span style="color:var(--acc2)">✓</span> No credit card required
       </p>
-      <p style="font-size:12.5px;color:var(--fg3);margin-top:20px">Already have an account? <a href="login">Log in</a></p>
+      <p style="font-size:12.5px;color:var(--fg3);margin-top:14px">Already have an account? <a href="login">Log in</a></p>
     </div>
   </div>
 </section>
@@ -170,10 +171,11 @@
       li.className = okk ? 'on' : (v.length? 'off':'');
       if(!okk) allOk=false;
     });
+    box.classList.toggle('typing', v.length > 0);
     var s=strength(v, !c.cmn);
     bar.style.width=(v.length? (s+1)*25 : 0)+'%';
     bar.style.background=COLORS[s];
-    lab.textContent = v.length ? LABELS[s] : 'Enter a password';
+    lab.textContent = v.length ? LABELS[s] : 'Password strength';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
     btn.disabled = !allOk;
   }
