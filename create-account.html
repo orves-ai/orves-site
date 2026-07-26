@@ -56,17 +56,26 @@
         <label class="af"><input type="password" id="pw2" placeholder="Confirm password" autocomplete="new-password" style="margin-top:0"/></label>
         <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
         <div class="pwreq" id="pwreq">
-          <div class="pwbar" id="pwbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="pwlab" id="pwlab">Password strength</div>
+          <div class="pwbar" id="pwbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="pwlab" id="pwlab">Password</div>
           <p class="pwhint">Choose a strong password (12+ characters).</p>
+          <!-- Duas classes de validação, e o usuário precisa distinguir:
+               REQUIREMENTS é o que ele digita; SECURITY CHECKS é o que o
+               sistema confere por trás. Misturar as duas numa lista só fazia
+               "not predictable" parecer uma regra de digitação. -->
+          <p class="pwgrp">Requirements</p>
           <ul>
             <li data-k="len">12+ characters</li>
             <li data-k="up">Uppercase</li>
             <li data-k="lo">Lowercase</li>
             <li data-k="num">Number</li>
             <li data-k="sp">Symbol</li>
-            <li data-k="cmn">Not found in common password lists</li>
             <li data-k="match">Passwords match</li>
+          </ul>
+          <p class="pwgrp">Security checks</p>
+          <ul class="pwsec">
+            <li data-k="cmn">Not found in common password lists</li>
+            <li data-k="idn">Doesn't contain your name or email</li>
           </ul>
         </div>
         <button class="btn" type="submit" id="pwsubmit" disabled style="width:100%;margin-top:6px">Create free account</button>
@@ -235,7 +244,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
   // DOIS estados. O usuário só precisa saber duas coisas: já posso criar a
   // conta, e a senha está boa. "Excellent" não respondia nenhuma das duas —
   // e obrigava a distinguir cinco categorias por diferenças de um caractere.
-  var LABELS=['Complete the remaining password requirements.','Strong password'];
+  var LABELS=['Complete the remaining requirements','Strong password'];
   var COLORS=['#E06A5E','#22C07E'];
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
@@ -245,7 +254,10 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
       lo: /\p{Ll}/u.test(v),
       num: /\p{N}/u.test(v),
       sp: /[^\p{L}\p{N}\s]/u.test(v),
-      cmn: v.length>0 && !isCommon(v) && !weakPattern(v) && !related(v),
+      // Separadas: "é uma senha conhecida" e "é a sua própria identidade" são
+      // checagens diferentes, e o usuário corrige cada uma de um jeito.
+      cmn: v.length>0 && !isCommon(v) && !weakPattern(v),
+      idn: v.length>0 && !related(v),
       match: v.length>0 && v===pw2.value
     };
     var allOk=true;
@@ -259,7 +271,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     if (v.length) box.classList.add('typing');
     // A barra tem SETE segmentos, um por requisito. Percentual contínuo dava a
     // impressão de um score escondido; segmento aceso é literal.
-    var KEYS = ['len','up','lo','num','sp','cmn','match'];
+    var KEYS = ['len','up','lo','num','sp','match','cmn','idn'];
     var feitos = KEYS.filter(function(k){ return c[k]; }).length;
     var segs = bar.querySelectorAll('i');
     for (var si = 0; si < segs.length; si++)
@@ -267,7 +279,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     var s = allOk ? 1 : 0;
     lab.textContent = v.length ? LABELS[s] : 'Password';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
-    // Fecha tudo: transição discreta no rótulo, uma vez só.
+    // Fecha tudo: check grande + transição. O olho acha o ✓ antes de ler.
     lab.classList.toggle('done', allOk && v.length > 0);
     // Falta UM: destaca qual, para o usuário não caçar na lista.
     var faltam = KEYS.filter(function(k){ return !c[k]; });
@@ -277,7 +289,14 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     var valido = allOk && formOk();
     // Reação discreta: ao ficar tudo válido, o grafo acelera por alguns
     // segundos e volta ao ritmo calmo.
-    if (valido && btn.disabled && window.__orvesGraphBoost) window.__orvesGraphBoost();
+    if (valido && btn.disabled) {
+      if (window.__orvesGraphBoost) window.__orvesGraphBoost();
+      // Confirma a virada por meio segundo e volta ao rótulo de ação.
+      var rot = btn.textContent;
+      btn.textContent = "✓ Ready";
+      btn.classList.add("ready");
+      setTimeout(function(){ btn.textContent = rot; btn.classList.remove("ready"); }, 500);
+    }
     btn.disabled = !valido;
   }
   // Caps Lock: erro de digitação silencioso é uma das maiores causas de

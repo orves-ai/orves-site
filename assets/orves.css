@@ -577,6 +577,12 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pwhint{font-size:11.5px;color:var(--fg3);line-height:1.5;margin:6px 0 0;text-align:left}
 .pwreq.typing .pwhint{display:none}
 .pwreq:not(.typing) .pwbar,.pwreq:not(.typing) .pwlab,.pwreq:not(.typing) ul{display:none}
+/* Cabeçalho de grupo: separa o que o usuário digita do que o sistema
+   confere por trás. */
+.pwgrp{font-family:JetBrains Mono,monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--fg3);margin:10px 0 7px;opacity:.8}
+.pwreq ul.pwsec{grid-template-columns:1fr}
+.pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
+.authform .btn.ready{background:var(--acc2)}
 .pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;text-align:left}
 .pwreq li{font-size:11.5px;color:var(--fg3);padding-left:16px;position:relative;transition:color .15s}
 /* "Passwords match" depende dos DOIS campos, ao contrário das demais —
