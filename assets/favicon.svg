@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-<!-- ORVES favicon — arte A2 (docs/brand/orves-aperture-responsive.svg), geometria
-     byte-idêntica: anel r15.3/1.5 + anel r8.6/3 + ponto r2. APERTURE_SYSTEM §2:
-     favicon = A2; fundo escuro <48px = ponto claro. Base = variante DARK (ordem
-     BP 26-jul); o ponto é "tinta do contexto", então a aba clara recebe a tinta
-     escura canônica (#131417) via prefers-color-scheme. Não recolorir os anéis. -->
-<style>.dot{fill:#E8ECF4}@media(prefers-color-scheme:light){.dot{fill:#131417}}</style>
-<circle cx="17" cy="17" r="15.3" stroke="#22C07E" stroke-width="1.5"/>
-<circle cx="17" cy="17" r="8.6" stroke="#4FD69B" stroke-width="3"/>
-<circle class="dot" cx="17" cy="17" r="2"/>
+<!-- GERADO por site/gen_favicon.py — NAO editar a mao.
+     Favicon da Orves: tile preto + arte A2 (decisao BP 26-jul-2026).
+     Aneis identicos a docs/brand/orves-aperture-responsive.svg; o `scale`
+     leva stroke-width junto, entao a proporcao da arte fica intacta.
+     Ponto claro FIXO: o tile opaco faz o contexto ser sempre escuro, entao a
+     arte nao muda com o tema do sistema. -->
+<rect width="34" height="34" rx="7.48" fill="#0B0E14"/>
+<g transform="translate(3.4,3.4) scale(0.8)">
+  <circle cx="17" cy="17" r="15.3" stroke="#22C07E" stroke-width="1.5"/>
+  <circle cx="17" cy="17" r="8.6" stroke="#4FD69B" stroke-width="3"/>
+  <circle cx="17" cy="17" r="2" fill="#E8ECF4"/>
+</g>
 </svg>
