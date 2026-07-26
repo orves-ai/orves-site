@@ -859,6 +859,6 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 .cmptbl .yes{color:var(--acc2)}
 .cmptbl .no{color:var(--fg3);opacity:.5}
 .cmptbl td .val{font-family:var(--mono);font-size:11.5px;color:var(--fg)}
-.plan .prate{font-family:var(--mono);font-size:15px;color:var(--acc2);font-weight:600;margin-top:6px}
-.plan .prate span{color:var(--fg3);font-weight:400;font-size:12px}
-.plan .prate small{color:var(--fg3);font-weight:400;font-size:11px;font-family:var(--sans)}
+.plan .prate{font-family:var(--sans);font-variant-numeric:tabular-nums lining-nums;font-size:17px;line-height:1.3;color:var(--fg);font-weight:650;letter-spacing:-.01em;margin-top:6px}
+.plan .prate span{color:var(--fg2);font-weight:450;font-size:13px;letter-spacing:0}
+.plan .prate small{color:var(--fg3);font-weight:400;font-size:11.5px;letter-spacing:0}
