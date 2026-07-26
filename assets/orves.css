@@ -565,8 +565,12 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
    Checklist em DUAS colunas e progressiva — só uma linha de dica até o
    usuário começar a digitar. Sem isso o botão primário caía fora do viewport. */
 .pwreq{margin-top:2px}
-.pwbar{height:3px;border-radius:3px;background:var(--line2);overflow:hidden}
-.pwbar i{display:block;height:100%;width:0;border-radius:3px;transition:width .18s ease,background .18s ease}
+/* Sete segmentos, um por requisito. Barra contínua sugeria um score escondido;
+   segmento aceso é literal — dá para contar. */
+.pwbar{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;height:3px}
+.pwbar i{display:block;height:3px;border-radius:2px;background:var(--line2);transition:background .18s ease}
+.pwbar i.on{background:#E06A5E}
+.pwbar i.on.full{background:var(--acc)}
 /* Sem CAPS, sem tracking, sem fonte condensada: "GOOD" saía como
    G O O D e obrigava o cérebro a decodificar um status importante. */
 .pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:8px 0 10px;color:var(--fg3)}
@@ -580,6 +584,16 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pwreq li:last-child{grid-column:1 / -1;border-top:1px solid var(--line);margin-top:3px;padding-top:9px}
 .pwreq li:last-child::before{top:9px}
 .pwreq li::before{content:"○";position:absolute;left:0;top:-1px;font-size:11px;color:var(--fg3)}
+/* Falta um só: destaca qual, para o usuário não caçar na lista. */
+.pwreq li.only{color:var(--hold)}
+.pwreq li.only::before{color:var(--hold);animation:pwonly 1.4s ease-in-out infinite}
+@keyframes pwonly{0%,100%{opacity:.45}50%{opacity:1}}
+.pwlab.done{animation:pwdone .28s ease-out}
+@keyframes pwdone{from{opacity:.35;transform:translateY(2px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .pwreq li.only::before{animation:none}
+  .pwlab.done{animation:none}
+}
 .pwreq li.on{color:var(--acc2)}
 .pwreq li.on::before{content:"✓";color:var(--acc2)}
 .pwreq li.off::before{content:"✕";color:var(--hold)}

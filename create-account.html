@@ -56,7 +56,7 @@
         <label class="af"><input type="password" id="pw2" placeholder="Confirm password" autocomplete="new-password" style="margin-top:0"/></label>
         <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
         <div class="pwreq" id="pwreq">
-          <div class="pwbar"><i id="pwbari"></i></div>
+          <div class="pwbar" id="pwbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="pwlab" id="pwlab">Password strength</div>
           <p class="pwhint">Choose a strong password (12+ characters).</p>
           <ul>
@@ -65,7 +65,7 @@
             <li data-k="lo">Lowercase</li>
             <li data-k="num">Number</li>
             <li data-k="sp">Symbol</li>
-            <li data-k="cmn">Not a common password</li>
+            <li data-k="cmn">Not found in common password lists</li>
             <li data-k="match">Passwords match</li>
           </ul>
         </div>
@@ -172,7 +172,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
 // Mudou a regra aqui? Mude lá também.
 (function(){
   var pw = document.getElementById('pw'), pw2 = document.getElementById('pw2'),
-      box = document.getElementById('pwreq'), bar = document.getElementById('pwbari'),
+      box = document.getElementById('pwreq'), bar = document.getElementById('pwbar'),
       lab = document.getElementById('pwlab'), btn = document.getElementById('pwsubmit'),
       eye = document.getElementById('pweye'), form = pw.form;
   if(!pw) return;
@@ -232,8 +232,11 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
   // paralelo. Antes a barra media entropia e a checklist media requisitos:
   // o usuário via seis itens verdes com a palavra "GOOD" em cima, e um
   // caractere a mais rebaixava para "FAIR" sem explicação.
-  var LABELS=['Complete the remaining requirements','Strong password','Excellent password'];
-  var COLORS=['#E06A5E','#22C07E','#22C07E'];
+  // DOIS estados. O usuário só precisa saber duas coisas: já posso criar a
+  // conta, e a senha está boa. "Excellent" não respondia nenhuma das duas —
+  // e obrigava a distinguir cinco categorias por diferenças de um caractere.
+  var LABELS=['Complete the remaining password requirements.','Strong password'];
+  var COLORS=['#E06A5E','#22C07E'];
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
     var v=pw.value, c={
@@ -254,16 +257,23 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
       if(!okk) allOk=false;
     });
     if (v.length) box.classList.add('typing');
-    // A barra é PROGRESSO dos requisitos: cresce conforme os itens fecham.
-    // Não é mais um medidor de entropia correndo por fora.
+    // A barra tem SETE segmentos, um por requisito. Percentual contínuo dava a
+    // impressão de um score escondido; segmento aceso é literal.
     var KEYS = ['len','up','lo','num','sp','cmn','match'];
     var feitos = KEYS.filter(function(k){ return c[k]; }).length;
-    // "Excellent" pede mais do que o mínimo: 16+ caracteres com tudo cumprido.
-    var s = !allOk ? 0 : (v.length >= 16 ? 2 : 1);
-    bar.style.width = Math.round(feitos / KEYS.length * 100) + '%';
-    bar.style.background = COLORS[s];
+    var segs = bar.querySelectorAll('i');
+    for (var si = 0; si < segs.length; si++)
+      segs[si].className = si < feitos ? (allOk ? 'on full' : 'on') : '';
+    var s = allOk ? 1 : 0;
     lab.textContent = v.length ? LABELS[s] : 'Password';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
+    // Fecha tudo: transição discreta no rótulo, uma vez só.
+    lab.classList.toggle('done', allOk && v.length > 0);
+    // Falta UM: destaca qual, para o usuário não caçar na lista.
+    var faltam = KEYS.filter(function(k){ return !c[k]; });
+    box.querySelectorAll('li').forEach(function(li){
+      li.classList.toggle('only', faltam.length === 1 && li.dataset.k === faltam[0] && v.length > 0);
+    });
     var valido = allOk && formOk();
     // Reação discreta: ao ficar tudo válido, o grafo acelera por alguns
     // segundos e volta ao ritmo calmo.
