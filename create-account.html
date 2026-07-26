@@ -48,8 +48,7 @@
       </svg>
     </div>
     <div class="auth rv" style="margin:0">
-      <h2 style="font-size:22px;margin:0 0 5px">Create your account</h2>
-      <p style="font-size:13px;color:var(--fg2);margin-bottom:18px">Free plan · 15,000 credits included.</p>
+      <h2 style="font-size:22px;margin:0 0 18px">Create your account</h2>
       <div id="autherr" style="display:none;border:1px solid color-mix(in srgb,var(--hold) 50%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--hold);margin-bottom:14px"></div>
       <form class="authform" method="post" action="https://app.orves.ai/api/signup">
         <label class="af"><input type="text" name="name" required placeholder="Full name" autocomplete="name" style="margin-top:0"/></label>
@@ -93,6 +92,12 @@
   var el = document.getElementById('autherr'); el.textContent = msg; el.style.display = 'block';
 })();
 
+// Sintaxe local: só orienta a UX. O servidor revalida tudo.
+// Literal de regex de propósito: como string, o `\s` era comido pelo escape e
+// a classe virava "qualquer coisa menos a letra s" — todo e-mail com "s" era
+// recusado. O teste de comportamento pegou isso antes de ir ao ar.
+window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
+
 // Estado do e-mail ao vivo. O formato é checado aqui; a capacidade do DOMÍNIO
 // de receber e-mail vem do servidor. Nada aqui afirma que a CAIXA existe —
 // isso só o código de confirmação prova.
@@ -107,26 +112,40 @@
     rate_limited:        'Too many checks. Wait a moment.'
   };
   function show(cls,txt){ out.hidden=!txt; out.className='emstat '+cls; out.textContent=txt||''; }
-  function localOk(v){ return /^[^@s<>"'&\]+@[^@s]+.[^@s.]{2,}$/.test(v.trim()); }
-  var t=null, ultimo=null;
+  function localOk(v){ return window.EMAIL_LOCAL_RE.test(v.trim()); }
+  var t=null, ultimo=null, pendente=false;
+  // Retry sem obrigar o usuário a reescrever o endereço.
+  out.addEventListener('click', function(){
+    if (out.classList.contains('warn')) { ultimo = null; check(); }
+  });
+  window.__orvesEmailPending = function(){ return pendente; };
   function check(){
     var v=el.value.trim();
-    if(!v){ show('',''); return; }
-    if(!localOk(v)){ show('bad',MSG.invalid_format); return; }
+    if(!v){ pendente=false; show('',''); return; }
+    if(!localOk(v)){ pendente=false; show('bad',MSG.invalid_format); return; }
     if(v===ultimo) return;
-    show('wait','Checking domain…');
+    show('wait','Checking domain…'); pendente=true;
     fetch('https://app.orves.ai/api/email/check',{method:'POST',
       headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
       .then(function(r){ return r.json(); })
       .then(function(d){
+        pendente=false;
         if(el.value.trim()!==v) return;
         ultimo=v;
+        var bad = !(d.format && (d.domain || d.retryable));
         if(d.format&&d.domain){ show('good','Domain can receive email'); }
         else { show(d.retryable?'warn':'bad', MSG[d.code]||MSG.invalid_format); }
+        // Domínio reprovado pelo servidor também desabilita o botão. Falha
+        // temporária de DNS NÃO reprova — o servidor revalida no envio.
+        if (window.__orvesEmailBad) window.__orvesEmailBad(bad);
       })
-      .catch(function(){ show('',''); });   // rede caiu: não bloqueia o usuário
+      .catch(function(){ pendente=false; show('',''); });   // rede caiu: não bloqueia o usuário
   }
-  el.addEventListener('input',function(){ clearTimeout(t); ultimo=null; t=setTimeout(check,600); });
+  el.addEventListener('input',function(){
+    clearTimeout(t); ultimo=null;
+    if (window.__orvesEmailBad) window.__orvesEmailBad(false);   // limpa veredito velho
+    t=setTimeout(check,600);
+  });
   el.addEventListener('blur',function(){ clearTimeout(t); check(); });
 })();
 
@@ -193,6 +212,7 @@
   }
   var LABELS=['Weak','Fair','Good','Strong','Excellent'];
   var COLORS=['#E06A5E','#E0A85E','#E0D25E','#5EC8E0','#22C07E'];
+  var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
     var v=pw.value, c={
       len: v.length>=12 && v.length<=256,
@@ -206,16 +226,18 @@
     var allOk=true;
     box.querySelectorAll('li').forEach(function(li){
       var okk=c[li.dataset.k];
-      li.className = okk ? 'on' : (v.length? 'off':'');
+      // Neutro (○) enquanto digita; ✕ só depois de sair do campo ou tentar
+      // enviar. Marcar erro a cada tecla pune quem ainda está escrevendo.
+      li.className = okk ? 'on' : (strict ? 'off' : '');
       if(!okk) allOk=false;
     });
     if (v.length) box.classList.add('typing');
     var s=strength(v, !c.cmn);
     bar.style.width=(v.length? (s+1)*20 : 0)+'%';
     bar.style.background=COLORS[s];
-    lab.textContent = v.length ? LABELS[s] : 'Password strength';
+    lab.textContent = v.length ? (s === 4 ? 'Excellent password' : LABELS[s]) : 'Password strength';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
-    btn.disabled = !allOk;
+    btn.disabled = !(allOk && formOk());
   }
   // Caps Lock: erro de digitação silencioso é uma das maiores causas de
   // "minha senha não funciona". getModifierState é o único jeito confiável.
@@ -234,9 +256,39 @@
   [pw, pw2].forEach(function(el){
     el.addEventListener('focus', function(){ box.classList.add('typing'); });
   });
+  // Nome preenchido e e-mail com formato válido — e não reprovado pelo
+  // servidor. Checagem de domínio ainda em voo não trava o botão.
+  var emailBad=false;
+  function formOk(){
+    var nm=(form.querySelector('[name=name]')||{}).value||'';
+    var em=(form.querySelector('[name=email]')||{}).value||'';
+    return nm.trim().length>0 && window.EMAIL_LOCAL_RE.test(em.trim()) && !emailBad;
+  }
+  window.__orvesEmailBad = function(b){ emailBad=!!b; run(); };
+  [pw, pw2].forEach(function(el){
+    el.addEventListener('blur', function(){ strict = true; run(); });
+  });
+  form.addEventListener('submit', function(ev){
+    strict = true; run();
+    if (btn && btn.disabled) { ev.preventDefault(); return; }
+    if (window.__orvesEmailPending && window.__orvesEmailPending()) {
+      ev.preventDefault();
+      btn.disabled = true;
+      var esperou = 0;
+      var iv = setInterval(function(){
+        esperou += 100;
+        if (!window.__orvesEmailPending() || esperou >= 2500) {
+          clearInterval(iv); run();
+          if (!btn.disabled) form.submit();
+        }
+      }, 100);
+    }
+  });
   pw.addEventListener('input',run); pw2.addEventListener('input',run);
-  form.querySelector('[name=email]').addEventListener('input',run);
-  form.querySelector('[name=name]').addEventListener('input',run);
+  ['[name=email]', '[name=name]'].forEach(function(sel){
+    var el = form.querySelector(sel);
+    if (el) { el.addEventListener('input', run); el.addEventListener('blur', run); }
+  });
   eye.addEventListener('click',function(){
     var show = pw.type==='password';
     pw.type = pw2.type = show ? 'text' : 'password';

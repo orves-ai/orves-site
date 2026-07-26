@@ -536,7 +536,10 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .emstat.good{color:var(--acc2)}.emstat.good::before{content:"¹3"}
 .emstat.bad{color:#E06A5E}.emstat.bad::before{content:"¹5"}
 .emstat.warn{color:var(--hold)}.emstat.warn::before{content:"!"}
-.emstat.wait{color:var(--fg3)}.emstat.wait::before{content:"CB"}
+.emstat.wait{color:var(--fg3)}
+.emstat.wait::before{content:"";width:9px;height:9px;border:1.5px solid var(--line2);border-top-color:var(--acc);border-radius:50%;top:2px;animation:emspin .7s linear infinite}
+@keyframes emspin{to{transform:rotate(360deg)}}
+.emstat.warn{cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .emstat[hidden]{display:none}
 
 /* Sem card dentro de card: a borda interna engordava sem informar nada.
