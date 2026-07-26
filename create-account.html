@@ -64,8 +64,8 @@
             <li data-k="up">Uppercase</li>
             <li data-k="lo">Lowercase</li>
             <li data-k="num">Number</li>
-            <li data-k="sp">Special character</li>
-            <li data-k="cmn">Not predictable</li>
+            <li data-k="sp">Symbol</li>
+            <li data-k="cmn">Not a common password</li>
             <li data-k="match">Passwords match</li>
           </ul>
         </div>
@@ -228,8 +228,12 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     if(penal) bits=Math.min(bits,28);
     return bits<40?0:bits<55?1:bits<70?2:bits<90?3:4;
   }
-  var LABELS=['Weak','Fair','Good','Strong','Excellent'];
-  var COLORS=['#E06A5E','#E0A85E','#E0D25E','#5EC8E0','#22C07E'];
+  // TRÊS estados, derivados dos REQUISITOS — não de um score de entropia
+  // paralelo. Antes a barra media entropia e a checklist media requisitos:
+  // o usuário via seis itens verdes com a palavra "GOOD" em cima, e um
+  // caractere a mais rebaixava para "FAIR" sem explicação.
+  var LABELS=['Complete the remaining requirements','Strong password','Excellent password'];
+  var COLORS=['#E06A5E','#22C07E','#22C07E'];
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
     var v=pw.value, c={
@@ -250,10 +254,15 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
       if(!okk) allOk=false;
     });
     if (v.length) box.classList.add('typing');
-    var s=strength(v, !c.cmn);
-    bar.style.width=(v.length? (s+1)*20 : 0)+'%';
-    bar.style.background=COLORS[s];
-    lab.textContent = v.length ? (s === 4 ? 'Excellent password' : LABELS[s]) : 'Password strength';
+    // A barra é PROGRESSO dos requisitos: cresce conforme os itens fecham.
+    // Não é mais um medidor de entropia correndo por fora.
+    var KEYS = ['len','up','lo','num','sp','cmn','match'];
+    var feitos = KEYS.filter(function(k){ return c[k]; }).length;
+    // "Excellent" pede mais do que o mínimo: 16+ caracteres com tudo cumprido.
+    var s = !allOk ? 0 : (v.length >= 16 ? 2 : 1);
+    bar.style.width = Math.round(feitos / KEYS.length * 100) + '%';
+    bar.style.background = COLORS[s];
+    lab.textContent = v.length ? LABELS[s] : 'Password';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
     var valido = allOk && formOk();
     // Reação discreta: ao ficar tudo válido, o grafo acelera por alguns

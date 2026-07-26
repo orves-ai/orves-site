@@ -567,7 +567,9 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pwreq{margin-top:2px}
 .pwbar{height:3px;border-radius:3px;background:var(--line2);overflow:hidden}
 .pwbar i{display:block;height:100%;width:0;border-radius:3px;transition:width .18s ease,background .18s ease}
-.pwlab{font-family:JetBrains Mono,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin:7px 0 8px;color:var(--fg3)}
+/* Sem CAPS, sem tracking, sem fonte condensada: "GOOD" saía como
+   G O O D e obrigava o cérebro a decodificar um status importante. */
+.pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:8px 0 10px;color:var(--fg3)}
 .pwhint{font-size:11.5px;color:var(--fg3);line-height:1.5;margin:6px 0 0;text-align:left}
 .pwreq.typing .pwhint{display:none}
 .pwreq:not(.typing) .pwbar,.pwreq:not(.typing) .pwlab,.pwreq:not(.typing) ul{display:none}
