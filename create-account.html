@@ -55,10 +55,12 @@
           <button type="button" class="pweye" id="pweye" aria-label="Show password">show</button></label>
         <label class="af"><input type="password" id="pw2" placeholder="Confirm password" autocomplete="new-password" style="margin-top:0"/></label>
         <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
+        <!-- Sem barra de progresso. Ela sobrou de quando havia um score de
+             entropia; sem score, uma barra que enche não diz o que significa —
+             a lista já diz, e diz melhor. Sem dica também: campo vazio não tem
+             nada a corrigir. -->
         <div class="pwreq" id="pwreq">
-          <div class="pwbar" id="pwbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="pwlab" id="pwlab">Password</div>
-          <p class="pwhint">Choose a strong password (12+ characters).</p>
+          <div class="pwlab" id="pwlab"></div>
           <!-- Duas classes de validação, e o usuário precisa distinguir:
                REQUIREMENTS é o que ele digita; SECURITY CHECKS é o que o
                sistema confere por trás. Misturar as duas numa lista só fazia
@@ -185,7 +187,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
 // Mudou a regra aqui? Mude lá também.
 (function(){
   var pw = document.getElementById('pw'), pw2 = document.getElementById('pw2'),
-      box = document.getElementById('pwreq'), bar = document.getElementById('pwbar'),
+      box = document.getElementById('pwreq'),
       lab = document.getElementById('pwlab'), btn = document.getElementById('pwsubmit'),
       eye = document.getElementById('pweye'), form = pw.form;
   if(!pw) return;
@@ -250,7 +252,9 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
   // categorias por diferenças de um caractere, sem explicar nenhuma.
   // 'Almost there' existe porque faltar UM item é situação diferente de faltar
   // cinco: o usuário está a um passo, e o rótulo diz isso.
-  var LABELS=['Complete these','Almost there','Strong password'];
+  // "Complete these" ficava pendurado, como se faltasse uma palavra. O rótulo
+  // do estado 1 tem de introduzir a lista; os outros dois são o estado em si.
+  var LABELS=['Your password needs:','Almost there','Password ready'];
   var COLORS=['#E06A5E','#D9A441','#22C07E'];
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
@@ -275,20 +279,15 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
       li.className = okk ? 'on' : (strict ? 'off' : '');
       if(!okk) allOk=false;
     });
-    if (v.length) box.classList.add('typing');
-    // Tudo certo: some a lista inteira e fica só "✓ Strong password".
+    // Campo vazio: a seção inteira fica invisível. A tela é de criar conta.
+    box.classList.toggle('typing', v.length > 0);
+    // Tudo certo: some a lista e fica só "✓ Password ready".
     box.classList.toggle('ready', allOk && v.length > 0);
-    // A barra tem SETE segmentos, um por requisito. Percentual contínuo dava a
-    // impressão de um score escondido; segmento aceso é literal.
     var KEYS = ['len','up','lo','num','sp','match','cmn','idn'];
-    var feitos = KEYS.filter(function(k){ return c[k]; }).length;
-    var segs = bar.querySelectorAll('i');
-    for (var si = 0; si < segs.length; si++)
-      segs[si].className = si < feitos ? (allOk ? 'on full' : 'on') : '';
     var faltam = KEYS.filter(function(k){ return !c[k]; });
     // Faltar UM é situação diferente de faltar cinco — e o rótulo diz qual é.
     var s = allOk ? 2 : (faltam.length === 1 ? 1 : 0);
-    lab.textContent = v.length ? LABELS[s] : 'Password';
+    lab.textContent = v.length ? LABELS[s] : '';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
     // Fecha tudo: check grande + transição. O olho acha o ✓ antes de ler.
     lab.classList.toggle('done', allOk && v.length > 0);
@@ -320,11 +319,10 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     el.addEventListener('keyup', caps_);
     el.addEventListener('blur', function(){ caps.hidden = true; });
   });
-  // Abre no FOCO: o usuário não deveria digitar um caractere só para
-  // descobrir as regras.
-  [pw, pw2].forEach(function(el){
-    el.addEventListener('focus', function(){ box.classList.add('typing'); });
-  });
+  // Abre no PRIMEIRO CARACTERE, não no foco. Abrir no foco enche a tela de
+  // regras antes de o usuário tentar qualquer coisa — o campo vazio não tem
+  // nada a corrigir, e a tela é de criar conta, não de aprender política de
+  // senha. run() adiciona .typing assim que há conteúdo.
   // Nome preenchido e e-mail com formato válido — e não reprovado pelo
   // servidor. Checagem de domínio ainda em voo não trava o botão.
   var emailBad=false;

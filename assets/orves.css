@@ -564,24 +564,16 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
   animation:emspin .7s linear infinite}
 
 /* Sem card dentro de card: a borda interna engordava sem informar nada.
-   Checklist em DUAS colunas e progressiva — só uma linha de dica até o
-   usuário começar a digitar. Sem isso o botão primário caía fora do viewport. */
+   Sem barra de progresso: ela existia quando havia um score de entropia por
+   trás. Abandonado o score, sobrava uma barra enchendo sem dizer do quê — a
+   lista de pendências responde melhor, e sem ocupar altura.
+   Campo vazio não mostra NADA: a tela é de criar conta, não de ensinar
+   política de senha. */
 .pwreq{margin-top:2px}
-/* Sete segmentos, um por requisito. Barra contínua sugeria um score escondido;
-   segmento aceso é literal — dá para contar. */
-.pwbar{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;height:2px}
-.pwbar i{display:block;height:2px;border-radius:2px;background:var(--line2);transition:background .18s ease}
-.pwbar i.on{background:#E06A5E}
-.pwbar i.on.full{background:var(--acc)}
 /* Sem CAPS, sem tracking, sem fonte condensada: "GOOD" saía como
    G O O D e obrigava o cérebro a decodificar um status importante. */
-.pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:7px 0 5px;color:var(--fg3)}
-.pwhint{font-size:11.5px;color:var(--fg3);line-height:1.5;margin:6px 0 0;text-align:left}
-.pwreq.typing .pwhint{display:none}
-.pwreq:not(.typing) .pwbar,.pwreq:not(.typing) .pwlab,.pwreq:not(.typing) ul{display:none}
-/* Cabeçalho de grupo: separa o que o usuário digita do que o sistema
-   confere por trás. */
-.pwgrp{font-family:JetBrains Mono,monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--fg3);margin:2px 0 5px;opacity:.8}
+.pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:0 0 5px;color:var(--fg3)}
+.pwreq:not(.typing){display:none}
 .pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
 .authform .btn.ready{background:var(--acc2)}
 .pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:3px;text-align:left}
