@@ -54,6 +54,7 @@
       <form class="authform" method="post" action="https://app.orves.ai/api/signup">
         <label class="af"><input type="text" name="name" required placeholder="Full name" autocomplete="name" style="margin-top:0"/></label>
         <label class="af"><input type="email" name="email" required placeholder="Your best email" autocomplete="email" style="margin-top:0"/></label>
+        <div id="emstat" class="emstat" hidden></div>
         <label class="af" style="position:relative"><input type="password" id="pw" name="password" required minlength="12" maxlength="256" placeholder="Password" autocomplete="new-password" style="margin-top:0;padding-right:44px"/>
           <button type="button" class="pweye" id="pweye" aria-label="Show password">show</button></label>
         <label class="af"><input type="password" id="pw2" placeholder="Confirm password" autocomplete="new-password" style="margin-top:0"/></label>
@@ -90,6 +91,43 @@
               pwpolicy: 'That password does not meet the requirements below.',
               invalid: 'Please check your name and email and try again.' }[e] || 'Something went wrong — please try again.';
   var el = document.getElementById('autherr'); el.textContent = msg; el.style.display = 'block';
+})();
+
+// Estado do e-mail ao vivo. O formato é checado aqui; a capacidade do DOMÍNIO
+// de receber e-mail vem do servidor. Nada aqui afirma que a CAIXA existe —
+// isso só o código de confirmação prova.
+(function(){
+  var el=document.querySelector('[name=email]'), out=document.getElementById('emstat');
+  if(!el||!out) return;
+  var MSG={
+    invalid_format:      'Enter a valid email address.',
+    domain_cannot_receive:'This email domain does not appear able to receive email.',
+    disposable_domain:   'Temporary or disposable email addresses are not accepted.',
+    temporary_dns_failure:'Could not check this domain right now — you can try again.',
+    rate_limited:        'Too many checks. Wait a moment.'
+  };
+  function show(cls,txt){ out.hidden=!txt; out.className='emstat '+cls; out.textContent=txt||''; }
+  function localOk(v){ return /^[^@s<>"'&\]+@[^@s]+.[^@s.]{2,}$/.test(v.trim()); }
+  var t=null, ultimo=null;
+  function check(){
+    var v=el.value.trim();
+    if(!v){ show('',''); return; }
+    if(!localOk(v)){ show('bad',MSG.invalid_format); return; }
+    if(v===ultimo) return;
+    show('wait','Checking domain…');
+    fetch('https://app.orves.ai/api/email/check',{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(el.value.trim()!==v) return;
+        ultimo=v;
+        if(d.format&&d.domain){ show('good','Domain can receive email'); }
+        else { show(d.retryable?'warn':'bad', MSG[d.code]||MSG.invalid_format); }
+      })
+      .catch(function(){ show('',''); });   // rede caiu: não bloqueia o usuário
+  }
+  el.addEventListener('input',function(){ clearTimeout(t); ultimo=null; t=setTimeout(check,600); });
+  el.addEventListener('blur',function(){ clearTimeout(t); check(); });
 })();
 
 // Checklist de senha ao vivo. ESPELHA passwordCheck() em app/worker.js — o
