@@ -61,7 +61,7 @@
         <div class="pwreq" id="pwreq">
           <div class="pwbar"><i id="pwbari"></i></div>
           <div class="pwlab" id="pwlab">Password strength</div>
-          <p class="pwhint">Use 12+ characters with uppercase, lowercase, a number and a symbol.</p>
+          <p class="pwhint">Choose a strong password (12+ characters).</p>
           <ul>
             <li data-k="len">12+ characters</li>
             <li data-k="up">Uppercase</li>
@@ -151,10 +151,10 @@
     var bits=Math.log2(Math.max(space,2))*Math.min(v.length,40);
     bits*=Math.min(1, uniq/Math.max(8, v.length*0.6));
     if(penal) bits=Math.min(bits,28);
-    return bits<45?0:bits<65?1:bits<90?2:3;
+    return bits<40?0:bits<55?1:bits<70?2:bits<90?3:4;
   }
-  var LABELS=['Weak','Fair','Strong','Very strong'];
-  var COLORS=['#E06A5E','#E0A85E','#5EC8E0','#22C07E'];
+  var LABELS=['Weak','Fair','Good','Strong','Excellent'];
+  var COLORS=['#E06A5E','#E0A85E','#E0D25E','#5EC8E0','#22C07E'];
   function run(){
     var v=pw.value, c={
       len: v.length>=12 && v.length<=256,
@@ -171,9 +171,9 @@
       li.className = okk ? 'on' : (v.length? 'off':'');
       if(!okk) allOk=false;
     });
-    box.classList.toggle('typing', v.length > 0);
+    if (v.length) box.classList.add('typing');
     var s=strength(v, !c.cmn);
-    bar.style.width=(v.length? (s+1)*25 : 0)+'%';
+    bar.style.width=(v.length? (s+1)*20 : 0)+'%';
     bar.style.background=COLORS[s];
     lab.textContent = v.length ? LABELS[s] : 'Password strength';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
@@ -190,6 +190,11 @@
     el.addEventListener('keydown', caps_);
     el.addEventListener('keyup', caps_);
     el.addEventListener('blur', function(){ caps.hidden = true; });
+  });
+  // Abre no FOCO: o usuário não deveria digitar um caractere só para
+  // descobrir as regras.
+  [pw, pw2].forEach(function(el){
+    el.addEventListener('focus', function(){ box.classList.add('typing'); });
   });
   pw.addEventListener('input',run); pw2.addEventListener('input',run);
   form.querySelector('[name=email]').addEventListener('input',run);
