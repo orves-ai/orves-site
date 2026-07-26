@@ -1,9 +1,29 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Log in | Orves</title>
+<title>Log in | Orves<script>
+(function(){
+  var f=document.querySelector('.authform'); if(!f) return;
+  var pw=f.querySelector('[autocomplete="current-password"]'), caps=document.getElementById('capsw');
+  if(!pw||!caps) return;
+  function on(ev){ if(typeof ev.getModifierState==="function") caps.hidden=!ev.getModifierState("CapsLock"); }
+  pw.addEventListener("keydown",on); pw.addEventListener("keyup",on);
+  pw.addEventListener("blur",function(){ caps.hidden=true; });
+})();
+</script>
+</title>
 <meta name="description" content="Log in to the Orves console."/>
 <link rel="canonical" href="https://orves.ai/login"/>
-<meta property="og:title" content="Log in | Orves"/>
+<meta property="og:title" content="Log in | Orves<script>
+(function(){
+  var f=document.querySelector('.authform'); if(!f) return;
+  var pw=f.querySelector('[autocomplete="current-password"]'), caps=document.getElementById('capsw');
+  if(!pw||!caps) return;
+  function on(ev){ if(typeof ev.getModifierState==="function") caps.hidden=!ev.getModifierState("CapsLock"); }
+  pw.addEventListener("keydown",on); pw.addEventListener("keyup",on);
+  pw.addEventListener("blur",function(){ caps.hidden=true; });
+})();
+</script>
+"/>
 <meta property="og:description" content="Log in to the Orves console."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://orves.ai/login"/>
@@ -40,7 +60,9 @@
       </label>
       <label class="af">
         <span style="display:flex;justify-content:space-between">Password <a href="forgot-password" style="color:var(--acc2);text-transform:none;letter-spacing:0">Forgot password?</a></span>
-        <input type="password" name="password" required placeholder="••••••••••" autocomplete="current-password"/>
+        <input type="password" name="password" required placeholder="••••••••••" autocomplete="current-password"/></label>
+        <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
+        <label class="af" style="display:none">
       </label>
       <button class="btn" type="submit" style="width:100%;margin-top:6px">Log in</button>
     </form>

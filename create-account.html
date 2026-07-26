@@ -54,8 +54,24 @@
       <form class="authform" method="post" action="https://app.orves.ai/api/signup">
         <label class="af"><input type="text" name="name" required placeholder="Full name" autocomplete="name" style="margin-top:0"/></label>
         <label class="af"><input type="email" name="email" required placeholder="Your best email" autocomplete="email" style="margin-top:0"/></label>
-        <label class="af"><input type="password" name="password" required minlength="8" placeholder="Password (min. 8 characters)" autocomplete="new-password" style="margin-top:0"/></label>
-        <button class="btn" type="submit" style="width:100%;margin-top:6px">Create free account</button>
+        <label class="af" style="position:relative"><input type="password" id="pw" name="password" required minlength="12" maxlength="256" placeholder="Password" autocomplete="new-password" style="margin-top:0;padding-right:44px"/>
+          <button type="button" class="pweye" id="pweye" aria-label="Show password">show</button></label>
+        <label class="af"><input type="password" id="pw2" placeholder="Confirm password" autocomplete="new-password" style="margin-top:0"/></label>
+        <div id="capsw" class="capswarn" hidden>⇪ Caps Lock is on</div>
+        <div class="pwreq" id="pwreq">
+          <div class="pwbar"><i id="pwbari"></i></div>
+          <div class="pwlab" id="pwlab">Enter a password</div>
+          <ul>
+            <li data-k="len">12 or more characters</li>
+            <li data-k="up">Uppercase letter</li>
+            <li data-k="lo">Lowercase letter</li>
+            <li data-k="num">Number</li>
+            <li data-k="sp">Special character</li>
+            <li data-k="cmn">Not commonly used or predictable</li>
+            <li data-k="match">Passwords match</li>
+          </ul>
+        </div>
+        <button class="btn" type="submit" id="pwsubmit" disabled style="width:100%;margin-top:6px">Create free account</button>
       </form>
       <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:16px;line-height:1.9">
         <span style="color:var(--acc2)">✓</span> 15,000 free credits&nbsp;&nbsp;<span style="color:var(--acc2)">✓</span> No credit card required
@@ -70,9 +86,118 @@
   var e = new URLSearchParams(location.search).get('error');
   if(!e) return;
   var msg = { exists: 'An account with this email already exists — log in instead.',
-              short: 'Password must be at least 8 characters.',
+              pwpolicy: 'That password does not meet the requirements below.',
               invalid: 'Please check your name and email and try again.' }[e] || 'Something went wrong — please try again.';
   var el = document.getElementById('autherr'); el.textContent = msg; el.style.display = 'block';
+})();
+
+// Checklist de senha ao vivo. ESPELHA passwordCheck() em app/worker.js — o
+// servidor é a autoridade e repete tudo (mais a checagem de vazamento).
+// Mudou a regra aqui? Mude lá também.
+(function(){
+  var pw = document.getElementById('pw'), pw2 = document.getElementById('pw2'),
+      box = document.getElementById('pwreq'), bar = document.getElementById('pwbari'),
+      lab = document.getElementById('pwlab'), btn = document.getElementById('pwsubmit'),
+      eye = document.getElementById('pweye'), form = pw.form;
+  if(!pw) return;
+  var COMMON = ('password passwd senha admin administrator root user guest test welcome letmein '+
+    'qwerty qwertyui asdf asdfgh zxcvbn monkey dragon master login secret abc iloveyou sunshine '+
+    'princess football baseball superman batman trustno shadow michael jennifer jordan harley '+
+    'ranger hunter buster soccer hockey killer george andrew charlie thomas robert daniel matthew '+
+    'joshua summer winter spring autumn january changeme default temporary orves orvesai anthropic '+
+    'openai google github microsoft azure aws cloudflare stripe supabase postgres mysql mongodb '+
+    'redis docker kubernetes linux windows macos android iphone samsung nokia motorola').split(' ');
+  var LEET = {'0':'o','1':'l','3':'e','4':'a','5':'s','7':'t','8':'b','@':'a','$':'s','!':'i','|':'l'};
+  function cands(s){
+    var low=s.toLowerCase();
+    var full=low.split('').map(function(c){return LEET[c]||c;}).join('').replace(/[^a-z0-9]/g,'');
+    var sym=low.split('').map(function(c){return /[0-9]/.test(c)?c:(LEET[c]||c);}).join('').replace(/[^a-z0-9]/g,'').replace(/[0-9]+$/,'');
+    return [full, full.replace(/[0-9]+$/,''), sym].filter(Boolean);
+  }
+  function isCommon(s){ return cands(s).some(function(c){
+    return COMMON.some(function(w){ return c===w || (w.length>=5 && c.indexOf(w)>=0); }); }); }
+  function norm(s){ return cands(s)[1]||''; }
+  function weakPattern(s){
+    s = s.toLowerCase();
+    if(/^(.)\1*$/.test(s)) return true;
+    var runs='abcdefghijklmnopqrstuvwxyz0123456789qwertyuiopasdfghjklzxcvbnm';
+    for(var i=0;i+4<=runs.length;i++){
+      var seg=runs.slice(i,i+4);
+      if(s.indexOf(seg)>=0 || s.indexOf(seg.split('').reverse().join(''))>=0) return true;
+    }
+    return false;
+  }
+  function related(s){
+    var base=norm(s); if(!base) return false;
+    var em=(form.querySelector('[name=email]')||{}).value||'';
+    var nm=(form.querySelector('[name=name]')||{}).value||'';
+    var parts=[]; em=em.toLowerCase();
+    if(em.indexOf('@')>0){ parts.push(em.split('@')[0], em.split('@')[1].split('.')[0]); }
+    nm.toLowerCase().split(/\s+/).forEach(function(w){ parts.push(w); });
+    return parts.some(function(w){
+      var t=w.replace(/[^a-z0-9]/g,'');
+      return t.length>=4 && (base.indexOf(t)>=0 || t.indexOf(base)>=0);
+    });
+  }
+  function strength(v, penal){
+    var space=0;
+    if(/\p{Ll}/u.test(v)) space+=26;
+    if(/\p{Lu}/u.test(v)) space+=26;
+    if(/\p{N}/u.test(v))  space+=10;
+    if(/[^\p{L}\p{N}\s]/u.test(v)) space+=33;
+    if(/\s/.test(v)) space+=1;
+    var uniq=new Set(v).size;
+    var bits=Math.log2(Math.max(space,2))*Math.min(v.length,40);
+    bits*=Math.min(1, uniq/Math.max(8, v.length*0.6));
+    if(penal) bits=Math.min(bits,28);
+    return bits<45?0:bits<65?1:bits<90?2:3;
+  }
+  var LABELS=['Weak','Fair','Strong','Very strong'];
+  var COLORS=['#E06A5E','#E0A85E','#5EC8E0','#22C07E'];
+  function run(){
+    var v=pw.value, c={
+      len: v.length>=12 && v.length<=256,
+      up: /\p{Lu}/u.test(v),
+      lo: /\p{Ll}/u.test(v),
+      num: /\p{N}/u.test(v),
+      sp: /[^\p{L}\p{N}\s]/u.test(v),
+      cmn: v.length>0 && !isCommon(v) && !weakPattern(v) && !related(v),
+      match: v.length>0 && v===pw2.value
+    };
+    var allOk=true;
+    box.querySelectorAll('li').forEach(function(li){
+      var okk=c[li.dataset.k];
+      li.className = okk ? 'on' : (v.length? 'off':'');
+      if(!okk) allOk=false;
+    });
+    var s=strength(v, !c.cmn);
+    bar.style.width=(v.length? (s+1)*25 : 0)+'%';
+    bar.style.background=COLORS[s];
+    lab.textContent = v.length ? LABELS[s] : 'Enter a password';
+    lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
+    btn.disabled = !allOk;
+  }
+  // Caps Lock: erro de digitação silencioso é uma das maiores causas de
+  // "minha senha não funciona". getModifierState é o único jeito confiável.
+  var caps = document.getElementById('capsw');
+  function caps_(ev){
+    if (typeof ev.getModifierState !== 'function') return;
+    caps.hidden = !ev.getModifierState('CapsLock');
+  }
+  [pw, pw2].forEach(function(el){
+    el.addEventListener('keydown', caps_);
+    el.addEventListener('keyup', caps_);
+    el.addEventListener('blur', function(){ caps.hidden = true; });
+  });
+  pw.addEventListener('input',run); pw2.addEventListener('input',run);
+  form.querySelector('[name=email]').addEventListener('input',run);
+  form.querySelector('[name=name]').addEventListener('input',run);
+  eye.addEventListener('click',function(){
+    var show = pw.type==='password';
+    pw.type = pw2.type = show ? 'text' : 'password';
+    eye.textContent = show ? 'hide' : 'show';
+  });
+  run();
 })();
 </script>
 
