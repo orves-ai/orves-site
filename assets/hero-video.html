@@ -18,7 +18,7 @@
     --fg:#E8ECF4;
     --fg2:#AEB7C7;
     --fg3:#727E93;
-    --acc:#22C07E;          /* emerald = verified / canonical / certified */
+    --acc:#22C07E;          /* emerald = verified / structured / certified */
     --acc2:#4FD69B;
     --danger:#F16A6A;       /* alarm red — reserved for PDF type accent, never UNKNOWN */
     --hold:#E0A94E;         /* calm amber = deliberate UNKNOWN / abstain */
@@ -261,7 +261,7 @@
     border:1px solid var(--line2);background:color-mix(in srgb,var(--panel2) 70%,transparent)}
   .chip.any{color:var(--fg3);border-style:dashed}
   /* ONE WORD AT A TIME — each word owns the center, held in silence, then fades to the next */
-  /* ENDING FLOW MAP — the pipeline draws itself stage by stage, and STAYS on screen */
+  /* ENDING FLOW MAP — the flow draws itself stage by stage, and STAYS on screen */
   .flowmap{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);z-index:13;
     display:flex;flex-direction:column;align-items:center;text-align:center}
   .fstage{display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(12px);
@@ -374,13 +374,13 @@
           <div class="fact" data-i="0">
             <span class="brace">{</span> <span class="k">"claim":</span><span class="v">"effective_date"</span><span class="brace">,</span>
             <span class="k">"value":</span><span class="v">"2024-03-01"</span><span class="brace">,</span>
-            <span class="k">"canonical":</span><span class="state-ok">true</span><span class="brace">,</span>
+            <span class="k">"structured":</span><span class="state-ok">true</span><span class="brace">,</span>
             <span class="k">"provenance":</span><span class="hash">"sha256:9f2c…4b"</span> <span class="brace">},</span>
           </div>
           <div class="fact" data-i="1">
             <span class="brace">{</span> <span class="k">"claim":</span><span class="v">"renewal_term"</span><span class="brace">,</span>
             <span class="k">"value":</span><span class="v">"24 months"</span><span class="brace">,</span>
-            <span class="k">"canonical":</span><span class="state-ok">true</span><span class="brace">,</span>
+            <span class="k">"structured":</span><span class="state-ok">true</span><span class="brace">,</span>
             <span class="k">"provenance":</span><span class="hash">"sha256:a1e0…7d"</span> <span class="brace">},</span>
           </div>
           <div class="fact unk" data-i="2">
@@ -393,15 +393,15 @@
           </div>
           <div class="brace">] }</div>
         </div>
-        <div class="footline"><span><b>canonical</b> · content-hashed</span><span class="u">held-back where evidence is missing</span></div>
+        <div class="footline"><span><b>structured</b> · content-hashed</span><span class="u">held-back where evidence is missing</span></div>
       </div>
     </div>
 
     <!-- ============ ENDING — model chips, then ONE WORD AT A TIME with silence ============ -->
     <div class="ending" id="ending">
       <div class="chips" id="chips">
-        <span class="chip">GPT</span><span class="chip">Claude</span><span class="chip">Gemini</span>
-        <span class="chip">Llama</span><span class="chip any">+ any model</span>
+        <span class="chip">your apps</span><span class="chip">your agents</span><span class="chip">copilots</span>
+        <span class="chip">assistants</span><span class="chip any">+ any model</span>
       </div>
     </div>
     <!-- isolated one-word chain: Documents ↓ Knowledge ↓ Knowledge ↓ Applications (spaced, held) -->
@@ -591,14 +591,14 @@
   const CAPS=[
     {t:0.00, html:'<b>Attach</b> — any source of knowledge', tick:0},
     {t:0.245,html:'<b>Extract</b>', tick:1},
-    {t:0.315,html:'<b>Resolve</b> · <b>canonical</b> · <b>certified</b>', tick:2},
+    {t:0.315,html:'<b>Resolve</b> · <b>structured</b> · <b>certified</b>', tick:2},
     {t:0.545,html:'<b>2,847 verified</b> · <span class="amber">1 abstained</span> — never guessed', tick:2},
     {t:0.70, html:'<b>Knowledge</b> becomes living infrastructure', tick:3},
     {t:0.86, html:'', tick:4},
   ];
   // chapter boundaries for the continuously-filling ticks
   const SEG=[0,0.245,0.315,0.70,0.86,1];
-  // ENDING flow map — each stage appears and STAYS (cumulative diagram, reads as one pipeline)
+  // ENDING flow map — each stage appears and STAYS (cumulative diagram, reads as one flow)
   const FLOW=[0.885,0.908,0.931,0.954];
 
   let start=performance.now(), lastCap=-1, revealed=-1, detonated=false;
@@ -682,7 +682,7 @@
     // ---------- ENDING: model chips, then ONE WORD AT A TIME in isolation ----------
     ending.classList.toggle('show', p>=0.865 && p<0.882);   // chips first, FULLY clear before the words
     core.classList.toggle('cede', p>=0.865 && p<0.995);     // core fades out so each word owns the screen
-    // flow map: each stage enters in sequence and STAYS — the pipeline draws itself
+    // flow map: each stage enters in sequence and STAYS — the flow draws itself
     const flowOn = p>=0.885 && p<0.99;
     fstages.forEach((el,i)=> el.classList.toggle('on', flowOn && p>=FLOW[i]));
     // final tagline holds under the completed flow

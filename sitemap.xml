@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://orves.ai/</loc></url>
-  <url><loc>https://orves.ai/architecture</loc></url>
   <url><loc>https://orves.ai/why-orves</loc></url>
   <url><loc>https://orves.ai/use-cases</loc></url>
   <url><loc>https://orves.ai/benchmarks</loc></url>
@@ -13,7 +12,6 @@
   <url><loc>https://orves.ai/developers</loc></url>
   <url><loc>https://orves.ai/contact</loc></url>
   <url><loc>https://orves.ai/roadmap</loc></url>
-  <url><loc>https://orves.ai/how-it-works</loc></url>
   <url><loc>https://orves.ai/login</loc></url>
   <url><loc>https://orves.ai/create-account</loc></url>
   <url><loc>https://orves.ai/forgot-password</loc></url>

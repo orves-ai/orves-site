@@ -27,7 +27,6 @@
         <a href="products/verifiable-knowledge">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
       </span></span>
     </span>
-    <a href="architecture" class="">Technology</a>
     <span class="ndd">
       <a class="on" style="cursor:default">Resources <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
@@ -49,7 +48,6 @@
 <div class="mnav">
   <a href="products/parser">Parser</a>
   <a href="products/verifiable-knowledge">Verifiable Knowledge</a>
-  <a href="architecture">Technology</a>
   <a href="developers" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
@@ -68,7 +66,7 @@
   <div>
     <span class="eye">Benchmarks</span>
     <h1 style="max-width:14ch;margin-left:auto;margin-right:auto">Measured before claimed.</h1>
-    <p class="sub">The benchmark is not marketing — it is how the platform is governed. Champions are elected by measurement, weaknesses are hunted on purpose, and a number is published only after it survives pre-registered evaluation.</p>
+    <p class="sub">The benchmark is not marketing — it is how the platform is governed. The best measured system ships, weaknesses are hunted on purpose, and a number is published only after it survives pre-registered evaluation.</p>
     <div class="feats" style="justify-content:center">
       <span><b>pre-registered</b> metrics</span>
       <span><b>versioned</b> gold sets</span>
@@ -81,7 +79,7 @@
 <section class="ruled center">
   <span class="eye">Reading this page</span>
 <h2>Honest states, not empty promises.</h2>
-<p class="lead center">Most numbers here are in the publication pipeline. Rather than advertise internal results, each dimension shows its true state — the same discipline the platform applies to knowledge.</p>
+<p class="lead center">Most numbers here are still in publication. Rather than advertise internal results, each dimension shows its true state — the same discipline the platform applies to knowledge.</p>
   <div class="tblwrap rv" style="max-width:760px;margin-left:auto;margin-right:auto"><table class="tbl">
     <thead><tr><th>State</th><th>Meaning</th></tr></thead>
     <tbody>
@@ -102,7 +100,7 @@
 <tbody>
 <tr><td><b>Reading order</b></td><td><span class="u">F1 vs gold</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>publication after pre-registered eval</td></tr>
 <tr><td><b>Tables</b></td><td><span class="u">structure F1</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>gold set expanding — n reported with every number</td></tr>
-<tr><td><b>OCR</b></td><td><span class="u">CER / WER</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>champions measured per document family</td></tr>
+<tr><td><b>Text recognition accuracy</b></td><td><span class="u">CER / WER</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>measured per document family</td></tr>
 <tr><td><b>Forms</b></td><td><span class="u">field F1</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>gold set in construction</td></tr>
 <tr><td><b>Long documents</b></td><td><span class="u">fidelity at 60+ pages</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>long-document bench in progress</td></tr>
 <tr><td><b>Charts</b></td><td><span class="u">chart-to-table</span></td><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>abstains instead of guessing</td></tr>
@@ -117,9 +115,9 @@
   <div class="tblwrap rv"><table class="tbl">
 <thead><tr><th>Dimension</th><th>Unit</th><th>Status</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td><b>Audio</b></td><td><span class="u">canonical audio pipeline</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>acquisition → canonical, certified</td></tr>
-<tr><td><b>Canonical determinism</b></td><td><span class="u">identical re-runs</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>byte-level round-trip checks</td></tr>
-<tr><td><b>Chunking</b></td><td><span class="u">structure alignment</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>projections measured against gold</td></tr>
+<tr><td><b>Audio</b></td><td><span class="u">transcription fidelity</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>acquisition → evidence, certified</td></tr>
+<tr><td><b>Determinism</b></td><td><span class="u">identical re-runs</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>byte-level round-trip checks</td></tr>
+<tr><td><b>Structure alignment</b></td><td><span class="u">output vs source structure</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>measured against gold</td></tr>
 <tr><td><b>Retrieval</b></td><td><span class="u">grounded recall</span></td><td><span class="st pend"><span class="d"></span>publication pending</span></td><td>measured on governed knowledge</td></tr>
 <tr><td><b>Claim extraction</b></td><td><span class="u">precision / recall</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>abstention counted, never hidden</td></tr>
 <tr><td><b>Reasoning grounding</b></td><td><span class="u">answers traceable to claims</span></td><td><span class="st int"><span class="d"></span>measured · internal</span></td><td>adversarial sets included</td></tr>
@@ -135,11 +133,14 @@
 <p class="lead center">Every vendor wins their own benchmark. Ours is built to find our weaknesses first.</p>
   <div class="g3 rv" style="margin-top:44px">
     <div class="card"><h4>Pre-registered</h4><p>Metrics, thresholds and datasets are fixed before the run. No metric shopping after the fact.</p></div>
+    <div class="card"><h4>Scoped numbers</h4><p>No naked scores: every published number carries its dataset and version, sample size (n), inclusion criteria, the comparators it was measured against, its run date, and known limitations.</p></div>
+    <div class="card"><h4>Independent gold</h4><p>Gold sets are held independent of the systems under test — never derived from the same process that produces the results being scored.</p></div>
     <div class="card"><h4>Gold is corrigible</h4><p>Gold sets are scientific artifacts: versioned, adjudicated, corrected through a recorded process — never silently edited.</p></div>
     <div class="card"><h4>Abstention is scored</h4><p>UNKNOWN is a measured outcome. A system that hides its abstentions is optimizing the wrong thing.</p></div>
-    <div class="card"><h4>Champions re-elected</h4><p>Every capability runs a permanent championship. Champions keep their place only while they win — including ours.</p></div>
-    <div class="card"><h4>Scoped numbers</h4><p>No naked scores: every published number carries its n, its dataset version and its confusion matrix.</p></div>
+    <div class="card"><h4>Reproducible evaluation</h4><p>The evaluation itself is reproducible: same datasets, same metrics, same protocol — you can re-run the comparison, not just read the score.</p></div>
+    <div class="card"><h4>Continuously re-measured</h4><p>Every capability is re-measured as methods improve. The best measured result ships — and only keeps its place while the numbers hold, including ours.</p></div>
     <div class="card"><h4>Detection proven</h4><p>Evaluation layers are validated by deliberate fault injection — we prove the benchmark can catch failure before trusting its green.</p></div>
+    <div class="card"><h4>Method, not mechanism</h4><p>What we publish is the proof, not the machine. Datasets, metrics and results are open; the implementation that achieves them is not part of what you audit — the number is.</p></div>
   </div>
 </section>
 
@@ -148,7 +149,7 @@
 <h2>A benchmark that never stops.</h2>
 
   <div class="tline rv" style="max-width:640px;margin-left:auto;margin-right:auto">
-    <div class="tev"><span class="tt">continuous</span><div class="th">New product version → automatic re-measurement</div><p>Every release re-enters the championship. Regressions are caught by the benchmark, not by customers.</p></div>
+    <div class="tev"><span class="tt">continuous</span><div class="th">New product version → automatic re-measurement</div><p>Every release is re-measured against the benchmark. Regressions are caught by the benchmark, not by customers.</p></div>
     <div class="tev"><span class="tt">continuous</span><div class="th">New gold data → wider coverage</div><p>Gold sets grow by adjudicated annotation. Coverage gaps are tracked as debt, visibly.</p></div>
     <div class="tev dim"><span class="tt">upcoming</span><div class="th">Public leaderboard</div><p>Published results with datasets and methodology, verifiable end to end.</p></div>
   </div>

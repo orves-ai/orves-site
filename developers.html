@@ -27,7 +27,6 @@
         <a href="products/verifiable-knowledge">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
       </span></span>
     </span>
-    <a href="architecture" class="">Technology</a>
     <span class="ndd">
       <a class="on" style="cursor:default">Resources <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
@@ -49,7 +48,6 @@
 <div class="mnav">
   <a href="products/parser">Parser</a>
   <a href="products/verifiable-knowledge">Verifiable Knowledge</a>
-  <a href="architecture">Technology</a>
   <a href="developers" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
@@ -115,7 +113,7 @@
       <ul class="kwl" style="margin-top:14px"><li>document → JSON</li><li class="kwd" style="border:0;padding:0">“trust me”</li><li>no source spans</li><li>no versions, no proof</li></ul>
       <p class="kwd" style="margin-top:4px">When the output is wrong, you debug blind.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>The Orves API</h4>
-      <ul class="kwl" style="margin-top:14px"><li>document → canonical objects</li><li>evidence + source spans</li><li>versions + resolution states</li><li>certificate + public verification</li></ul>
+      <ul class="kwl" style="margin-top:14px"><li>document → structured objects</li><li>evidence + source spans</li><li>versions + resolution states</li><li>certificate + public verification</li></ul>
       <p class="kwd" style="margin-top:4px">Every response can be traced, reproduced and proven.</p></div>
   </div>
 </section>
@@ -125,8 +123,8 @@
 <h2>What the API promises — and shows.</h2>
 
   <div class="g2 rv" style="margin-top:26px;max-width:900px;margin-left:auto;margin-right:auto">
-    <div class="card"><h4>Deterministic</h4><p>Same input, same version, same output. Idempotency keys on every mutating call.</p></div>
-    <div class="card"><h4>Replayable</h4><p>Every result can be re-derived from the canonical model — reproduce exactly what changed, and what did not.</p></div>
+    <div class="card"><h4>Reproducible</h4><p>Same input, same declared version, same output. Idempotency keys on every mutating call.</p></div>
+    <div class="card"><h4>Replayable</h4><p>Every result can be re-derived from the structured model — reproduce exactly what changed, and what did not.</p></div>
     <div class="card"><h4>Honest states</h4><p>UNKNOWN and ABSTAINED are first-class API states with reasons — never silent nulls.</p></div>
     <div class="card"><h4>Certified responses</h4><p>Every artifact returns with a certificate ID. Verification is designed to be public and account-free.</p></div>
   </div>

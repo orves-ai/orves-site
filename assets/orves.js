@@ -86,10 +86,10 @@
       spawn('c2b', pick('c2b'), big ? 'big' : 'small', serveFromKnowledge);
     }, 100 + Math.random() * 220);
   }
-  function toCanonical(big) {
+  function toStructured(big) {
     setTimeout(function () {
       spawn('p2c', pick('p2c'), big ? 'big' : 'small', function () {
-        if (Math.random() < .7) toKnowledge(big); // else: Canonical rejected (quiet confidence)
+        if (Math.random() < .7) toKnowledge(big); // else: structured record rejected (quiet confidence)
       });
     }, 90 + Math.random() * 200);
   }
@@ -109,7 +109,7 @@
       var kind = Math.random() < .12 ? 'big' : 'small';
       // ingestão que chega ao Parser pode continuar a cadeia
       spawn(k, edge, kind, k === 'in' && Math.random() < .6
-        ? function () { toCanonical(kind === 'big'); } : null);
+        ? function () { toStructured(kind === 'big'); } : null);
     });
   }
   // Observatory: silêncio longo → rajada de evidências; a primeira
@@ -122,7 +122,7 @@
         for (var i = 0; i < n; i++) (function (i) {
           setTimeout(function () {
             spawn('evidence', g[0], 'burst', i === 0
-              ? function () { if (Math.random() < .8) toCanonical(true); } : null);
+              ? function () { if (Math.random() < .8) toStructured(true); } : null);
           }, i * (140 + Math.random() * 180));
         })(i);
       }
@@ -130,7 +130,7 @@
     }, 9000 + Math.random() * 16000);
   }
   // mínimos garantidos por trecho — quiet confidence é do Observatory,
-  // não do pipeline servindo seis consumidores
+  // não do fluxo servindo seis consumidores
   setInterval(function () {
     Object.keys(MIN_ACTIVE).forEach(function (k) {
       var g = groups[k]; if (!g || !g.length) return;
@@ -153,7 +153,7 @@
       setTimeout(function () {
         var e = pick(s[0]); if (!e) return;
         spawn(s[0], e, 'small', s[0] === 'in' && Math.random() < .6
-          ? function () { toCanonical(false); } : null);
+          ? function () { toStructured(false); } : null);
       }, s[1]);
     });
   // ── render ─────────────────────────────────────────────────────────
@@ -546,7 +546,7 @@
     }, ms);
   }
   rotator('.srcchips', ['PDFs', 'Word', 'Excel', 'PowerPoint', 'scans', 'spreadsheets', 'websites', 'images', 'audio', 'video', 'email', 'Slack', 'Teams', 'GitHub', 'Jira', 'Notion', 'Confluence', 'databases', 'APIs', 'logs', 'sensors', 'IoT', 'CRM', 'ERP', 'books', 'research', 'contracts', 'policies', 'SQL', 'JSON', 'XML', 'Parquet'], 2400);
-  rotator('.aichips', ['ChatGPT', 'Claude', 'Gemini', 'Llama', 'Mistral', 'DeepSeek', 'Qwen', 'Kimi', 'agents', 'copilots', 'internal AI', 'Claude Code', 'Cursor', 'CrewAI', 'LangGraph', 'OpenAI', 'Anthropic', 'Google', 'Meta'], 2900);
+  rotator('.aichips', ['your apps', 'your agents', 'copilots', 'assistants', 'internal AI', 'chatbots', 'RAG apps', 'search', 'workflows', 'automations', 'analysts', 'any model'], 2900);
   // linha de convergência
   var flow = document.querySelector('.dflow');
   if (flow) {

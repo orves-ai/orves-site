@@ -27,7 +27,6 @@
         <a href="../products/verifiable-knowledge">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
       </span></span>
     </span>
-    <a href="../architecture" class="">Technology</a>
     <span class="ndd">
       <a class="" style="cursor:default">Resources <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
@@ -49,7 +48,6 @@
 <div class="mnav">
   <a href="../products/parser">Parser</a>
   <a href="../products/verifiable-knowledge">Verifiable Knowledge</a>
-  <a href="../architecture">Technology</a>
   <a href="../developers" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
   <a href="../research" class="sub">Research</a>
@@ -68,7 +66,7 @@
   <div>
     <span class="eyepill"><span class="d"></span>ingestion engine · parser</span>
     <h1>Unstructured in. <span class="accent-tx">Evidence out.</span></h1>
-    <p class="sub">The ingestion engine of the Verifiable Knowledge Layer: documents, scans, images, audio and video become structured, machine-readable evidence — layout, meaning, exact location and provenance. Standalone API, available in pilot; the first layer, not the final destination.</p>
+    <p class="sub">The ingestion engine of the Verifiable Knowledge Layer: documents, scans, images, audio and video become structured, machine-readable evidence — structure, meaning, exact location and provenance. Standalone API, available in pilot; the first layer, not the final destination.</p>
     <div class="cta">
       <a class="btn" href="../create-account">Start building</a>
       <a class="btn gh" href="../pricing">View pricing</a>
@@ -80,7 +78,7 @@
 <pre><span class="cm"># parse a document, keep every span</span>
 <span class="k">POST</span> <span class="s">/v1/parse</span>
 { <span class="k">"document"</span>: <span class="s">"s3://acme/contract_2024.pdf"</span>,
-  <span class="k">"outputs"</span>: [<span class="s">"canonical_text"</span>, <span class="s">"structure"</span>, <span class="s">"spans"</span>] }
+  <span class="k">"outputs"</span>: [<span class="s">"text"</span>, <span class="s">"structure"</span>, <span class="s">"spans"</span>] }
 
 <span class="cm"># 200 OK</span>
 { <span class="k">"atoms"</span>: <span class="g">1284</span>, <span class="k">"tables"</span>: <span class="g">17</span>,
@@ -94,7 +92,7 @@
 <h2>Parsing is where AI systems start lying.</h2>
 
   <p class="lead center">Most parsers flatten documents into a string. Structure, geometry, tables and provenance are destroyed before any model sees the content — and no downstream step can recover what parsing lost.</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">flattened tables</span><span class="chip bad">lost reading order</span><span class="chip bad">orphan footnotes</span><span class="chip bad">no source spans</span><span class="chip bad">silent OCR errors</span></div>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">flattened tables</span><span class="chip bad">lost reading order</span><span class="chip bad">orphan footnotes</span><span class="chip bad">no source spans</span><span class="chip bad">silent read errors</span></div>
   
   <div class="cmp rv">
     <div class="cmprow bad"><span class="lab">the default</span><span class="n">document</span><span class="a">→</span><span class="n">"one long string"</span><span class="a">→</span><span class="n">LLM</span><span class="a">→</span><span class="n x">confident, wrong</span></div>
@@ -110,8 +108,8 @@
 <h2>Artifacts, not strings.</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>Canonical text</h4>
-    <ul class="kwl"><li>deterministic</li><li>stable coordinates</li><li>addressable</li></ul><p class="kwd">Same document, same text — always.</p>
+    <div class="card"><h4>Stable text</h4>
+    <ul class="kwl"><li>reproducible</li><li>stable coordinates</li><li>addressable</li></ul><p class="kwd">Same document, same version — same text.</p>
     </div><div class="card"><h4>Structure atoms</h4>
     <ul class="kwl"><li>tables</li><li>lists · headers</li><li>reading order</li><li>geometry</li></ul><p class="kwd">Every element typed and addressable.</p>
     </div><div class="card"><h4>Built for verification</h4>
@@ -126,39 +124,6 @@
 <h2>From upload to certificate.</h2>
 
   <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">PDF in</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parser</span><span class="a">→</span><span class="fc" style="animation-delay:2s">artifacts</span><span class="a">→</span><span class="fc" style="animation-delay:3s">API response</span><span class="a">→</span><span class="fc" style="animation-delay:4s">certificate</span></div>
-</section>
-
-
-
-<section class="center">
-  <span class="eye">Inside the engine</span>
-<h2>From page to artifact, stage by stage.</h2>
-<p class="lead center">Each stage is run by a measured champion — benchmarked per document family, versioned, and swapped the day a better engine wins.</p>
-  <div class="deep rv">
-    
-    
-    <div class="dstage"><b>Layout detection</b><span>regions, columns, figures — geometry first</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage"><b>OCR</b><span>champion engine per document family</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage"><b>Reading order</b><span>the human path through the page, resolved</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage"><b>Tables & structure</b><span>cells, headers, spans — typed, not flattened</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage"><b>Canonical text</b><span>deterministic — same document, same bytes</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage out"><b>Structure atoms</b><span>every element addressable by position</span></div>
-    
-    <div class="darr">▾</div>
-    <div class="dstage out"><b>Certificate</b><span>engine version + inputs + outputs + spans, bound</span></div>
-    
-  </div>
-  <p class="lead center rv" style="margin-top:20px;font-size:14px">Where this engine sits in the platform → <a href="../architecture" style="color:var(--acc2)">architecture</a></p>
 </section>
 
 
@@ -201,11 +166,11 @@
 { <span class="k">"type"</span>: <span class="s">"table"</span>, <span class="k">"page"</span>: <span class="g">12</span>,
   <span class="k">"bbox"</span>: [<span class="g">143, 220, 502, 640</span>],
   <span class="k">"reading_order"</span>: <span class="g">47</span>, <span class="k">"cells"</span>: <span class="g">84</span>,
-  <span class="k">"canonical_text"</span>: <span class="s">"Q2 revenue by segment…"</span>,
+  <span class="k">"text"</span>: <span class="s">"Q2 revenue by segment…"</span>,
   <span class="k">"source_span"</span>: <span class="s">"contract_2024.pdf#p12/143,220,502,640"</span>,
   <span class="k">"certificate"</span>: <span class="s">"cert_9f2…"</span> }
 
-<span class="cm"># artifact 51 — chart, page 14: the engine abstains</span>
+<span class="cm"># artifact 51 — chart, page 14: the parser abstains</span>
 { <span class="k">"type"</span>: <span class="s">"chart"</span>, <span class="k">"state"</span>: <span class="r">"ABSTAINED"</span>,
   <span class="k">"reason"</span>: <span class="s">"chart-to-table below the evidence bar"</span> }</pre></div>
   </div>
@@ -217,11 +182,9 @@
   <span class="eye">Benchmarks</span>
 <h2>Measured before claimed.</h2>
 
-  <p class="lead center rv" style="max-width:620px">What we measure: reading order, table structure, OCR accuracy, form fields and long-document fidelity — and charts, where the engine abstains rather than guess.</p>
+  <p class="lead center rv" style="max-width:620px">What we measure: reading order, table structure, text accuracy, form fields and long-document fidelity — and charts, where the parser abstains rather than guess.</p>
   <p class="lead center rv" style="margin-top:14px;font-size:14px">Public results are released only after pre-registered evaluation — until then, no number appears on this site. <a href="../benchmarks" style="color:var(--acc2)">How we benchmark →</a></p>
 </section>
-
-
 
 <section class="center tight">
   <div class="band rv">
