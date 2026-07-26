@@ -26,7 +26,7 @@
 // (reality-Parser-VerifiableKnowledge-consumers), with silent rejections
 // during adjudication and a "hub pause" before serving. Its fan-out
 // has warm start + activity guarantee (never >1.8s without a pulse —
-// sempre pronto e servindo; o Observatory é que espera o mundo mudar).
+// sempre pronto e servindo).
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var svg = document.querySelector('.flowart svg');
@@ -112,7 +112,7 @@
         ? function () { toStructured(kind === 'big'); } : null);
     });
   }
-  // Observatory: silêncio longo → rajada de evidências; a primeira
+  // silêncio longo → rajada de evidências; a primeira
   // burst evidence fires an important chain up to Knowledge
   function scheduleBurst() {
     setTimeout(function () {
@@ -129,8 +129,8 @@
       scheduleBurst();
     }, 9000 + Math.random() * 16000);
   }
-  // mínimos garantidos por trecho — quiet confidence é do Observatory,
-  // não do fluxo servindo seis consumidores
+  // mínimos garantidos por trecho — o fluxo servindo seis consumidores
+  // nunca fica parado
   setInterval(function () {
     Object.keys(MIN_ACTIVE).forEach(function (k) {
       var g = groups[k]; if (!g || !g.length) return;
