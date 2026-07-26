@@ -211,8 +211,19 @@
 // contador só sobe. Sem JS / reduced-motion: grafo estático permanece.
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var svg = document.querySelector('svg.mo-know');
-  if (!svg) return;
+  // Um grafo por elemento: a home usa o perfil padrão; o cadastro usa um
+  // perfil calmo (data-calm) para servir de pano de fundo sem disputar
+  // atenção com o formulário.
+  var todos = document.querySelectorAll('svg.mo-know');
+  for (var gi = 0; gi < todos.length; gi++) montarGrafo(todos[gi]);
+
+  function montarGrafo(svg) {
+  var CALM   = svg.dataset.calm === '1';
+  var MAXSAT_CFG = parseInt(svg.dataset.maxsat || '', 10) || (CALM ? 90 : 240);
+  var SPIN_BASE  = CALM ? 0.00016 : 0.00045;   // ~35% da velocidade
+  var CAPTION    = svg.dataset.caption || 'knowledge grows · evidence stays connected';
+  var DIM        = CALM ? 0.62 : 1;            // brilho reduzido
+  var boost = 0;                               // reação discreta ao formulário
   var NS = 'http://www.w3.org/2000/svg';
   svg.innerHTML = '';
   svg.style.cursor = 'crosshair';
@@ -226,7 +237,7 @@
   caption.setAttribute('x', 170); caption.setAttribute('y', 202);
   caption.setAttribute('text-anchor', 'middle');
   caption.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:9px;fill:var(--fg3);opacity:.75');
-  caption.textContent = 'knowledge grows · evidence stays connected';
+  caption.textContent = CAPTION;
   svg.appendChild(caption);
   var counter = el('text');
   counter.setAttribute('x', 326); counter.setAttribute('y', 16);
@@ -247,7 +258,7 @@
     { l: 'Market',     x: 306, y: 102 }
   ];
   var hubs = [], sats = [], edges = [], pulses = [];
-  var MAXSAT = 240;
+  var MAXSAT = MAXSAT_CFG;
   var focus = null;
 
   function link(a, b, kind, g, style0) {
@@ -354,13 +365,24 @@
     for (i = 0; i < sats.length; i++) { n = sats[i]; dx = n.x - mx; dy = n.y - my; dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; best = n; } }
     setFocus(best);
   });
-  svg.addEventListener('mouseleave', function () { mx = -999; my = -999; spinT = 0.00045; setFocus(null); });
+  svg.addEventListener('mouseleave', function () { mx = -999; my = -999; spinT = SPIN_BASE; setFocus(null); });
 
   var NOP = [1, 0.95, 0.55, 0.1];       // opacidade por nível (com foco)
   var EOPS = { radial: 0.14, hub: 0.22, cross: 0.2 };
   var G = 0;
+  var ultimo = 0;
+  var FPS_MIN_MS = CALM ? 33 : 0;      // ~30fps no perfil calmo
+  var visivel = true;
+  document.addEventListener('visibilitychange', function () {
+    visivel = !document.hidden;
+    if (visivel) requestAnimationFrame(frame);
+  });
   function frame(now) {
-    spin += (spinT - spin) * 0.04;
+    if (!visivel) return;              // aba escondida: não desenha nada
+    if (FPS_MIN_MS && now - ultimo < FPS_MIN_MS) { requestAnimationFrame(frame); return; }
+    ultimo = now;
+    if (boost > 0) boost -= 0.008;
+    spin += ((spinT + Math.max(0, boost) * 0.0004) - spin) * 0.04;
     G += spin * 16;
     var i, s, age, x, y;
     var hasFocus = !!focus;
@@ -375,14 +397,14 @@
       var op = hasFocus ? NOP[s.lvl] : s.op;
       var rr = s.sz * age * (s.lvl === 0 ? 2.4 : s.lvl === 1 ? 1.5 : 1);
       s.el.setAttribute('cx', s.x); s.el.setAttribute('cy', s.y); s.el.setAttribute('r', Math.max(0.05, rr));
-      s.el.setAttribute('style', 'fill:' + (s.lvl <= 1 && hasFocus ? 'var(--acc)' : s.col) + ';opacity:' + (op * age));
+      s.el.setAttribute('style', 'fill:' + (s.lvl <= 1 && hasFocus ? 'var(--acc)' : s.col) + ';opacity:' + (op * age * DIM));
     }
     for (i = 0; i < hubs.length; i++) {
       var h = hubs[i];
       var hr = (3.5 + Math.min(4.5, h.sats * 0.12)) * (h.lvl === 0 ? 1.5 : 1);
       var hop = hasFocus ? Math.max(NOP[h.lvl], 0.25) : 1;
       h.el.setAttribute('cx', h.x); h.el.setAttribute('cy', h.y); h.el.setAttribute('r', Math.max(0.05, hr));
-      h.el.setAttribute('style', 'fill:var(--acc);opacity:' + hop);
+      h.el.setAttribute('style', 'fill:var(--acc);opacity:' + (hop * DIM));
       h.lab.setAttribute('x', h.x); h.lab.setAttribute('y', h.y - hr - 3);
       h.lab.setAttribute('style', 'font-family:JetBrains Mono,monospace;font-size:7.5px;fill:var(--fg2);opacity:' + (hasFocus ? Math.max(NOP[h.lvl], 0.2) : 0.9));
     }
@@ -413,6 +435,11 @@
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
+
+  // O formulário pode dar um empurrãozinho: o grafo acelera por alguns
+  // segundos e volta ao ritmo calmo. Nada chamativo.
+  if (CALM) window.__orvesGraphBoost = function () { boost = 1; };
+  }
 })();
 
 // ── Domains: 48 setores, 8 por visita, sem repetição na sessão ──

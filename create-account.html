@@ -33,18 +33,15 @@
       <span class="eye">Free tier</span>
       <h1 style="font-size:36px;max-width:14ch;margin:14px 0 12px">Start building on Orves.</h1>
       <p class="lead" style="font-size:15px">Create your account and get <b style="color:var(--fg)">15,000 free credits</b> to build on the Verifiable Knowledge Layer.</p>
-      <svg viewBox="0 0 300 260" style="width:min(300px,80%);height:auto;margin-top:34px" role="img" aria-label="Reality flows through Parser into Verifiable Knowledge, consumed by agents, models and applications.">
-        <rect class="m-box" x="90" y="6" width="120" height="34" rx="9" style="opacity:.6"/><text class="m-t" x="150" y="27" text-anchor="middle" style="font-size:11px;opacity:.7">Reality</text>
-        <line x1="150" y1="40" x2="150" y2="58" style="stroke:var(--line2);stroke-width:1.2"/>
-        <rect x="90" y="58" width="120" height="34" rx="9" style="fill:var(--panel);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/><text class="m-t" x="150" y="79" text-anchor="middle" style="font-size:11px">Parser</text>
-        <line x1="150" y1="92" x2="150" y2="110" style="stroke:color-mix(in srgb,var(--acc) 30%,var(--line2));stroke-width:1.2"/>
-        <rect x="60" y="110" width="180" height="44" rx="11" style="fill:color-mix(in srgb,var(--acc) 7%,var(--panel));stroke:var(--acc)"/><text class="m-t" x="150" y="136" text-anchor="middle" style="font-size:11.5px;fill:var(--acc2);font-weight:700">Verifiable Knowledge</text>
-        <path d="M 120 154 C 105 180 75 190 60 206" style="fill:none;stroke:color-mix(in srgb,var(--acc) 40%,var(--line2));stroke-width:1"/>
-        <path d="M 150 154 L 150 206" style="fill:none;stroke:color-mix(in srgb,var(--acc) 40%,var(--line2));stroke-width:1"/>
-        <path d="M 180 154 C 195 180 225 190 240 206" style="fill:none;stroke:color-mix(in srgb,var(--acc) 40%,var(--line2));stroke-width:1"/>
-        <rect class="m-box" x="14" y="206" width="92" height="30" rx="8"/><text class="m-t" x="60" y="225" text-anchor="middle" style="font-size:9.5px">Agents</text>
-        <rect class="m-box" x="118" y="206" width="64" height="30" rx="8"/><text class="m-t" x="150" y="225" text-anchor="middle" style="font-size:9.5px">Models</text>
-        <rect class="m-box" x="194" y="206" width="92" height="30" rx="8"/><text class="m-t" x="240" y="225" text-anchor="middle" style="font-size:9px">Applications</text>
+      <!-- Grafo vivo, perfil calmo: mesma animação da home, ~35% da
+           velocidade, menos nós e brilho reduzido. Aqui ela é pano de fundo,
+           não demonstração — o foco continua sendo o formulário.
+           Sem JS ou com prefers-reduced-motion, o SVG estático abaixo fica. -->
+      <svg class="mo-know" data-calm="1" data-maxsat="90"
+           data-caption="every document becomes connected knowledge"
+           style="width:100%;height:auto;margin-top:26px" viewBox="0 0 340 210"
+           role="img" aria-label="A knowledge graph grows: entities such as Company, Revenue, Contract, People and Product appear and stay connected by their relationships as new evidence arrives.">
+        <text x="170" y="100" text-anchor="middle" style="font-family:JetBrains Mono,monospace;font-size:9px;fill:var(--fg3)">knowledge graph</text>
       </svg>
     </div>
     <div class="auth rv" style="margin:0">
@@ -237,7 +234,11 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     bar.style.background=COLORS[s];
     lab.textContent = v.length ? (s === 4 ? 'Excellent password' : LABELS[s]) : 'Password strength';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
-    btn.disabled = !(allOk && formOk());
+    var valido = allOk && formOk();
+    // Reação discreta: ao ficar tudo válido, o grafo acelera por alguns
+    // segundos e volta ao ritmo calmo.
+    if (valido && btn.disabled && window.__orvesGraphBoost) window.__orvesGraphBoost();
+    btn.disabled = !valido;
   }
   // Caps Lock: erro de digitação silencioso é uma das maiores causas de
   // "minha senha não funciona". getModifierState é o único jeito confiável.
