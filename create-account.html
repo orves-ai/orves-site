@@ -63,8 +63,12 @@
                REQUIREMENTS é o que ele digita; SECURITY CHECKS é o que o
                sistema confere por trás. Misturar as duas numa lista só fazia
                "not predictable" parecer uma regra de digitação. -->
-          <p class="pwgrp">Requirements</p>
-          <ul>
+          <!-- Só o que FALTA aparece. Listar oito itens sempre empurrava o
+               botão para fora da tela em notebook de 1366×768 — o usuário
+               tinha de rolar para achar a ação principal. Item cumprido some;
+               a lista encolhe conforme ele digita. -->
+          <p class="pwgrp" id="pwgrp1">Missing</p>
+          <ul id="pwreq1">
             <li data-k="len">12+ characters</li>
             <li data-k="up">Uppercase</li>
             <li data-k="lo">Lowercase</li>
@@ -72,11 +76,14 @@
             <li data-k="sp">Symbol</li>
             <li data-k="match">Passwords match</li>
           </ul>
-          <p class="pwgrp">Security checks</p>
-          <ul class="pwsec">
+          <ul class="pwsec" id="pwreq2">
             <li data-k="cmn">Not found in common password lists</li>
             <li data-k="idn">Doesn't contain your name or email</li>
           </ul>
+          <!-- Duas checagens que o sistema faz por trás viram UMA linha quando
+               passam. O usuário não precisa lê-las o tempo todo; precisa saber
+               que foram feitas. -->
+          <p class="pwsecok" id="pwsecok" hidden>Security checks passed</p>
         </div>
         <button class="btn" type="submit" id="pwsubmit" disabled style="width:100%;margin-top:6px">Create free account</button>
       </form>
@@ -263,12 +270,21 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     var allOk=true;
     box.querySelectorAll('li').forEach(function(li){
       var okk=c[li.dataset.k];
-      // Neutro (○) enquanto digita; ✕ só depois de sair do campo ou tentar
-      // enviar. Marcar erro a cada tecla pune quem ainda está escrevendo.
+      // Item cumprido recebe .on e o CSS o esconde — a lista mostra só o que
+      // falta. Neutro (○) enquanto digita; ✕ só depois de sair do campo ou
+      // tentar enviar: marcar erro a cada tecla pune quem ainda está escrevendo.
       li.className = okk ? 'on' : (strict ? 'off' : '');
       if(!okk) allOk=false;
     });
+    // As duas checagens de segurança colapsam numa linha só quando passam.
+    var secOk = c.cmn && c.idn;
+    document.getElementById('pwsecok').hidden = !(secOk && v.length > 0) || allOk;
+    // Cabeçalho "Missing" some quando não falta nada de digitação.
+    var faltaDigitar = !(c.len && c.up && c.lo && c.num && c.sp && c.match);
+    document.getElementById('pwgrp1').hidden = !faltaDigitar;
     if (v.length) box.classList.add('typing');
+    // Tudo certo: some a lista inteira e fica só "✓ Strong password".
+    box.classList.toggle('ready', allOk && v.length > 0);
     // A barra tem SETE segmentos, um por requisito. Percentual contínuo dava a
     // impressão de um score escondido; segmento aceso é literal.
     var KEYS = ['len','up','lo','num','sp','match','cmn','idn'];
