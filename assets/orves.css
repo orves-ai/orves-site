@@ -531,16 +531,35 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 /* checklist de senha — estado por requisito, ao vivo */
 .pweye{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--fg3);font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;padding:4px 6px}
 .pweye:hover{color:var(--fg2)}
+/* Caracteres LITERAIS, não escapes: `\2713` virou "¹3" na página porque o
+   escape passou por interpretação octal antes de chegar ao CSS. */
 .emstat{font-size:11.5px;line-height:1.45;margin:-4px 0 0;text-align:left;padding-left:16px;position:relative}
 .emstat::before{position:absolute;left:0;top:-1px}
-.emstat.good{color:var(--acc2)}.emstat.good::before{content:"¹3"}
-.emstat.bad{color:#E06A5E}.emstat.bad::before{content:"¹5"}
-.emstat.warn{color:var(--hold)}.emstat.warn::before{content:"!"}
+.emstat.good{color:var(--acc2)}.emstat.good::before{content:"✓"}
+.emstat.bad{color:#E06A5E}.emstat.bad::before{content:"✕"}
+.emstat.warn{color:var(--hold);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.emstat.warn::before{content:"!"}
 .emstat.wait{color:var(--fg3)}
 .emstat.wait::before{content:"";width:9px;height:9px;border:1.5px solid var(--line2);border-top-color:var(--acc);border-radius:50%;top:2px;animation:emspin .7s linear infinite}
 @keyframes emspin{to{transform:rotate(360deg)}}
-.emstat.warn{cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .emstat[hidden]{display:none}
+
+/* Estado DENTRO do campo. A sequência importa: regex válida NÃO acende o ✓ —
+   ele só aparece quando o DNS confirma que o domínio recebe e-mail. Antes
+   disso é spinner. E nem o ✓ significa "verificado": posse só se prova com o
+   código enviado ao endereço. */
+.af.st{position:relative}
+.af.st input{padding-right:38px;transition:border-color .15s ease}
+.emicon{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:13px;line-height:1;
+  opacity:0;transition:opacity .15s ease,transform .15s ease;pointer-events:none}
+.af.st.is-good input{border-color:color-mix(in srgb,var(--acc) 60%,transparent)}
+.af.st.is-bad  input{border-color:color-mix(in srgb,#E06A5E 65%,transparent)}
+.af.st.is-good .emicon,.af.st.is-bad .emicon,.af.st.is-wait .emicon{opacity:1}
+.af.st.is-good .emicon::before{content:"✓";color:var(--acc2)}
+.af.st.is-bad  .emicon::before{content:"✕";color:#E06A5E}
+.af.st.is-wait .emicon::before{content:"";display:block;width:12px;height:12px;
+  border:1.5px solid var(--line2);border-top-color:var(--acc);border-radius:50%;
+  animation:emspin .7s linear infinite}
 
 /* Sem card dentro de card: a borda interna engordava sem informar nada.
    Checklist em DUAS colunas e progressiva — só uma linha de dica até o
