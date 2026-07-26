@@ -63,27 +63,24 @@
                REQUIREMENTS é o que ele digita; SECURITY CHECKS é o que o
                sistema confere por trás. Misturar as duas numa lista só fazia
                "not predictable" parecer uma regra de digitação. -->
-          <!-- Só o que FALTA aparece. Listar oito itens sempre empurrava o
-               botão para fora da tela em notebook de 1366×768 — o usuário
-               tinha de rolar para achar a ação principal. Item cumprido some;
-               a lista encolhe conforme ele digita. -->
-          <p class="pwgrp" id="pwgrp1">Missing</p>
+          <!-- Só o que FALTA aparece, e como INSTRUÇÃO, não como rótulo:
+               "Add an uppercase letter" diz o que fazer; "Uppercase" obriga o
+               usuário a traduzir. Cumprido some — listar oito itens sempre
+               empurrava o botão para fora da tela em notebook de 1366×768.
+
+               As duas últimas são checagens automáticas. Elas NÃO aparecem
+               quando passam, mas precisam aparecer quando falham: senão o
+               botão fica travado e nada na tela explica por quê. -->
           <ul id="pwreq1">
-            <li data-k="len">12+ characters</li>
-            <li data-k="up">Uppercase</li>
-            <li data-k="lo">Lowercase</li>
-            <li data-k="num">Number</li>
-            <li data-k="sp">Symbol</li>
-            <li data-k="match">Passwords match</li>
+            <li data-k="len">Use at least 12 characters</li>
+            <li data-k="up">Add an uppercase letter</li>
+            <li data-k="lo">Add a lowercase letter</li>
+            <li data-k="num">Add a number</li>
+            <li data-k="sp">Add a symbol</li>
+            <li data-k="match">Passwords must match</li>
+            <li data-k="cmn">Choose a less common password</li>
+            <li data-k="idn">Don't use your name or email</li>
           </ul>
-          <ul class="pwsec" id="pwreq2">
-            <li data-k="cmn">Not found in common password lists</li>
-            <li data-k="idn">Doesn't contain your name or email</li>
-          </ul>
-          <!-- Duas checagens que o sistema faz por trás viram UMA linha quando
-               passam. O usuário não precisa lê-las o tempo todo; precisa saber
-               que foram feitas. -->
-          <p class="pwsecok" id="pwsecok" hidden>Security checks passed</p>
         </div>
         <button class="btn" type="submit" id="pwsubmit" disabled style="width:100%;margin-top:6px">Create free account</button>
       </form>
@@ -248,11 +245,13 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
   // paralelo. Antes a barra media entropia e a checklist media requisitos:
   // o usuário via seis itens verdes com a palavra "GOOD" em cima, e um
   // caractere a mais rebaixava para "FAIR" sem explicação.
-  // DOIS estados. O usuário só precisa saber duas coisas: já posso criar a
-  // conta, e a senha está boa. "Excellent" não respondia nenhuma das duas —
-  // e obrigava a distinguir cinco categorias por diferenças de um caractere.
-  var LABELS=['Complete the remaining requirements','Strong password'];
-  var COLORS=['#E06A5E','#22C07E'];
+  // TRÊS estados, e todos derivados dos requisitos — nunca de um score de
+  // entropia paralelo. "Excellent"/"Fair"/"Good" obrigavam a distinguir cinco
+  // categorias por diferenças de um caractere, sem explicar nenhuma.
+  // 'Almost there' existe porque faltar UM item é situação diferente de faltar
+  // cinco: o usuário está a um passo, e o rótulo diz isso.
+  var LABELS=['Complete these','Almost there','Strong password'];
+  var COLORS=['#E06A5E','#D9A441','#22C07E'];
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
     var v=pw.value, c={
@@ -276,12 +275,6 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
       li.className = okk ? 'on' : (strict ? 'off' : '');
       if(!okk) allOk=false;
     });
-    // As duas checagens de segurança colapsam numa linha só quando passam.
-    var secOk = c.cmn && c.idn;
-    document.getElementById('pwsecok').hidden = !(secOk && v.length > 0) || allOk;
-    // Cabeçalho "Missing" some quando não falta nada de digitação.
-    var faltaDigitar = !(c.len && c.up && c.lo && c.num && c.sp && c.match);
-    document.getElementById('pwgrp1').hidden = !faltaDigitar;
     if (v.length) box.classList.add('typing');
     // Tudo certo: some a lista inteira e fica só "✓ Strong password".
     box.classList.toggle('ready', allOk && v.length > 0);
@@ -292,13 +285,13 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     var segs = bar.querySelectorAll('i');
     for (var si = 0; si < segs.length; si++)
       segs[si].className = si < feitos ? (allOk ? 'on full' : 'on') : '';
-    var s = allOk ? 1 : 0;
+    var faltam = KEYS.filter(function(k){ return !c[k]; });
+    // Faltar UM é situação diferente de faltar cinco — e o rótulo diz qual é.
+    var s = allOk ? 2 : (faltam.length === 1 ? 1 : 0);
     lab.textContent = v.length ? LABELS[s] : 'Password';
     lab.style.color = v.length ? COLORS[s] : 'var(--fg3)';
     // Fecha tudo: check grande + transição. O olho acha o ✓ antes de ler.
     lab.classList.toggle('done', allOk && v.length > 0);
-    // Falta UM: destaca qual, para o usuário não caçar na lista.
-    var faltam = KEYS.filter(function(k){ return !c[k]; });
     box.querySelectorAll('li').forEach(function(li){
       li.classList.toggle('only', faltam.length === 1 && li.dataset.k === faltam[0] && v.length > 0);
     });
