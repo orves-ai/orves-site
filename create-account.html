@@ -68,7 +68,7 @@
         <!-- aria-label no input: o botão SHOW vive dentro do <label>, e o nome
              acessível calculado viraria "PASSWORD Show password". -->
         <label class="af"><span>Password</span>
-          <div class="afin"><input type="password" id="pw" name="password" required minlength="12" maxlength="256" aria-label="Password" autocomplete="new-password" style="margin-top:0;padding-right:44px"/>
+          <div class="afin"><input type="password" id="pw" name="password" required minlength="8" maxlength="256" aria-label="Password" autocomplete="new-password" style="margin-top:0;padding-right:44px"/>
           <button type="button" class="pweye" id="pweye" aria-label="Show password">show</button></div></label>
         <!-- O campo de confirmação responde por si. Antes, "não confere" só
              existia como item de lista, e o usuário tinha de olhar para outro
@@ -89,22 +89,22 @@
                REQUIREMENTS é o que ele digita; SECURITY CHECKS é o que o
                sistema confere por trás. Misturar as duas numa lista só fazia
                "not predictable" parecer uma regra de digitação. -->
-          <!-- Os OITO itens ficam sempre visíveis, na mesma ordem: nenhum
+          <!-- Os QUATRO itens ficam sempre visíveis, na mesma ordem: nenhum
                entra, sai ou se desloca. Só o marcador muda (○ → ✓ / ✕). Lista
                que encolhe a cada tecla obriga o usuário a acompanhar linhas se
                movendo e apaga a prova do que ele já cumpriu.
 
-               Texto como INSTRUÇÃO, não como rótulo: "Add an uppercase letter"
-               diz o que fazer; "Uppercase" obriga o usuário a traduzir.
+               Texto como INSTRUÇÃO, não como rótulo: "Use at least 8
+               characters" diz o que fazer, não só nomeia a regra.
+               Sem regras de composição (decisão BP 27-jul-2026, NIST
+               SP 800-63B): maiúscula/número/símbolo obrigatórios empurram
+               para o previsível; quem barra senha fraca é a lista de comuns,
+               identidade e vazamento — como em app/worker.js.
                As duas últimas são checagens automáticas do sistema, não regras
                de digitação — ficam por último, e quando falham explicam por que
                o botão está travado. -->
           <ul id="pwreq1">
-            <li data-k="len">Use at least 12 characters</li>
-            <li data-k="up">Add an uppercase letter</li>
-            <li data-k="lo">Add a lowercase letter</li>
-            <li data-k="num">Add a number</li>
-            <li data-k="sp">Add a symbol</li>
+            <li data-k="len">Use at least 8 characters</li>
             <li data-k="match">Passwords must match</li>
             <li data-k="cmn">Choose a less common password</li>
             <li data-k="idn">Don't use your name or email</li>
@@ -281,11 +281,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
   var strict=false;   // vira true no blur ou na tentativa de enviar
   function run(){
     var v=pw.value, c={
-      len: v.length>=12 && v.length<=256,
-      up: /\p{Lu}/u.test(v),
-      lo: /\p{Ll}/u.test(v),
-      num: /\p{N}/u.test(v),
-      sp: /[^\p{L}\p{N}\s]/u.test(v),
+      len: v.length>=8 && v.length<=256,
       // Separadas: "é uma senha conhecida" e "é a sua própria identidade" são
       // checagens diferentes, e o usuário corrige cada uma de um jeito.
       cmn: v.length>0 && !isCommon(v) && !weakPattern(v),
@@ -316,7 +312,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     // Campo vazio: a seção inteira fica invisível. A tela é de criar conta.
     // Depois do primeiro caractere ela nunca mais se mexe.
     box.classList.toggle('typing', v.length > 0);
-    var KEYS = ['len','up','lo','num','sp','match','cmn','idn'];
+    var KEYS = ['len','match','cmn','idn'];
     var faltam = KEYS.filter(function(k){ return !c[k]; });
     var s = allOk && v.length ? 1 : 0;
     lab.textContent = LABELS[s];
