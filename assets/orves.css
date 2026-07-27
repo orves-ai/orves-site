@@ -522,6 +522,11 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .auth{max-width:400px;margin:0 auto;background:var(--panel);border:1px solid var(--line2);border-radius:16px;padding:30px 32px;text-align:center}
 .authform{display:flex;flex-direction:column;gap:9px;text-align:left}
 .af span{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--fg3);margin-bottom:6px}
+/* Contexto de posicionamento do CAMPO, não do label inteiro: ✓/✕ e o botão
+   SHOW são absolutos com top:50%, e com o rótulo dentro do <label> esse 50%
+   passava a medir rótulo+campo — os dois subiam para cima da borda do input.
+   É <div> e não <span> de propósito: `.af span` acima é o rótulo. */
+.afin{position:relative}
 /* padding 10px→8px: quatro campos empilhados, 8px de economia cada. O alvo de
    toque continua acima de 40px de altura. */
 .af input{width:100%;background:var(--ink2);border:1px solid var(--line2);border-radius:9px;padding:8px 13px;font-size:14px;color:var(--fg);font-family:Inter,system-ui,sans-serif;outline:none;transition:border-color .15s}
@@ -572,22 +577,19 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 /* Sem CAPS, sem tracking, sem fonte condensada: "GOOD" saía como
    G O O D e obrigava o cérebro a decodificar um status importante. */
 .pwlab{font-size:12.5px;font-weight:600;letter-spacing:0;margin:0 0 5px;color:var(--fg3)}
-/* Recolhe com transição em vez de sumir de uma vez: sem isto o formulário
-   SALTA no instante em que o usuário confirma a senha, e o botão muda de lugar
-   debaixo do cursor. grid-template-rows anima altura AUTOMÁTICA, coisa que
-   `height` não faz — e exige exatamente um filho com overflow:hidden, daí o
-   .pwinner e o .pwlist. */
+/* Abre com transição em vez de aparecer de uma vez: sem isto o formulário
+   SALTA no primeiro caractere e o botão muda de lugar debaixo do cursor.
+   grid-template-rows anima altura AUTOMÁTICA, coisa que `height` não faz — e
+   exige exatamente um filho com overflow:hidden, daí o .pwinner.
+   Depois de aberta, a lista NÃO se mexe mais: nenhum item entra, sai ou
+   troca de posição — só o estado de cada um muda. */
 .pwreq{margin-top:2px;display:grid;grid-template-rows:1fr;opacity:1;
   transition:grid-template-rows .18s ease,opacity .18s ease}
 .pwreq>.pwinner{overflow:hidden;min-height:0}
 .pwreq:not(.typing){grid-template-rows:0fr;opacity:0;pointer-events:none}
-/* Tudo válido: a lista recolhe, o rótulo fica. */
-.pwlist{display:grid;grid-template-rows:1fr;transition:grid-template-rows .18s ease}
-.pwlist>ul{overflow:hidden;min-height:0}
-.pwreq.ready .pwlist{grid-template-rows:0fr}
-@media (prefers-reduced-motion: reduce){
-  .pwreq,.pwlist{transition:none}
-}
+/* os overrides de prefers-reduced-motion estão TODOS no bloco único mais
+   abaixo — duas definições de `.pwreq{}` disparam o guard de colisão de
+   classes do test_graph, que existe para pegar sobreposição acidental. */
 .pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
 .authform .btn.ready{background:var(--acc2)}
 .pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:3px;text-align:left}
@@ -602,16 +604,18 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pwlab.done{animation:pwdone .28s ease-out}
 @keyframes pwdone{from{opacity:.35;transform:translateY(2px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){
-  .pwreq li.only::before{animation:none}
-  .pwlab.done{animation:none}
+  .pwreq,.pwreq li.only::before,.pwlab.done{transition:none;animation:none}
 }
-/* Cumprido SOME. Oito itens sempre listados empurravam o botão primário para
-   fora do viewport em notebook comum — o usuário tinha de rolar para achar a
-   ação principal. A lista mostra só o que falta e encolhe conforme ele digita. */
-.pwreq li.on{display:none}
-/* Tudo fechado: nem lista, nem cabeçalho. Fica a barra e "Strong password". */
-/* o recolhimento da lista é animado no bloco .pwlist, acima */
-/* As duas checagens que o sistema faz por trás viram UMA linha quando passam. */
+/* Cumprido FICA, com ✓ verde. Esconder o item cumprido encolhia o card, mas
+   tirava a única prova de que ele foi cumprido e obrigava o usuário a
+   acompanhar linhas mudando de lugar a cada tecla. Lista fixa: a política
+   inteira continua legível, e os ✓ acumulando são o próprio progresso.
+   A altura de PICO não mudou — no primeiro caractere quase nada está
+   cumprido, e era esse o estado mais alto dos dois desenhos. */
+.pwreq li.on{color:var(--acc2)}
+.pwreq li.on::before{content:"✓";color:var(--acc2)}
+/* ✕ âmbar, nunca vermelho, e só depois do blur/submit: enquanto digita o
+   usuário não está errando, está no meio da frase. */
 .pwreq li.off::before{content:"✕";color:var(--hold)}
 .authform .btn[disabled]{opacity:.45;cursor:not-allowed}
 .authdiv{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--fg3);font-size:11.5px;font-family:JetBrains Mono,monospace}
