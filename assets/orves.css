@@ -66,12 +66,19 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
 .navin{display:flex;align-items:center;gap:30px;height:64px}
 .brand{display:flex;align-items:center;gap:10px}.brand svg{display:block}
 .word{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em}
-.nlinks{display:flex;gap:24px;margin-left:6px}
+/* align-items:center — sem isto o padrão é `stretch`: cada item estica até a
+   altura do container e o TEXTO encosta no topo da própria caixa, de modo que
+   qualquer diferença de altura de linha entre os itens vira desalinhamento
+   visível. É o que o caret ▾ provocava: ele engorda a linha de Products e
+   Resources, e só esses dois desciam em relação a Pricing e Why Orves. */
+.nlinks{display:flex;align-items:center;gap:24px;margin-left:6px}
 .nlinks a{font-size:14px;color:var(--fg2)}.nlinks a:hover{color:var(--fg)}.nlinks a.on{color:var(--fg)}
 @media(max-width:960px){.nlinks{display:none}}
 .sp{flex:1}.si{font-size:14px;color:var(--fg2)}.si:hover{color:var(--fg)}
-.ndd{position:relative;display:inline-block}
-.ndd .caret{font-size:9px;color:var(--fg3);margin-left:2px}
+.ndd{position:relative;display:flex;align-items:center}
+/* line-height:1 + vertical-align:middle: o caret não pode participar do
+   cálculo da altura da linha do link, senão volta a empurrar o texto. */
+.ndd .caret{font-size:9px;color:var(--fg3);margin-left:2px;line-height:1;vertical-align:middle}
 .ndd .nmenu{position:absolute;top:100%;left:-16px;padding-top:12px;display:none;min-width:250px;z-index:60}
 .ndd:hover .nmenu,.ndd:focus-within .nmenu{display:block}
 .nmenu .in{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
