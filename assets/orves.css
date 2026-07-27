@@ -520,7 +520,18 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 
 /* auth: signin / create account */
 .auth{max-width:400px;margin:0 auto;background:var(--panel);border:1px solid var(--line2);border-radius:16px;padding:30px 32px;text-align:center}
-.authform{display:flex;flex-direction:column;gap:9px;text-align:left}
+/* Ritmo do formulário. Um `gap` único não dá conta: as distâncias aqui não
+   são todas a mesma relação. Rótulo→campo (6px) diz "isto nomeia aquilo";
+   grupo→grupo (18px) diz "aqui termina um campo e começa outro"; mensagem de
+   estado (5px) pertence ao campo ACIMA dela, e herdar o ritmo de grupo a
+   soltaria do campo que ela explica. Com 9px para tudo o formulário lia como
+   um bloco só. Por isso gap:0 e margem declarada por relação. */
+.authform{display:flex;flex-direction:column;gap:0;text-align:left}
+.authform>.af{margin-top:18px}
+.authform>.af:first-child{margin-top:0}
+.authform>.capswarn{margin-top:9px}
+/* Separa PREENCHER de EXECUTAR. */
+.authform>.btn{margin-top:26px}
 .af span{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--fg3);margin-bottom:6px}
 /* Contexto de posicionamento do CAMPO, não do label inteiro: ✓/✕ e o botão
    SHOW são absolutos com top:50%, e com o rótulo dentro do <label> esse 50%
@@ -540,7 +551,9 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pweye:hover{color:var(--fg2)}
 /* Caracteres LITERAIS, não escapes: `\2713` virou "¹3" na página porque o
    escape passou por interpretação octal antes de chegar ao CSS. */
-.emstat{font-size:11.5px;line-height:1.45;margin:-4px 0 0;text-align:left;padding-left:16px;position:relative}
+/* 5px: a mensagem gruda no campo que ela explica. O -4px de antes existia só
+   para anular o gap de 9px do flex, que agora não existe. */
+.emstat{font-size:11.5px;line-height:1.45;margin:5px 0 0;text-align:left;padding-left:16px;position:relative}
 .emstat::before{position:absolute;left:0;top:-1px}
 .emstat.good{color:var(--acc2)}.emstat.good::before{content:"✓"}
 .emstat.bad{color:#E06A5E}.emstat.bad::before{content:"✕"}
@@ -583,10 +596,14 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
    exige exatamente um filho com overflow:hidden, daí o .pwinner.
    Depois de aberta, a lista NÃO se mexe mais: nenhum item entra, sai ou
    troca de posição — só o estado de cada um muda. */
-.pwreq{margin-top:2px;display:grid;grid-template-rows:1fr;opacity:1;
+.pwreq{margin-top:12px;display:grid;grid-template-rows:1fr;opacity:1;
   transition:grid-template-rows .18s ease,opacity .18s ease}
 .pwreq>.pwinner{overflow:hidden;min-height:0}
-.pwreq:not(.typing){grid-template-rows:0fr;opacity:0;pointer-events:none}
+/* margin-top:0 quando fechada: altura zero com margem viva deixaria um vão
+   fantasma entre o último campo e o botão, e o formulário em repouso — que é
+   como a tela é vista pela primeira vez — pareceria mal espaçado sem motivo
+   visível na página. */
+.pwreq:not(.typing){grid-template-rows:0fr;opacity:0;pointer-events:none;margin-top:0}
 /* os overrides de prefers-reduced-motion estão TODOS no bloco único mais
    abaixo: uma classe, uma definição. */
 .pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
