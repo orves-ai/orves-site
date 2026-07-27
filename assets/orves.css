@@ -87,7 +87,10 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
 .nlinks{display:flex;align-items:center;gap:24px;margin-left:6px}
 .nlinks a{font-size:14px;color:var(--fg2)}.nlinks a:hover{color:var(--fg)}.nlinks a.on{color:var(--fg)}
 @media(max-width:960px){.nlinks{display:none}}
-.sp{flex:1}.si{font-size:14px;color:var(--fg2)}.si:hover{color:var(--fg)}
+.sp{flex:1}
+/* ghost button: nunca competir com o CTA verde — borda/fundo só no hover */
+.si{font-size:14px;color:var(--fg2);padding:10px 15px;border-radius:var(--r);border:1px solid transparent;transition:color .15s,background-color .15s,border-color .15s}
+.si:hover{color:var(--fg);background:var(--panel2);border-color:var(--line2)}
 .ndd{position:relative;display:flex;align-items:center}
 /* line-height:1 + vertical-align:middle: o caret não pode participar do
    cálculo da altura da linha do link, senão volta a empurrar o texto. */

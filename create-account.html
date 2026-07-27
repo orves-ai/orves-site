@@ -115,7 +115,7 @@
       <p class="mono" style="font-size:11px;color:var(--fg3);margin-top:12px;line-height:1.7">
         <span style="color:var(--acc2)">✓</span> 15,000 free credits&nbsp;&nbsp;<span style="color:var(--acc2)">✓</span> No credit card required
       </p>
-      <p style="font-size:12.5px;color:var(--fg3);margin-top:14px">Already have an account? <a href="login">Log in</a></p>
+      <p style="font-size:12.5px;color:var(--fg3);margin-top:14px">Already have an account? <a href="login">Sign in</a></p>
     </div>
   </div>
 </section>
@@ -124,7 +124,7 @@
 (function(){
   var e = new URLSearchParams(location.search).get('error');
   if(!e) return;
-  var msg = { exists: 'An account with this email already exists — log in instead.',
+  var msg = { exists: 'An account with this email already exists — sign in instead.',
               pwpolicy: 'That password does not meet the requirements below.',
               invalid: 'Please check your name and email and try again.' }[e] || 'Something went wrong — please try again.';
   var el = document.getElementById('autherr'); el.textContent = msg; el.style.display = 'block';
