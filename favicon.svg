@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+<!-- GERADO por site/gen_favicon.py — NAO editar a mao.
+     Favicon da Orves: DISCO preto + arte A2 em tamanho cheio (decisao BP,
+     26-jul-2026). O disco e coerente com a arte, que ja e aneis concentricos,
+     e sem cantos a marca cabe inteira: o anel externo vai a 94% do raio.
+     Aneis e ponto identicos a docs/brand/orves-aperture-responsive.svg.
+     Ponto claro FIXO: o disco opaco faz o contexto ser sempre escuro, entao a
+     arte nao muda com o tema do sistema. -->
+<circle cx="17" cy="17" r="17" fill="#0B0E14"/>
+<circle cx="17" cy="17" r="15.3" stroke="#22C07E" stroke-width="1.5"/>
+<circle cx="17" cy="17" r="8.6" stroke="#4FD69B" stroke-width="3"/>
+<circle cx="17" cy="17" r="2" fill="#E8ECF4"/>
+</svg>
