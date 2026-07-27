@@ -89,8 +89,10 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
 @media(max-width:960px){.nlinks{display:none}}
 .sp{flex:1}
 /* botão secundário: caixa discreta sempre visível, sem competir com o CTA verde */
-.si{font-size:14px;color:var(--fg2);padding:10px 15px;border-radius:var(--r);border:1px solid var(--line2);background:var(--panel2);transition:color .15s,border-color .15s}
+.si{font-size:14px;color:var(--fg2);padding:10px 20px;border-radius:var(--r);border:1px solid var(--line2);background:var(--panel2);transition:color .15s,border-color .15s}
 .si:hover{color:var(--fg);border-color:var(--fg3)}
+/* o par Sign in→CTA anda junto (12px), mais perto que o gap geral da nav */
+.navin .si+.btn{margin-left:-18px}
 .ndd{position:relative;display:flex;align-items:center}
 /* line-height:1 + vertical-align:middle: o caret não pode participar do
    cálculo da altura da linha do link, senão volta a empurrar o texto. */
