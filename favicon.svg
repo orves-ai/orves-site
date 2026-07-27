@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
 <!-- GERADO por site/gen_favicon.py — NAO editar a mao.
-     Favicon da Orves: TILE preto arredondado + arte A2 a 80% (decisao BP
-     27-jul-2026, restaurando a v1: o disco em tamanho cheio da v2 desaparecia
-     na tab strip escura — so os aneis sobravam, lendo como o globo de "sem
-     favicon". Os cantos do tile sao a presenca do icone em qualquer tema).
+     Favicon v3 da Orves (decisao BP 27-jul-2026): DISCO preto no maximo +
+     ARO de borda #3A4453 — a v2 (disco sem aro) desaparecia na tab strip
+     escura; o aro silhueta o circulo em qualquer tema, e em 16/32 px o raster
+     engrossa os aneis (BOOST), porque stroke de 1.5/34 vira <1px e some.
      Aneis e ponto identicos a docs/brand/orves-aperture-responsive.svg.
-     Ponto claro FIXO: o tile opaco faz o contexto ser sempre escuro, entao a
-     arte nao muda com o tema do sistema. -->
-<rect width="34" height="34" rx="7.48" fill="#0B0E14"/>
-<g transform="translate(3.4,3.4) scale(0.8)">
+     Ponto claro FIXO: o disco opaco faz o contexto ser sempre escuro. -->
+<circle cx="17" cy="17" r="17" fill="#0B0E14"/>
+<circle cx="17" cy="17" r="16.4" stroke="#3A4453" stroke-width="1.2"/>
 <circle cx="17" cy="17" r="15.3" stroke="#22C07E" stroke-width="1.5"/>
 <circle cx="17" cy="17" r="8.6" stroke="#4FD69B" stroke-width="3"/>
 <circle cx="17" cy="17" r="2" fill="#E8ECF4"/>
-</g>
 </svg>
