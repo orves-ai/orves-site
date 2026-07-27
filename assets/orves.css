@@ -39,6 +39,19 @@ h1{font-size:56px}h2{font-size:34px;margin:10px 0 12px}h3{font-size:22px}h4{font
 @media(max-width:900px){h1{font-size:40px}h2{font-size:28px}}
 a{color:inherit;text-decoration:none}
 p a,li a{color:var(--acc2)}p a:hover,li a:hover{text-decoration:underline}
+/* A convenção de sublinhar no hover existia, mas só para link dentro de <p> ou
+   <li>. O "Forgot password?" vive num <span> dentro do <label>, então nunca
+   casava: ficava verde e sem nenhum sinal de que é clicável — cor sozinha é
+   sinal fraco num link pequeno colado a um rótulo. */
+.aflink{color:var(--acc2);text-transform:none;letter-spacing:0}
+.aflink:hover,.aflink:focus-visible{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+/* FOCO VISÍVEL — o site não tinha NENHUM. Quem navega por teclado percorria a
+   página inteira sem saber onde estava; o navegador desenha um anel padrão que
+   `outline:none` em resets costuma matar, e aqui simplesmente nunca houve
+   substituto. :focus-visible só acende para teclado, então o clique de mouse
+   continua limpo. */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--acc);outline-offset:3px;border-radius:3px}
 .mono{font-family:var(--mono)}
 .lead{color:var(--fg2);max-width:60ch;font-size:17px}
 .center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
