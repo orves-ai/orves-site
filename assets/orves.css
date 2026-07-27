@@ -247,6 +247,19 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--fg3)}
 /* ── Ilustração viva (home 2.3/2.4) — peça CENTRAL, quase cinematográfica */
 .flowart{position:relative;left:50%;transform:translateX(-50%);width:min(1280px,96vw);border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--panel) 55%,transparent);padding:22px 14px}
 .flowart svg{display:block;width:100%;height:auto}
+/* A rolagem horizontal do diagrama no celular precisa de AVISO. O SVG tem
+   min-width:680px abaixo de 900px (encolher para 360px deixaria os rótulos
+   com ~4px, ilegíveis), então ele transborda e rola dentro da própria caixa —
+   mas nada na tela dizia isso, e a arte só PARECIA cortada. Foi assim que ela
+   foi reportada como quebrada.
+   O aviso aparece só na largura em que a rolagem existe de fato: o contêiner
+   mede 96vw-28px, logo há transbordo abaixo de ~737px de viewport. Acima
+   disso o diagrama cabe inteiro e o aviso seria mentira. */
+.flowhint{display:none}
+@media(max-width:736px){
+  .flowhint{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;
+    letter-spacing:.08em;color:var(--fg3);text-align:center;margin-top:10px}
+}
 html.js .flowart.rv{transform:translateX(-50%) translateY(14px)}
 html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
 .flowart .fnode{fill:var(--panel);stroke:var(--line2)}
