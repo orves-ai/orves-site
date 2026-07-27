@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://app.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://app.orves.ai"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Create your account | Orves</title>
 <meta name="description" content="Create your free Orves account and get 15,000 credits to start building on the Verifiable Knowledge Layer. No credit card required."/>
 <link rel="canonical" href="https://orves.ai/create-account"/>
@@ -52,7 +52,7 @@
     <div class="auth rv" style="margin:0">
       <h2 style="font-size:22px;margin:0 0 18px">Create your account</h2>
       <div id="autherr" style="display:none;border:1px solid color-mix(in srgb,var(--hold) 50%,transparent);background:color-mix(in srgb,var(--hold) 8%,transparent);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--hold);margin-bottom:14px"></div>
-      <form class="authform" method="post" action="https://app.orves.ai/api/signup">
+      <form class="authform" method="post" action="https://dashboard.orves.ai/api/signup">
         <!-- Rótulo FORA do campo, como no login. Placeholder some no primeiro
              caractere: quem revisa o formulário preenchido perde a identidade
              de cada campo, e leitor de tela não tem nome acessível estável.
@@ -182,7 +182,7 @@ window.EMAIL_LOCAL_RE = /^[^@\s<>"'&\\]+@[^@\s]+\.[^@\s.]{2,}$/;
     }
     if(v===ultimo) return;
     show('wait','Checking domain…'); pendente=true;
-    fetch('https://app.orves.ai/api/email/check',{method:'POST',
+    fetch('https://dashboard.orves.ai/api/email/check',{method:'POST',
       headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
       .then(function(r){ return r.json(); })
       .then(function(d){
