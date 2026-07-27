@@ -628,6 +628,11 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 @keyframes pwdone{from{opacity:.35;transform:translateY(2px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){
   .pwreq,.pwreq li.only::before,.pwlab.done{transition:none;animation:none}
+  /* Spinners também param. Indicador de carregamento é a exceção que todo
+     mundo esquece — e é justamente uma rotação CONTÍNUA, o tipo de movimento
+     que quem pede redução de movimento quer evitar. Sem animação eles viram
+     um anel estático, que continua dizendo "aguardando". */
+  .af-state.is-wait .emicon::before,.emstat.wait::before,.flowchain .fc{animation:none}
 }
 /* Cumprido FICA, com ✓ verde. Esconder o item cumprido encolhia o card, mas
    tirava a única prova de que ele foi cumprido e obrigava o usuário a
@@ -934,6 +939,10 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 .cform input:focus,.cform textarea:focus{border-color:var(--acc)}
 .cform textarea{resize:vertical;min-height:120px}
 .cform .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+/* Formulário de contato: Nome e E-mail lado a lado só enquanto couberem. Em
+   375px cada campo ficaria com ~165px — um e-mail digitado não cabe no campo e
+   o usuário perde de vista o que escreveu. Abaixo disso, um por linha. */
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}}
 @media(max-width:560px){.cform .fgrid{grid-template-columns:1fr}}
 .cform button{margin-top:4px}
 .cbanner{max-width:560px;margin:0 auto 6px;border-radius:10px;padding:12px 14px;font-size:13.5px;display:none}
