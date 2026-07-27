@@ -588,8 +588,7 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .pwreq>.pwinner{overflow:hidden;min-height:0}
 .pwreq:not(.typing){grid-template-rows:0fr;opacity:0;pointer-events:none}
 /* os overrides de prefers-reduced-motion estão TODOS no bloco único mais
-   abaixo — duas definições de `.pwreq{}` disparam o guard de colisão de
-   classes do test_graph, que existe para pegar sobreposição acidental. */
+   abaixo: uma classe, uma definição. */
 .pwlab.done::before{content:"✓";margin-right:6px;font-weight:700}
 .authform .btn.ready{background:var(--acc2)}
 .pwreq ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:3px;text-align:left}
