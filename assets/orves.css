@@ -88,7 +88,22 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
 
 /* ── Hero (original) ────────────────────────────────────────────── */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:78px 0 44px;border-top:0}
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
+/* Variante do hero para as telas de conta. Existe como CLASSE, e não como
+   style inline na página, por um motivo de precedência: declaração inline
+   VENCE qualquer regra de folha sem !important — inclusive a media query
+   abaixo. Com grid-template-columns inline, as duas colunas nunca colapsavam
+   no celular, o grid transbordava, e o FORMULÁRIO ficava fora da tela à
+   direita: a pessoa via o texto e o grafo e concluía que a página não tinha
+   campos. */
+.hero-auth{grid-template-columns:1fr 1fr}
+@media(max-width:900px){
+  .hero,.hero-auth{grid-template-columns:1fr}
+  /* Formulário PRIMEIRO. Empilhado na ordem do código, ele nasce depois de
+     título, texto e grafo — perto de uma tela inteira de rolagem antes do
+     primeiro campo, numa página cujo único objetivo é preencher o formulário.
+     O texto continua logo abaixo, para quem quiser ler antes de decidir. */
+  .hero-auth .auth{order:-1}
+}
 .hero h1{margin:16px 0 20px}
 .accent-tx{color:var(--acc)}
 .hero .sub{font-size:18px;color:var(--fg2);max-width:52ch;margin-bottom:28px}
@@ -186,7 +201,12 @@ a.obsloop:hover{border-color:var(--acc2)}
 
 /* ── Stats ──────────────────────────────────────────────────────── */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
-@media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* Variante de 3 colunas como CLASSE. Estava no style inline de system.html e,
+   por vencer a media query, era a única grade do site que NÃO colapsava — três
+   colunas em 375px. Foi o guard de "nenhum grid-template-columns inline" que a
+   encontrou; o caso do cadastro sozinho não teria revelado esta. */
+.stats3{grid-template-columns:repeat(3,1fr);max-width:640px}
+@media(max-width:820px){.stats,.stats3{grid-template-columns:repeat(2,1fr)}}
 .stat{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:18px 20px;text-align:left}
 .stat .v{font-family:var(--disp);font-size:30px;font-weight:600;color:var(--fg);display:block}
 .stat .l{font-family:var(--mono);font-size:11px;color:var(--fg3);text-transform:uppercase;letter-spacing:.06em;margin-top:4px;display:block}
