@@ -280,18 +280,15 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--fg3)}
 /* ── Ilustração viva (home 2.3/2.4) — peça CENTRAL, quase cinematográfica */
 .flowart{position:relative;left:50%;transform:translateX(-50%);width:min(1280px,96vw);border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--panel) 55%,transparent);padding:22px 14px}
 .flowart svg{display:block;width:100%;height:auto}
-/* A rolagem horizontal do diagrama no celular precisa de AVISO. O SVG tem
-   min-width:680px abaixo de 900px (encolher para 360px deixaria os rótulos
-   com ~4px, ilegíveis), então ele transborda e rola dentro da própria caixa —
-   mas nada na tela dizia isso, e a arte só PARECIA cortada. Foi assim que ela
-   foi reportada como quebrada.
-   O aviso aparece só na largura em que a rolagem existe de fato: o contêiner
-   mede 96vw-28px, logo há transbordo abaixo de ~737px de viewport. Acima
-   disso o diagrama cabe inteiro e o aviso seria mentira. */
-.flowhint{display:none}
+/* Duas artes, uma por faixa de largura. Não é a mesma reduzida: com viewBox de
+   1000 unidades um rótulo de 12px renderiza a ~4px em 375px de tela — cabe e
+   não se lê. A versão estreita tem viewBox de 360, escala perto de 1:1 e texto
+   em tamanho real. Nada rola na horizontal: cada uma cabe na sua faixa. */
+.flowart .fa-narrow{display:none}
 @media(max-width:736px){
-  .flowhint{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;
-    letter-spacing:.08em;color:var(--fg3);text-align:center;margin-top:10px}
+  .flowart .fa-wide{display:none}
+  .flowart .fa-narrow{display:block}
+  .flowart{padding:18px 10px}
 }
 html.js .flowart.rv{transform:translateX(-50%) translateY(14px)}
 html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
@@ -751,8 +748,6 @@ html.js .dcard:nth-child(8){animation-delay:14s}
   .pchap{padding:42px 0;gap:24px}
   .pchap h3{font-size:24px}
   .bignum{font-size:32px}
-  .flowart{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .flowart svg{min-width:680px}
   .kxstat{flex-wrap:wrap;row-gap:4px}
   .hero .sub{font-size:16px}
   .auth{padding:28px 22px}
