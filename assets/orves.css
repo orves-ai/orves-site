@@ -279,16 +279,30 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--fg3)}
 
 /* ── Ilustração viva (home 2.3/2.4) — peça CENTRAL, quase cinematográfica */
 .flowart{position:relative;left:50%;transform:translateX(-50%);width:min(1280px,96vw);border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--panel) 55%,transparent);padding:22px 14px}
+.flowart{position:relative;left:50%;transform:translateX(-50%)}
+.flowpan{overflow:visible}
 .flowart svg{display:block;width:100%;height:auto}
-/* Duas artes, uma por faixa de largura. Não é a mesma reduzida: com viewBox de
-   1000 unidades um rótulo de 12px renderiza a ~4px em 375px de tela — cabe e
-   não se lê. A versão estreita tem viewBox de 360, escala perto de 1:1 e texto
-   em tamanho real. Nada rola na horizontal: cada uma cabe na sua faixa. */
-.flowart .fa-narrow{display:none}
+/* CELULAR/TABLET ESTREITO — o MESMO diagrama, com viewport que arrasta.
+   A alternativa (redesenhar na vertical) troca o conteúdo para resolver um
+   problema de interação: perde a narrativa esquerda→direita, vira outro
+   asset e não se parece com o que a pessoa viu no desktop.
+   Aqui a peça é preservada e a INTERAÇÃO é que se adapta. Três pistas, porque
+   sem elas o corte lê como defeito — foi o que aconteceu:
+   1. o viewport arrasta (overflow-x no .flowpan, não no card);
+   2. desvanecimento na borda direita, ancorado no CARD (que não rola), então
+      ele fica parado enquanto o conteúdo passa por baixo;
+   3. dica em texto abaixo do viewport. */
+.flowhint{display:none}
 @media(max-width:736px){
-  .flowart .fa-wide{display:none}
-  .flowart .fa-narrow{display:block}
-  .flowart{padding:18px 10px}
+  .flowpan{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+  .flowpan svg{min-width:680px}
+  .flowart{padding:18px 10px 14px}
+  .flowart::after{content:"";position:absolute;top:1px;right:1px;bottom:38px;width:56px;
+    border-radius:0 17px 17px 0;pointer-events:none;
+    background:linear-gradient(to right,transparent,color-mix(in srgb,var(--ink) 92%,transparent))}
+  .flowhint{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;
+    letter-spacing:.06em;color:var(--fg3);text-align:center;margin:10px 0 0}
+}
 }
 html.js .flowart.rv{transform:translateX(-50%) translateY(14px)}
 html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
