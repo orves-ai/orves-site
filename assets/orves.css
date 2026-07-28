@@ -116,11 +116,8 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
 .hero-auth{grid-template-columns:1fr 1fr}
 @media(max-width:900px){
   .hero,.hero-auth{grid-template-columns:1fr}
-  /* Formulário PRIMEIRO. Empilhado na ordem do código, ele nasce depois de
-     título, texto e grafo — perto de uma tela inteira de rolagem antes do
-     primeiro campo, numa página cujo único objetivo é preencher o formulário.
-     O texto continua logo abaixo, para quem quiser ler antes de decidir. */
-  .hero-auth .auth{order:-1}
+  /* O formulário já vem PRIMEIRO no próprio DOM (coluna esquerda no desktop,
+     pedido BP 27-jul) — empilhado, ele nasce no topo sem precisar de order. */
 }
 .hero h1{margin:16px 0 20px}
 .accent-tx{color:var(--acc)}
