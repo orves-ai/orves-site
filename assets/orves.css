@@ -1019,8 +1019,9 @@ html.js .flowart.rv.in .ppb4{animation:ppG4 6.5s 4s linear infinite}
 .ritem span{display:block;font-size:12px;color:var(--fg2);margin-top:2px;line-height:1.5}
 
 /* pricing v2 — plan cards + comparison table */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1020px;margin:28px auto 0;text-align:left;align-items:stretch}
-@media(max-width:860px){.plans{grid-template-columns:1fr;max-width:440px}}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1180px;margin:28px auto 0;text-align:left;align-items:stretch}
+@media(max-width:1080px){.plans{grid-template-columns:repeat(2,1fr);max-width:720px}}
+@media(max-width:560px){.plans{grid-template-columns:1fr;max-width:440px}}
 .plan{border:1px solid var(--line2);border-radius:16px;background:var(--panel);padding:26px 22px;display:flex;flex-direction:column}
 .plan.rec{border-color:color-mix(in srgb,var(--acc) 55%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--acc) 26%,transparent) inset}
 .plan .pname{font-family:var(--disp);font-size:15px;color:var(--fg2);display:flex;align-items:center;gap:9px}
