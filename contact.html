@@ -102,14 +102,16 @@
   else if (p.get('error') === 'invalid') { b.className = 'cbanner err'; b.textContent = 'Please add your name, a valid email and a short message.'; }
   else if (p.get('error') === 'send') { b.className = 'cbanner err'; b.innerHTML = 'Something went wrong sending your message. Email us at <a href="mailto:hi@orves.ai">hi@orves.ai</a>.'; }
   if (p.get('sent')) { var f = document.querySelector('.cform'); if (f) f.style.display = 'none'; }
-  // ?topic=<slug>-beta: chegada por CTA "Join private beta" de um produto em
-  // desenvolvimento — pré-preenche a mensagem sem prometer nada indisponível.
+  // ?topic=<slug>-beta | <slug>-pilot: chegada por CTA de produto em beta/
+  // pilot — pré-preenche a mensagem sem prometer nada indisponível.
   var topic = p.get('topic');
-  if (topic && /^[a-z-]{1,40}$/.test(topic) && topic.slice(-5) === '-beta') {
+  var tm = topic && /^([a-z-]{1,36})-(beta|pilot)$/.exec(topic);
+  if (tm) {
     var ta = document.querySelector('.cform textarea[name="message"]');
-    var prod = topic.slice(0, -5);
-    if (ta && !ta.value) ta.value = "I'd like to join the Orves " +
-      prod.charAt(0).toUpperCase() + prod.slice(1) + " private beta.";
+    var prod = tm[1].charAt(0).toUpperCase() + tm[1].slice(1);
+    if (ta && !ta.value) ta.value = tm[2] === 'beta'
+      ? "I'd like to join the Orves " + prod + " private beta."
+      : "I'd like to request access to the Orves " + prod + " private pilot.";
   }
 })();
 </script>
