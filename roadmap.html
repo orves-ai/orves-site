@@ -28,8 +28,9 @@
     <span class="ndd">
       <a class="" style="cursor:default">Products <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
-        <a href="products/parser">Parser <em>Any document into structured evidence</em></a>
-        <a href="products/verifiable-knowledge">Verifiable Knowledge <em>A knowledge base you can prove</em></a>
+        <a href="products/parse">Parse <em>From documents to structured data</em></a>
+        <a href="products/knowledge">Knowledge <em>From evidence to verifiable knowledge</em></a>
+        <a href="products/vault">Vault <em>A persistent home for that knowledge</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -51,8 +52,9 @@
   <button class="menubtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 <div class="mnav">
-  <a href="products/parser">Parser</a>
-  <a href="products/verifiable-knowledge">Verifiable Knowledge</a>
+  <a href="products/parse">Parse</a>
+  <a href="products/knowledge">Knowledge</a>
+  <a href="products/vault">Vault</a>
   <a href="developers" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
@@ -81,6 +83,7 @@
       <h3>Available now <span class="st live"><span class="d"></span>live</span></h3>
       <p class="rsub">Usable today, no waiting.</p>
       <div class="ritem"><b>Orves Dashboard</b><span>Create an account, get 15,000 credits, generate API keys.</span></div>
+      <div class="ritem"><b>Python SDK</b><span><b>pip install orves</b> — alpha, mirrors the served Parse contract exactly.</span></div>
       <div class="ritem"><b>Developers</b><span>Integration guide and quickstart for the API surface.</span></div>
       <div class="ritem"><b>Benchmark methodology</b><span>How we evaluate — datasets, metrics and pre-registration.</span></div>
       <div class="ritem"><b>Research</b><span>Methods, reports and technical findings.</span></div>
@@ -90,23 +93,23 @@
     <div class="rcol">
       <h3>In progress <span class="st draft"><span class="d"></span>building</span></h3>
       <p class="rsub">Being built now — the pilot rollout.</p>
-      <div class="ritem"><b>Parser API</b><span>Live parsing to structured evidence, consuming credits.</span></div>
-      <div class="ritem"><b>Verifiable Knowledge API</b><span>Knowledge objects, versions and grounding over your evidence.</span></div>
+      <div class="ritem"><b>Parse API · private pilot</b><span>Live parsing to structured output, consuming credits — PDF first.</span></div>
+      <div class="ritem"><b>Knowledge API</b><span>Knowledge objects, versions and grounding over your evidence — contract in definition.</span></div>
       <div class="ritem"><b>Credit billing</b><span>Usage ledger — every debit reconciled to its unit of work.</span></div>
-      <div class="ritem"><b>Playground</b><span>Run real documents in the browser and inspect the output.</span></div>
-      <div class="ritem"><b>SDKs</b><span>Thin Python and TypeScript clients — disposable by design.</span></div>
-      <div class="ritem"><b>OpenAPI spec</b><span>Generated from the live surface.</span></div>
       <div class="ritem"><b>Public certificate verification</b><span>Verify any artifact, no account required.</span></div>
     </div>
     <div class="rcol">
       <h3>Planned <span class="st soon"><span class="d"></span>planned</span></h3>
       <p class="rsub">Committed direction — not started yet.</p>
+      <div class="ritem"><b>Orves Vault</b><span>The persistent home for knowledge — storage, governance, Web · API · SDK · MCP.</span></div>
       <div class="ritem"><b>API reference &amp; full docs</b><span>Complete, versioned, agent-readable.</span></div>
+      <div class="ritem"><b>Playground</b><span>Run real documents in the browser and inspect the output.</span></div>
+      <div class="ritem"><b>TypeScript SDK</b><span>Thin client over the public contract — after the contract widens.</span></div>
       <div class="ritem"><b>Examples &amp; cookbook</b><span>Finance, legal, scientific, forms, RAG and agents.</span></div>
       <div class="ritem"><b>Compare</b><span>Head-to-head vs leading tools — backed by reproducible benchmarks, never marketing.</span></div>
       <div class="ritem"><b>Webhooks</b><span>Governed change events into your own systems.</span></div>
       <div class="ritem"><b>Projects</b><span>Organize documents and knowledge in the dashboard.</span></div>
-      <div class="ritem"><b>MCP serving</b><span>Knowledge objects to agents, natively.</span></div>
+      <div class="ritem"><b>MCP serving</b><span>Knowledge from the Vault to models and agents, natively — with permissions and provenance.</span></div>
       <div class="ritem"><b>Benchmark reports</b><span>Pre-registered results and performance notes, published in the open.</span></div>
       <div class="ritem"><b>Learn</b><span>Deep technical guides — document AI, grounding, evaluation.</span></div>
     </div>
@@ -119,7 +122,7 @@
 
 <section class="center">
   <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">Build AI systems that know where every answer came from.</h2>
-  <p class="lead center" style="margin-bottom:26px">Create your account with 15,000 free credits and generate your API keys today. The APIs activate with the pilot rollout.</p>
+  <p class="lead center" style="margin-bottom:26px">Create your account with 15,000 free credits and generate your API keys today. Parse is in private pilot; Knowledge and Vault follow as they ship.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">Start building — free</a>
     <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">Talk to us</a>
@@ -134,8 +137,9 @@
       <p class="ftsig">The Verifiable Knowledge Layer.</p>
     </div>
     <div class="ftcol"><div class="h">Products</div>
-      <a href="products/parser">Parser</a>
-      <a href="products/verifiable-knowledge">Verifiable Knowledge</a>
+      <a href="products/parse">Parse</a>
+      <a href="products/knowledge">Knowledge</a>
+      <a href="products/vault">Vault</a>
     </div>
     <div class="ftcol"><div class="h">Resources</div>
       <a href="developers">Developers</a>

@@ -184,7 +184,7 @@ a.pnode:hover{border-color:color-mix(in srgb,var(--acc) 45%,transparent);transfo
 .parr .v{width:1px;height:14px;background:var(--line2)}
 .parr .t{font-family:var(--mono);font-size:11px;margin:3px 0}
 .pnode .cert{font-family:var(--mono);font-size:10.5px;color:var(--acc2);margin-left:auto;white-space:nowrap;opacity:.85}
-/* the FORK — bifurcação pós-Canonical (peça central do posicionamento V2) */
+/* the FORK — bifurcação pós-camada (peça central do posicionamento V2) */
 .fork{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin:2px 0}
 @media(max-width:760px){.fork{grid-template-columns:1fr}.forx{padding:4px 0}}
 .fcol{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:18px 20px;text-align:left;display:flex;flex-direction:column;gap:8px}
@@ -322,7 +322,7 @@ html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
 @keyframes corepulse{0%,100%{opacity:.6;stroke-width:1}50%{opacity:1;stroke-width:2.2}}
 .flowart .corehalo{fill:none;stroke:var(--acc);opacity:0;transform-box:fill-box;transform-origin:center;animation:halo 4.5s ease-out infinite}
 @keyframes halo{0%{opacity:.35;transform:scale(1)}70%{opacity:0;transform:scale(1.12)}100%{opacity:0}}
-/* a CAMADA canonical — plano de borda a borda, não card */
+/* a CAMADA central — plano de borda a borda, não card */
 .flowart .llayer-fill{fill:color-mix(in srgb,var(--acc) 5%,transparent)}
 .flowart .llayer-line{stroke:var(--acc);stroke-width:1.4;opacity:.8}
 .flowart .pulse-line{animation:layerpulse 4.5s ease-in-out infinite}
@@ -346,7 +346,7 @@ html.js .flowart .schip{opacity:0;animation:srcin .5s ease forwards}
 .videowrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .videocap{font-family:var(--mono);font-size:11.5px;color:var(--fg3);margin-top:12px}
 
-/* ── CANONICAL como camada (home 2.1) ───────────────────────────── */
+/* ── camada central (home 2.1) ───────────────────────────── */
 .canonhero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:96px 0}
 .canonhero .big{font-family:var(--disp);font-weight:700;font-size:clamp(64px,11vw,150px);letter-spacing:-.03em;line-height:.95;color:var(--fg);margin:18px 0 8px}
 .canonhero .big em{font-style:normal;color:var(--acc)}
@@ -407,7 +407,7 @@ html.js .rv.in{opacity:1;transform:none}
 .m-t{font-family:'JetBrains Mono',monospace;font-size:10px;fill:var(--fg3)}
 .m-t.acc{fill:var(--acc2)}
 
-/* Parser: caos → grade */
+/* ingestão: caos → grade */
 @keyframes mChaos{0%,38%{opacity:.55}52%,86%{opacity:0}100%{opacity:.55}}
 @keyframes mGrid{0%,38%{opacity:0}52%,86%{opacity:.95}100%{opacity:0}}
 @keyframes mScan{0%{transform:translateX(0)}50%{transform:translateX(210px)}100%{transform:translateX(0)}}
@@ -415,7 +415,7 @@ html.js .mo-parser .chaos line{animation:mChaos 9s ease-in-out infinite}
 html.js .mo-parser .grid line{animation:mGrid 9s ease-in-out infinite}
 html.js .mo-parser .scan{animation:mScan 9s ease-in-out infinite}
 
-/* Canonical: camadas empilham + versão */
+/* adjudicação: camadas empilham + versão */
 @keyframes mStack{0%{opacity:0;transform:translateY(14px)}18%,82%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
 html.js .mo-canon .lyr{animation:mStack 8s ease-in-out infinite}
 html.js .mo-canon .lyr:nth-child(2){animation-delay:.5s}
@@ -552,7 +552,7 @@ footer{padding:88px 0 44px}
 .kxrow .y{color:var(--acc2)}
 .kxrow .x{color:var(--hold)}
 
-/* parser demo: blocos estruturados aparecem em sequência */
+/* demo de ingestão: blocos estruturados aparecem em sequência */
 @keyframes sbIn{0%,38%{opacity:0}50%,84%{opacity:1}96%,100%{opacity:0}}
 html.js .mo-parser .sb,html.js .mo-canon .sb{opacity:0;animation:sbIn 9s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){html.js .mo-parser .sb,html.js .mo-canon .sb{animation:none;opacity:1}}
@@ -567,7 +567,7 @@ html.js .mo-know .bs{opacity:0;animation:bsIn 13s ease-out infinite}
 html.js .mo-obs .os{opacity:0;animation:osIn 11s ease-out infinite}
 @media(prefers-reduced-motion:reduce){html.js .mo-obs .os{animation:none;opacity:1}}
 
-/* parser: o documento de entrada acende quando seu elemento é detectado */
+/* ingestão: o documento de entrada acende quando seu elemento é detectado */
 @keyframes dlPulse{0%,38%{filter:none}46%,58%{filter:drop-shadow(0 0 4px color-mix(in srgb,var(--acc) 55%,transparent)) brightness(1.6)}70%,100%{filter:none}}
 html.js .mo-parser .dl{animation:dlPulse 9s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){html.js .mo-parser .dl{animation:none}}
@@ -779,7 +779,7 @@ html.js .dcard:nth-child(8){animation-delay:14s}
   .vcard{width:100%;max-width:340px}
 }
 
-/* parser: 4 atos — entende, organiza, ancora, entrega (ciclo 14s) */
+/* ingestão: 4 atos — entende, organiza, ancora, entrega (ciclo 14s) */
 @keyframes phWin{0%,3%{opacity:0}6%,22%{opacity:1}25%,100%{opacity:0}}
 html.js .mo-parser .ph{opacity:0;animation:phWin 14s ease-in-out infinite}
 html.js .mo-parser .ph2{animation-delay:3.5s}

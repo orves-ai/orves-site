@@ -23,7 +23,7 @@
 
 // ── Live-flow v2: grafo causal de eventos no diagrama da camada ──
 // Não é loop nem só aleatoriedade: eventos GERAM o estágio seguinte
-// (reality-Parser-VerifiableKnowledge-consumers), with silent rejections
+// (reality-layer-consumers), with silent rejections
 // during adjudication and a "hub pause" before serving. Its fan-out
 // has warm start + activity guarantee (never >1.8s without a pulse —
 // sempre pronto e servindo).
@@ -107,7 +107,7 @@
       if (now - edge.last < cfg.cool) return;
       edge.last = now;
       var kind = Math.random() < .12 ? 'big' : 'small';
-      // ingestão que chega ao Parser pode continuar a cadeia
+      // ingestão que chega à camada pode continuar a cadeia
       spawn(k, edge, kind, k === 'in' && Math.random() < .6
         ? function () { toStructured(kind === 'big'); } : null);
     });
