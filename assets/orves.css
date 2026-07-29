@@ -708,6 +708,118 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .authdiv{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--fg3);font-size:11.5px;font-family:JetBrains Mono,monospace}
 .authdiv::before,.authdiv::after{content:"";flex:1;height:1px;background:var(--line)}
 
+/* ── auth shell (login, 29-jul): painel institucional + formulário ──
+   Escopado a body.authpage: nada aqui muda cadastro/reset, que seguem o card
+   .auth clássico. Sem cor nova: tudo deriva dos tokens de §Tokens. */
+.authmain{border-top:0;padding:44px 0;min-height:calc(100vh - 64px);min-height:calc(100svh - 64px);display:flex;align-items:center}
+/* iluminação radial única e discreta atrás do painel — mesmo recurso escopado
+   que a pricing ganhou por decisão de BP; 5% de acc, nunca "página iluminada" */
+/* inset:0 de propósito: inset negativo estendia a caixa além do viewport e
+   criava scroll horizontal em 900–1280px (achado da auditoria por CDP) */
+.authmain::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 26% 44%,color-mix(in srgb,var(--acc) 5%,transparent),transparent 70%);pointer-events:none}
+.authshell{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(400px,.88fr);gap:clamp(48px,6vw,88px);align-items:center;width:100%}
+/* form PRIMEIRO no DOM, coluna DIREITA no desktop: atribuição explícita de
+   célula — jamais order/inline (inline vence media query). */
+.authstory{grid-column:1;grid-row:1;min-width:0}
+.authpanel{grid-column:2;grid-row:1;min-width:0;width:100%;max-width:448px;justify-self:end}
+
+/* painel institucional */
+.ashead{font-size:40px;letter-spacing:-.03em;margin:14px 0 16px;max-width:16ch}
+.asbody{color:var(--fg2);font-size:16.5px;line-height:1.62;max-width:52ch;margin:0 0 28px}
+.asvis{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,color-mix(in srgb,var(--panel) 88%,transparent),color-mix(in srgb,var(--ink2) 92%,transparent));padding:16px 12px;overflow:hidden}
+.asvis svg{display:block;width:100%;height:auto}
+.aslab{font-family:var(--mono);font-size:10px;letter-spacing:.09em;fill:var(--fg3)}
+.asln{stroke:var(--line2);stroke-width:1;fill:none}
+.aspulse{stroke:var(--acc2);stroke-width:1.2;fill:none;stroke-dasharray:.18 1;stroke-dashoffset:1.2;opacity:0}
+.astrust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin:18px 0 0;padding:0}
+.astrust li{font-size:13px;color:var(--fg2);position:relative;padding-left:20px}
+.astrust li::before{content:"✓";position:absolute;left:0;color:var(--acc2)}
+/* ciclo de 12s: entradas → marca → saídas; nós acendem quando o pulso chega.
+   Tudo atrás de html.js e desligado sob reduced-motion — o estado estático é
+   completo sem animação nenhuma. */
+@keyframes asTravel{0%{stroke-dashoffset:1.2;opacity:0}2%{opacity:.9}11%{stroke-dashoffset:-.2;opacity:.9}13%,100%{stroke-dashoffset:-.2;opacity:0}}
+@keyframes asHalo{0%,26%,58%,100%{opacity:.28}33%,49%{opacity:.6}}
+@keyframes asNode{0%,100%{stroke:var(--line2)}12%,32%{stroke:color-mix(in srgb,var(--acc) 55%,transparent)}44%{stroke:var(--line2)}}
+@keyframes asFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+html.js .asp1{animation:asTravel 12s linear infinite}
+html.js .asp2{animation:asTravel 12s linear .9s infinite}
+html.js .asp3{animation:asTravel 12s linear 1.8s infinite}
+html.js .asp4{animation:asTravel 12s linear 4.6s infinite}
+html.js .asp5{animation:asTravel 12s linear 5.2s infinite}
+html.js .asp6{animation:asTravel 12s linear 5.8s infinite}
+html.js .asp7{animation:asTravel 12s linear 6.4s infinite}
+html.js .ashalo{animation:asHalo 12s ease-in-out infinite}
+html.js .asn1 rect{animation:asNode 12s linear 5.6s infinite}
+html.js .asn2 rect{animation:asNode 12s linear 6.2s infinite}
+html.js .asn3 rect{animation:asNode 12s linear 6.8s infinite}
+html.js .asn4 rect{animation:asNode 12s linear 7.4s infinite}
+html.js .ascard{animation:asFloat 12s ease-in-out infinite}
+html.js .asc2{animation-delay:1.3s}
+html.js .asc3{animation-delay:2.6s}
+
+/* superfície do formulário */
+.authcard{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--line2);border-radius:16px;padding:38px 36px;box-shadow:0 24px 80px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.025)}
+.authcard h1{font-size:30px;letter-spacing:-.025em;line-height:1.15;margin:0 0 8px}
+.authsub{font-size:14.5px;color:var(--fg2);line-height:1.5;margin:0 0 22px}
+.authalert{border:1px solid;border-radius:10px;padding:11px 14px;font-size:13px;line-height:1.45;margin:0 0 18px}
+.authalert.bad{border-color:color-mix(in srgb,#E06A5E 35%,transparent);background:color-mix(in srgb,#E06A5E 9%,transparent);color:var(--fg)}
+.authalert.good{border-color:color-mix(in srgb,var(--acc) 35%,transparent);background:color-mix(in srgb,var(--acc) 8%,transparent);color:var(--fg)}
+.authalert[hidden]{display:none}
+/* labels legíveis (sentence case, 13px) no lugar do mono uppercase 10.5px —
+   só aqui; cadastro/reset mantêm o padrão antigo até a mesma rodada chegar lá */
+.authpage .af span{font-family:var(--sans);font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg2);margin-bottom:7px}
+.authpage .aflab{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.authpage .aflink{font-size:13px;font-weight:500}
+.authpage .authform>.af{margin-top:16px}
+.authpage .af input{padding:13px 14px;font-size:15px;border-radius:10px}
+.authpage .afin input{padding-right:56px}
+/* alvo de toque real para o mostrar/ocultar (a auditoria mediu 40×22) */
+.authpage .pweye{min-width:44px;min-height:40px;right:4px}
+.authpage .af input:hover{border-color:color-mix(in srgb,var(--fg3) 60%,transparent)}
+.authpage .af input:focus{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 14%,transparent)}
+.authpage .af input[aria-invalid="true"]{border-color:color-mix(in srgb,#E06A5E 65%,transparent)}
+.authpage .af input[aria-invalid="true"]:focus{box-shadow:0 0 0 3px color-mix(in srgb,#E06A5E 12%,transparent)}
+/* autofill do Chrome/Safari: manter fundo escuro e texto legível, sem hacks
+   que apaguem o valor nem quebrem password manager */
+.authpage .af input:-webkit-autofill{-webkit-box-shadow:0 0 0 60px var(--ink2) inset;-webkit-text-fill-color:var(--fg);caret-color:var(--fg)}
+.authpage .authform>.btn{margin-top:22px;width:100%;padding:14px 18px;font-size:14.5px;border-radius:10px;border:0;cursor:pointer;font-family:var(--sans)}
+.authpage .btn.busy::after{content:"";display:inline-block;width:13px;height:13px;margin-left:9px;border:2px solid rgba(4,20,13,.3);border-top-color:#04140d;border-radius:50%;vertical-align:-2px;animation:emspin .7s linear infinite}
+.authpage .authform .btn[disabled]{opacity:.62}
+.authpage .emstat{font-size:12.5px}
+.authpage .capswarn{margin-top:9px}
+.authalt{font-size:13px;color:var(--fg2);text-align:center;margin:18px 0 0}
+.authnew{font-size:13px;color:var(--fg2);text-align:center;margin:14px 0 0}
+.authalt a,.authnew a{color:var(--acc2)}
+.authalt a:hover,.authnew a:hover,.authalt a:focus-visible,.authnew a:focus-visible{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+/* "Back to Orves" vira ghost link só aqui: sem caixa em repouso, caixa no hover */
+body.authpage nav .si{background:transparent;border-color:transparent}
+body.authpage nav .si:hover{border-color:var(--line2);background:var(--panel2)}
+
+/* responsivo do shell */
+@media(max-width:1080px){.ashead{font-size:34px}.asbody{font-size:15.5px}}
+@media(max-width:960px){body.authpage nav .si{display:inline-block}}
+@media(max-width:899px){
+  .authshell{grid-template-columns:1fr}
+  .authstory{display:none}
+  .authpanel{grid-column:1;grid-row:1;justify-self:center;max-width:480px}
+  .authmain{align-items:flex-start;min-height:0;padding:36px 0 56px}
+  .authmain::before{display:none}
+}
+@media(max-width:479px){
+  .authcard{background:transparent;border:0;box-shadow:none;padding:0}
+  .authcard h1{font-size:27px}
+  .authmain{padding:24px 0 44px}
+}
+/* tela baixa no desktop: a página pode rolar; o card nunca ganha scroll interno */
+@media(min-width:900px) and (max-height:720px){
+  .authmain{padding:24px 0;min-height:0}
+  .authcard{padding:30px 28px}
+}
+@media(prefers-reduced-motion:reduce){
+  html.js .aspulse,html.js .ashalo,html.js .asnode rect,html.js .ascard{animation:none}
+  .authpage .btn.busy::after{animation:none}
+}
+
 /* domains: grade universal com ciclo de destaque lento */
 .dcard{border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 70%,transparent);padding:16px 18px;text-align:left}
 .dcard h4{font-size:15px;margin-bottom:6px}
