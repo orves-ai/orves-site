@@ -597,6 +597,46 @@
     }, 3400);
   }
 })();
+// ── why-orves: a mesma pergunta, duas respostas (UMA arena) ──
+// Controle segmentado Without/With sobre a MESMA superfície: ao virar
+// "with", o CSS re-aplica as animações e as camadas (claim → span →
+// source → version → audit) surgem em sequência. Demonstração one-shot:
+// a arena revela em "without" e vira "with" sozinha UMA vez; interação
+// do usuário cancela o auto-flip; reduced-motion nunca liga o flip
+// automático. Sem JS, o CSS esconde o controle e mostra o estado
+// verificável completo.
+(function () {
+  var box = document.querySelector('.warena');
+  if (!box) return;
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.wtb'));
+  var touched = false, flipped = false;
+  function setMode(m) {
+    box.setAttribute('data-mode', m);
+    btns.forEach(function (b) {
+      var on = b.getAttribute('data-mode') === m;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      touched = true;
+      setMode(b.getAttribute('data-mode'));
+    });
+  });
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (en) {
+      if (!en.isIntersecting || flipped) return;
+      flipped = true;
+      io.disconnect();
+      setTimeout(function () { if (!touched) setMode('with'); }, 2000);
+    });
+  }, { threshold: 0.6 });
+  io.observe(box);
+})();
+
 // ── menu mobile ──
 (function () {
   var btn = document.querySelector('.menubtn');

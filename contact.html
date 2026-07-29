@@ -48,7 +48,10 @@
   </div>
   <span class="sp"></span>
   <a class="si" href="login">Sign in</a>
+  
+  
   <a class="btn" href="create-account">Start for free</a>
+  
   <button class="menubtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 <div class="mnav">
@@ -99,6 +102,15 @@
   else if (p.get('error') === 'invalid') { b.className = 'cbanner err'; b.textContent = 'Please add your name, a valid email and a short message.'; }
   else if (p.get('error') === 'send') { b.className = 'cbanner err'; b.innerHTML = 'Something went wrong sending your message. Email us at <a href="mailto:hi@orves.ai">hi@orves.ai</a>.'; }
   if (p.get('sent')) { var f = document.querySelector('.cform'); if (f) f.style.display = 'none'; }
+  // ?topic=<slug>-beta: chegada por CTA "Join private beta" de um produto em
+  // desenvolvimento — pré-preenche a mensagem sem prometer nada indisponível.
+  var topic = p.get('topic');
+  if (topic && /^[a-z-]{1,40}$/.test(topic) && topic.slice(-5) === '-beta') {
+    var ta = document.querySelector('.cform textarea[name="message"]');
+    var prod = topic.slice(0, -5);
+    if (ta && !ta.value) ta.value = "I'd like to join the Orves " +
+      prod.charAt(0).toUpperCase() + prod.slice(1) + " private beta.";
+  }
 })();
 </script>
 

@@ -48,7 +48,10 @@
   </div>
   <span class="sp"></span>
   <a class="si" href="../login">Sign in</a>
-  <a class="btn" href="../create-account">Start for free</a>
+  
+  
+  <a class="btn" href="../contact?topic=vault-beta">Join private beta</a>
+  
   <button class="menubtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 <div class="mnav">
@@ -76,8 +79,9 @@
     <p class="sub">Orves Vault stores, organizes, governs and serves the knowledge your organization produces or imports — documents, Parse output, knowledge objects and their graph — to people, applications, models and agents, through Web, API, SDK and MCP. In development: this page describes what Vault is being built to do.</p>
     <div class="cta">
       
-      <a class="btn" href="mailto:hi@orves.ai?subject=Orves%20Vault%20private%20beta">Join the private beta</a>
-      <a class="btn gh" href="../pricing">View pricing</a>
+      <a class="btn" href="../contact?topic=vault-beta">Join the private beta</a>
+      <a class="btn gh" href="#why-vault">See how it works</a>
+      
       
     </div>
     <div class="chips"><span class="chip">storage &amp; organization</span><span class="chip">versions &amp; history</span><span class="chip">permissions &amp; audit</span><span class="chip">Web · API · SDK · MCP</span></div>
@@ -108,39 +112,43 @@
 
 
 
-<section class="center">
-  <span class="eye">Two jobs, one pipeline</span>
+<section class="center" id="why-vault">
+  <span class="eye">Why Vault exists</span>
 <h2>Knowledge produces. Vault preserves.</h2>
-<p class="lead center">Parse and Knowledge can return results through an API and stop there. Vault is what turns those results into a living system: the accumulated, versioned state of everything your organization knows — ready to evolve when the next source arrives.</p>
+<p class="lead center">Parse structures your sources. Knowledge reads incoming evidence, compares it with the current Vault state and produces traceable claims, relationships and proposed changes. Vault commits, versions and preserves the resulting knowledge state — together with its evidence, history and disagreements.</p>
+  
+  
+  
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — interprets</h4>
-      <ul class="kwl" style="margin-top:14px"><li>reads structured evidence</li><li>identifies claims and entities</li><li>produces relationships and provenance</li><li>adjudicates against the evidence</li></ul>
-      <p class="kwd" style="margin-top:4px">Its job ends when knowledge is produced.</p></div>
-    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — preserves</h4>
-      <ul class="kwl" style="margin-top:14px"><li>keeps the accumulated, versioned state</li><li>compares new knowledge with existing context</li><li>records every change and why it happened</li><li>serves the current state — with its history</li></ul>
-      <p class="kwd" style="margin-top:4px">Its job never ends: knowledge stays alive, governed and served.</p></div>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — the transformation</h4>
+      <ul class="kwl" style="margin-top:14px"><li>reads incoming evidence</li><li>compares it with the current Vault state</li><li>produces claims, entities and relationships</li><li>grounds every proposed claim and relationship in evidence</li></ul>
+      <p class="kwd" style="margin-top:4px">Each Knowledge run produces a traceable result.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — the state</h4>
+      <ul class="kwl" style="margin-top:14px"><li>commits proposed changes as new versions</li><li>preserves evidence, history and disagreements</li><li>governs who can see and change what</li><li>serves the current state — with its history</li></ul>
+      <p class="kwd" style="margin-top:4px">Vault preserves those results across runs and over time.</p></div>
   </div>
   
   
   
+  
+  <span class="eye rv" style="display:block;margin-top:40px">The incremental loop</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">new source</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge reads the current Vault state</span><span class="a">→</span><span class="fc" style="animation-delay:3s">compares incoming evidence</span><span class="a">→</span><span class="fc" style="animation-delay:4s">proposes add · confirm · refine · update · contradict</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault commits a new version</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Current state, evidence and history remain available — nothing is blindly appended, nothing is silently overwritten.</p>
+  
 </section>
 
-<section class="center">
-  <span class="eye">The incremental loop</span>
-<h2>Every new source becomes part of the existing context.</h2>
-<p class="lead center">A new source is parsed, turned into knowledge, and compared against what the Vault already holds. Nothing is blindly appended — and nothing is silently overwritten.</p>
-  
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">new source</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge</span><span class="a">→</span><span class="fc" style="animation-delay:3s">compare with existing knowledge</span><span class="a">→</span><span class="fc" style="animation-delay:4s">add · confirm · refine · update · contradict</span><span class="a">→</span><span class="fc" style="animation-delay:5s">new version in Vault</span></div>
-  
-  
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">Every outcome — including contradiction — is written as a new version. Prior states keep their evidence.</p>
-</section>
-
-<section class="center">
+<section class="center" id="disagreement">
   <span class="eye">Disagreement, preserved</span>
 <h2>Contradictions are knowledge, not errors.</h2>
-<p class="lead center">Two institutions forecast the same indicator and disagree. Vault does not average them, overwrite one, or compress competing views into an artificial consensus — each claim keeps its author, date and evidence, visible and auditable.</p>
+<p class="lead center">Two institutions forecast the same indicator and disagree. Knowledge relates the two claims; Vault preserves both — with author, date and evidence — instead of averaging them, overwriting one, or manufacturing consensus.</p>
+  
+  
+  
   
   <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
     <div class="code rv"><div class="codehd">two sources · same subject</div>
@@ -150,38 +158,39 @@
 
 <span class="cm"># audio — July 2026</span>
 <span class="k">source</span>: <span class="s">weekly_call_jul.mp3 · 14:32 · Institution B</span>
-<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">the vault result — both preserved</div>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">the preserved state — both claims</div>
 <pre><span class="cm"># neither claim is lost or merged</span>
 ├── <span class="s">two independent claims</span>
 ├── <span class="s">same subject · same reference period</span>
 ├── <span class="s">different authors and dates</span>
-├── <span class="k">relationship</span>: <span class="r">contradicts</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Knowledge</span>
 └── <span class="g">evidence preserved for both</span></pre></div>
   </div>
   
   
   
-</section>
-
-<section class="center">
-  <span class="eye">The relationship vocabulary</span>
-<h2>How new knowledge relates to what you already know.</h2>
-<p class="lead center">A later source may update an earlier position, contradict another institution, refine a prior claim or introduce an unrelated view on the same topic. Vault preserves those distinctions instead of silently merging them.</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">The relationship vocabulary</span>
+  <p class="lead center rv" style="margin-top:12px">A later source may update an earlier position, contradict another institution, refine a prior claim or introduce an unrelated view on the same topic. Knowledge proposes the relationship; Vault preserves the distinction — never a silent merge.</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
+  
 </section>
 
-<section class="center">
+<section class="center" id="inside">
   <span class="eye">Inside a vault</span>
 <h2>More than files. More than vectors. More than a graph.</h2>
 <p class="lead center">A vault holds the sources, the knowledge produced from them, and the infrastructure that keeps both governed. The knowledge graph is a capability inside the Vault — not the product.</p>
+  
+  
+  
   
   <div class="g3 rv" style="margin-top:26px">
     <div class="card"><h4>Sources</h4>
     <ul class="kwl"><li>documents</li><li>audio</li><li>video</li><li>APIs</li><li>systems</li></ul><p class="kwd">The originals, retained under policy — everything above stays linked back to them.</p>
     </div><div class="card"><h4>Knowledge</h4>
-    <ul class="kwl"><li>claims</li><li>entities</li><li>relationships</li><li>evidence</li><li>temporal context</li><li>conflicts</li></ul><p class="kwd">What Knowledge produced — kept alive, versioned and queryable.</p>
+    <ul class="kwl"><li>claims</li><li>entities</li><li>relationships</li><li>evidence</li><li>temporal context</li><li>conflicts</li></ul><p class="kwd">What Knowledge produced — kept versioned, queryable and alive to change.</p>
     </div><div class="card"><h4>Infrastructure</h4>
     <ul class="kwl"><li>search indexes</li><li>knowledge graph</li><li>versions</li><li>permissions</li><li>audit logs</li><li>connections</li></ul><p class="kwd">What makes knowledge usable and governable at scale.</p>
     </div>
@@ -189,12 +198,9 @@
   
   
   
-</section>
-
-<section class="center">
-  <span class="eye">Evidence-backed knowledge graph</span>
-<h2>Every relationship keeps its evidence.</h2>
-<p class="lead center">Entities and claims are not connected because they look semantically similar. Every relationship retains provenance, source references, temporal context and the evidence that produced it.</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Evidence-backed knowledge graph</span>
+  <p class="lead center rv" style="margin-top:12px">Entities and claims are not connected because they look semantically similar. Every relationship retains provenance, source references, temporal context and the evidence that produced it.</p>
   
   <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">one claim inside the graph</div>
 <pre><span class="s">"IPCA forecast for 2026: 4.2%"</span>
@@ -207,12 +213,16 @@
   
   
   
+  
 </section>
 
-<section class="center">
-  <span class="eye">Access · in development</span>
-<h2>Connect any model, agent or application.</h2>
-<p class="lead center">Vault is being built to serve knowledge through Web, REST API, SDK and MCP — retrieval that returns the relevant claim with its evidence, competing views and history in one traceable response. Never disconnected chunks, never locked to a single AI provider.</p>
+<section class="center" id="access">
+  <span class="eye">Access &amp; governance · in development</span>
+<h2>Served to people, applications, models and agents.</h2>
+<p class="lead center">Vault is being built to serve knowledge through Web, REST API, SDK and MCP — retrieval designed to return the relevant claim with its evidence, competing views and history in one traceable response. Never disconnected chunks, never locked to a single AI provider.</p>
+  
+  
+  
   
   <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">planned surfaces · conceptual preview</div>
 <pre><span class="cm"># how a vault is served — in development</span>
@@ -228,21 +238,22 @@
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">full-text</span><span class="chip">semantic</span><span class="chip">entity &amp; claim search</span><span class="chip">temporal filters</span><span class="chip">conflict search</span><span class="chip">graph traversal</span><span class="chip">permission-aware</span></div>
   <p class="lead center rv" style="margin-top:16px;font-size:13px">The Vault provides the knowledge. Your applications and models provide the intelligence.</p>
-</section>
-
-<section class="center">
-  <span class="eye">Governance</span>
-<h2>Knowledge with history, ownership and control.</h2>
-<p class="lead center">Governance is designed in from the start — isolation per organization, permissions at vault and source level, full history and audit. Each control is announced when it ships, never before.</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Governance</span>
+  <p class="lead center rv" style="margin-top:12px">Isolation per organization, permissions at vault and source level, full history and audit. Each control is announced when it ships — never before.</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">organization isolation</span><span class="chip">vault-level permissions</span><span class="chip">source-level access</span><span class="chip">knowledge history</span><span class="chip">versioning</span><span class="chip">audit logs</span><span class="chip">retention policies</span><span class="chip">deletion &amp; export</span><span class="chip">API &amp; MCP scopes</span></div>
   
+  
 </section>
 
-<section class="center">
+<section class="center" id="use-cases">
   <span class="eye">Use cases</span>
 <h2>Built for knowledge that must survive scrutiny.</h2>
 
+  
+  
+  
   
   <div class="g2 rv" style="margin-top:26px;max-width:840px;margin-left:auto;margin-right:auto">
     <div class="card"><h4>Institutional research</h4>
@@ -251,6 +262,7 @@
     <p>Connect policies, documents and internal systems without losing ownership, provenance or history.</p></div><div class="card"><h4>AI &amp; agents</h4>
     <p>Give models persistent, permission-aware, evidence-backed context through API or MCP.</p></div>
   </div>
+  
   
   
   
@@ -303,7 +315,7 @@
   <p class="lead center" style="margin-bottom:26px">In development — tell us what your organization&#39;s knowledge needs a home for.</p>
   <div class="cta" style="justify-content:center">
     
-    <a class="btn" href="mailto:hi@orves.ai?subject=Orves%20Vault%20private%20beta">Join the private beta</a>
+    <a class="btn" href="../contact?topic=vault-beta">Join the private beta</a>
     <a class="btn gh" href="../products/parse">Start with Parse today</a>
     
   </div>
