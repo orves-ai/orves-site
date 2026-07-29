@@ -648,6 +648,28 @@
   io.observe(box);
 })();
 
+// ── home: demo Source→Parse→Knowledge→Vault ──
+// Seleção de fonte atualiza as zonas via data-src no container (o CSS
+// mostra as variantes .hv correspondentes e acende a linha do claim).
+// Sem loading artificial, sem reiniciar a progressão de reveal; botões
+// nativos = teclado de graça. Sem JS, o markup já nasce em "amendment".
+(function () {
+  var demo = document.querySelector('.hdemo');
+  if (!demo) return;
+  var btns = Array.prototype.slice.call(demo.querySelectorAll('.hsrc'));
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var src = b.getAttribute('data-src');
+      demo.setAttribute('data-src', src);
+      btns.forEach(function (x) {
+        var on = x === b;
+        x.classList.toggle('on', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    });
+  });
+})();
+
 // ── menu mobile ──
 (function () {
   var btn = document.querySelector('.menubtn');

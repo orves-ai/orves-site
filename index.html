@@ -3,10 +3,10 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Orves | The Verifiable Knowledge Layer</title>
-<meta name="description" content="The Verifiable Knowledge Layer: Orves transforms documents, systems and real-world evidence into verifiable knowledge for people and intelligent systems — traceable, inspectable, auditable."/>
+<meta name="description" content="Turn evidence into knowledge you can prove. Orves structures complex sources, connects every fact to provenance, versions and relationships, and serves governed knowledge to people, applications and intelligent systems."/>
 <link rel="canonical" href="https://orves.ai/"/>
 <meta property="og:title" content="Orves | The Verifiable Knowledge Layer"/>
-<meta property="og:description" content="The Verifiable Knowledge Layer: Orves transforms documents, systems and real-world evidence into verifiable knowledge for people and intelligent systems — traceable, inspectable, auditable."/>
+<meta property="og:description" content="Turn evidence into knowledge you can prove. Orves structures complex sources, connects every fact to provenance, versions and relationships, and serves governed knowledge to people, applications and intelligent systems."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://orves.ai/"/>
 <meta property="og:site_name" content="Orves"/>
@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/orves.css">
 </head>
-<body>
+<body class="homepage">
 <div class="grid-bg"></div>
 <div class="page">
 
@@ -73,336 +73,178 @@
 
 
 
-<section class="hero solo" style="padding:100px 0 52px;border-top:0">
+<section class="hero hhero dk-hero">
   <div>
-    <p class="mono" style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin:0 0 18px">The Verifiable Knowledge Layer</p>
-    <h1 class="h1b" style="margin-left:auto;margin-right:auto">Trustworthy answers start with<br>verifiable knowledge.</h1>
-    <p class="sub" style="max-width:88ch;margin-top:18px">Structure your sources, build verifiable knowledge, and keep it available<br>to every person, application, model and agent.</p>
-    <div class="cta" style="margin-top:6px">
-      <a class="btn" href="products/parse">Start with Parse</a>
-      <a class="btn gh" href="#products">Explore the platform</a>
+    <span class="eye">The Verifiable Knowledge Layer</span>
+    <h1><span class="hl1">Turn evidence into</span> <span class="hl2">knowledge you can prove.</span></h1>
+    <p class="sub">Orves structures complex sources, connects every fact to provenance, versions and relationships, and serves governed knowledge to people, applications and intelligent systems.</p>
+    <div class="cta">
+      <a class="btn" href="create-account">Start with Parse</a>
+      <a class="btn gh" href="#platform">Explore the platform</a>
+    </div>
+    <div class="havail">
+      <span class="ok">Parse · private pilot</span>
+      <span class="hold">Knowledge · in development</span>
+      <span class="dim">Vault · planned</span>
+    </div>
+  </div>
+  <div class="hlive rv">
+    <div class="hd"><span>Live knowledge object</span><span class="ok">● verified</span></div>
+    <p class="hq">“What is the contract renewal date?”</p>
+    <p class="ha">September 1, 2026</p>
+    <div class="hspan">…the term shall automatically renew on <mark>September 1, 2026</mark>, unless either party gives written notice…<span class="ref">amendment_v2.pdf · page 4 · ¶ 3</span></div>
+    <div class="hstate">
+      <div class="hrow ok"><span class="l">current claim</span><span class="v">verified</span></div>
+      <div class="hrow dim"><span class="l">prior version</span><span class="v">August 1 · superseded</span></div>
+      <div class="hrow hold"><span class="l">open signal</span><span class="v">possible postponement · unconfirmed</span></div>
+    </div>
+    <div class="hserve"><span class="l">served through</span><span class="v">Web · API · SDK · MCP</span></div>
+  </div>
+</section>
+
+
+<section class="center pz" id="platform-demo">
+  <span class="eye">See the platform work</span>
+<h2>From raw evidence to a governed answer.</h2>
+<p class="lead center">One source becomes structured data. Multiple sources become versioned knowledge. Vault keeps that knowledge available wherever it is needed.</p>
+  <div class="hdemo rv" data-src="amendment">
+    <div class="hz hsrcz">
+      <span class="hzl">01 · Source</span>
+      <div class="hsrcs" role="group" aria-label="Select a source">
+        <button class="hsrc" type="button" data-src="contract" aria-pressed="false">contract.pdf<em>v1 · superseded</em></button>
+        <button class="hsrc on" type="button" data-src="amendment" aria-pressed="true">amendment_v2.pdf<em>v2 · current</em></button>
+        <button class="hsrc" type="button" data-src="meeting" aria-pressed="false">meeting_2026-03.mp3<em>signal · pending</em></button>
+      </div>
+    </div>
+    <div class="hz">
+      <span class="hzl">02 · Parse</span>
+      <h4>Structured, source-linked data</h4>
+      <div class="hv hcode" data-for="contract">field&nbsp;&nbsp;renewal_date<br>value&nbsp;&nbsp;2026-08-01<br>span&nbsp;&nbsp;&nbsp;page 12 · ¶ 2<br><b>provenance ✓</b></div>
+      <div class="hv hcode" data-for="amendment">field&nbsp;&nbsp;renewal_date<br>value&nbsp;&nbsp;2026-09-01<br>span&nbsp;&nbsp;&nbsp;page 4 · ¶ 3<br><b>provenance ✓</b></div>
+      <div class="hv hcode" data-for="meeting">utterance&nbsp;&nbsp;“renewal may be<br>postponed again”<br>timestamp&nbsp;&nbsp;00:14:32<br><b>provenance ✓</b></div>
+    </div>
+    <div class="hz">
+      <span class="hzl">03 · Knowledge</span>
+      <h4>A claim with history</h4>
+      <div class="hkr ok" data-hot="amendment"><span>current</span>Renewal date: September 1, 2026</div>
+      <div class="hkr dim" data-hot="contract"><span>superseded</span>Renewal date: August 1</div>
+      <div class="hkr hold" data-hot="meeting"><span>unconfirmed signal</span>Renewal may be postponed again</div>
+      <div class="hrel hv" data-for="amendment">current ← supported by amendment_v2.pdf</div>
+      <div class="hrel hv" data-for="contract">superseded → replaced by amendment_v2.pdf</div>
+      <div class="hrel hv" data-for="meeting">signal ← meeting_2026-03.mp3</div>
+    </div>
+    <div class="hz">
+      <span class="hzl">04 · Vault</span>
+      <h4>Governed and ready to serve</h4>
+      <div class="hcode hmeta">version&nbsp;&nbsp;current<br>permissions&nbsp;&nbsp;organization<br>audit trail&nbsp;&nbsp;attached<br>delivery&nbsp;&nbsp;Web · API · SDK · MCP</div>
+      <p class="hans">The contract renews on September 1, 2026.</p>
+      <span class="hsig">1 unresolved signal attached</span>
     </div>
   </div>
 </section>
 
 
-<section class="center" style="border-top:0;padding-top:26px">
-  <div class="flowart rv">
-    <div class="flowpan">
-    <svg viewBox="0 0 1000 400" role="img" aria-label="Reality — documents, web, images, audio, video and APIs — flows into The Verifiable Knowledge Layer: Parse produces structured data, Knowledge turns evidence into verifiable knowledge, and Vault stores, governs and serves it. People, applications, LLMs, agents, AI memory and MCP servers draw from the layer.">
-      <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">REALITY</text>
-      <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">Documents</text></g>
-      <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">Web</text></g>
-      <g class="schip" style="animation-delay:.3s"><rect class="fnode" x="36" y="140" width="96" height="30" rx="8"/><text class="flbl" x="84" y="159" text-anchor="middle">Images</text></g>
-      <g class="schip" style="animation-delay:.4s"><rect class="fnode" x="36" y="188" width="96" height="30" rx="8"/><text class="flbl" x="84" y="207" text-anchor="middle">Audio</text></g>
-      <g class="schip" style="animation-delay:.5s"><rect class="fnode" x="36" y="236" width="96" height="30" rx="8"/><text class="flbl" x="84" y="255" text-anchor="middle">Video</text></g>
-      <g class="schip" style="animation-delay:.6s"><rect class="fnode" x="36" y="284" width="96" height="30" rx="8"/><text class="flbl" x="84" y="303" text-anchor="middle">APIs</text></g>
-      <g class="schip" style="animation-delay:.7s"><rect class="fnode" x="36" y="332" width="96" height="30" rx="8"/><text class="flbl" x="84" y="351" text-anchor="middle">Others</text></g>
-      <!-- fan-in: reality → Parse -->
-      <path class="fpath" data-flow="in" d="M 132 59  C 200 59  230 150 258 172"/>
-      <path class="fpath" data-flow="in" d="M 132 107 C 200 107 230 160 258 180"/>
-      <path class="fpath" data-flow="in" d="M 132 155 C 200 155 230 172 258 188"/>
-      <path class="fpath" data-flow="in" d="M 132 203 C 200 203 232 198 258 196"/>
-      <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
-      <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
-      <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- a camada: Parse → Knowledge → Vault -->
-      <rect class="layerbox" x="240" y="128" width="502" height="140" rx="20"/>
-      <rect class="fnode main" x="246" y="158" width="112" height="74" rx="12" style="stroke-opacity:.85"/>
-      <text class="flbl b" x="302" y="189" text-anchor="middle" style="font-size:14px">Parse</text>
-      <text class="flbl dim" x="302" y="207" text-anchor="middle" style="font-size:8.5px">Structured data</text>
-      <path class="fpath" data-flow="p2c" d="M 358 195 L 374 195"/>
-      <rect class="fnode main" x="374" y="146" width="190" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
-      <text class="flbl b" x="469" y="188" text-anchor="middle" style="font-size:16px">Knowledge</text>
-      <text class="flbl" x="469" y="212" text-anchor="middle" style="font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;fill:var(--fg2)">provenance · history · governance</text>
-      <path class="fpath" data-flow="p2c" d="M 564 195 L 580 195"/>
-      <rect class="fnode main" x="580" y="158" width="146" height="74" rx="12" style="stroke-opacity:.85"/>
-      <text class="flbl b" x="653" y="184" text-anchor="middle" style="font-size:14px">Vault</text>
-      <text class="flbl dim" x="653" y="200" text-anchor="middle" style="font-size:8.5px">stored · governed · served</text>
-      <text class="flbl dim" x="653" y="214" text-anchor="middle" style="font-size:7px;opacity:.75">in development</text>
-      <!-- fan-out: a camada serve a stack de IA -->
-      <path class="fpath" data-flow="out" d="M 726 168 C 790 130 810 80  866 59"/>
-      <path class="fpath" data-flow="out" d="M 726 178 C 790 150 810 120 866 107"/>
-      <path class="fpath" data-flow="out" d="M 726 188 C 790 175 810 160 866 155"/>
-      <path class="fpath" data-flow="out" d="M 726 196 C 790 200 810 202 866 203"/>
-      <path class="fpath" data-flow="out" d="M 726 206 C 790 228 810 240 866 251"/>
-      <path class="fpath" data-flow="out" d="M 726 216 C 790 260 810 285 866 299"/>
-      <path class="fpath" data-flow="out" d="M 726 226 C 790 295 810 330 866 347"/>
-      <text class="m-t" x="491" y="294" text-anchor="middle" style="letter-spacing:.06em;opacity:.75">USE EACH PRODUCT INDEPENDENTLY — OR CONNECT THE COMPLETE KNOWLEDGE PIPELINE</text>
-      <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">CONSUMERS</text>
-      <rect class="fnode" x="866" y="44"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="63"  text-anchor="middle">People</text>
-      <rect class="fnode" x="866" y="92"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="111" text-anchor="middle">Applications</text>
-      <rect class="fnode" x="866" y="140" width="110" height="30" rx="8"/><text class="flbl" x="921" y="159" text-anchor="middle">LLMs</text>
-      <rect class="fnode" x="866" y="188" width="110" height="30" rx="8"/><text class="flbl" x="921" y="207" text-anchor="middle">Agents</text>
-      <rect class="fnode" x="866" y="236" width="110" height="30" rx="8"/><text class="flbl" x="921" y="255" text-anchor="middle">AI Memory</text>
-      <rect class="fnode" x="866" y="284" width="110" height="30" rx="8"/><text class="flbl" x="921" y="303" text-anchor="middle">MCP Servers</text>
-      <rect class="fnode" x="866" y="332" width="110" height="30" rx="8"/><text class="flbl" x="921" y="351" text-anchor="middle">Others</text>
-      <!-- pulsos estáticos -->
-      <circle class="fdot" r="3"   style="offset-path:path('M 132 59 C 200 59 230 150 258 172');animation-delay:0s;fill:var(--fg2);filter:drop-shadow(0 0 4px var(--fg2))"/>
-      <circle class="fdot" r="3"   style="offset-path:path('M 132 203 C 200 203 232 198 258 196');animation-delay:-3s;fill:var(--fg2);filter:drop-shadow(0 0 4px var(--fg2))"/>
-      <circle class="fdot" r="3"   style="offset-path:path('M 132 347 C 200 347 230 250 258 220');animation-delay:-6s;fill:var(--fg2);filter:drop-shadow(0 0 4px var(--fg2))"/>
-      <circle class="fdot" r="3"   style="offset-path:path('M 358 195 L 374 195');animation-delay:-2s"/>
-      <circle class="fdot" r="3"   style="offset-path:path('M 564 195 L 580 195');animation-delay:-5s"/>
-      <circle class="fdot" r="3.2" style="offset-path:path('M 726 178 C 790 150 810 120 866 107');animation-delay:-1.5s"/>
-      <circle class="fdot" r="3.2" style="offset-path:path('M 726 216 C 790 260 810 285 866 299');animation-delay:-4.5s"/>
-    </svg>
-    </div>
-    
-    <p class="flowhint" aria-hidden="true">Drag to explore the full flow &rarr;</p>
+<section class="ruled" id="platform">
+  <div class="hsh">
+    <span class="eye">The platform</span>
+    <h2>Three products. One knowledge pipeline.</h2>
+    <p class="lead">Parse structures evidence. Knowledge connects and proves it. Vault governs and serves it.</p>
+  </div>
+  <div class="hprods rv">
+    <a class="hprod" href="products/parse">
+      <span class="hpl"><b>01 · Parse</b><em>private pilot</em></span>
+      <h3>Structure complex evidence.</h3>
+      <p>Transform documents, tables, images and audio into clean, reproducible and source-linked data.</p>
+      <span class="hprops">Structured · Traceable · Reproducible</span>
+      <span class="k">Explore Parse →</span>
+    </a>
+    <a class="hprod" href="products/knowledge">
+      <span class="hpl"><b>02 · Knowledge</b><em>in development</em></span>
+      <h3>Connect facts to proof.</h3>
+      <p>Turn evidence into claims, relationships, versions and explicit states without erasing disagreement or history.</p>
+      <span class="hprops">Grounded · Versioned · Conflict-aware</span>
+      <span class="k">Explore Knowledge →</span>
+    </a>
+    <a class="hprod" href="products/vault">
+      <span class="hpl"><b>03 · Vault</b><em>planned</em></span>
+      <h3>Govern and serve knowledge.</h3>
+      <p>Keep knowledge stored, permissioned, auditable and available through Web, API, SDK and MCP.</p>
+      <span class="hprops">Stored · Governed · Portable</span>
+      <span class="k">Explore Vault →</span>
+    </a>
   </div>
 </section>
 
 
-<section class="center tight">
-  <span class="eye">Why this layer exists</span>
-  <h2 style="max-width:24ch;margin-left:auto;margin-right:auto">Every AI system has the same blind spot.</h2>
-  <div class="chips rv" style="justify-content:center;align-items:center;margin-top:26px">
-    <span class="mono" style="font-size:10.5px;letter-spacing:.12em;color:var(--fg3);margin-right:6px">AI CONSUMES</span>
-    <span class="chip">PDFs</span><span class="chip">text</span><span class="chip">embeddings</span><span class="chip">search</span><span class="chip">databases</span>
+<section class="hdeep">
+  <div class="hsh">
+    <span class="eye">What Orves preserves</span>
+    <h2 style="max-width:22ch">Ordinary AI stacks retrieve content. Orves preserves why it can be trusted.</h2>
+    <p class="lead">The difference is not another answer layer. It is the evidence, history and governance beneath every answer.</p>
   </div>
-  <div class="chips rv" style="justify-content:center;align-items:center;margin-top:12px">
-    <span class="mono" style="font-size:10.5px;letter-spacing:.12em;color:var(--fg3);margin-right:6px">NONE PRESERVE</span>
-    <span class="chip bad">✕ provenance</span><span class="chip bad">✕ versions</span><span class="chip bad">✕ history</span><span class="chip bad">✕ governance</span><span class="chip bad">✕ relationships</span>
+  <div class="hcompare rv">
+    <div class="hside">
+      <span class="hzl">Typical stack</span>
+      <div class="hflow">Documents<i>↓</i>Chunks<i>↓</i>Embeddings<i>↓</i>Retrieval<i>↓</i>Answer</div>
+      <span class="hll">Usually lost or externalized</span>
+      <ul class="hlist lost">
+        <li>Provenance</li><li>Version history</li><li>Explicit conflicts</li><li>Relationships</li><li>Governance</li>
+      </ul>
+    </div>
+    <div class="hside orves">
+      <span class="hzl ok">Orves</span>
+      <div class="hflow">Evidence<i>↓</i>Structured data<i>↓</i>Claims and relationships<i>↓</i>Versions and states<i>↓</i>Governed knowledge</div>
+      <span class="hll ok">Preserved by construction</span>
+      <ul class="hlist kept">
+        <li>Exact source spans</li><li>Change history</li><li>Explicit disagreement</li><li>Traceable relationships</li><li>Audit trail</li>
+      </ul>
+    </div>
   </div>
-  <p class="lead center rv" style="margin-top:26px;font-size:17px"><b style="color:var(--fg)">The problem is not intelligence.</b> The problem is knowledge infrastructure.</p>
-  <p class="mono rv" style="margin-top:16px;font-size:13.5px;letter-spacing:.03em">Models generate. <span style="color:var(--acc2)">Orves preserves the evidence.</span></p>
+  <p class="mono rv hsig2">Models generate. <span>Orves preserves the evidence.</span></p>
 </section>
 
 
-<section style="padding:52px 0 0">
-  <div class="center" id="products" style="margin-bottom:48px"><span class="eye">Products</span>
-    <h2 style="margin-top:14px">Three products. One knowledge pipeline.</h2>
-    <p class="mono rv" style="margin-top:16px;font-size:13px;letter-spacing:.03em;color:var(--fg2)">Parse structures it. Knowledge makes it verifiable. <span style="color:var(--acc2)">Vault keeps it available.</span></p>
+<section class="ruled">
+  <div class="hsh">
+    <span class="eye">Built for knowledge-dependent systems</span>
+    <h2>One layer. Many ways to use it.</h2>
+    <p class="lead">Use Orves wherever an answer, decision or workflow must remain connected to its evidence.</p>
   </div>
-
-
-  
-  <div class="pchap rv">
-    <div>
-      <span class="bignum">01</span><span class="pq">Parse · Ingestion engine</span>
-      <h3>Transform complex documents into structured, source-linked data.</h3>
-      <p class="d">One authenticated API call turns documents into clean, structured output — structure, tables and reading order preserved — for your own workflows, AI systems, or as the entry to Orves.</p>
-      <span class="standalone"><span class="dt"></span>Reproducible<span class="dt"></span>Traceable<span class="dt"></span>Structured</span><br>
-      <p class="mono" style="margin-top:14px;font-size:11.5px;color:var(--fg3)">Parse → <span style="color:var(--acc2)">Structured Data</span></p>
-      <a href="products/parse" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Parse →</a>
-      <a href="trust" class="mono" style="display:inline-block;margin-top:14px;margin-left:18px;font-size:12px;color:var(--fg3)">How provenance works →</a>
+  <div class="hcases rv">
+    <div class="hcase">
+      <h3>AI and agents</h3>
+      <p>Ground outputs in inspectable evidence and reproducible knowledge states.</p>
+      <span class="hmicro">answers → claims → source spans</span>
     </div>
-    <div class="pmotif">
-      <svg class="mo-parser" viewBox="0 0 340 210" role="img" aria-label="Animation in four acts: Parse reads the document structure, understands entities and reading order, anchors every element to page, bounding box and confidence, and emits a structured evidence object with provenance and source hash.">
-        <rect class="m-box" x="14" y="18" width="140" height="174" rx="10"/>
-        <text class="m-t" x="26" y="36">q2_report.pdf</text>
-        <rect x="26" y="46" width="78" height="9" rx="3" style="fill:var(--fg3);opacity:.55"/>
-        <line class="m-l" x1="26" y1="66" x2="140" y2="66"/>
-        <line class="m-l" x1="26" y1="74" x2="128" y2="74"/>
-        <line class="m-l" x1="26" y1="82" x2="136" y2="82"/>
-        <rect x="26" y="92" width="114" height="28" rx="3" style="fill:none;stroke:var(--fg3);opacity:.55"/>
-        <line x1="26" y1="106" x2="140" y2="106" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
-        <line x1="64" y1="92" x2="64" y2="120" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
-        <line x1="102" y1="92" x2="102" y2="120" style="stroke:var(--fg3);stroke-width:1;opacity:.45"/>
-        <rect x="26" y="130" width="8" height="26" style="fill:var(--fg3);opacity:.45"/>
-        <rect x="38" y="140" width="8" height="16" style="fill:var(--fg3);opacity:.45"/>
-        <rect x="50" y="134" width="8" height="22" style="fill:var(--fg3);opacity:.45"/>
-        <path class="m-l" d="M 100 185 C 108 178 114 190 122 182 C 128 177 134 186 140 181" style="opacity:.45"/>
-        <g class="lo lo1">
-          <rect x="23" y="42" width="84" height="16" rx="3" style="fill:none;stroke:color-mix(in srgb,var(--acc) 60%,transparent)"/>
-          <rect x="23" y="89" width="120" height="34" rx="3" style="fill:none;stroke:color-mix(in srgb,var(--acc) 60%,transparent)"/>
-          <rect x="23" y="127" width="40" height="32" rx="3" style="fill:none;stroke:color-mix(in srgb,var(--hold) 55%,transparent)"/>
-        </g>
-        <g class="lo lo2">
-          <circle cx="22" cy="50" r="5" style="fill:var(--acc)"/><text x="22" y="53" text-anchor="middle" style="font:600 6.5px 'JetBrains Mono';fill:#04140d">1</text>
-          <circle cx="22" cy="103" r="5" style="fill:var(--acc)"/><text x="22" y="106" text-anchor="middle" style="font:600 6.5px 'JetBrains Mono';fill:#04140d">2</text>
-          <circle cx="22" cy="143" r="5" style="fill:var(--acc)"/><text x="22" y="146" text-anchor="middle" style="font:600 6.5px 'JetBrains Mono';fill:#04140d">3</text>
-          <circle cx="120" cy="74" r="2.5" style="fill:var(--acc2)"/>
-          <circle cx="83" cy="113" r="2.5" style="fill:var(--acc2)"/>
-          <line x1="120" y1="74" x2="83" y2="113" style="stroke:var(--acc2);stroke-width:.7;opacity:.6"/>
-        </g>
-        <g class="lo lo3">
-          <rect x="52" y="160" width="94" height="14" rx="4" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
-          <text x="59" y="170" style="font:6.8px 'JetBrains Mono';fill:var(--acc2)">page 4 · bbox · 0.98</text>
-          <line x1="100" y1="160" x2="100" y2="123" style="stroke:color-mix(in srgb,var(--acc) 40%,transparent);stroke-width:.7;stroke-dasharray:2 2"/>
-        </g>
-        <rect class="m-box" x="186" y="18" width="140" height="174" rx="10"/>
-        <text class="m-t acc" x="198" y="36">structured</text>
-        <g class="ph ph1">
-          <text class="m-t" x="198" y="56" style="font-size:7px;letter-spacing:.08em;opacity:.7">1 · UNDERSTAND STRUCTURE</text>
-          <rect x="198" y="66" width="52" height="15" rx="4" style="fill:none;stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/><text class="m-t acc" x="205" y="76" style="font-size:8px">TITLE</text>
-          <rect x="258" y="66" width="56" height="15" rx="4" style="fill:none;stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/><text class="m-t acc" x="265" y="76" style="font-size:8px">TABLE</text>
-          <rect x="198" y="88" width="56" height="15" rx="4" style="fill:none;stroke:color-mix(in srgb,var(--hold) 50%,transparent)"/><text class="m-t" x="205" y="98" style="font-size:8px;fill:var(--hold)">FIGURE</text>
-          <rect x="258" y="88" width="60" height="15" rx="4" style="fill:none;stroke:var(--line2)"/><text class="m-t" x="264" y="98" style="font-size:7.5px">FOOTNOTE</text>
-          <rect x="198" y="110" width="48" height="15" rx="4" style="fill:none;stroke:var(--line2)"/><text class="m-t" x="205" y="120" style="font-size:8px">FORM</text>
-          <rect x="252" y="110" width="66" height="15" rx="4" style="fill:none;stroke:var(--line2)"/><text class="m-t" x="258" y="120" style="font-size:7.5px">SIGNATURE</text>
-        </g>
-        <g class="ph ph2">
-          <text class="m-t" x="198" y="56" style="font-size:7px;letter-spacing:.08em;opacity:.7">2 · UNDERSTAND MEANING</text>
-          <rect x="198" y="66" width="64" height="15" rx="8" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/><text class="m-t acc" x="206" y="76" style="font-size:8px">ENTITIES</text>
-          <rect x="198" y="88" width="76" height="15" rx="8" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/><text class="m-t acc" x="206" y="98" style="font-size:8px">RELATIONS</text>
-          <rect x="198" y="110" width="100" height="15" rx="8" style="fill:color-mix(in srgb,var(--acc) 10%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/><text class="m-t acc" x="206" y="120" style="font-size:8px">READING ORDER</text>
-        </g>
-        <g class="ph ph3">
-          <text class="m-t" x="198" y="56" style="font-size:7px;letter-spacing:.08em;opacity:.7">3 · PRESERVE LOCATION</text>
-          <text class="m-t" x="198" y="74" style="font-size:8px">page 4</text>
-          <text class="m-t" x="198" y="90" style="font-size:8px">bbox [128, 402, 512, 468]</text>
-          <text class="m-t" x="198" y="106" style="font-size:8px">offset 1842–1987</text>
-          <text class="m-t acc" x="198" y="122" style="font-size:8px">confidence 0.98</text>
-        </g>
-        <g class="ph ph4">
-          <text class="m-t" x="198" y="56" style="font-size:7px;letter-spacing:.08em;opacity:.7">4 · EMIT EVIDENCE</text>
-          <rect x="198" y="64" width="120" height="64" rx="7" style="fill:color-mix(in srgb,var(--acc) 12%,transparent);stroke:color-mix(in srgb,var(--acc) 55%,transparent)"/>
-          <text class="m-t" x="206" y="79" style="font-size:6.8px;letter-spacing:.07em;opacity:.75">EVIDENCE OBJECT</text>
-          <text class="m-t acc" x="206" y="94" style="font-size:8.5px;font-weight:600">type table · page 4</text>
-          <text class="m-t" x="206" y="108" style="font-size:7px">relations 3 · provenance ✓</text>
-          <text class="m-t" x="206" y="121" style="font-size:7px">integrity ✓ · tamper-evident</text>
-        </g>
-        <line x1="198" y1="164" x2="314" y2="164" style="stroke:var(--line);stroke-width:1"/>
-        <text class="m-t" x="198" y="182" style="font-size:7.5px">ev_84f2 · <tspan style="fill:var(--acc2)">provenance ✓</tspan></text>
-      </svg>
+    <div class="hcase">
+      <h3>Enterprise knowledge</h3>
+      <p>Keep institutional knowledge connected, versioned, permissioned and available across teams.</p>
+      <span class="hmicro">documents → history → governed access</span>
+    </div>
+    <div class="hcase">
+      <h3>Research and intelligence</h3>
+      <p>Connect evidence across sources, formats and time without silently erasing disagreement.</p>
+      <span class="hmicro">sources → relationships → evolving conclusions</span>
+    </div>
+    <div class="hcase">
+      <h3>Regulated workflows</h3>
+      <p>Preserve provenance, decisions and auditability from original evidence to final result.</p>
+      <span class="hmicro">source → decision → audit trail</span>
     </div>
   </div>
-
-  
-  <div class="pchap flip rv">
-    <div class="pmotif">
-      <svg class="mo-canon" viewBox="0 0 340 210" role="img" aria-label="Animation in five acts: conflicting evidence enters; Knowledge adjudicates; a supported claim is produced; the knowledge object is built field by field — claim, evidence, provenance, relationships; a new version becomes current while older versions remain.">
-        <g class="ckE1">
-          <rect x="14" y="36" width="138" height="22" rx="6" class="m-box" style="opacity:.85"/>
-          <text class="m-t" x="22" y="51" style="font-size:7.5px">Revenue · 100 <tspan class="ckNq" style="fill:var(--hold)">≠</tspan> 105 <tspan class="ckNq" style="fill:var(--hold)">≠</tspan> 102</text>
-        </g>
-        <g class="ckE2">
-          <rect x="14" y="66" width="138" height="22" rx="6" class="m-box" style="opacity:.85"/>
-          <text class="m-t" x="22" y="81" style="font-size:7.5px">CEO · John <tspan class="ckNq" style="fill:var(--hold)">≠</tspan> Alice</text>
-        </g>
-        <g class="ckE3">
-          <rect x="14" y="96" width="138" height="22" rx="6" class="m-box" style="opacity:.85"/>
-          <text class="m-t" x="22" y="111" style="font-size:7.5px">Contract · renewed <tspan class="ckNq" style="fill:var(--hold)">≠</tspan> expired</text>
-        </g>
-        <text class="m-t" x="78" y="138" text-anchor="middle" style="opacity:.6;font-size:8.5px">any domain · any conflict</text>
-        <g class="ckLn">
-          <line class="m-l" x1="152" y1="47" x2="158" y2="70"/>
-          <line class="m-l" x1="152" y1="77" x2="158" y2="79"/>
-          <line class="m-l" x1="152" y1="107" x2="158" y2="88"/>
-        </g>
-        <g class="ckBox">
-          <rect x="158" y="58" width="64" height="42" rx="10" style="fill:color-mix(in srgb,var(--acc) 8%,transparent);stroke:color-mix(in srgb,var(--acc) 45%,transparent)"/>
-          <text class="m-t acc" x="190" y="74" text-anchor="middle" style="font-size:8px">Orves</text>
-          <text class="m-t acc" x="190" y="84" text-anchor="middle" style="font-size:8px">Knowledge</text>
-        </g>
-        <text class="m-t ckSt1" x="190" y="95" text-anchor="middle" style="font-size:6px;opacity:.75">adjudicating<tspan class="ckD1">.</tspan><tspan class="ckD2">.</tspan><tspan class="ckD3">.</tspan></text>
-        <text class="m-t ckSt2" x="190" y="95" text-anchor="middle" style="font-size:6.8px;fill:var(--acc2)">adjudicated ✓</text>
-        <line class="m-l acc ckAr" x1="222" y1="79" x2="228" y2="79" style="stroke-width:1.6"/>
-        <g class="ckCard">
-          <rect x="228" y="40" width="100" height="78" rx="9" style="fill:color-mix(in srgb,var(--acc) 13%,transparent);stroke:color-mix(in srgb,var(--acc) 60%,transparent)"/>
-          <text class="m-t" x="236" y="55" style="font-size:6.8px;letter-spacing:.07em;opacity:.75">KNOWLEDGE OBJECT</text>
-        </g>
-        <text class="m-t acc ckF1" x="236" y="71" style="font-weight:700;font-size:8px">claim · SUPPORTED</text>
-        <text class="m-t ckF2" x="236" y="86" style="font-size:7.5px">evidence 3 · v3</text>
-        <text class="m-t ckF3" x="236" y="99" style="font-size:7.5px">provenance ✓</text>
-        <text class="m-t ckF4" x="236" y="112" style="font-size:7.5px">relationships 5</text>
-        <g class="ckV">
-          <text class="m-t" x="228" y="138" style="font-size:8px"><tspan style="opacity:.4">v1</tspan> · <tspan style="opacity:.4">v2</tspan> · <tspan style="fill:var(--acc2)">v3 ✓ current</tspan></text>
-          <text class="m-t" x="228" y="151" style="font-size:7.5px;opacity:.6">older versions remain</text>
-        </g>
-        <text class="m-t ckCap" x="170" y="192" text-anchor="middle" style="opacity:.7">decided · versioned · never overwritten</text>
-      </svg>
-    </div>
-    <div>
-      <span class="bignum">02</span><span class="pq">Knowledge · Knowledge infrastructure</span>
-      <h3 style="font-size:27px">Turn evidence into knowledge you can prove.</h3>
-      <p class="d">Evidence becomes governed, verifiable knowledge. Every fact remains connected to its origin, relationships, versions and history — then becomes available to people and intelligent systems.</p>
-      <span class="standalone"><span class="dt"></span>Grounded<span class="dt"></span>Verifiable<span class="dt"></span>Versioned</span><br>
-      <p class="mono" style="margin-top:14px;font-size:11.5px;color:var(--fg3)">Knowledge → <span style="color:var(--acc2)">Knowledge Objects</span></p>
-      <a href="products/knowledge" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Knowledge →</a>
-    </div>
-  </div>
-
-  
-  <div class="pchap rv" style="border-bottom:1px solid var(--line)">
-    <div>
-      <span class="bignum">03</span><span class="pq">Vault · Persistent knowledge</span>
-      <h3 style="font-size:27px">Give that knowledge a persistent, governed home.</h3>
-      <p class="d">Documents, structured output, knowledge objects and their graph — stored, organized, permissioned and audited, then served to people, applications, models and agents through Web, API, SDK and MCP. In development.</p>
-      <span class="standalone"><span class="dt"></span>Stored<span class="dt"></span>Governed<span class="dt"></span>Served</span><br>
-      <p class="mono" style="margin-top:14px;font-size:11.5px;color:var(--fg3)">Vault → <span style="color:var(--acc2)">Web · API · SDK · MCP</span></p>
-      <a href="products/vault" class="mono" style="display:inline-block;margin-top:14px;font-size:12px;color:var(--acc2)">View Vault →</a>
-    </div>
-    <div class="pmotif">
-      <svg viewBox="0 0 340 210" role="img" aria-label="A vault: documents, parse output, knowledge objects and their graph stored behind governed access, served through Web, API, SDK and MCP. In development.">
-        <rect class="m-box" x="70" y="20" width="200" height="130" rx="12"/>
-        <text class="m-t" x="86" y="42">vault · governed</text>
-        <rect class="m-box" x="86" y="54" width="82" height="26" rx="6" style="opacity:.9"/><text class="m-t" x="94" y="71" style="font-size:7.5px">documents</text>
-        <rect class="m-box" x="174" y="54" width="82" height="26" rx="6" style="opacity:.9"/><text class="m-t" x="182" y="71" style="font-size:7.5px">parse output</text>
-        <rect class="m-box" x="86" y="88" width="82" height="26" rx="6" style="opacity:.9"/><text class="m-t" x="94" y="105" style="font-size:7.5px">knowledge</text>
-        <rect class="m-box" x="174" y="88" width="82" height="26" rx="6" style="opacity:.9"/><text class="m-t" x="182" y="105" style="font-size:7.5px">graph · history</text>
-        <text class="m-t" x="86" y="136" style="font-size:7px;opacity:.7">permissions · audit log · versions</text>
-        <line class="m-l" x1="170" y1="150" x2="170" y2="166"/>
-        <text class="m-t acc" x="170" y="184" text-anchor="middle" style="font-size:8.5px">Web · API · SDK · MCP</text>
-        <text class="m-t" x="170" y="200" text-anchor="middle" style="font-size:7px;opacity:.6">in development</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="center rv" style="padding:34px 0 52px">
-    <p class="lead center" style="font-size:15px;max-width:52ch;margin-left:auto;margin-right:auto">Use Parse, Knowledge or Vault independently.<br><span style="color:var(--fg)">Connect them when you need the complete pipeline.</span></p>
-  </div>
-
+  <p class="rv" style="margin-top:22px"><a class="mono hmore" href="use-cases">Explore solutions →</a></p>
 </section>
 
 
-<section class="center">
-  <span class="eye">Inside Knowledge</span>
-<h2>Knowledge grows. Its evidence stays connected.</h2>
-<p class="lead center">Not a collection of documents — a continuously connected network of evidence, facts, relationships and history.</p>
-  <p class="mono rv" style="margin-top:18px;font-size:13px;letter-spacing:.03em;color:var(--acc2)">Every relationship is traceable.</p>
-  <div class="rv" style="max-width:820px;margin:26px auto 0">
-    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="Animation: a knowledge view grows inside Orves Knowledge — Company, Revenue, Contract, CEO, Earnings, Renewal — facts appear and preserve their relationships; history is kept as knowledge evolves.">
-        <g class="bs" style="animation-delay:0s">
-          <circle cx="170" cy="92" r="7" style="fill:var(--acc)"/>
-          <text class="m-t" x="170" y="76" text-anchor="middle" style="font-size:8.5px;fill:var(--fg)">Company</text>
-        </g>
-        <g class="bs" style="animation-delay:1.4s">
-          <line class="m-l" x1="163" y1="88" x2="102" y2="62" style="opacity:.55"/>
-          <circle cx="96" cy="58" r="5.5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="96" y="44" text-anchor="middle" style="font-size:8px">Revenue</text>
-        </g>
-        <g class="bs" style="animation-delay:2.8s">
-          <line class="m-l" x1="177" y1="88" x2="244" y2="64" style="opacity:.55"/>
-          <circle cx="250" cy="60" r="5.5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="250" y="46" text-anchor="middle" style="font-size:8px">Contract</text>
-        </g>
-        <g class="bs" style="animation-delay:4.2s">
-          <line class="m-l" x1="164" y1="98" x2="116" y2="134" style="opacity:.55"/>
-          <circle cx="112" cy="138" r="5.5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="112" y="156" text-anchor="middle" style="font-size:8px">CEO</text>
-        </g>
-        <g class="bs" style="animation-delay:5.6s">
-          <line class="m-l" x1="90" y1="60" x2="46" y2="94" style="opacity:.55"/>
-          <circle cx="42" cy="98" r="5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="42" y="116" text-anchor="middle" style="font-size:8px">Earnings</text>
-        </g>
-        <g class="bs" style="animation-delay:7s">
-          <line class="m-l" x1="256" y1="63" x2="294" y2="94" style="opacity:.55"/>
-          <circle cx="298" cy="98" r="5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="298" y="116" text-anchor="middle" style="font-size:8px">Renewal</text>
-        </g>
-        <g class="bs" style="animation-delay:8.4s">
-          <line class="m-l" x1="175" y1="98" x2="212" y2="140" style="opacity:.55"/>
-          <line class="m-l" x1="118" y1="140" x2="208" y2="145" style="opacity:.55"/>
-          <circle cx="216" cy="144" r="5.5" style="fill:var(--acc2)"/>
-          <text class="m-t" x="216" y="162" text-anchor="middle" style="font-size:8px">Product</text>
-        </g>
-        <g class="bs" style="animation-delay:9.6s">
-          <line class="m-l" x1="296" y1="103" x2="272" y2="132" style="opacity:.45"/>
-          <circle cx="270" cy="136" r="3.5" style="fill:var(--acc2);opacity:.8"/>
-        </g>
-        <g class="bs" style="animation-delay:10.4s">
-          <line class="m-l" x1="46" y1="103" x2="66" y2="132" style="opacity:.45"/>
-          <circle cx="68" cy="135" r="3.5" style="fill:var(--acc2);opacity:.8"/>
-        </g>
-        <g class="bs" style="animation-delay:11.2s">
-          <line class="m-l" x1="170" y1="99" x2="170" y2="128" style="opacity:.45"/>
-          <circle cx="170" cy="132" r="3.5" style="fill:var(--acc2);opacity:.8"/>
-        </g>
-        <text class="m-t" x="170" y="196" text-anchor="middle" style="opacity:.7">knowledge grows · evidence stays connected</text>
-      </svg>
+<section class="center pz">
+  <span class="eye">Measured before claimed</span>
+<h2>Trust starts with evidence.</h2>
+<p class="lead center">Capabilities become public claims only after versioned evaluation, with scope, methodology and limitations attached.</p>
+  <div class="wpubs rv">
+    <a href="benchmarks"><span class="t">Benchmarks</span><span class="d">Versioned evaluations and reported scope.</span><span class="ar">→</span></a>
+    <a href="benchmarks.html#method"><span class="t">Methodology</span><span class="d">How capabilities are measured and verified.</span><span class="ar">→</span></a>
+    <a href="research"><span class="t">Research</span><span class="d">Technical findings, limitations and reports.</span><span class="ar">→</span></a>
+    <a href="trust"><span class="t">Trust</span><span class="d">Security, governance and operational commitments.</span><span class="ar">→</span></a>
   </div>
 </section>
 
@@ -410,19 +252,18 @@
 </main>
 
 
-<section class="center finale" style="padding:150px 0 230px">
-  <div class="rv">
-    <p style="font-family:var(--disp);font-weight:600;letter-spacing:-.03em;line-height:1.12;font-size:clamp(40px,6vw,64px);margin:0">
-      <span class="fl l1" style="display:block">Reality changes.</span>
-      <span class="fl l2" style="display:block">Models change.</span>
-      <span class="fl l3" style="display:block;color:var(--acc2)">Evidence remains.</span>
-    </p>
-    <div class="fu" style="width:56px;height:1px;background:color-mix(in srgb,var(--acc) 55%,transparent);margin:38px auto 0"></div>
-    <div class="cta fl l4" style="justify-content:center;margin-top:38px">
-      <a class="btn" href="products/parse">Explore Parse</a>
-      <a class="btn gh" href="research">Read the research</a>
-    </div>
+<section class="center darkband ctaglow">
+  <div class="wclose rv" aria-hidden="true">
+    <span class="n">Source</span><span class="a">→</span><span class="n">Evidence</span><span class="a">→</span><span class="n">Knowledge</span><span class="a">→</span><span class="n ok">Answer</span>
   </div>
+  <p class="mono wclosecap">versioned and traceable, end to end</p>
+  <h2 style="font-size:36px;max-width:30ch;margin:18px auto 12px">Build on knowledge that stays connected to its evidence.</h2>
+  <p class="lead center" style="margin-bottom:26px">Start with Parse in private pilot. Knowledge and Vault will follow as they become available.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="create-account">Start for free</a>
+    <a class="btn gh" href="contact">Talk to us</a>
+  </div>
+  <p class="mono" style="margin-top:26px;font-size:12px;color:var(--fg3)">The Verifiable Knowledge Layer.</p>
 </section>
 
 
