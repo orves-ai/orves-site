@@ -89,33 +89,37 @@
             <text x="62" y="310" class="aslab">EVIDENCE</text>
           </g>
 
-          <!-- conectores de entrada -->
-          <path class="asln" d="M144 74C212 74 224 164 262 182" pathLength="1"/>
-          <path class="asln" d="M144 190H258" pathLength="1"/>
-          <path class="asln" d="M144 306C212 306 224 216 262 198" pathLength="1"/>
+          <!-- conectores de entrada: base condutora + pulso viajante -->
+          <path class="asln asl1" d="M144 74C212 74 224 164 262 182" pathLength="1"/>
+          <path class="asln asl2" d="M144 190H258" pathLength="1"/>
+          <path class="asln asl3" d="M144 306C212 306 224 216 262 198" pathLength="1"/>
           <path class="aspulse asp1" d="M144 74C212 74 224 164 262 182" pathLength="1"/>
           <path class="aspulse asp2" d="M144 190H258" pathLength="1"/>
           <path class="aspulse asp3" d="M144 306C212 306 224 216 262 198" pathLength="1"/>
 
-          <!-- a marca no centro -->
-          <circle class="ashalo" cx="300" cy="190" r="44" stroke="var(--acc)" stroke-width="1" stroke-dasharray="2 6" opacity=".28"/>
-          <circle cx="300" cy="190" r="27" stroke="var(--brand)" stroke-width="1.5"/>
-          <circle cx="300" cy="190" r="15.2" stroke="var(--brand2)" stroke-width="3"/>
-          <circle cx="300" cy="190" r="3.5" fill="var(--fg)"/>
-          <text x="300" y="256" text-anchor="middle" class="aslab">ORVES</text>
+          <!-- a marca no centro: halo + anel que respira + glow de processamento -->
+          <g class="ascore">
+            <circle class="asglow" cx="300" cy="190" r="34" fill="var(--acc)" opacity=".05"/>
+            <circle class="asbreathe" cx="300" cy="190" r="27" stroke="var(--acc)" stroke-width="1" fill="none" opacity="0"/>
+            <circle class="ashalo" cx="300" cy="190" r="44" stroke="var(--acc)" stroke-width="1" stroke-dasharray="2 6" opacity=".28"/>
+            <circle cx="300" cy="190" r="27" stroke="var(--brand)" stroke-width="1.5"/>
+            <circle cx="300" cy="190" r="15.2" stroke="var(--brand2)" stroke-width="3"/>
+            <circle cx="300" cy="190" r="3.5" fill="var(--fg)"/>
+            <text x="300" y="256" text-anchor="middle" class="aslab">ORVES</text>
+          </g>
 
           <!-- conectores de saída -->
-          <path class="asln" d="M338 182C400 168 412 80 466 69" pathLength="1"/>
-          <path class="asln" d="M338 187C400 180 412 150 466 150" pathLength="1"/>
-          <path class="asln" d="M338 193C400 200 412 231 466 231" pathLength="1"/>
-          <path class="asln" d="M338 198C400 212 412 312 466 312" pathLength="1"/>
+          <path class="asln asl4" d="M338 182C400 168 412 80 466 69" pathLength="1"/>
+          <path class="asln asl5" d="M338 187C400 180 412 150 466 150" pathLength="1"/>
+          <path class="asln asl6" d="M338 193C400 200 412 231 466 231" pathLength="1"/>
+          <path class="asln asl7" d="M338 198C400 212 412 312 466 312" pathLength="1"/>
           <path class="aspulse asp4" d="M338 182C400 168 412 80 466 69" pathLength="1"/>
           <path class="aspulse asp5" d="M338 187C400 180 412 150 466 150" pathLength="1"/>
           <path class="aspulse asp6" d="M338 193C400 200 412 231 466 231" pathLength="1"/>
           <path class="aspulse asp7" d="M338 198C400 212 412 312 466 312" pathLength="1"/>
 
-          <!-- conhecimento resultante -->
-          <path class="asln" d="M538 86v47M538 167v47M538 248v47" stroke-dasharray="3 4"/>
+          <!-- elos entre os nós (tracejado próprio — fora do stroke-draw do build) -->
+          <path class="asld" d="M538 86v47M538 167v47M538 248v47" stroke-dasharray="3 4"/>
           <g class="asnode asn1">
             <rect x="470" y="52" width="136" height="34" rx="8" fill="var(--panel)" stroke="var(--line2)"/>
             <circle cx="486" cy="69" r="2.4" fill="var(--acc2)"/>

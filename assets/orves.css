@@ -730,32 +730,85 @@ html.js .mo-know .bc{opacity:0;animation:bcGhost 13s ease-out infinite}
 .asvis svg{display:block;width:100%;height:auto}
 .aslab{font-family:var(--mono);font-size:10px;letter-spacing:.09em;fill:var(--fg3)}
 .asln{stroke:var(--line2);stroke-width:1;fill:none}
-.aspulse{stroke:var(--acc2);stroke-width:1.2;fill:none;stroke-dasharray:.18 1;stroke-dashoffset:1.2;opacity:0}
+.asld{stroke:var(--line2);stroke-width:1;fill:none}
+.aspulse{stroke:var(--acc2);stroke-width:1.5;fill:none;stroke-dasharray:.22 1;stroke-dashoffset:1.22;opacity:0}
 .astrust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin:18px 0 0;padding:0}
 .astrust li{font-size:13px;color:var(--fg2);position:relative;padding-left:20px}
 .astrust li::before{content:"✓";position:absolute;left:0;color:var(--acc2)}
-/* ciclo de 12s: entradas → marca → saídas; nós acendem quando o pulso chega.
-   Tudo atrás de html.js e desligado sob reduced-motion — o estado estático é
-   completo sem animação nenhuma. */
-@keyframes asTravel{0%{stroke-dashoffset:1.2;opacity:0}2%{opacity:.9}11%{stroke-dashoffset:-.2;opacity:.9}13%,100%{stroke-dashoffset:-.2;opacity:0}}
-@keyframes asHalo{0%,26%,58%,100%{opacity:.28}33%,49%{opacity:.6}}
-@keyframes asNode{0%,100%{stroke:var(--line2)}12%,32%{stroke:color-mix(in srgb,var(--acc) 55%,transparent)}44%{stroke:var(--line2)}}
-@keyframes asFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-html.js .asp1{animation:asTravel 12s linear infinite}
-html.js .asp2{animation:asTravel 12s linear .9s infinite}
-html.js .asp3{animation:asTravel 12s linear 1.8s infinite}
-html.js .asp4{animation:asTravel 12s linear 4.6s infinite}
-html.js .asp5{animation:asTravel 12s linear 5.2s infinite}
-html.js .asp6{animation:asTravel 12s linear 5.8s infinite}
-html.js .asp7{animation:asTravel 12s linear 6.4s infinite}
-html.js .ashalo{animation:asHalo 12s ease-in-out infinite}
-html.js .asn1 rect{animation:asNode 12s linear 5.6s infinite}
-html.js .asn2 rect{animation:asNode 12s linear 6.2s infinite}
-html.js .asn3 rect{animation:asNode 12s linear 6.8s infinite}
-html.js .asn4 rect{animation:asNode 12s linear 7.4s infinite}
-html.js .ascard{animation:asFloat 12s ease-in-out infinite}
-html.js .asc2{animation-delay:1.3s}
-html.js .asc3{animation-delay:2.6s}
+
+/* ── o motor em funcionamento: 4 camadas de movimento ──
+   build one-shot no reveal → núcleo respirando (5.2s) → fluxo entrada→núcleo→
+   saída num ciclo de 8s (a linha CONDUZ: acende no trecho enquanto o pulso
+   passa; o núcleo responde com glow; os nós acendem NA CHEGADA do pulso, em
+   sequência) → cauda quieta de ~1.2s. Precedente de marca: live-flow do
+   diagrama da home. Tudo atrás de html.js; sob reduced-motion o estado
+   estático completo fica (regras no bloco reduce abaixo). */
+/* build: estado inicial só com JS vivo — sem JS nada disto se aplica */
+html.js .authstory.rv .asln{stroke-dasharray:1;stroke-dashoffset:1}
+html.js .authstory.rv .ascard,html.js .authstory.rv .ascore,
+html.js .authstory.rv .asnode,html.js .authstory.rv .asld{opacity:0}
+@keyframes asDraw{to{stroke-dashoffset:0}}
+@keyframes asIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes asFade{to{opacity:1}}
+html.js .authstory.rv.in .ascard{transform-box:fill-box;animation:asIn .5s cubic-bezier(.2,.6,.2,1) both}
+html.js .authstory.rv.in .asc2{animation-delay:.12s}
+html.js .authstory.rv.in .asc3{animation-delay:.24s}
+html.js .authstory.rv.in .asl1{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) .35s both,asLive 8s linear 1.9s infinite}
+html.js .authstory.rv.in .asl2{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) .45s both,asLive 8s linear 2.4s infinite}
+html.js .authstory.rv.in .asl3{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) .55s both,asLive 8s linear 2.9s infinite}
+html.js .authstory.rv.in .ascore{transform-box:fill-box;animation:asIn .6s cubic-bezier(.2,.6,.2,1) .75s both}
+html.js .authstory.rv.in .asl4{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) .95s both,asLive 8s linear 5.3s infinite}
+html.js .authstory.rv.in .asl5{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) 1.05s both,asLive 8s linear 5.8s infinite}
+html.js .authstory.rv.in .asl6{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) 1.15s both,asLive 8s linear 6.3s infinite}
+html.js .authstory.rv.in .asl7{animation:asDraw .55s cubic-bezier(.2,.6,.2,1) 1.25s both,asLive 8s linear 6.8s infinite}
+html.js .authstory.rv.in .asnode{transform-box:fill-box;animation:asIn .45s cubic-bezier(.2,.6,.2,1) both}
+html.js .authstory.rv.in .asn1{animation-delay:1.35s}
+html.js .authstory.rv.in .asn2{animation-delay:1.45s}
+html.js .authstory.rv.in .asn3{animation-delay:1.55s}
+html.js .authstory.rv.in .asn4{animation-delay:1.65s}
+html.js .authstory.rv.in .asld{animation:asFade .4s ease 1.7s both}
+/* fluxo contínuo (começa depois do build: +1.9s de offset nos delays) */
+@keyframes asTravel{0%{stroke-dashoffset:1.22;opacity:0}2%{opacity:.95}14%{stroke-dashoffset:-.22;opacity:.95}16%,100%{stroke-dashoffset:-.22;opacity:0}}
+@keyframes asLive{0%{stroke:var(--line2)}4%{stroke:color-mix(in srgb,var(--acc) 38%,var(--line2))}15%,100%{stroke:var(--line2)}}
+@keyframes asHalo{0%,20%{opacity:.28}32%,45%{opacity:.62}58%,100%{opacity:.28}}
+@keyframes asGlowP{0%,18%{opacity:.05}30%,42%{opacity:.14}55%,100%{opacity:.05}}
+@keyframes asBreathe{0%{transform:scale(.94);opacity:.34}75%{transform:scale(1.5);opacity:0}100%{transform:scale(1.5);opacity:0}}
+@keyframes asNode{0%,100%{stroke:var(--line2)}6%,20%{stroke:color-mix(in srgb,var(--acc) 60%,transparent)}32%{stroke:var(--line2)}}
+@keyframes asDot{0%,100%{opacity:.55}6%,20%{opacity:1}32%{opacity:.55}}
+html.js .asp1{animation:asTravel 8s linear 1.9s infinite}
+html.js .asp2{animation:asTravel 8s linear 2.4s infinite}
+html.js .asp3{animation:asTravel 8s linear 2.9s infinite}
+html.js .asp4{animation:asTravel 8s linear 5.3s infinite}
+html.js .asp5{animation:asTravel 8s linear 5.8s infinite}
+html.js .asp6{animation:asTravel 8s linear 6.3s infinite}
+html.js .asp7{animation:asTravel 8s linear 6.8s infinite}
+html.js .ashalo{animation:asHalo 8s ease-in-out 1.9s infinite}
+html.js .asglow{animation:asGlowP 8s ease-in-out 1.9s infinite}
+html.js .asbreathe{transform-box:fill-box;transform-origin:center;animation:asBreathe 5.2s cubic-bezier(.2,.6,.2,1) 2.2s infinite}
+html.js .asn1 rect{animation:asNode 8s linear 6.4s infinite}
+html.js .asn2 rect{animation:asNode 8s linear 6.9s infinite}
+html.js .asn3 rect{animation:asNode 8s linear 7.4s infinite}
+html.js .asn4 rect{animation:asNode 8s linear 7.9s infinite}
+html.js .asn1 circle{animation:asDot 8s linear 6.4s infinite}
+html.js .asn2 circle{animation:asDot 8s linear 6.9s infinite}
+html.js .asn3 circle{animation:asDot 8s linear 7.4s infinite}
+html.js .asn4 circle{animation:asDot 8s linear 7.9s infinite}
+/* hover causal: cada entrada acende a própria linha, o núcleo e as saídas
+   que alimenta (DOCUMENT→SOURCE+CLAIM · SYSTEM→RELATION · EVIDENCE→CLAIM+
+   HISTORY); no núcleo, o sistema inteiro acende suave. animation:none no
+   hover: animação venceria a declaração normal de stroke. */
+.asvis .ascard rect,.asvis .asnode rect,.asvis .asln,.asvis .asld{transition:stroke .15s}
+.asvis .ashalo{transition:opacity .15s}
+.asc1:hover rect,.asc2:hover rect,.asc3:hover rect{stroke:color-mix(in srgb,var(--acc) 55%,transparent)}
+.asc1:hover~.asl1,.asc2:hover~.asl2,.asc3:hover~.asl3{animation:none;stroke:color-mix(in srgb,var(--acc) 55%,var(--line2))}
+.asc1:hover~.asl4,.asc1:hover~.asl5,.asc2:hover~.asl6,
+.asc3:hover~.asl5,.asc3:hover~.asl7{animation:none;stroke:color-mix(in srgb,var(--acc) 42%,var(--line2))}
+.asc1:hover~.asn1 rect,.asc1:hover~.asn2 rect,.asc2:hover~.asn3 rect,
+.asc3:hover~.asn2 rect,.asc3:hover~.asn4 rect{animation:none;stroke:color-mix(in srgb,var(--acc) 55%,transparent)}
+.asc1:hover~.ascore .ashalo,.asc2:hover~.ascore .ashalo,.asc3:hover~.ascore .ashalo{animation:none;opacity:.62}
+.asvis svg:has(.ascore:hover) .asln{animation:none;stroke:color-mix(in srgb,var(--acc) 42%,var(--line2))}
+.asvis svg:has(.ascore:hover) .asnode rect{animation:none;stroke:color-mix(in srgb,var(--acc) 50%,transparent)}
+.asvis svg:has(.ascore:hover) .ashalo{animation:none;opacity:.62}
 
 /* superfície do formulário */
 .authcard{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--line2);border-radius:16px;padding:38px 36px;box-shadow:0 24px 80px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.025)}
@@ -816,7 +869,22 @@ body.authpage nav .si:hover{border-color:var(--line2);background:var(--panel2)}
   .authcard{padding:30px 28px}
 }
 @media(prefers-reduced-motion:reduce){
-  html.js .aspulse,html.js .ashalo,html.js .asnode rect,html.js .ascard{animation:none}
+  html.js .aspulse,html.js .ashalo,html.js .asglow,html.js .asbreathe,
+  html.js .asnode,html.js .asnode rect,html.js .asnode circle,
+  html.js .ascard,html.js .ascore,html.js .asln,html.js .asld{animation:none}
+  /* o build .rv.in vence `html.js .asln` por especificidade — o desliga
+     exige seletores equivalentes */
+  html.js .authstory.rv.in .ascard,html.js .authstory.rv.in .ascore,
+  html.js .authstory.rv.in .asnode,html.js .authstory.rv.in .asld,
+  html.js .authstory.rv.in .asl1,html.js .authstory.rv.in .asl2,
+  html.js .authstory.rv.in .asl3,html.js .authstory.rv.in .asl4,
+  html.js .authstory.rv.in .asl5,html.js .authstory.rv.in .asl6,
+  html.js .authstory.rv.in .asl7{animation:none}
+  /* o estado inicial do build esconderia o diagrama sem a animação que o
+     revela — aqui ele volta inteiro, estático */
+  html.js .authstory.rv .asln{stroke-dashoffset:0}
+  html.js .authstory.rv .ascard,html.js .authstory.rv .ascore,
+  html.js .authstory.rv .asnode,html.js .authstory.rv .asld{opacity:1}
   .authpage .btn.busy::after{animation:none}
 }
 
