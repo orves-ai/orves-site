@@ -106,17 +106,158 @@
 
 
 
-<section class="center">
-  <span class="eye">What it produces</span>
-<h2>More than storage.</h2>
 
-  <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>A governed home</h4>
-    <p>Documents, Parse output, knowledge objects, the knowledge graph, versions, permissions and audit logs — organized and isolated per organization.</p></div><div class="card"><h4>Evidence you can explore</h4>
-    <p>Search and navigate knowledge with its evidence attached — inspect sources, versions and conflicts instead of grepping files.</p></div><div class="card"><h4>Served to everything</h4>
-    <p>People through the Web, applications through API and SDK, models and agents through MCP — with permissions and provenance enforced at the door.</p></div>
+
+<section class="center">
+  <span class="eye">Two jobs, one pipeline</span>
+<h2>Knowledge produces. Vault preserves.</h2>
+<p class="lead center">Parse and Knowledge can return results through an API and stop there. Vault is what turns those results into a living system: the accumulated, versioned state of everything your organization knows — ready to evolve when the next source arrives.</p>
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — interprets</h4>
+      <ul class="kwl" style="margin-top:14px"><li>reads structured evidence</li><li>identifies claims and entities</li><li>produces relationships and provenance</li><li>adjudicates against the evidence</li></ul>
+      <p class="kwd" style="margin-top:4px">Its job ends when knowledge is produced.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — preserves</h4>
+      <ul class="kwl" style="margin-top:14px"><li>keeps the accumulated, versioned state</li><li>compares new knowledge with existing context</li><li>records every change and why it happened</li><li>serves the current state — with its history</li></ul>
+      <p class="kwd" style="margin-top:4px">Its job never ends: knowledge stays alive, governed and served.</p></div>
   </div>
+  
+  
+  
 </section>
+
+<section class="center">
+  <span class="eye">The incremental loop</span>
+<h2>Every new source becomes part of the existing context.</h2>
+<p class="lead center">A new source is parsed, turned into knowledge, and compared against what the Vault already holds. Nothing is blindly appended — and nothing is silently overwritten.</p>
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">new source</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge</span><span class="a">→</span><span class="fc" style="animation-delay:3s">compare with existing knowledge</span><span class="a">→</span><span class="fc" style="animation-delay:4s">add · confirm · refine · update · contradict</span><span class="a">→</span><span class="fc" style="animation-delay:5s">new version in Vault</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Every outcome — including contradiction — is written as a new version. Prior states keep their evidence.</p>
+</section>
+
+<section class="center">
+  <span class="eye">Disagreement, preserved</span>
+<h2>Contradictions are knowledge, not errors.</h2>
+<p class="lead center">Two institutions forecast the same indicator and disagree. Vault does not average them, overwrite one, or compress competing views into an artificial consensus — each claim keeps its author, date and evidence, visible and auditable.</p>
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">two sources · same subject</div>
+<pre><span class="cm"># report — May 2026</span>
+<span class="k">source</span>: <span class="s">macro_outlook_may.pdf · p.8 · Institution A</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+
+<span class="cm"># audio — July 2026</span>
+<span class="k">source</span>: <span class="s">weekly_call_jul.mp3 · 14:32 · Institution B</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">the vault result — both preserved</div>
+<pre><span class="cm"># neither claim is lost or merged</span>
+├── <span class="s">two independent claims</span>
+├── <span class="s">same subject · same reference period</span>
+├── <span class="s">different authors and dates</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span>
+└── <span class="g">evidence preserved for both</span></pre></div>
+  </div>
+  
+  
+  
+</section>
+
+<section class="center">
+  <span class="eye">The relationship vocabulary</span>
+<h2>How new knowledge relates to what you already know.</h2>
+<p class="lead center">A later source may update an earlier position, contradict another institution, refine a prior claim or introduce an unrelated view on the same topic. Vault preserves those distinctions instead of silently merging them.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+</section>
+
+<section class="center">
+  <span class="eye">Inside a vault</span>
+<h2>More than files. More than vectors. More than a graph.</h2>
+<p class="lead center">A vault holds the sources, the knowledge produced from them, and the infrastructure that keeps both governed. The knowledge graph is a capability inside the Vault — not the product.</p>
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>Sources</h4>
+    <ul class="kwl"><li>documents</li><li>audio</li><li>video</li><li>APIs</li><li>systems</li></ul><p class="kwd">The originals, retained under policy — everything above stays linked back to them.</p>
+    </div><div class="card"><h4>Knowledge</h4>
+    <ul class="kwl"><li>claims</li><li>entities</li><li>relationships</li><li>evidence</li><li>temporal context</li><li>conflicts</li></ul><p class="kwd">What Knowledge produced — kept alive, versioned and queryable.</p>
+    </div><div class="card"><h4>Infrastructure</h4>
+    <ul class="kwl"><li>search indexes</li><li>knowledge graph</li><li>versions</li><li>permissions</li><li>audit logs</li><li>connections</li></ul><p class="kwd">What makes knowledge usable and governable at scale.</p>
+    </div>
+  </div>
+  
+  
+  
+</section>
+
+<section class="center">
+  <span class="eye">Evidence-backed knowledge graph</span>
+<h2>Every relationship keeps its evidence.</h2>
+<p class="lead center">Entities and claims are not connected because they look semantically similar. Every relationship retains provenance, source references, temporal context and the evidence that produced it.</p>
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">one claim inside the graph</div>
+<pre><span class="s">"IPCA forecast for 2026: 4.2%"</span>
+├── <span class="k">asserted_by</span>   → <span class="s">Institution A</span>
+├── <span class="k">supported_by</span>  → <span class="s">macro_outlook_may.pdf · p.8</span>
+├── <span class="k">concerns</span>      → <span class="s">Brazil · IPCA</span>
+├── <span class="k">valid_for</span>     → <span class="s">2026</span>
+├── <span class="k">contradicts</span>   → <span class="s">claim kn_517 · Institution B</span>
+└── <span class="k">created_at</span>    → <span class="s">2026-05-14</span></pre></div></div>
+  
+  
+  
+</section>
+
+<section class="center">
+  <span class="eye">Access · in development</span>
+<h2>Connect any model, agent or application.</h2>
+<p class="lead center">Vault is being built to serve knowledge through Web, REST API, SDK and MCP — retrieval that returns the relevant claim with its evidence, competing views and history in one traceable response. Never disconnected chunks, never locked to a single AI provider.</p>
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">planned surfaces · conceptual preview</div>
+<pre><span class="cm"># how a vault is served — in development</span>
+<span class="k">Web</span>       <span class="cm"># explore, search, inspect evidence</span>
+<span class="k">REST API</span>  <span class="cm"># applications and pipelines</span>
+<span class="k">SDK</span>       <span class="cm"># your language, one contract</span>
+<span class="k">MCP</span>       <span class="cm"># models and agents, permission-aware</span>
+<span class="k">Export</span>    <span class="cm"># your asset, portable</span>
+
+<span class="cm"># conceptual MCP tools — subject to change</span>
+<span class="s">search_knowledge · get_claim · get_evidence</span>
+<span class="s">trace_claim · find_conflicts · list_changes</span></pre></div></div>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">full-text</span><span class="chip">semantic</span><span class="chip">entity &amp; claim search</span><span class="chip">temporal filters</span><span class="chip">conflict search</span><span class="chip">graph traversal</span><span class="chip">permission-aware</span></div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">The Vault provides the knowledge. Your applications and models provide the intelligence.</p>
+</section>
+
+<section class="center">
+  <span class="eye">Governance</span>
+<h2>Knowledge with history, ownership and control.</h2>
+<p class="lead center">Governance is designed in from the start — isolation per organization, permissions at vault and source level, full history and audit. Each control is announced when it ships, never before.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">organization isolation</span><span class="chip">vault-level permissions</span><span class="chip">source-level access</span><span class="chip">knowledge history</span><span class="chip">versioning</span><span class="chip">audit logs</span><span class="chip">retention policies</span><span class="chip">deletion &amp; export</span><span class="chip">API &amp; MCP scopes</span></div>
+  
+</section>
+
+<section class="center">
+  <span class="eye">Use cases</span>
+<h2>Built for knowledge that must survive scrutiny.</h2>
+
+  
+  <div class="g2 rv" style="margin-top:26px;max-width:840px;margin-left:auto;margin-right:auto">
+    <div class="card"><h4>Institutional research</h4>
+    <p>Maintain forecasts, opinions, revisions and source evidence across reports, calls, audio and datasets.</p></div><div class="card"><h4>Legal &amp; compliance</h4>
+    <p>Keep claims, clauses, precedents and evidence traceable to their original sources.</p></div><div class="card"><h4>Enterprise knowledge</h4>
+    <p>Connect policies, documents and internal systems without losing ownership, provenance or history.</p></div><div class="card"><h4>AI &amp; agents</h4>
+    <p>Give models persistent, permission-aware, evidence-backed context through API or MCP.</p></div>
+  </div>
+  
+  
+  
+</section>
+
+
+
 
 
 
