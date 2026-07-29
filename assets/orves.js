@@ -618,10 +618,21 @@
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
-  btns.forEach(function (b) {
+  btns.forEach(function (b, i) {
     b.addEventListener('click', function () {
       touched = true;
       setMode(b.getAttribute('data-mode'));
+    });
+    // Setas movem o foco E ativam o vizinho (padrão de controle segmentado);
+    // Enter/Space já disparam click nativamente por serem <button>.
+    b.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' &&
+          e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+      e.preventDefault();
+      touched = true;
+      var next = btns[(i + 1) % btns.length];
+      next.focus();
+      setMode(next.getAttribute('data-mode'));
     });
   });
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;

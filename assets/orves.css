@@ -1324,3 +1324,23 @@ body.whypage .ftbar{margin-top:36px}
   html.js .warena[data-mode="with"] .wnode .m1{animation:none!important}
   .wb:hover{transform:none}
 }
+
+/* ── why-orves: polimento final da rodada 10/10 (revisão BP 29-jul §7) ──
+   Só deltas de espaço/contraste, escopados na .whypage; nenhuma cor nova,
+   nenhum componente novo. Verde segue = evidência/positivo/CTA; amber =
+   conflito/pendência. */
+body.whypage .hero-why{padding-bottom:54px}
+body.whypage #difference{padding-top:60px}          /* hero→comparação ~-10% */
+body.whypage .wtoggle{margin-top:16px}              /* título mais perto do controle */
+body.whypage .warena{margin-top:20px}               /* toggle mais perto do painel */
+/* contraste discreto de textos secundários e tags de status */
+body.whypage .wdex .ref,body.whypage .wdm .ref,body.whypage .wltag,
+body.whypage .wtrcap,body.whypage .wlsrc{color:color-mix(in srgb,var(--fg2) 55%,var(--fg3))}
+body.whypage .wltag.ok{color:var(--acc2)}
+body.whypage .wltag.hold{color:var(--hold)}
+/* card Exact provenance: menos vazio interno; leitura confortável no desktop */
+body.whypage .wb.s4 .wdm{margin-top:10px;line-height:1.75}
+body.whypage .wb p{max-width:56ch}
+/* fechamento: CTA final e footer mais compactos */
+body.whypage section.ctaglow{padding-bottom:52px}
+body.whypage footer{padding:48px 0 32px}
