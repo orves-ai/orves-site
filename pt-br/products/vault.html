@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Vault | Orves</title>
+<meta name="description" content="A Orves constrói The Verifiable Knowledge Layer — três produtos, Parse, Knowledge e Vault: dados estruturados, conhecimento verificável e uma casa governada que o serve."/>
+<link rel="canonical" href="https://orves.ai/pt-br/products/vault"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/vault"/>
+<meta property="og:title" content="Vault | Orves"/>
+<meta property="og:description" content="A Orves constrói The Verifiable Knowledge Layer — três produtos, Parse, Knowledge e Vault: dados estruturados, conhecimento verificável e uma casa governada que o serve."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:url" content="https://orves.ai/pt-br/products/vault"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">Produtos <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>De documentos a dados estruturados</em></a>
+        <a href="../products/knowledge">Knowledge <em>Da evidência ao conhecimento verificável</em></a>
+        <a href="../products/vault">Vault <em>Uma casa persistente para esse conhecimento</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">Recursos <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API, guia rápido e exemplos</em></a>
+        <a href="../benchmarks">Benchmarks <em>Como medimos — metodologia e resultados</em></a>
+        <a href="../research">Research <em>Métodos, relatórios e achados técnicos</em></a>
+        <a href="../trust">Trust <em>Certificação e verificação</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>O que já saiu e o que vem</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">Preços</a>
+    <a href="../why-orves" class="">Por que Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="Idioma">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">PT</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>Selecionar idioma</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/vault"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/vault"
+         class="on" aria-current="true">Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/vault"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/vault"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/vault"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/vault"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/vault"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/vault"
+         >简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">Entrar</a>
+  
+  
+  <a class="btn" href="../contact?topic=vault-beta">Entrar no beta privado</a>
+  
+  <button class="menubtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/knowledge">Knowledge</a>
+  <a href="../products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">Preços</a>
+  <a href="../why-orves">Por que Orves</a>
+  <a href="../login">Entrar</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>conhecimento persistente · vault · em desenvolvimento</span>
+    <h1>Conhecimento que vale guardar <span class="accent-tx">merece uma casa.</span></h1>
+    <p class="sub">O Orves Vault armazena, organiza, governa e serve o conhecimento que sua organização produz ou importa — documentos, saída do Parse, objetos de conhecimento e seu grafo — para pessoas, aplicações, modelos e agentes, por Web, API, SDK e MCP. Em desenvolvimento: esta página descreve o que o Vault está sendo construído para fazer.</p>
+    <div class="cta">
+      
+      <a class="btn" href="../contact?topic=vault-beta">Entrar no beta privado</a>
+      <a class="btn gh" href="#why-vault">Veja como funciona</a>
+      
+      
+    </div>
+    <div class="chips"><span class="chip">armazenamento e organização</span><span class="chip">versões e histórico</span><span class="chip">permissões e auditoria</span><span class="chip">Web · API · SDK · MCP</span></div>
+    
+  </div>
+  <div class="code rv"><div class="codehd">dentro de um vault · em desenvolvimento</div>
+<pre><span class="cm"># what a vault is built to hold</span>
+<span class="k">documents/</span>       <span class="cm"># originals, retained under policy</span>
+<span class="k">parse-output/</span>    <span class="cm"># structured data, source-linked</span>
+<span class="k">knowledge/</span>       <span class="cm"># objects · claims · entities · evidence</span>
+<span class="k">graph/</span>           <span class="cm"># relationships · conflicts</span>
+<span class="k">history/</span>         <span class="cm"># versions · audit log</span>
+<span class="k">access/</span>          <span class="cm"># permissions · policies</span>
+
+<span class="cm"># served via Web · API · SDK · MCP — in development</span></pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">O problema</span>
+<h2>Conhecimento que vive em pipelines evapora.</h2>
+
+  <p class="lead center">Documentos parseados, fatos extraídos e contexto conquistado a duras penas acabam espalhados por buckets, bancos vetoriais e notebooks — sem versão, sem governança e invisíveis para o próximo sistema que precisar deles. Armazenamento guarda arquivos. Não guarda conhecimento.</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">saídas espalhadas</span><span class="chip bad">sem permissões</span><span class="chip bad">sem histórico</span><span class="chip bad">sem trilha de auditoria</span><span class="chip bad">preso a um único stack</span></div>
+  
+</section>
+
+
+
+
+
+<section class="center" id="why-vault">
+  <span class="eye">Por que o Vault existe</span>
+<h2>O Knowledge produz. O Vault preserva.</h2>
+<p class="lead center">O Parse estrutura suas fontes. O Knowledge lê a evidência que chega, compara com o estado atual do Vault e produz afirmações rastreáveis, relações e mudanças propostas. O Vault commita, versiona e preserva o estado de conhecimento resultante — junto com sua evidência, seu histórico e suas discordâncias.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — a transformação</h4>
+      <ul class="kwl" style="margin-top:14px"><li>lê a evidência que chega</li><li>compara com o estado atual do Vault</li><li>produz afirmações, entidades e relações</li><li>fundamenta em evidência cada afirmação e relação proposta</li></ul>
+      <p class="kwd" style="margin-top:4px">Cada execução do Knowledge produz um resultado rastreável.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — o estado</h4>
+      <ul class="kwl" style="margin-top:14px"><li>commita as mudanças propostas como novas versões</li><li>preserva evidência, histórico e discordâncias</li><li>governa quem pode ver e mudar o quê</li><li>serve o estado atual — com seu histórico</li></ul>
+      <p class="kwd" style="margin-top:4px">O Vault preserva esses resultados entre execuções e ao longo do tempo.</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">O laço incremental</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">nova fonte</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">o Knowledge lê o estado atual do Vault</span><span class="a">→</span><span class="fc" style="animation-delay:3s">compara a evidência que chega</span><span class="a">→</span><span class="fc" style="animation-delay:4s">propõe adicionar · confirmar · refinar · atualizar · contradizer</span><span class="a">→</span><span class="fc" style="animation-delay:5s">o Vault commita uma nova versão</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O estado atual, a evidência e o histórico continuam disponíveis — nada é anexado às cegas, nada é sobrescrito em silêncio.</p>
+  
+</section>
+
+<section class="center" id="disagreement">
+  <span class="eye">A discordância, preservada</span>
+<h2>Contradições são conhecimento, não erros.</h2>
+<p class="lead center">Duas instituições projetam o mesmo indicador e discordam. O Knowledge relaciona as duas afirmações; o Vault preserva as duas — com autor, data e evidência — em vez de tirar a média, sobrescrever uma ou fabricar consenso.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">duas fontes · mesmo assunto</div>
+<pre><span class="cm"># report — May 2026</span>
+<span class="k">source</span>: <span class="s">macro_outlook_may.pdf · p.8 · Institution A</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+
+<span class="cm"># audio — July 2026</span>
+<span class="k">source</span>: <span class="s">weekly_call_jul.mp3 · 14:32 · Institution B</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">o estado preservado — as duas afirmações</div>
+<pre><span class="cm"># neither claim is lost or merged</span>
+├── <span class="s">two independent claims</span>
+├── <span class="s">same subject · same reference period</span>
+├── <span class="s">different authors and dates</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Knowledge</span>
+└── <span class="g">evidence preserved for both</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">O vocabulário de relações</span>
+  <p class="lead center rv" style="margin-top:12px">Uma fonte posterior pode atualizar uma posição anterior, contradizer outra instituição, refinar uma afirmação prévia ou trazer uma visão não relacionada sobre o mesmo tema. O Knowledge propõe a relação; o Vault preserva a distinção — nunca uma fusão silenciosa.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
+
+<section class="center" id="inside">
+  <span class="eye">Dentro de um vault</span>
+<h2>Mais que arquivos. Mais que vetores. Mais que um grafo.</h2>
+<p class="lead center">Um vault guarda as fontes, o conhecimento produzido a partir delas e a infraestrutura que mantém os dois governados. O grafo de conhecimento é uma capacidade dentro do Vault — não o produto.</p>
+  
+  
+  
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>Fontes</h4>
+    <ul class="kwl"><li>documentos</li><li>áudio</li><li>vídeo</li><li>APIs</li><li>sistemas</li></ul><p class="kwd">Os originais, retidos conforme a política — tudo acima continua ligado a eles.</p>
+    </div><div class="card"><h4>Knowledge</h4>
+    <ul class="kwl"><li>afirma</li><li>entidades</li><li>relações</li><li>evidência</li><li>contexto temporal</li><li>conflitos</li></ul><p class="kwd">O que o Knowledge produziu — mantido versionado, consultável e vivo diante da mudança.</p>
+    </div><div class="card"><h4>Infraestrutura</h4>
+    <ul class="kwl"><li>índices de busca</li><li>grafo de conhecimento</li><li>versões</li><li>permissões</li><li>logs de auditoria</li><li>conexões</li></ul><p class="kwd">O que torna o conhecimento usável e governável em escala.</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Grafo de conhecimento respaldado por evidência</span>
+  <p class="lead center rv" style="margin-top:12px">Entidades e afirmações não são conectadas por parecerem semanticamente parecidas. Toda relação retém procedência, referências de origem, contexto temporal e a evidência que a produziu.</p>
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">uma afirmação dentro do grafo</div>
+<pre><span class="s">"IPCA forecast for 2026: 4.2%"</span>
+├── <span class="k">asserted_by</span>   → <span class="s">Institution A</span>
+├── <span class="k">supported_by</span>  → <span class="s">macro_outlook_may.pdf · p.8</span>
+├── <span class="k">concerns</span>      → <span class="s">Brazil · IPCA</span>
+├── <span class="k">valid_for</span>     → <span class="s">2026</span>
+├── <span class="k">contradicts</span>   → <span class="s">claim kn_517 · Institution B</span>
+└── <span class="k">created_at</span>    → <span class="s">2026-05-14</span></pre></div></div>
+  
+  
+  
+  
+</section>
+
+<section class="center" id="access">
+  <span class="eye">Acesso e governança · em desenvolvimento</span>
+<h2>Servido a pessoas, aplicações, modelos e agentes.</h2>
+<p class="lead center">O Vault está sendo construído para servir conhecimento por Web, REST API, SDK e MCP — com uma recuperação projetada para devolver a afirmação relevante junto com sua evidência, as visões concorrentes e seu histórico em uma única resposta rastreável. Nunca chunks desconectados, nunca preso a um único provedor de IA.</p>
+  
+  
+  
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">superfícies previstas · prévia conceitual</div>
+<pre><span class="cm"># how a vault is served — in development</span>
+<span class="k">Web</span>       <span class="cm"># explore, search, inspect evidence</span>
+<span class="k">REST API</span>  <span class="cm"># applications and pipelines</span>
+<span class="k">SDK</span>       <span class="cm"># your language, one contract</span>
+<span class="k">MCP</span>       <span class="cm"># models and agents, permission-aware</span>
+<span class="k">Export</span>    <span class="cm"># your asset, portable</span>
+
+<span class="cm"># conceptual MCP tools — subject to change</span>
+<span class="s">search_knowledge · get_claim · get_evidence</span>
+<span class="s">trace_claim · find_conflicts · list_changes</span></pre></div></div>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">texto completo</span><span class="chip">semântica</span><span class="chip">busca por entidade e afirmação</span><span class="chip">filtros temporais</span><span class="chip">busca por conflitos</span><span class="chip">percurso do grafo</span><span class="chip">consciente de permissões</span></div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O Vault fornece o conhecimento. Suas aplicações e seus modelos fornecem a inteligência.</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Governança</span>
+  <p class="lead center rv" style="margin-top:12px">Isolamento por organização, permissões no nível do vault e da fonte, histórico completo e auditoria. Cada controle é anunciado quando for ao ar — nunca antes.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">isolamento por organização</span><span class="chip">permissões no nível do vault</span><span class="chip">acesso no nível da fonte</span><span class="chip">histórico do conhecimento</span><span class="chip">versionamento</span><span class="chip">logs de auditoria</span><span class="chip">políticas de retenção</span><span class="chip">exclusão e exportação</span><span class="chip">escopos de API e MCP</span></div>
+  
+  
+</section>
+
+<section class="center" id="use-cases">
+  <span class="eye">Casos de uso</span>
+<h2>Feito para conhecimento que precisa resistir ao escrutínio.</h2>
+
+  
+  
+  
+  
+  <div class="g2 rv" style="margin-top:26px;max-width:840px;margin-left:auto;margin-right:auto">
+    <div class="card"><h4>Pesquisa institucional</h4>
+    <p>Mantenha projeções, opiniões, revisões e evidência de origem ao longo de relatórios, calls, áudio e conjuntos de dados.</p></div><div class="card"><h4>Jurídico e conformidade</h4>
+    <p>Mantenha afirmações, cláusulas, precedentes e evidência rastreáveis até suas fontes originais.</p></div><div class="card"><h4>Conhecimento corporativo</h4>
+    <p>Conecte políticas, documentos e sistemas internos sem perder propriedade, procedência ou histórico.</p></div><div class="card"><h4>IA e agentes</h4>
+    <p>Dê aos modelos um contexto persistente, consciente de permissões e respaldado por evidência, pela API ou por MCP.</p></div>
+  </div>
+  
+  
+  
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">Uma propriedade, não um produto</span>
+    <h3 style="margin:8px 0 6px">Todo artefato é verificável.</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">A certificação atravessa tudo que a Orves produz. A verificação é projetada para ser pública, reproduzível e independente de uma conta na Orves.</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ procedência</span><span class="bp hot">✓ integridade</span><span class="bp">versão</span><span class="bp">evidência</span><span class="bp">estado de resolução</span><span class="bp">verificação</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API primeiro</span>
+    <h3 style="margin:8px 0 6px">Integre em minutos.</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">Tudo é entregue pela API gerenciada — nenhuma infraestrutura adicional para implantar.</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">Exemplos</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Entre primeiro na fila do Vault.</h2>
+  <p class="lead center" style="margin-bottom:26px">Em desenvolvimento — conte para a gente a que o conhecimento da sua organização precisa dar uma casa.</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../contact?topic=vault-beta">Entrar no beta privado</a>
+    <a class="btn gh" href="../products/parse">Comece hoje pelo Parse</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">Produtos</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/knowledge">Knowledge</a>
+      <a href="../products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">Recursos</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">Empresa</div>
+      <a href="../why-orves">Por que Orves</a>
+      <a href="/system" hreflang="en">Marca</a>
+      <a href="../contact">Contato</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · Todos os direitos reservados.</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

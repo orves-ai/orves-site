@@ -305,7 +305,15 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--fg3)}
   .flowhint{display:block;font-family:JetBrains Mono,monospace;font-size:10.5px;
     letter-spacing:.06em;color:var(--fg3);text-align:center;margin:10px 0 0}
 }
-}
+/* Estas DUAS regras existem porque `.flowart` centraliza com
+   transform:translateX(-50%) e também carrega `.rv` — e o reveal genérico
+   `html.js .rv{transform:translateY(14px)}` sobrescreveria o transform
+   inteiro, tirando o card do centro durante a animação de entrada.
+   Elas estavam MORTAS até 30-jul: uma `}` órfã logo acima fazia o parser
+   descartar a primeira, e o diagrama entrava 640px à direita e saltava para
+   o centro ao longo dos 600ms da transição — medido, não suposto:
+   estado inicial left=720 → final left=80. Removida a chave, o movimento
+   passou a ser só vertical (Y=-14px, X=0), que é o que o autor escreveu. */
 html.js .flowart.rv{transform:translateX(-50%) translateY(14px)}
 html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
 .flowart .fnode{fill:var(--panel);stroke:var(--line2)}
@@ -1697,3 +1705,96 @@ body.whypage .wb p{max-width:56ch}
 /* fechamento: CTA final e footer mais compactos */
 body.whypage section.ctaglow{padding-bottom:52px}
 body.whypage footer{padding:48px 0 32px}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SELETOR DE IDIOMA — spec BP 30-jul
+   Fica no FIM do arquivo de propósito: a primeira versão foi inserida junto
+   de `.caret`, antes da regra `.nmenu .in{display:block}`, e o display:block
+   vencia o grid por ordem de cascata — o menu saía numa coluna só. Mesma
+   especificidade resolve-se por posição; aqui a posição é a última.
+   Sem bandeiras: bandeira é país, não idioma.
+   ═══════════════════════════════════════════════════════════════════════ */
+.lngdd{position:relative;display:flex;align-items:center}
+/* Largura FIXA: sem ela o botão encolhe de "EN" para "JA" e a barra inteira
+   se rearranja ao trocar de idioma — o header dançaria a cada visita. */
+.lngbtn{display:flex;align-items:center;justify-content:center;gap:6px;width:60px;height:36px;padding:0;background:none;border:0;border-radius:8px;cursor:pointer;color:var(--fg2);font:inherit;transition:background .15s,color .15s}
+.lngbtn:hover{background:var(--panel2);color:var(--fg)}
+.lngbtn[aria-expanded=true]{background:var(--panel2);color:var(--fg)}
+.lngbtn svg{flex:none;opacity:.9}
+.lngcur{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em}
+
+.lngmenu{position:absolute;top:calc(100% + 8px);right:0;z-index:60}
+.lngmenu[hidden]{display:none}
+.lngsheet{width:232px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+/* O cabeçalho "Select language" só existe no bottom sheet do celular: no
+   popover do desktop o próprio botão já diz o que aquilo é. */
+.lnghd{display:none}
+.lngmenu a{display:flex;align-items:center;height:42px;padding:0 12px;border-radius:8px;font-size:14px;color:var(--fg2);transition:background .12s,color .12s}
+.lngmenu a:hover{background:var(--panel2);color:var(--fg)}
+.lngmenu a.on{color:var(--fg);background:color-mix(in srgb,var(--acc) 9%,transparent)}
+/* Check à direita — marca o idioma atual sem depender só de cor de fundo,
+   que é invisível para quem não distingue o contraste. */
+.lngmenu a.on::after{content:"";margin-left:auto;width:14px;height:9px;border-left:1.8px solid var(--acc2);border-bottom:1.8px solid var(--acc2);transform:rotate(-45deg) translateY(-2px)}
+
+/* ── bottom sheet no celular ───────────────────────────────────────────
+   Com sete idiomas um dropdown flutuante de 232px preso ao canto superior
+   fica longe do polegar e perto da borda. O sheet sobe da base, ocupa a
+   largura toda e é o padrão que o sistema operacional já ensinou. */
+@media(max-width:640px){
+  .lngmenu{position:fixed;inset:0;top:0;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;animation:lngfade .18s ease}
+  .lngsheet{width:100%;border-radius:16px 16px 0 0;border-bottom:0;padding:8px 10px calc(10px + env(safe-area-inset-bottom));animation:lngup .22s cubic-bezier(.2,.8,.3,1)}
+  .lnghd{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 12px;font-size:13px;color:var(--fg3);border-bottom:1px solid var(--line2);margin-bottom:6px}
+  .lngx{background:none;border:0;color:var(--fg2);font-size:22px;line-height:1;cursor:pointer;padding:0 4px}
+  .lngmenu a{height:48px;font-size:15px}
+}
+@keyframes lngfade{from{opacity:0}to{opacity:1}}
+@keyframes lngup{from{transform:translateY(14px)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){.lngmenu,.lngsheet{animation:none}}
+
+/* ── CJK ───────────────────────────────────────────────────────────────
+   Space Grotesk (display) e Inter (texto) NÃO cobrem japonês nem chinês: sem
+   isto os títulos caem no fallback do sistema e o peso visual muda de página
+   para página. A pilha usa as fontes que o próprio SO já traz — nada de baixar
+   um webfont CJK, que custaria megabytes e a CSP do site nem permite host
+   externo além do Google Fonts já declarado.
+   `lang` é o seletor certo, não uma classe: o atributo já está no <html>. */
+:root:lang(ja),:root:lang(ko),:root:lang(zh-Hans),:root:lang(zh){
+  --sans:'Inter','Hiragino Kaku Gothic ProN','Yu Gothic UI','Noto Sans JP','Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif;
+  --disp:'Space Grotesk','Hiragino Kaku Gothic ProN','Yu Gothic UI','Noto Sans JP','Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR','Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif;
+}
+/* CJK não tem ascendente/descendente latino e fica apertado na entrelinha
+   pensada para o inglês; e não quebra por espaço — sem isto uma headline
+   longa transborda a caixa em vez de quebrar. */
+:lang(ja) h1,:lang(ko) h1,:lang(zh-Hans) h1,:lang(ja) h2,:lang(ko) h2,:lang(zh-Hans) h2,
+:lang(ja) .h1b,:lang(ko) .h1b,:lang(zh-Hans) .h1b{line-height:1.35;letter-spacing:.01em;word-break:normal;overflow-wrap:anywhere}
+:lang(ja) p,:lang(ko) p,:lang(zh-Hans) p,:lang(ja) li,:lang(ko) li,:lang(zh-Hans) li{line-height:1.85}
+/* O tracking largo dos rótulos mono foi desenhado para caixa alta latina e
+   deixa o CJK esparramado e ilegível. */
+:lang(ja) .eye,:lang(ko) .eye,:lang(zh-Hans) .eye,:lang(ja) .m-t,:lang(ko) .m-t,:lang(zh-Hans) .m-t{letter-spacing:.02em}
+
+/* ── superfície que fica em inglês ─────────────────────────────────────
+   Nos locales, os links para documentação técnica apontam para a versão
+   inglesa e o build marca cada um com hreflang="en". Dizer isso ao lado do
+   link é honestidade: a pessoa sabe antes de clicar que vai trocar de idioma.
+   Quando o <a> tem um <em> de descrição (os dropdowns do nav), o rótulo entra
+   nele; senão, no próprio link. */
+/* Escopo pelos containers de NAVEGAÇÃO, nunca `nav a[hreflang=en]` solto: o
+   próprio seletor de idioma vive dentro do <nav> e seu link para English
+   carrega hreflang="en" — a regra ampla escrevia "English · English" dentro
+   do menu de idiomas. */
+.nmenu a[hreflang=en] em::after,.ftcol a[hreflang=en]::after{content:" · English"}
+.mnav a[hreflang=en]::after{content:" · English"}
+.nmenu a[hreflang=en] em::after,.mnav a[hreflang=en]::after,
+.ftcol a[hreflang=en]::after{color:var(--fg3)}
+
+/* No celular a barra passa a carregar mais um item de largura fixa (o botão
+   de idioma, 60px por spec) ao lado do CTA e do hambúrguer. Com o gap de 30px
+   herdado do desktop, 390px não bastam: o CTA quebrava em duas linhas e a
+   página ganhava 35px de rolagem horizontal em espanhol, onde "Empezar
+   gratis" é mais longo que "Start for free". A folga sai do gap — nada é
+   removido da barra e o botão mantém os 60px da spec. */
+@media(max-width:640px){.navin{gap:14px}}
+/* Abaixo de 400px (iPhone SE, Androids pequenos) nem 14px chegam. Produção
+   já rolava 38px para o lado nesta largura — este bloco fecha o caso antigo
+   junto com o novo, sem tirar nada da barra. */
+@media(max-width:400px){.navin{gap:10px}.navin .btn{padding:10px 12px;font-size:13px}.navin .brand .word{font-size:17px}}

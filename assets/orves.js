@@ -683,6 +683,62 @@
   panel.addEventListener('click', function (e) { if (e.target.tagName === 'A') panel.classList.remove('open'); });
 })();
 
+// ── seletor de idioma ──
+// Abre por CLIQUE, não por hover: no celular não existe hover, e a mesma
+// árvore de DOM serve ao popover do desktop e ao bottom sheet — o CSS decide
+// a forma, o JS só governa aberto/fechado. Sem JS o menu fica `hidden` e o
+// site continua inteiro em inglês na raiz, que é a fonte; nenhuma navegação
+// depende disto para funcionar.
+(function () {
+  var dd = document.querySelector('.lngdd');
+  if (!dd) return;
+  var btn = dd.querySelector('.lngbtn');
+  var menu = dd.querySelector('.lngmenu');
+  if (!btn || !menu) return;
+
+  function abrir(v) {
+    var movel = window.matchMedia('(max-width:640px)').matches;
+    // O <nav> tem backdrop-filter, e backdrop-filter CRIA containing block
+    // para position:fixed — o bottom sheet ficava preso dentro da barra de
+    // 64px e era desenhado 342px ACIMA do viewport. Por isso, no celular, o
+    // sheet é movido para o <body> enquanto está aberto e devolvido ao
+    // fechar. No desktop ele fica onde está: o popover é absolute e precisa
+    // do .lngdd como âncora.
+    if (movel && v) document.body.appendChild(menu);
+    else if (!v && menu.parentNode !== dd) dd.appendChild(menu);
+    menu.hidden = !v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    // Trava o scroll do fundo só no sheet do celular: no desktop o popover
+    // é pequeno e travar a página inteira seria hostil.
+    document.body.style.overflow = (movel && v) ? 'hidden' : '';
+    if (v) { var a = menu.querySelector('a.on') || menu.querySelector('a'); if (a) a.focus(); }
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    abrir(menu.hidden);
+  });
+  // Clique no backdrop do sheet (o alvo é o próprio .lngmenu, não o painel)
+  // e no X fecham; clique dentro do painel não.
+  menu.addEventListener('click', function (e) {
+    if (e.target === menu || e.target.classList.contains('lngx')) abrir(false);
+  });
+  document.addEventListener('click', function (e) {
+    if (!dd.contains(e.target) && !menu.contains(e.target)) abrir(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) { abrir(false); btn.focus(); }
+  });
+  // Setas percorrem a lista — é um menu, e teclado tem de chegar aos sete.
+  menu.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    var itens = [].slice.call(menu.querySelectorAll('a'));
+    var i = itens.indexOf(document.activeElement);
+    itens[(i + (e.key === 'ArrowDown' ? 1 : itens.length - 1)) % itens.length].focus();
+  });
+})();
+
 // ── tema light/dark: toggle persistido ──
 (function () {
   var btns = document.querySelectorAll('.thbtn');

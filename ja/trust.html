@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Trust | Orves</title>
+<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<link rel="canonical" href="https://orves.ai/ja/trust"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/trust"/>
+<meta property="og:title" content="Trust | Orves"/>
+<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ja"/>
+<meta property="og:url" content="https://orves.ai/ja/trust"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="" style="cursor:default">製品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products/parse">Parse <em>文書から構造化データへ</em></a>
+        <a href="products/knowledge">Knowledge <em>証跡から検証可能な知識へ</em></a>
+        <a href="products/vault">Vault <em>その知識のための永続的な場所</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="on" style="cursor:default">リソース <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、クイックスタート、サンプル</em></a>
+        <a href="benchmarks">Benchmarks <em>測定方法 — 手法と結果</em></a>
+        <a href="research">Research <em>手法、レポート、技術的知見</em></a>
+        <a href="trust">Trust <em>認証と検証</em></a>
+        <a href="roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>提供済みのものと次に来るもの</em></a>
+      </span></span>
+    </span>
+    <a href="pricing" class="">料金</a>
+    <a href="why-orves" class="">Orves を選ぶ理由</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="言語">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">JA</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>言語を選択</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/trust"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/trust"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/trust"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/trust"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/trust"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/trust"
+         class="on" aria-current="true">日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/trust"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/trust"
+         >简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="login">ログイン</a>
+  
+  
+  <a class="btn" href="create-account">無料で始める</a>
+  
+  <button class="menubtn" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="products/parse">Parse</a>
+  <a href="products/knowledge">Knowledge</a>
+  <a href="products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="benchmarks" class="sub">Benchmarks</a>
+  <a href="research" class="sub">Research</a>
+  <a href="trust" class="sub">Trust</a>
+  <a href="roadmap" class="sub">Roadmap</a>
+  <a href="pricing">料金</a>
+  <a href="why-orves">Orves を選ぶ理由</a>
+  <a href="login">ログイン</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero solo" style="padding-bottom:40px;border-top:0">
+  <div>
+    <span class="eye">Trust</span>
+    <h1 style="max-width:16ch;margin-left:auto;margin-right:auto">製品ではなく、性質です。</h1>
+    <p class="sub">価格表に「認証」という項目はありません — すべてを貫いているからです。Orves が生み出すすべての成果物は、検証可能な証明書を携えるように作られており（現在はパイロット中）、独立した第三者が完全性と来歴を確認するために必要なものを含んでいます。アカウント不要の公開検証エンドポイントは、パイロットのロールアウトとともに提供されます。</p>
+  </div>
+</section>
+
+<section class="center">
+  <span class="eye">あらゆる場所で</span>
+<h2>すべての工程で認証。</h2>
+
+  <div class="tblwrap rv" style="max-width:820px;margin-left:auto;margin-right:auto"><table class="tbl">
+    <thead><tr><th>製品</th><th>何が認証されるか</th><th></th></tr></thead>
+    <tbody>
+      <tr><td><b>Parse</b></td><td>すべてのパース — バージョン、入力、出力、出典スパン</td><td><span class="st draft"><span class="d"></span>設計済み · パイロット中</span></td></tr>
+      <tr><td><b>Knowledge</b></td><td>すべてのナレッジオブジェクト、主張、回答 — バージョングラフ、証跡の連鎖、棄権とともに</td><td><span class="st draft"><span class="d"></span>開発中</span></td></tr>
+      <tr><td><b>Vault</b></td><td>保管、アクセス、監査イベント — 端から端まで認証できるよう設計</td><td><span class="st draft"><span class="d"></span>開発中</span></td></tr>
+      <tr><td><b>更新</b></td><td>新しい証跡の受け入れと再裁定のすべて — 完全な系譜つきで</td><td><span class="st draft"><span class="d"></span>パイロット</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="center">
+  <span class="eye">性質</span>
+<h2>Orves のすべての結果が携えるもの。</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>来歴</h4><p>すべての事実が、その正確な出典までたどれます。「これはどこから来たのか」には、いつでも答えがあります。</p></div>
+    <div class="card"><h4>系譜</h4><p>すべての結果は、それを生んだ各工程をさかのぼれます — 一段ごとに記録され、一段ごとに確認できます。</p></div>
+    <div class="card"><h4>バージョン管理</h4><p>成果物と知識はバージョンを携えます。訂正は履歴を伴う新しい項目であって、静かな書き換えではありません。</p></div>
+    <div class="card"><h4>証跡</h4><p>主張は、それを支える証跡とともに提供されます — 証跡が足りないときは解決状態とともに。</p></div>
+    <div class="card"><h4>統制</h4><p>判断なしに入るものも変わるものもありません。採点された受け入れ、解決規則、追記専用の台帳。</p></div>
+    <div class="card"><h4>検証</h4><p>すべての結果が、独立した検証に必要な証跡を携えます。アカウント不要の公開検証は、パイロットのロールアウトとともに提供されます。</p></div>
+  </div>
+</section>
+
+<section class="center">
+  <span class="eye">保証</span>
+<h2>契約が約束すること。</h2>
+<p class="lead center">お客様が買うのは結果です。それがどう作られるかの責任は私たちが負います。以下は、すべての出力に伴う保証です — 背後の機構の説明ではなく、契約の性質です。</p>
+  <div class="g3 rv" style="margin-top:28px">
+    <div class="card"><h4>追跡可能</h4><p>すべての結果は、それを支える出典までさかのぼれます。</p></div>
+    <div class="card"><h4>バージョン管理</h4><p>すべての結果が、それを生んだ製品・スキーマ・実行バージョンを示します。</p></div>
+    <div class="card"><h4>検証可能</h4><p>結果は、完全性と来歴を検証するために必要な証跡を携えます。</p></div>
+    <div class="card"><h4>静かな書き換えなし</h4><p>変更は、以前の履歴を保ったまま、識別可能な新しいバージョンを生みます。</p></div>
+    <div class="card"><h4>失敗を明示する</h4><p>システムは、欠けている証跡、劣化した処理、未解決の状態を隠さずに報告します。</p></div>
+    <div class="card"><h4>監査可能</h4><p>実行記録、変換、消費を確認し、突き合わせられます。</p></div>
+  </div>
+  <p class="mono rv" style="margin-top:26px;font-size:13px;color:var(--acc2)">特定の実装ではなく、契約によって保証されます。</p>
+</section>
+
+<section class="ruled center">
+  <span class="eye">仕組み</span>
+<h2>発行する。記録する。検証する。</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><span class="pnum">01</span><h4>発行</h4><p>各製品は、自らが行うすべての変換について証明書を発行します — 署名され、ハッシュ化され、入力と出力に結びついています。</p></div>
+    <div class="card"><span class="pnum">02</span><h4>記録</h4><p>台帳は追記専用で保存し、以前の履歴を保ちます。訂正は系譜を伴う識別可能な新しいバージョンであって、静かな編集ではありません。</p></div>
+    <div class="card"><span class="pnum">03</span><h4>検証</h4><p>すべての証明書が、独立した第三者が確認するために必要なものを携えます。アカウント不要の公開検証エンドポイントはパイロットのロールアウトとともに提供されます — ベンダーとの関係より長く続く信頼です。</p></div>
+  </div>
+</section>
+
+<section class="center">
+  <span class="eye">誠実さ</span>
+<h2>「分かりません」と言える唯一のプラットフォーム。</h2>
+
+  <div class="unk rv" style="margin-top:40px;text-align:left">
+    <div class="unkq">
+      <span class="eye">誤りではなく、意図的な判断</span>
+      <div class="claim">証跡が足りないとき、Orves は棄権します。</div>
+      <p class="why">すべての主張が解決状態を携えます。<b>CERTIFIED</b> は証跡がそこにあるという意味です — 読んでください。<b>ABSTAINED</b> は証跡がないという意味で、どのモデルもその空白を流暢さで埋めることはできません。<b>Orves は事実を捏造しません。</b></p>
+    </div>
+    <div class="unkc"><span class="cm"># the same API, telling the truth</span><br>{ <span class="k">"claim"</span>: <span class="s">"renewal_term"</span>,<br>&nbsp;&nbsp;<span class="k">"state"</span>: <span class="r">"ABSTAINED"</span>,<br>&nbsp;&nbsp;<span class="k">"reason"</span>: <span class="r">"insufficient_evidence"</span> }<br><br>{ <span class="k">"claim"</span>: <span class="s">"policy_owner"</span>,<br>&nbsp;&nbsp;<span class="k">"state"</span>: <span class="g">"CERTIFIED"</span>,<br>&nbsp;&nbsp;<span class="k">"evidence"</span>: [{ <span class="k">"span"</span>: <span class="s">"p14 §2.3"</span>, <span class="k">"sha256"</span>: <span class="s">"9c41…"</span> }] }</div>
+  </div>
+</section>
+
+<section class="center">
+  <span class="eye">よくある質問</span>
+<h2>FAQ</h2>
+
+  <div class="rv" style="max-width:760px;margin:26px auto 0;text-align:left">
+<details><summary>なぜ認証は製品ではないのですか。</summary><p>決済会社から「消込」をオプションとして買わないのと同じ理由です。認証はプラットフォームの動き方であって、カートに追加するものではありません。すべての成果物は認証つきで提供されます — 常に含まれています。</p></details>
+<details><summary>Orves の外で作られた成果物を認証できますか。</summary><p>現時点ではできません。認証はプラットフォームが生み出すものを対象とします。他所で作られた成果物の認証が本当に必要とされるようになれば、独立した製品になる可能性があります — その判断は需要にもとづいて行われ、ロードマップのスライドで行われることはありません。</p></details>
+<details><summary>証明書は誰が検証できますか。</summary><p>設計上、誰でもできます — アカウントも費用も不要です。公開検証エンドポイントはパイロットのロールアウトとともに提供されます。今日でも、すべての証明書が独立した確認に必要なものをすでに携えています。</p></details>
+
+</div>
+</section>
+
+
+</main>
+
+<section class="center">
+  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">すべての回答の出どころが分かる AI システムを構築しましょう。</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 の無料クレジットつきでアカウントを作成し、今日から API キーを発行できます。Parse はプライベートパイロット中です。Knowledge と Vault は提供が始まり次第続きます。</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="create-account">構築を始める — 無料</a>
+    <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">お問い合わせ</a>
+  </div>
+</section>
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">製品</div>
+      <a href="products/parse">Parse</a>
+      <a href="products/knowledge">Knowledge</a>
+      <a href="products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">リソース</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="benchmarks">Benchmarks</a>
+      <a href="research">Research</a>
+      <a href="trust">Trust</a>
+      <a href="roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">会社</div>
+      <a href="why-orves">Orves を選ぶ理由</a>
+      <a href="/system" hreflang="en">ブランド</a>
+      <a href="contact">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Roadmap | Orves</title>
+<meta name="description" content="Orves プラットフォームで提供済みのものと次に来るもの — 項目が動くのは作業が動いたときだけで、ベンチマークと同じ規則です。"/>
+<link rel="canonical" href="https://orves.ai/ja/roadmap"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/roadmap"/>
+<meta property="og:title" content="Roadmap | Orves"/>
+<meta property="og:description" content="Orves プラットフォームで提供済みのものと次に来るもの — 項目が動くのは作業が動いたときだけで、ベンチマークと同じ規則です。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ja"/>
+<meta property="og:url" content="https://orves.ai/ja/roadmap"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="" style="cursor:default">製品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products/parse">Parse <em>文書から構造化データへ</em></a>
+        <a href="products/knowledge">Knowledge <em>証跡から検証可能な知識へ</em></a>
+        <a href="products/vault">Vault <em>その知識のための永続的な場所</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="on" style="cursor:default">リソース <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、クイックスタート、サンプル</em></a>
+        <a href="benchmarks">Benchmarks <em>測定方法 — 手法と結果</em></a>
+        <a href="research">Research <em>手法、レポート、技術的知見</em></a>
+        <a href="trust">Trust <em>認証と検証</em></a>
+        <a href="roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>提供済みのものと次に来るもの</em></a>
+      </span></span>
+    </span>
+    <a href="pricing" class="">料金</a>
+    <a href="why-orves" class="">Orves を選ぶ理由</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="言語">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">JA</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>言語を選択</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/roadmap"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/roadmap"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/roadmap"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/roadmap"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/roadmap"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/roadmap"
+         class="on" aria-current="true">日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/roadmap"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/roadmap"
+         >简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="login">ログイン</a>
+  
+  
+  <a class="btn" href="create-account">無料で始める</a>
+  
+  <button class="menubtn" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="products/parse">Parse</a>
+  <a href="products/knowledge">Knowledge</a>
+  <a href="products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="benchmarks" class="sub">Benchmarks</a>
+  <a href="research" class="sub">Research</a>
+  <a href="trust" class="sub">Trust</a>
+  <a href="roadmap" class="sub">Roadmap</a>
+  <a href="pricing">料金</a>
+  <a href="why-orves">Orves を選ぶ理由</a>
+  <a href="login">ログイン</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero solo" style="padding-bottom:18px">
+  <div>
+    <span class="eye">Roadmap</span>
+    <h1 style="max-width:15ch;margin-left:auto;margin-right:auto">提供済みのものと、次に来るもの。</h1>
+    <p class="sub" style="max-width:54ch">守れない期日は出しません。項目の状態が変わるのは、作業が変わったときだけです — ベンチマークと同じ規則です。これは方向であって、約束ではありません。</p>
+  </div>
+</section>
+
+<section class="center" style="border-top:0;padding-top:8px">
+  <div class="rmap rv">
+    <div class="rcol now">
+      <h3>現在利用可能 <span class="st live"><span class="d"></span>稼働中</span></h3>
+      <p class="rsub">今日から使えます。待ち時間はありません。</p>
+      <div class="ritem"><b>Orves Dashboard</b><span>アカウントを作成し、15,000 クレジットを受け取り、API キーを発行。</span></div>
+      <div class="ritem"><b>Python SDK</b><span><b>pip install orves</b> — アルファ版。提供中の Parse 契約をそのまま反映します。</span></div>
+      <div class="ritem"><b>Developers</b><span>API 面の統合ガイドとクイックスタート。</span></div>
+      <div class="ritem"><b>ベンチマークの手法</b><span>評価の方法 — データセット、指標、事前登録。</span></div>
+      <div class="ritem"><b>Research</b><span>手法、レポート、技術的知見。</span></div>
+      <div class="ritem"><b>Trust</b><span>認証と検証のアプローチ。</span></div>
+      <div class="ritem"><b>お問い合わせ</b><span>チームに相談 — 担当者が返信します。</span></div>
+    </div>
+    <div class="rcol">
+      <h3>進行中 <span class="st draft"><span class="d"></span>構築中</span></h3>
+      <p class="rsub">いま構築中 — パイロットのロールアウト。</p>
+      <div class="ritem"><b>Parse API · プライベートパイロット</b><span>構造化出力への実稼働パース。クレジットを消費します — まず PDF から。</span></div>
+      <div class="ritem"><b>Knowledge API</b><span>ナレッジオブジェクト、バージョン、お客様の証跡にもとづく根拠づけ — 契約を定義中。</span></div>
+      <div class="ritem"><b>クレジット課金</b><span>利用台帳 — すべての引き落としが作業単位と突き合わされます。</span></div>
+      <div class="ritem"><b>証明書の公開検証</b><span>アカウントなしで、どの成果物でも検証できます。</span></div>
+    </div>
+    <div class="rcol">
+      <h3>予定 <span class="st soon"><span class="d"></span>予定</span></h3>
+      <p class="rsub">約束した方向 — まだ着手していません。</p>
+      <div class="ritem"><b>Orves Vault</b><span>知識の永続的な居場所 — 保管、統制、Web · API · SDK · MCP。</span></div>
+      <div class="ritem"><b>API リファレンスと完全なドキュメント</b><span>完全で、バージョン管理され、エージェントが読める形で。</span></div>
+      <div class="ritem"><b>Playground</b><span>実際の文書をブラウザで実行し、出力を確認できます。</span></div>
+      <div class="ritem"><b>TypeScript SDK</b><span>公開契約の上の軽量クライアント — 契約が広がったあとに。</span></div>
+      <div class="ritem"><b>サンプルとレシピ集</b><span>金融、法務、科学、フォーム、RAG、エージェント。</span></div>
+      <div class="ritem"><b>比較</b><span>主要ツールとの直接比較 — マーケティングではなく、再現可能なベンチマークにもとづいて。</span></div>
+      <div class="ritem"><b>Webhook</b><span>統制された変更イベントを、お客様自身のシステムへ。</span></div>
+      <div class="ritem"><b>プロジェクト</b><span>ダッシュボードで文書と知識を整理。</span></div>
+      <div class="ritem"><b>MCP による提供</b><span>Vault の知識をモデルとエージェントへ、ネイティブに — 権限と来歴つきで。</span></div>
+      <div class="ritem"><b>ベンチマークレポート</b><span>事前登録された結果と性能に関する注記を、公開の場で。</span></div>
+      <div class="ritem"><b>学ぶ</b><span>踏み込んだ技術ガイド — 文書 AI、根拠づけ、評価。</span></div>
+    </div>
+  </div>
+  <p class="lead center rv" style="margin-top:24px;font-size:13.5px;color:var(--fg3)">学ぶにつれて順序と範囲は変わります。何かが動くときは、まずここで動きます。<a href="contact" style="color:var(--acc2)">機能をリクエスト →</a></p>
+</section>
+
+
+</main>
+
+<section class="center">
+  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">すべての回答の出どころが分かる AI システムを構築しましょう。</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 の無料クレジットつきでアカウントを作成し、今日から API キーを発行できます。Parse はプライベートパイロット中です。Knowledge と Vault は提供が始まり次第続きます。</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="create-account">構築を始める — 無料</a>
+    <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">お問い合わせ</a>
+  </div>
+</section>
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">製品</div>
+      <a href="products/parse">Parse</a>
+      <a href="products/knowledge">Knowledge</a>
+      <a href="products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">リソース</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="benchmarks">Benchmarks</a>
+      <a href="research">Research</a>
+      <a href="trust">Trust</a>
+      <a href="roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">会社</div>
+      <a href="why-orves">Orves を選ぶ理由</a>
+      <a href="/system" hreflang="en">ブランド</a>
+      <a href="contact">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

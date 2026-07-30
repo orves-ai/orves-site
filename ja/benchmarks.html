@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>ベンチマーク | Orves</title>
+<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<link rel="canonical" href="https://orves.ai/ja/benchmarks"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/benchmarks"/>
+<meta property="og:title" content="ベンチマーク | Orves"/>
+<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ja"/>
+<meta property="og:url" content="https://orves.ai/ja/benchmarks"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="" style="cursor:default">製品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products/parse">Parse <em>文書から構造化データへ</em></a>
+        <a href="products/knowledge">Knowledge <em>証跡から検証可能な知識へ</em></a>
+        <a href="products/vault">Vault <em>その知識のための永続的な場所</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="on" style="cursor:default">リソース <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、クイックスタート、サンプル</em></a>
+        <a href="benchmarks">Benchmarks <em>測定方法 — 手法と結果</em></a>
+        <a href="research">Research <em>手法、レポート、技術的知見</em></a>
+        <a href="trust">Trust <em>認証と検証</em></a>
+        <a href="roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>提供済みのものと次に来るもの</em></a>
+      </span></span>
+    </span>
+    <a href="pricing" class="">料金</a>
+    <a href="why-orves" class="">Orves を選ぶ理由</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="言語">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">JA</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>言語を選択</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/benchmarks"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/benchmarks"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/benchmarks"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/benchmarks"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/benchmarks"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/benchmarks"
+         class="on" aria-current="true">日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/benchmarks"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/benchmarks"
+         >简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="login">ログイン</a>
+  
+  
+  <a class="btn" href="create-account">無料で始める</a>
+  
+  <button class="menubtn" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="products/parse">Parse</a>
+  <a href="products/knowledge">Knowledge</a>
+  <a href="products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="benchmarks" class="sub">Benchmarks</a>
+  <a href="research" class="sub">Research</a>
+  <a href="trust" class="sub">Trust</a>
+  <a href="roadmap" class="sub">Roadmap</a>
+  <a href="pricing">料金</a>
+  <a href="why-orves">Orves を選ぶ理由</a>
+  <a href="login">ログイン</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero solo" style="padding-bottom:40px">
+  <div>
+    <span class="eye">Benchmarks</span>
+    <h1 style="max-width:14ch;margin-left:auto;margin-right:auto">主張の前に、測定を。</h1>
+    <p class="sub">ベンチマークはマーケティングではなく、プラットフォームを統治する仕組みです。最も良く測定されたシステムが提供され、弱点は意図的に探し出され、数値は事前登録された評価を通過してはじめて公開されます。</p>
+    <div class="feats" style="justify-content:center">
+      <span><b>事前登録された</b>指標</span>
+      <span><b>バージョン管理された</b>ゴールドセット</span>
+      <span><b>n</b> は常に明記</span>
+      <span><b>棄権</b>も計上</span>
+    </div>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">このページの読み方</span>
+<h2>空約束ではなく、正直な状態を。</h2>
+<p class="lead center">ここにある数値の多くはまだ公開手続きの途中です。社内の結果を宣伝する代わりに、各次元はその実際の状態を示します — プラットフォームが知識に適用しているのと同じ規律です。</p>
+  <div class="tblwrap rv" style="max-width:760px;margin-left:auto;margin-right:auto"><table class="tbl">
+    <thead><tr><th>状態</th><th>意味</th></tr></thead>
+    <tbody>
+      <tr><td><span class="st live"><span class="d"></span>公開済み</span></td><td>事前登録された評価を通過。数値、n、混同行列を公開</td></tr>
+      <tr><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>社内ゴールドセットで測定済み。外部検証を待って公開</td></tr>
+      <tr><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>ゴールドセットまたは評価を構築中</td></tr>
+      <tr><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>本番では推測せずに棄権します</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">文書パース</span>
+<h2>パースを、次元ごとに。</h2>
+
+  <div class="tblwrap rv"><table class="tbl">
+<thead><tr><th>次元</th><th>単位</th><th>ステータス</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td><b>読み順</b></td><td><span class="u">F1 対 ゴールド</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>事前登録評価の後に公開</td></tr>
+<tr><td><b>表</b></td><td><span class="u">構造 F1</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>ゴールドセットを拡張中 — すべての数値に n を明記</td></tr>
+<tr><td><b>テキスト認識の精度</b></td><td><span class="u">CER / WER</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>文書ファミリーごとに測定</td></tr>
+<tr><td><b>フォーム</b></td><td><span class="u">フィールド F1</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>ゴールドセットを構築中</td></tr>
+<tr><td><b>長文文書</b></td><td><span class="u">60ページ以上での忠実度</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>長文文書ベンチを実施中</td></tr>
+<tr><td><b>図表</b></td><td><span class="u">図から表へ</span></td><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>推測せずに棄権します</td></tr>
+
+</tbody></table></div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">パースの先へ</span>
+<h2>すべての製品が測定対象の面です。</h2>
+
+  <div class="tblwrap rv"><table class="tbl">
+<thead><tr><th>次元</th><th>単位</th><th>ステータス</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td><b>音声</b></td><td><span class="u">文字起こしの忠実度</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>取得 → 証跡、認証済み</td></tr>
+<tr><td><b>決定性</b></td><td><span class="u">同一の再実行</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>バイト単位の往復検査</td></tr>
+<tr><td><b>構造の整合</b></td><td><span class="u">出力構造 対 元構造</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>ゴールドに対して測定</td></tr>
+<tr><td><b>検索</b></td><td><span class="u">根拠に基づく再現率</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>統制された知識の上で測定</td></tr>
+<tr><td><b>主張の抽出</b></td><td><span class="u">適合率 / 再現率</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>棄権は計上し、決して隠さない</td></tr>
+<tr><td><b>推論の根拠付け</b></td><td><span class="u">回答は主張まで追跡可能</span></td><td><span class="st int"><span class="d"></span>測定済み · 社内</span></td><td>敵対的セットを含む</td></tr>
+<tr><td><b>レイテンシ</b></td><td><span class="u">単位あたり p50 / p95</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>製品ごと、デプロイごと</td></tr>
+<tr><td><b>コスト</b></td><td><span class="u">1,000単位あたり</span></td><td><span class="st pend"><span class="d"></span>公開保留</span></td><td>クレジット単価とともに公開</td></tr>
+
+</tbody></table></div>
+</section>
+
+<section class="ruled center" id="method">
+  <span class="eye">手法</span>
+<h2>自画自賛できないように設計しています。</h2>
+<p class="lead center">どのベンダーも自社のベンチマークでは勝ちます。私たちのものは、まず自分の弱点を見つけるために作られています。</p>
+  <div class="g3 rv" style="margin-top:44px">
+    <div class="card"><h4>事前登録</h4><p>指標、しきい値、データセットは実行前に確定します。結果を見てから指標を選ぶことはしません。</p></div>
+    <div class="card"><h4>適用範囲つきの数値</h4><p>裸のスコアは出しません。公開されるすべての数値には、データセットとそのバージョン、標本サイズ（n）、選定基準、比較対象、実行日、既知の限界が付随します。</p></div>
+    <div class="card"><h4>独立したゴールド</h4><p>ゴールドセットは評価対象のシステムから独立して保持されます — 採点対象の結果を生む同じ工程から導かれることは決してありません。</p></div>
+    <div class="card"><h4>ゴールドは訂正可能</h4><p>ゴールドセットは科学的な成果物です。バージョン管理され、裁定され、記録された手続きを通じて訂正されます — 黙って編集されることはありません。</p></div>
+    <div class="card"><h4>棄権も採点対象</h4><p>UNKNOWN は測定された結果です。棄権を隠すシステムは、間違ったものを最適化しています。</p></div>
+    <div class="card"><h4>再現可能な評価</h4><p>評価そのものが再現可能です。同じデータセット、同じ指標、同じ手順 — スコアを読むだけでなく、比較を再実行できます。</p></div>
+    <div class="card"><h4>継続的に再測定</h4><p>手法が改善されるたび、すべての能力を測定し直します。最も良く測定された結果が提供され — 数値が持ちこたえる間だけその座を保ちます。私たちのものも例外ではありません。</p></div>
+    <div class="card"><h4>検知力を実証済み</h4><p>評価層は意図的な障害注入で検証します — ベンチマークの緑を信じる前に、失敗を捉えられることを証明します。</p></div>
+    <div class="card"><h4>仕組みではなく、手法を</h4><p>私たちが公開するのは証拠であって、機械ではありません。データセット、指標、結果は公開されます。それを達成する実装は監査の対象ではありません — 対象は数値です。</p></div>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">継続性</span>
+<h2>止まらないベンチマーク。</h2>
+
+  <div class="tline rv" style="max-width:640px;margin-left:auto;margin-right:auto">
+    <div class="tev"><span class="tt">継続的</span><div class="th">新しい製品バージョン → 自動で再測定</div><p>すべてのリリースはベンチマークで測定し直されます。リグレッションを見つけるのはベンチマークであって、お客様ではありません。</p></div>
+    <div class="tev"><span class="tt">継続的</span><div class="th">新しいゴールドデータ → 広がる網羅性</div><p>ゴールドセットは裁定つきの注釈によって育ちます。網羅性の欠落は負債として可視化されます。</p></div>
+    <div class="tev dim"><span class="tt">近日</span><div class="th">公開リーダーボード</div><p>データセットと手法とともに公開され、端から端まで検証できる結果。</p></div>
+  </div>
+</section>
+
+
+</main>
+
+<section class="center">
+  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">すべての回答の出どころが分かる AI システムを構築しましょう。</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 の無料クレジットつきでアカウントを作成し、今日から API キーを発行できます。Parse はプライベートパイロット中です。Knowledge と Vault は提供が始まり次第続きます。</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="create-account">構築を始める — 無料</a>
+    <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">お問い合わせ</a>
+  </div>
+</section>
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">製品</div>
+      <a href="products/parse">Parse</a>
+      <a href="products/knowledge">Knowledge</a>
+      <a href="products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">リソース</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="benchmarks">Benchmarks</a>
+      <a href="research">Research</a>
+      <a href="trust">Trust</a>
+      <a href="roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">会社</div>
+      <a href="why-orves">Orves を選ぶ理由</a>
+      <a href="/system" hreflang="en">ブランド</a>
+      <a href="contact">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · All rights reserved.</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

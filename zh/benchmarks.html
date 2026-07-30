@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>基准测试 | Orves</title>
+<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<link rel="canonical" href="https://orves.ai/zh/benchmarks"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/benchmarks"/>
+<meta property="og:title" content="基准测试 | Orves"/>
+<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_Hans"/>
+<meta property="og:url" content="https://orves.ai/zh/benchmarks"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="" style="cursor:default">产品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="products/parse">Parse <em>从文档到结构化数据</em></a>
+        <a href="products/knowledge">Knowledge <em>从证据到可验证的知识</em></a>
+        <a href="products/vault">Vault <em>为这些知识提供长久的所在</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="on" style="cursor:default">资源 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、快速上手与示例</em></a>
+        <a href="benchmarks">Benchmarks <em>我们如何测量 —— 方法与结果</em></a>
+        <a href="research">Research <em>方法、报告与技术发现</em></a>
+        <a href="trust">Trust <em>认证与验证</em></a>
+        <a href="roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>已交付的与接下来的</em></a>
+      </span></span>
+    </span>
+    <a href="pricing" class="">价格</a>
+    <a href="why-orves" class="">为什么选 Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="语言">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">ZH</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>选择语言</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/benchmarks"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/benchmarks"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/benchmarks"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/benchmarks"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/benchmarks"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/benchmarks"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/benchmarks"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/benchmarks"
+         class="on" aria-current="true">简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="login">登录</a>
+  
+  
+  <a class="btn" href="create-account">免费开始</a>
+  
+  <button class="menubtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="products/parse">Parse</a>
+  <a href="products/knowledge">Knowledge</a>
+  <a href="products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="benchmarks" class="sub">Benchmarks</a>
+  <a href="research" class="sub">Research</a>
+  <a href="trust" class="sub">Trust</a>
+  <a href="roadmap" class="sub">Roadmap</a>
+  <a href="pricing">价格</a>
+  <a href="why-orves">为什么选 Orves</a>
+  <a href="login">登录</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero solo" style="padding-bottom:40px">
+  <div>
+    <span class="eye">Benchmarks</span>
+    <h1 style="max-width:14ch;margin-left:auto;margin-right:auto">先测量，再声明。</h1>
+    <p class="sub">基准测试不是营销，而是这个平台的治理方式。测量结果最好的系统才会交付，弱点是被刻意找出来的，数字只有通过预先登记的评估之后才会公开。</p>
+    <div class="feats" style="justify-content:center">
+      <span><b>预先登记</b>的指标</span>
+      <span><b>版本化</b>的金标准集</span>
+      <span>始终标注 <b>n</b></span>
+      <span><b>弃答</b>也计入</span>
+    </div>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">如何读这一页</span>
+<h2>诚实的状态，而不是空头承诺。</h2>
+<p class="lead center">这里的多数数字仍在公开流程中。我们不宣传内部结果，而是让每个维度显示它真实的状态 —— 这与平台对待知识的纪律是同一套。</p>
+  <div class="tblwrap rv" style="max-width:760px;margin-left:auto;margin-right:auto"><table class="tbl">
+    <thead><tr><th>状态</th><th>含义</th></tr></thead>
+    <tbody>
+      <tr><td><span class="st live"><span class="d"></span>已公开</span></td><td>通过了预先登记的评估；数字、n 与混淆矩阵均可查看</td></tr>
+      <tr><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>已用内部金标准集测量；等待外部验证后公开</td></tr>
+      <tr><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>金标准集或评估正在构建中</td></tr>
+      <tr><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>该能力在生产中选择弃答，而不是猜测</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">文档解析</span>
+<h2>逐个维度地看解析。</h2>
+
+  <div class="tblwrap rv"><table class="tbl">
+<thead><tr><th>维度</th><th>单位</th><th>状态</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><b>阅读顺序</b></td><td><span class="u">F1 对比金标准</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>预先登记评估之后公开</td></tr>
+<tr><td><b>表格</b></td><td><span class="u">结构 F1</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>金标准集正在扩充 —— 每个数字都标注 n</td></tr>
+<tr><td><b>文字识别准确率</b></td><td><span class="u">CER / WER</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>按文档族分别测量</td></tr>
+<tr><td><b>表单</b></td><td><span class="u">字段 F1</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>金标准集构建中</td></tr>
+<tr><td><b>长文档</b></td><td><span class="u">60 页以上的保真度</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>长文档基准进行中</td></tr>
+<tr><td><b>图表</b></td><td><span class="u">图表转表格</span></td><td><span class="st unk"><span class="d"></span>UNKNOWN · fail-closed</span></td><td>选择弃答，而不是猜测</td></tr>
+
+</tbody></table></div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">解析之外</span>
+<h2>每一个产品都是被测量的面。</h2>
+
+  <div class="tblwrap rv"><table class="tbl">
+<thead><tr><th>维度</th><th>单位</th><th>状态</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><b>音频</b></td><td><span class="u">转写保真度</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>采集 → 证据，已认证</td></tr>
+<tr><td><b>确定性</b></td><td><span class="u">完全一致的重跑</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>字节级往返校验</td></tr>
+<tr><td><b>结构对齐</b></td><td><span class="u">输出结构对比原始结构</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>对照金标准测量</td></tr>
+<tr><td><b>检索</b></td><td><span class="u">有据可依的召回</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>在受治理的知识上测量</td></tr>
+<tr><td><b>主张抽取</b></td><td><span class="u">精确率 / 召回率</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>弃答计入统计，从不隐藏</td></tr>
+<tr><td><b>推理的依据</b></td><td><span class="u">回答可追溯到主张</span></td><td><span class="st int"><span class="d"></span>已测量 · 内部</span></td><td>包含对抗性数据集</td></tr>
+<tr><td><b>延迟</b></td><td><span class="u">每单位 p50 / p95</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>按产品、按部署</td></tr>
+<tr><td><b>成本</b></td><td><span class="u">每 1,000 单位</span></td><td><span class="st pend"><span class="d"></span>等待公开</span></td><td>与额度单价一同公开</td></tr>
+
+</tbody></table></div>
+</section>
+
+<section class="ruled center" id="method">
+  <span class="eye">方法</span>
+<h2>刻意设计成让我们无法自夸。</h2>
+<p class="lead center">每家厂商都会在自己的基准上取胜。我们的基准是为了先找出自己的弱点而造的。</p>
+  <div class="g3 rv" style="margin-top:44px">
+    <div class="card"><h4>预先登记</h4><p>指标、阈值与数据集在运行之前就已确定。绝不事后挑选指标。</p></div>
+    <div class="card"><h4>带适用范围的数字</h4><p>没有孤零零的分数：每个公开的数字都附带它的数据集与版本、样本量（n）、纳入标准、比较对象、运行日期以及已知局限。</p></div>
+    <div class="card"><h4>独立的金标准</h4><p>金标准集与被测系统保持独立 —— 绝不会从产生被评分结果的同一流程中派生。</p></div>
+    <div class="card"><h4>金标准可被修正</h4><p>金标准集是科学产物：版本化、经过裁定、通过有记录的流程修正 —— 绝不悄悄改动。</p></div>
+    <div class="card"><h4>弃答也参与评分</h4><p>UNKNOWN 是一个被测量出来的结果。隐藏弃答的系统，优化的是错误的东西。</p></div>
+    <div class="card"><h4>可复现的评估</h4><p>评估本身是可复现的：同样的数据集、同样的指标、同样的流程 —— 你可以重跑这次比较，而不只是读一个分数。</p></div>
+    <div class="card"><h4>持续重新测量</h4><p>方法一有改进，每项能力都会被重新测量。测量结果最好的才会交付 —— 而且只有在数字站得住时才保住位置，包括我们自己的。</p></div>
+    <div class="card"><h4>检出能力已被证明</h4><p>评估层通过刻意注入故障来验证 —— 在相信它的绿灯之前，我们先证明基准确实能抓到失败。</p></div>
+    <div class="card"><h4>公开方法，而非机器</h4><p>我们公开的是证据，不是机器。数据集、指标与结果都是开放的；实现这些结果的具体实现不在你审计的范围内 —— 数字才是。</p></div>
+  </div>
+</section>
+
+<section class="ruled center">
+  <span class="eye">连续性</span>
+<h2>一个不会停下的基准。</h2>
+
+  <div class="tline rv" style="max-width:640px;margin-left:auto;margin-right:auto">
+    <div class="tev"><span class="tt">持续进行</span><div class="th">新的产品版本 → 自动重新测量</div><p>每一次发布都会重新对照基准测量。发现回归的是基准，而不是客户。</p></div>
+    <div class="tev"><span class="tt">持续进行</span><div class="th">新的金标准数据 → 更广的覆盖</div><p>金标准集通过经裁定的标注增长。覆盖缺口会作为债务被公开跟踪。</p></div>
+    <div class="tev dim"><span class="tt">即将推出</span><div class="th">公开排行榜</div><p>公开的结果，附带数据集与方法，端到端可验证。</p></div>
+  </div>
+</section>
+
+
+</main>
+
+<section class="center">
+  <h2 style="font-size:40px;max-width:20ch;margin:0 auto 14px">构建知道每个答案从何而来的 AI 系统。</h2>
+  <p class="lead center" style="margin-bottom:26px">创建账户即获 15,000 免费额度，今天就能生成 API 密钥。Parse 处于私有试点；Knowledge 与 Vault 会在交付后陆续跟上。</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="create-account">开始构建 —— 免费</a>
+    <a class="btn gh" href="mailto:hi@orves.ai?subject=Orves%20pilot%20request">与我们联系</a>
+  </div>
+</section>
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">产品</div>
+      <a href="products/parse">Parse</a>
+      <a href="products/knowledge">Knowledge</a>
+      <a href="products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">资源</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="benchmarks">Benchmarks</a>
+      <a href="research">Research</a>
+      <a href="trust">Trust</a>
+      <a href="roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">公司</div>
+      <a href="why-orves">为什么选 Orves</a>
+      <a href="/system" hreflang="en">品牌</a>
+      <a href="contact">联系</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · 保留所有权利。</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

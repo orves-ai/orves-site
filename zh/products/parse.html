@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Parse | Orves</title>
+<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<link rel="canonical" href="https://orves.ai/zh/products/parse"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/parse"/>
+<meta property="og:title" content="Parse | Orves"/>
+<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_Hans"/>
+<meta property="og:url" content="https://orves.ai/zh/products/parse"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
+        <a href="../products/knowledge">Knowledge <em>从证据到可验证的知识</em></a>
+        <a href="../products/vault">Vault <em>为这些知识提供长久的所在</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">资源 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、快速上手与示例</em></a>
+        <a href="../benchmarks">Benchmarks <em>我们如何测量 —— 方法与结果</em></a>
+        <a href="../research">Research <em>方法、报告与技术发现</em></a>
+        <a href="../trust">Trust <em>认证与验证</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>已交付的与接下来的</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">价格</a>
+    <a href="../why-orves" class="">为什么选 Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="语言">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">ZH</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>选择语言</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/parse"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/parse"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/parse"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/parse"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/parse"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/parse"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/parse"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/parse"
+         class="on" aria-current="true">简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">登录</a>
+  
+  
+  <a class="btn" href="../create-account">免费开始</a>
+  
+  <button class="menubtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/knowledge">Knowledge</a>
+  <a href="../products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">价格</a>
+  <a href="../why-orves">为什么选 Orves</a>
+  <a href="../login">登录</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>接入引擎 · parse · 试点</span>
+    <h1>非结构化进去，<span class="accent-tx">结构化数据出来。</span></h1>
+    <p class="sub">Orves Parse 通过一次经过认证的 API 调用，把复杂文档变成结构化、与来源相连的数据。设计上就是异步的：提交文档、轮询任务、取回结果。这是一个可独立使用的 API，目前处于私有试点；它是第一层，不是终点。</p>
+    <div class="cta">
+      
+      <a class="btn" href="../create-account">开始构建</a>
+      <a class="btn gh" href="../pricing">查看价格</a>
+      
+    </div>
+    <div class="chips"><span class="chip">PDF · 试点中</span><span class="chip">异步任务</span><span class="chip">保住结构</span><span class="chip">可复现</span></div>
+    
+  </div>
+  <div class="code rv"><div class="codehd">POST /v1/parse</div>
+<pre><span class="cm"># submit a document (multipart)</span>
+<span class="k">POST</span> <span class="s">/v1/parse</span>  <span class="cm">file=@contract_2024.pdf</span>
+
+<span class="cm"># 202 Accepted</span>
+{ <span class="k">"id"</span>: <span class="s">"prs_9f2c41…"</span>, <span class="k">"object"</span>: <span class="s">"parse"</span>,
+  <span class="k">"status"</span>: <span class="s">"queued"</span> }
+
+<span class="cm"># poll until completed</span>
+<span class="k">GET</span> <span class="s">/v1/parses/prs_9f2c41…</span>
+{ <span class="k">"status"</span>: <span class="s">"completed"</span>,
+  <span class="k">"result"</span>: { <span class="k">"json_url"</span>: <span class="s">"…/result"</span> } }</pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">问题</span>
+<h2>AI 系统开始说谎的地方，就是解析。</h2>
+
+  <p class="lead center">多数解析器把文档压成一串文本。结构、几何、表格与来源，在任何模型看到内容之前就被毁掉了 —— 之后的任何环节都补不回解析丢失的东西。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">被压平的表格</span><span class="chip bad">丢失的阅读顺序</span><span class="chip bad">掉队的脚注</span><span class="chip bad">没有来源片段</span><span class="chip bad">无声的读取错误</span></div>
+  
+  <div class="cmp rv">
+    <div class="cmprow bad"><span class="lab">通常的结果</span><span class="n">文档</span><span class="a">→</span><span class="n">「一长串文本」</span><span class="a">→</span><span class="n">LLM</span><span class="a">→</span><span class="n x">语气笃定，内容出错</span></div>
+    <div class="cmprow good"><span class="lab">用 Parse 的话</span><span class="n">文档</span><span class="a">→</span><span class="n">产物 + 片段</span><span class="a">→</span><span class="n">LLM</span><span class="a">→</span><span class="n x">有依据，可核对</span></div>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">它产出什么</span>
+<h2>要结构，不要一锅粥。</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>结构化输出</h4>
+    <ul class="kwl"><li>标题</li><li>表格</li><li>阅读顺序</li></ul><p class="kwd">试点今天返回的：把文档的结构保留为干净的 Markdown。</p>
+    </div><div class="card"><h4>异步任务</h4>
+    <ul class="kwl"><li>任务 ID</li><li>轮询</li><li>幂等性</li></ul><p class="kwd">提交时返回 202，轮询任务，取回结果。失败的解析从不计费。</p>
+    </div><div class="card"><h4>设计上就与来源相连</h4>
+    <ul class="kwl"><li>来源</li><li>版本化</li><li>路线图</li></ul><p class="kwd">输出始终与产生它的文档绑定。带类型的元素、坐标与证书是已公开的方向 —— 只有在交付时才会宣布。</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">工作原理</span>
+<h2>从输入，到受治理的输出。</h2>
+
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">PDF 进入</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">任务</span><span class="a">→</span><span class="fc" style="animation-delay:3s">结果</span><span class="a">→</span><span class="fc" style="animation-delay:4s">结构化输出</span></div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">看看</span>
+<h2>一个响应，正是 API 返回的样子。</h2>
+<p class="lead center">左边：页面。右边：你收到的东西 —— 把文档的结构保留为干净、结构化的 Markdown。</p>
+  <div class="odemo rv">
+    <div class="pgmock">
+      <svg width="220" height="290" viewBox="0 0 220 290" fill="none" role="img" aria-label="含已解析表格区域的文档页面">
+        <rect x="1" y="1" width="218" height="288" rx="8" stroke="var(--line2)"/>
+        <rect x="20" y="22" width="120" height="7" rx="3.5" fill="var(--fg3)" opacity=".55"/>
+        <rect x="20" y="40" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="50" width="172" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="60" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="70" width="120" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <text x="20" y="98" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--acc2)">表格 · 已检出</text>
+        <rect x="20" y="104" width="180" height="92" rx="4" stroke="var(--acc)" stroke-width="1.3"/>
+        <line x1="20" y1="127" x2="200" y2="127" stroke="var(--line2)"/>
+        <line x1="20" y1="150" x2="200" y2="150" stroke="var(--line2)"/>
+        <line x1="20" y1="173" x2="200" y2="173" stroke="var(--line2)"/>
+        <line x1="80" y1="104" x2="80" y2="196" stroke="var(--line2)"/>
+        <line x1="140" y1="104" x2="140" y2="196" stroke="var(--line2)"/>
+        <text x="20" y="212" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">保住结构</text>
+        <rect x="20" y="226" width="180" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="236" width="164" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <rect x="20" y="246" width="176" height="4" rx="2" fill="var(--fg3)" opacity=".3"/>
+        <text x="176" y="276" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">p. 12</text>
+      </svg>
+    </div>
+    <div class="code rv"><div class="codehd">GET /v1/parses/{id}/result</div>
+<pre><span class="cm"># 200 OK</span>
+{ <span class="k">"markdown"</span>: <span class="s">"# Q2 Report\n\n## Revenue by segment\n\n| Segment | Q2 |\n| --- | --- |\n| Cloud | 104.2 |\n| Devices | 61.8 |\n\nRenewal is scheduled for…"</span> }</pre></div>
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">来自线上试点契约的响应。带几何与坐标的类型化结构单元是已公开的方向 —— 交付时才会宣布，绝不提前。</p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Benchmarks</span>
+<h2>先测量，再声明。</h2>
+
+  <p class="lead center rv" style="max-width:620px">我们测量的：阅读顺序、表格结构、文字准确率、表单字段与长文档保真度 —— 以及图表，在图表上解析会选择弃答而不是猜测。</p>
+  <p class="lead center rv" style="margin-top:14px;font-size:14px">公开结果只在预先登记的评估之后发布 —— 在那之前，本站不会出现任何数字。<a href="../benchmarks" style="color:var(--acc2)">我们如何做基准测试 →</a></p>
+</section>
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">这是一种性质，不是一个产品</span>
+    <h3 style="margin:8px 0 6px">每一个产物都可验证。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">认证贯穿 Orves 产出的一切。验证被设计成公开、可复现，并且不依赖 Orves 账户。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ 来源</span><span class="bp hot">✓ 完整性</span><span class="bp">版本</span><span class="bp">证据</span><span class="bp">裁定状态</span><span class="bp">验证</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API 优先</span>
+    <h3 style="margin:8px 0 6px">几分钟完成集成。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">一切都通过托管 API 提供 —— 无需再部署额外的基础设施。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">示例</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">把你的第一份文档变成结构化数据。</h2>
+  <p class="lead center" style="margin-bottom:26px">15,000 免费额度 · 无需信用卡 · 私有试点。</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../create-account">创建免费账户</a>
+    <a class="btn gh" href="/developers" hreflang="en">阅读文档</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">产品</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/knowledge">Knowledge</a>
+      <a href="../products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">资源</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">公司</div>
+      <a href="../why-orves">为什么选 Orves</a>
+      <a href="/system" hreflang="en">品牌</a>
+      <a href="../contact">联系</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · 保留所有权利。</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

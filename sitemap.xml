@@ -1,21 +1,1285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://orves.ai/</loc></url>
-  <url><loc>https://orves.ai/why-orves</loc></url>
-  <url><loc>https://orves.ai/use-cases</loc></url>
-  <url><loc>https://orves.ai/benchmarks</loc></url>
-  <url><loc>https://orves.ai/trust</loc></url>
-  <url><loc>https://orves.ai/pricing</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://orves.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/"/>
+  </url>
+  <url><loc>https://orves.ai/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/es/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/fr/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/de/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/ja/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/ko/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/zh/why-orves</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/why-orves"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/why-orves"/>
+  </url>
+  <url><loc>https://orves.ai/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/es/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/fr/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/de/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/ja/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/ko/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/zh/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/use-cases"/>
+  </url>
+  <url><loc>https://orves.ai/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/es/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/fr/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/de/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/ja/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/ko/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/zh/benchmarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/benchmarks"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/benchmarks"/>
+  </url>
+  <url><loc>https://orves.ai/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/es/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/fr/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/de/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/ja/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/ko/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/zh/trust</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/trust"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/trust"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/trust"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/trust"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/trust"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/trust"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/trust"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/trust"/>
+  </url>
+  <url><loc>https://orves.ai/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/es/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/fr/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/de/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/ja/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/ko/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
+  <url><loc>https://orves.ai/zh/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/pricing"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/pricing"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/pricing"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/pricing"/>
+  </url>
   <url><loc>https://orves.ai/system</loc></url>
-  <url><loc>https://orves.ai/faq</loc></url>
-  <url><loc>https://orves.ai/research</loc></url>
+  <url><loc>https://orves.ai/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/es/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/fr/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/de/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/ja/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/ko/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/zh/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/faq"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/faq"/>
+  </url>
+  <url><loc>https://orves.ai/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/es/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/fr/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/de/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/ja/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/ko/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
+  <url><loc>https://orves.ai/zh/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/research"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/research"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/research"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/research"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/research"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/research"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/research"/>
+  </url>
   <url><loc>https://orves.ai/developers</loc></url>
-  <url><loc>https://orves.ai/contact</loc></url>
-  <url><loc>https://orves.ai/roadmap</loc></url>
-  <url><loc>https://orves.ai/login</loc></url>
-  <url><loc>https://orves.ai/create-account</loc></url>
-  <url><loc>https://orves.ai/forgot-password</loc></url>
-  <url><loc>https://orves.ai/products/parse</loc></url>
-  <url><loc>https://orves.ai/products/knowledge</loc></url>
-  <url><loc>https://orves.ai/products/vault</loc></url>
+  <url><loc>https://orves.ai/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/de/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/ja/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/ko/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/zh/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/contact"/>
+  </url>
+  <url><loc>https://orves.ai/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/es/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/fr/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/de/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/ja/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/ko/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/zh/roadmap</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/roadmap"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/roadmap"/>
+  </url>
+  <url><loc>https://orves.ai/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/es/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/fr/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/de/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/ja/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/ko/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/zh/login</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/login"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/login"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/login"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/login"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/login"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/login"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/login"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/login"/>
+  </url>
+  <url><loc>https://orves.ai/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/es/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/fr/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/de/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/ja/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/ko/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/zh/create-account</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/create-account"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/create-account"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/create-account"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/create-account"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/create-account"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/create-account"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/create-account"/>
+  </url>
+  <url><loc>https://orves.ai/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/es/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/fr/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/de/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/ja/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/ko/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/zh/forgot-password</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/forgot-password"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/forgot-password"/>
+  </url>
+  <url><loc>https://orves.ai/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/es/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/fr/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/de/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/ja/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/ko/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/zh/products/parse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/parse"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/parse"/>
+  </url>
+  <url><loc>https://orves.ai/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/es/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/fr/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/de/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/ja/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/ko/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/zh/products/knowledge</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/knowledge"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/knowledge"/>
+  </url>
+  <url><loc>https://orves.ai/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/pt-br/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/es/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/fr/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/de/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/ja/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/ko/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
+  <url><loc>https://orves.ai/zh/products/vault</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orves.ai/es/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://orves.ai/de/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/vault"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
+  </url>
 </urlset>
