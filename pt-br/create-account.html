@@ -173,6 +173,10 @@
   if(!e) return;
   var msg = { exists: 'An account with this email already exists — sign in instead.',
               pwpolicy: 'That password does not meet the requirements below.',
+              // Mensagem separada de propósito: quando a recusa não corresponde
+              // a nenhum item da lista abaixo, mandar reler a lista não dá ao
+              // usuário nada para corrigir.
+              pwbreach: 'This password has appeared in a known data breach. Choose a different password that you do not use anywhere else.',
               invalid: 'Please check your name and email and try again.' }[e] || 'Something went wrong — please try again.';
   var el = document.getElementById('autherr'); el.textContent = msg; el.style.display = 'block';
 })();
