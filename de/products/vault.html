@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Vault | Orves</title>
-<meta name="description" content="Orves baut The Verifiable Knowledge Layer — drei Produkte, Parse, Knowledge und Vault: strukturierte Daten, überprüfbares Wissen und ein geregelter Ort, der es bereitstellt."/>
+<meta name="description" content="Orves baut The Verifiable Knowledge Layer — drei Produkte, Parse, Prove und Vault: strukturierte Daten, überprüfbares Wissen und ein geregelter Ort, der es bereitstellt."/>
 <link rel="canonical" href="https://orves.ai/de/products/vault"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/vault"/>
 <meta property="og:title" content="Vault | Orves"/>
-<meta property="og:description" content="Orves baut The Verifiable Knowledge Layer — drei Produkte, Parse, Knowledge und Vault: strukturierte Daten, überprüfbares Wissen und ein geregelter Ort, der es bereitstellt."/>
+<meta property="og:description" content="Orves baut The Verifiable Knowledge Layer — drei Produkte, Parse, Prove und Vault: strukturierte Daten, überprüfbares Wissen und ein geregelter Ort, der es bereitstellt."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="de"/>
 <meta property="og:url" content="https://orves.ai/de/products/vault"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">Produkte <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>Von Dokumenten zu strukturierten Daten</em></a>
-        <a href="../products/knowledge">Knowledge <em>Von Belegen zu überprüfbarem Wissen</em></a>
+        <a href="../products/prove">Prove <em>Von Belegen zu überprüfbarem Wissen</em></a>
         <a href="../products/vault">Vault <em>Ein dauerhafter Ort für dieses Wissen</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/knowledge">Knowledge</a>
+  <a href="../products/prove">Prove</a>
   <a href="../products/vault">Vault</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -162,16 +162,16 @@
 
 <section class="center" id="why-vault">
   <span class="eye">Warum es Vault gibt</span>
-<h2>Knowledge erzeugt. Vault bewahrt.</h2>
-<p class="lead center">Parse strukturiert Ihre Quellen. Knowledge liest eingehende Belege, vergleicht sie mit dem aktuellen Vault-Zustand und erzeugt nachvollziehbare Aussagen, Beziehungen und vorgeschlagene Änderungen. Vault übernimmt sie, versioniert und bewahrt den resultierenden Wissenszustand — samt Belegen, Historie und Widersprüchen.</p>
+<h2>Prove erzeugt. Vault bewahrt.</h2>
+<p class="lead center">Parse strukturiert Ihre Quellen. Prove liest eingehende Belege, vergleicht sie mit dem aktuellen Vault-Zustand und erzeugt nachvollziehbare Aussagen, Beziehungen und vorgeschlagene Änderungen. Vault übernimmt sie, versioniert und bewahrt den resultierenden Wissenszustand — samt Belegen, Historie und Widersprüchen.</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — die Transformation</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — die Transformation</h4>
       <ul class="kwl" style="margin-top:14px"><li>liest eingehende Belege</li><li>vergleicht sie mit dem aktuellen Vault-Zustand</li><li>erzeugt Aussagen, Entitäten und Beziehungen</li><li>verankert jede vorgeschlagene Aussage und Beziehung in Belegen</li></ul>
-      <p class="kwd" style="margin-top:4px">Jeder Knowledge-Lauf erzeugt ein nachvollziehbares Ergebnis.</p></div>
+      <p class="kwd" style="margin-top:4px">Jeder Prove-Lauf erzeugt ein nachvollziehbares Ergebnis.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — der Zustand</h4>
       <ul class="kwl" style="margin-top:14px"><li>übernimmt vorgeschlagene Änderungen als neue Versionen</li><li>bewahrt Belege, Historie und Widersprüche</li><li>regelt, wer was sehen und ändern darf</li><li>liefert den aktuellen Zustand — mit seiner Historie</li></ul>
       <p class="kwd" style="margin-top:4px">Vault bewahrt diese Ergebnisse über Läufe hinweg und über die Zeit.</p></div>
@@ -183,7 +183,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">Die inkrementelle Schleife</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">neue Quelle</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge liest den aktuellen Vault-Zustand</span><span class="a">→</span><span class="fc" style="animation-delay:3s">vergleicht die eingehenden Belege</span><span class="a">→</span><span class="fc" style="animation-delay:4s">schlägt vor: hinzufügen · bestätigen · verfeinern · aktualisieren · widersprechen</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault übernimmt eine neue Version</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">neue Quelle</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove liest den aktuellen Vault-Zustand</span><span class="a">→</span><span class="fc" style="animation-delay:3s">vergleicht die eingehenden Belege</span><span class="a">→</span><span class="fc" style="animation-delay:4s">schlägt vor: hinzufügen · bestätigen · verfeinern · aktualisieren · widersprechen</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault übernimmt eine neue Version</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">Aktueller Zustand, Belege und Historie bleiben verfügbar — nichts wird blind angehängt, nichts still überschrieben.</p>
@@ -193,7 +193,7 @@
 <section class="center" id="disagreement">
   <span class="eye">Widerspruch, bewahrt</span>
 <h2>Widersprüche sind Wissen, keine Fehler.</h2>
-<p class="lead center">Zwei Institutionen prognostizieren denselben Indikator und sind uneins. Knowledge setzt die beiden Aussagen in Beziehung; Vault bewahrt beide — mit Autor, Datum und Beleg — statt zu mitteln, eine zu überschreiben oder Konsens herzustellen.</p>
+<p class="lead center">Zwei Institutionen prognostizieren denselben Indikator und sind uneins. Prove setzt die beiden Aussagen in Beziehung; Vault bewahrt beide — mit Autor, Datum und Beleg — statt zu mitteln, eine zu überschreiben oder Konsens herzustellen.</p>
   
   
   
@@ -211,7 +211,7 @@
 ├── <span class="s">two independent claims</span>
 ├── <span class="s">same subject · same reference period</span>
 ├── <span class="s">different authors and dates</span>
-├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Knowledge</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Prove</span>
 └── <span class="g">evidence preserved for both</span></pre></div>
   </div>
   
@@ -219,7 +219,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">Das Vokabular der Beziehungen</span>
-  <p class="lead center rv" style="margin-top:12px">Eine spätere Quelle kann eine frühere Position aktualisieren, einer anderen Institution widersprechen, eine frühere Aussage verfeinern oder eine unverbundene Sicht zum selben Thema einbringen. Knowledge schlägt die Beziehung vor; Vault bewahrt den Unterschied — nie eine stille Verschmelzung.</p>
+  <p class="lead center rv" style="margin-top:12px">Eine spätere Quelle kann eine frühere Position aktualisieren, einer anderen Institution widersprechen, eine frühere Aussage verfeinern oder eine unverbundene Sicht zum selben Thema einbringen. Prove schlägt die Beziehung vor; Vault bewahrt den Unterschied — nie eine stille Verschmelzung.</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -237,8 +237,8 @@
   <div class="g3 rv" style="margin-top:26px">
     <div class="card"><h4>Quellen</h4>
     <ul class="kwl"><li>Dokumente</li><li>Audio</li><li>Video</li><li>APIs</li><li>Systeme</li></ul><p class="kwd">Die Originale, nach Richtlinie aufbewahrt — alles darüber bleibt mit ihnen verknüpft.</p>
-    </div><div class="card"><h4>Knowledge</h4>
-    <ul class="kwl"><li>behauptet</li><li>Entitäten</li><li>Beziehungen</li><li>Beleg</li><li>zeitlicher Kontext</li><li>Konflikte</li></ul><p class="kwd">Was Knowledge erzeugt hat — versioniert, abfragbar und offen für Veränderung.</p>
+    </div><div class="card"><h4>Wissen</h4>
+    <ul class="kwl"><li>behauptet</li><li>Entitäten</li><li>Beziehungen</li><li>Beleg</li><li>zeitlicher Kontext</li><li>Konflikte</li></ul><p class="kwd">Was Prove erzeugt hat — versioniert, abfragbar und offen für Veränderung.</p>
     </div><div class="card"><h4>Infrastruktur</h4>
     <ul class="kwl"><li>Suchindizes</li><li>Wissensgraph</li><li>Versionen</li><li>Berechtigungen</li><li>Prüfprotokolle</li><li>Verbindungen</li></ul><p class="kwd">Was Wissen im großen Maßstab nutzbar und regelbar macht.</p>
     </div>
@@ -380,7 +380,7 @@
     </div>
     <div class="ftcol"><div class="h">Produkte</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/knowledge">Knowledge</a>
+      <a href="../products/prove">Prove</a>
       <a href="../products/vault">Vault</a>
     </div>
     <div class="ftcol"><div class="h">Ressourcen</div>

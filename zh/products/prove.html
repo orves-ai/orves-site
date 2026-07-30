@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Prove | Orves</title>
+<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<link rel="canonical" href="https://orves.ai/zh/products/prove"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/prove"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/prove"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/prove"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/prove"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/prove"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/prove"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/prove"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/prove"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/prove"/>
+<meta property="og:title" content="Prove | Orves"/>
+<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_Hans"/>
+<meta property="og:url" content="https://orves.ai/zh/products/prove"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
+        <a href="../products/prove">Prove <em>从证据到可验证的知识</em></a>
+        <a href="../products/vault">Vault <em>为这些知识提供长久的所在</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">资源 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、快速上手与示例</em></a>
+        <a href="../benchmarks">Benchmarks <em>我们如何测量 —— 方法与结果</em></a>
+        <a href="../research">Research <em>方法、报告与技术发现</em></a>
+        <a href="../trust">Trust <em>认证与验证</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>已交付的与接下来的</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">价格</a>
+    <a href="../why-orves" class="">为什么选 Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="语言">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">ZH</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>选择语言</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/prove"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/prove"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/prove"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/prove"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/prove"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/prove"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/prove"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/prove"
+         class="on" aria-current="true">简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">登录</a>
+  
+  
+  <a class="btn" href="../create-account">免费开始</a>
+  
+  <button class="menubtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/prove">Prove</a>
+  <a href="../products/vault">Vault</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">价格</a>
+  <a href="../why-orves">为什么选 Orves</a>
+  <a href="../login">登录</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>知识基础设施 · knowledge · 开发中</span>
+    <h1>从证据到 <span class="accent-tx">可验证的知识。</span></h1>
+    <p class="sub">Orves Prove 把文档、数据与证据变成可验证、可追溯、可审计的知识 —— 每一条主张都保留它的来源、关系、版本与历史，随时可供人、应用与智能系统使用。目前处于开发中，API 契约正在定稿。</p>
+    <div class="cta">
+      
+      <a class="btn" href="../create-account">开始构建</a>
+      <a class="btn gh" href="../pricing">查看价格</a>
+      
+    </div>
+    <div class="chips"><span class="chip">来源</span><span class="chip">关系</span><span class="chip">历史</span><span class="chip">治理</span></div>
+    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">不绑定模型 · 开发中 —— API 契约定义中</p>
+  </div>
+  <div class="code rv"><div class="codehd">知识对象 · 示意预览</div>
+<pre><span class="cm"># a knowledge object — not text</span>
+<span class="cm"># illustrative preview — the API contract is in definition</span>
+{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
+  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
+  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
+  <span class="k">"lineage"</span>: <span class="s">"amendment_v2.pdf · page 4 · bbox"</span>,
+  <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">问题</span>
+<h2>AI 技术栈保存结论，丢掉证据。</h2>
+
+  <p class="lead center">多数 AI 管线是为检索和生成优化的，而不是为经得起时间的知识。几个月后，团队知道答案 —— 却不知道它当初为什么被接受、什么变了、哪条证据支撑过它。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">来源被打散</span><span class="chip bad">版本悄悄漂移</span><span class="chip bad">关系缺失</span><span class="chip bad">决策无法还原</span><span class="chip bad">更新缺乏治理</span></div>
+  
+</section>
+
+
+<section class="center tight">
+  <span class="eye">你会得到</span>
+  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">更少的幻觉</span><span class="chip">可审计性</span><span class="chip">合规</span><span class="chip">可复现性</span><span class="chip">智能体记忆</span><span class="chip">可解释性</span><span class="chip">机构层面的信任</span></div>
+</section>
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">它产出什么</span>
+<h2>一个自带证据的知识库。</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>知识对象</h4>
+    <p>带证据、矛盾、关系、版本与裁定状态的主张，而不是文本。证据不足就是 ABSTAINED，绝不猜测。</p></div><div class="card"><h4>谱系与引用</h4>
+    <p>每个事实都能追到它在来源中的精确位置 —— 页、区域、时间戳或来源事件。一旦有变化，你可以还原出改了什么、为什么改。</p></div><div class="card"><h4>随处可用</h4>
+    <p>同一份受治理的知识，提供给人、应用、智能体与模型 —— 通过 API，以及交付后通过 Orves Vault（Web · SDK · MCP）。</p></div>
+  </div>
+</section>
+
+
+
+
+
+<section class="center">
+  <span class="eye">看看</span>
+<h2>一个知识对象的结构。</h2>
+<p class="lead center">不只是文本：一个受治理、可寻址的知识对象。下面的每一部分都能通过 API 取用。</p>
+  <div class="kobj rv">
+    <div class="kohead">
+      <span class="kolab">KNOWLEDGE OBJECT · kn_842 · v4</span>
+      <div class="koclaim">「合同续约日期改为 2026-09-01。」</div>
+      <span class="kostate">SUPPORTED</span>
+    </div>
+    <div class="kogrid">
+      <div class="kocol">
+        <h5>证据 · 支持 3 条 · 反对 1 条</h5>
+        <div class="koev">amendment_v2.pdf · 第4页 ¶3<em>支持</em></div>
+        <div class="koev">renewal_notice.eml · 2026-06-12<em>支持</em></div>
+        <div class="koev">board_minutes.pdf · 第2页<em>支持</em></div>
+        <div class="koev bad" style="border-bottom:0">contract_2024.pdf · 第12页<em>反对 · 已被取代</em></div>
+      </div>
+      <div class="kocol">
+        <h5>关系 · 21</h5>
+        <div class="koev">续约 → 合同 #442</div>
+        <div class="koev">当事方 → 供应商 XYZ</div>
+        <div class="koev">影响 → 发票 #9812</div>
+        <div class="koev" style="border-bottom:0;color:var(--fg3)">+ 另有 18 条</div>
+      </div>
+      <div class="kocol">
+        <h5>历史</h5>
+        <div class="koev">v1 · 6月 · 定于6月30日</div>
+        <div class="koev">v2 · 7月 · 推迟</div>
+        <div class="koev">v3 · 8月 · 提出新日期</div>
+        <div class="koev">v4 · 9月 · 改为9月1日<em>现行</em></div>
+        <h5 style="margin-top:14px">证书</h5>
+        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
+        <div class="kwd" style="font-size:10.5px;margin-top:4px">记录来源、版本、裁定状态与完整性</div>
+      </div>
+    </div>
+    <div class="kograph">
+      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="知识图谱中的这条主张">
+        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
+        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
+        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
+        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
+        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">当事方</text>
+        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">主张</text>
+        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">供应</text>
+        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">开票</text>
+        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
+        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Acme Corp</text>
+        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">合同 #442</text>
+        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--acc2)">kn_842 · 续约</text>
+        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">供应商 XYZ</text>
+        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">发票 #9812</text>
+        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">同一个对象，在知识图谱之中</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">历史</span>
+<h2>看一条主张如何演变。</h2>
+<p class="lead center">新证据到来；主张被重新裁定；写入一个新版本。任何东西都不会被覆盖 —— 每个状态都保留自己的证据。</p>
+  <div class="htl rv">
+    
+    
+    <div class="hstop"><span class="tm">6月</span><span class="tv">v1</span><p>续约定于6月30日</p><span class="te">contract_2024.pdf · 第12页</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">7月</span><span class="tv">v2</span><p>续约推迟</p><span class="te">renewal_notice.eml</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">8月</span><span class="tv">v3</span><p>提出新日期：8月15日</p><span class="te">draft_amendment.pdf · 第2页</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop cur"><span class="tm">9月</span><span class="tv">v4</span><p>续约改为9月1日</p><span class="te">amendment_v2.pdf · 第4页</span></div>
+    
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">同一个知识对象 —— 之前的每个状态与它的来源都被保住。</p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">前 × 后</span>
+<h2>检索找到的是文本。这一层保住的是「它凭什么是真的」。</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">传统检索</h4>
+      <ul class="kwl" style="margin-top:14px"><li>在查询时取回片段</li><li>上下文只存在于那一刻</li><li>知识没有被持续治理</li><li>冲突与版本在外部处理</li></ul>
+      <p class="kwd" style="margin-top:4px">等到答案被质疑时，管线早就走远了。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>在 Verifiable Knowledge Layer 上</h4>
+      <ul class="kwl" style="margin-top:14px"><li>持久保存主张及其证据</li><li>保住关系与决策历史</li><li>每一次变更都生成一个受治理的版本</li><li>提供可复用的知识对象</li></ul>
+      <p class="kwd" style="margin-top:4px">当答案被质疑时，你能拿出理由。</p></div>
+  </div>
+</section>
+
+
+
+
+
+<section class="center">
+  <span class="eye">Benchmarks</span>
+<h2>先测量，再声明。</h2>
+
+  <p class="lead center rv" style="max-width:620px">我们测量的：确定性、还原保真度、主张抽取、弃答校准与依据保真度。</p>
+  <p class="lead center rv" style="margin-top:14px;font-size:14px">公开结果只在预先登记的评估之后发布 —— 在那之前，本站不会出现任何数字。<a href="../benchmarks" style="color:var(--acc2)">我们如何做基准测试 →</a></p>
+</section>
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">这是一种性质，不是一个产品</span>
+    <h3 style="margin:8px 0 6px">每一个产物都可验证。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">认证贯穿 Orves 产出的一切。验证被设计成公开、可复现，并且不依赖 Orves 账户。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ 来源</span><span class="bp hot">✓ 完整性</span><span class="bp">版本</span><span class="bp">证据</span><span class="bp">裁定状态</span><span class="bp">验证</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API 优先</span>
+    <h3 style="margin:8px 0 6px">几分钟完成集成。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">一切都通过托管 API 提供 —— 无需再部署额外的基础设施。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">示例</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">在你能证明的知识上构建。</h2>
+  <p class="lead center" style="margin-bottom:26px">从 Parse 的输出开始，或接入你自己的结构化证据 —— 15,000 免费额度，无需信用卡。</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../create-account">创建免费账户</a>
+    <a class="btn gh" href="/developers" hreflang="en">阅读文档</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">产品</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/prove">Prove</a>
+      <a href="../products/vault">Vault</a>
+    </div>
+    <div class="ftcol"><div class="h">资源</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">公司</div>
+      <a href="../why-orves">为什么选 Orves</a>
+      <a href="/system" hreflang="en">品牌</a>
+      <a href="../contact">联系</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · 保留所有权利。</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

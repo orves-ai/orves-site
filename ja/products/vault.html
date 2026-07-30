@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Vault | Orves</title>
-<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
 <link rel="canonical" href="https://orves.ai/ja/products/vault"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/vault"/>
 <meta property="og:title" content="Vault | Orves"/>
-<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Knowledge、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="ja"/>
 <meta property="og:url" content="https://orves.ai/ja/products/vault"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">製品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>文書から構造化データへ</em></a>
-        <a href="../products/knowledge">Knowledge <em>証跡から検証可能な知識へ</em></a>
+        <a href="../products/prove">Prove <em>証跡から検証可能な知識へ</em></a>
         <a href="../products/vault">Vault <em>その知識のための永続的な場所</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/knowledge">Knowledge</a>
+  <a href="../products/prove">Prove</a>
   <a href="../products/vault">Vault</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -162,16 +162,16 @@
 
 <section class="center" id="why-vault">
   <span class="eye">Vault がある理由</span>
-<h2>Knowledge が生み、Vault が守る。</h2>
-<p class="lead center">Parse が情報源を構造化します。Knowledge は届いた証跡を読み、現在の Vault の状態と比較し、追跡可能な主張・関係・変更案を生み出します。Vault はその結果として生じた知識の状態を確定し、バージョン管理し、証跡・履歴・相違とともに保持します。</p>
+<h2>Prove が生み、Vault が守る。</h2>
+<p class="lead center">Parse が情報源を構造化します。Prove は届いた証跡を読み、現在の Vault の状態と比較し、追跡可能な主張・関係・変更案を生み出します。Vault はその結果として生じた知識の状態を確定し、バージョン管理し、証跡・履歴・相違とともに保持します。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge — 変換</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — 変換</h4>
       <ul class="kwl" style="margin-top:14px"><li>届いた証跡を読む</li><li>現在の Vault の状態と比較する</li><li>主張、実体、関係を生み出す</li><li>提案するすべての主張と関係を証跡に根拠づける</li></ul>
-      <p class="kwd" style="margin-top:4px">Knowledge の実行ごとに、追跡可能な結果が生まれます。</p></div>
+      <p class="kwd" style="margin-top:4px">Prove の実行ごとに、追跡可能な結果が生まれます。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault — 状態</h4>
       <ul class="kwl" style="margin-top:14px"><li>提案された変更を新しいバージョンとして確定する</li><li>証跡、履歴、相違を保持する</li><li>誰が何を見て変更できるかを統制する</li><li>現在の状態を、その履歴とともに提供する</li></ul>
       <p class="kwd" style="margin-top:4px">Vault はその結果を、実行をまたいで、時間をまたいで保持します。</p></div>
@@ -183,7 +183,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">積み重ねのループ</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新しい情報源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge が現在の Vault の状態を読む</span><span class="a">→</span><span class="fc" style="animation-delay:3s">届いた証跡を比較する</span><span class="a">→</span><span class="fc" style="animation-delay:4s">追加 · 確認 · 精緻化 · 更新 · 反証 を提案する</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault が新しいバージョンを確定する</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新しい情報源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove が現在の Vault の状態を読む</span><span class="a">→</span><span class="fc" style="animation-delay:3s">届いた証跡を比較する</span><span class="a">→</span><span class="fc" style="animation-delay:4s">追加 · 確認 · 精緻化 · 更新 · 反証 を提案する</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault が新しいバージョンを確定する</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">現在の状態、証跡、履歴はいつでも参照できます — 何も闇雲に追記されず、何も静かに上書きされません。</p>
@@ -193,7 +193,7 @@
 <section class="center" id="disagreement">
   <span class="eye">相違を、保持する</span>
 <h2>矛盾は誤りではなく、知識です。</h2>
-<p class="lead center">二つの機関が同じ指標を予測し、見解が分かれます。Knowledge は二つの主張を関係づけ、Vault は両方を — 著者、日付、証跡とともに — 保持します。平均を取ることも、片方を上書きすることも、合意を作り出すこともしません。</p>
+<p class="lead center">二つの機関が同じ指標を予測し、見解が分かれます。Prove は二つの主張を関係づけ、Vault は両方を — 著者、日付、証跡とともに — 保持します。平均を取ることも、片方を上書きすることも、合意を作り出すこともしません。</p>
   
   
   
@@ -211,7 +211,7 @@
 ├── <span class="s">two independent claims</span>
 ├── <span class="s">same subject · same reference period</span>
 ├── <span class="s">different authors and dates</span>
-├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Knowledge</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Prove</span>
 └── <span class="g">evidence preserved for both</span></pre></div>
   </div>
   
@@ -219,7 +219,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">関係の語彙</span>
-  <p class="lead center rv" style="margin-top:12px">後から来た情報源は、以前の立場を更新することも、別の機関に反証することも、先行する主張を精緻化することも、同じ主題について無関係な見方を持ち込むこともあります。Knowledge が関係を提案し、Vault がその区別を保持します — 静かな統合は決してしません。</p>
+  <p class="lead center rv" style="margin-top:12px">後から来た情報源は、以前の立場を更新することも、別の機関に反証することも、先行する主張を精緻化することも、同じ主題について無関係な見方を持ち込むこともあります。Prove が関係を提案し、Vault がその区別を保持します — 静かな統合は決してしません。</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -237,8 +237,8 @@
   <div class="g3 rv" style="margin-top:26px">
     <div class="card"><h4>情報源</h4>
     <ul class="kwl"><li>文書</li><li>音声</li><li>動画</li><li>API</li><li>システム</li></ul><p class="kwd">ポリシーにもとづき保持される原本 — 上にあるすべてがそこへ結びついたままです。</p>
-    </div><div class="card"><h4>Knowledge</h4>
-    <ul class="kwl"><li>主張する</li><li>実体</li><li>関係</li><li>証跡</li><li>時間的文脈</li><li>矛盾</li></ul><p class="kwd">Knowledge が生み出したもの — バージョン管理され、問い合わせでき、変化に開かれたまま。</p>
+    </div><div class="card"><h4>知識</h4>
+    <ul class="kwl"><li>主張する</li><li>実体</li><li>関係</li><li>証跡</li><li>時間的文脈</li><li>矛盾</li></ul><p class="kwd">Prove が生み出したもの — バージョン管理され、問い合わせでき、変化に開かれたまま。</p>
     </div><div class="card"><h4>インフラ</h4>
     <ul class="kwl"><li>検索インデックス</li><li>ナレッジグラフ</li><li>バージョン</li><li>権限</li><li>監査ログ</li><li>接続</li></ul><p class="kwd">知識を大規模に使え、統制できるものにするもの。</p>
     </div>
@@ -380,7 +380,7 @@
     </div>
     <div class="ftcol"><div class="h">製品</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/knowledge">Knowledge</a>
+      <a href="../products/prove">Prove</a>
       <a href="../products/vault">Vault</a>
     </div>
     <div class="ftcol"><div class="h">リソース</div>

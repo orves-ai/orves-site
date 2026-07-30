@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Vault | Orves</title>
-<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
 <link rel="canonical" href="https://orves.ai/zh/products/vault"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/vault"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/vault"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/vault"/>
 <meta property="og:title" content="Vault | Orves"/>
-<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Knowledge、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="zh_Hans"/>
 <meta property="og:url" content="https://orves.ai/zh/products/vault"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
-        <a href="../products/knowledge">Knowledge <em>从证据到可验证的知识</em></a>
+        <a href="../products/prove">Prove <em>从证据到可验证的知识</em></a>
         <a href="../products/vault">Vault <em>为这些知识提供长久的所在</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/knowledge">Knowledge</a>
+  <a href="../products/prove">Prove</a>
   <a href="../products/vault">Vault</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -162,16 +162,16 @@
 
 <section class="center" id="why-vault">
   <span class="eye">Vault 为什么存在</span>
-<h2>Knowledge 负责产生，Vault 负责保住。</h2>
-<p class="lead center">Parse 把你的来源结构化。Knowledge 读取新进来的证据，与 Vault 当前状态比对，产出可追溯的主张、关系与变更提案。Vault 把由此得到的知识状态提交、版本化并保住 —— 连同它的证据、历史与分歧。</p>
+<h2>Prove 负责产生，Vault 负责保住。</h2>
+<p class="lead center">Parse 把你的来源结构化。Prove 读取新进来的证据，与 Vault 当前状态比对，产出可追溯的主张、关系与变更提案。Vault 把由此得到的知识状态提交、版本化并保住 —— 连同它的证据、历史与分歧。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Knowledge —— 转换</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Prove —— 转换</h4>
       <ul class="kwl" style="margin-top:14px"><li>读取新进来的证据</li><li>与 Vault 当前状态比对</li><li>产出主张、实体与关系</li><li>把提出的每条主张与关系都建立在证据上</li></ul>
-      <p class="kwd" style="margin-top:4px">Knowledge 每跑一次，都会产出一个可追溯的结果。</p></div>
+      <p class="kwd" style="margin-top:4px">Prove 每跑一次，都会产出一个可追溯的结果。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Vault —— 状态</h4>
       <ul class="kwl" style="margin-top:14px"><li>把提出的变更作为新版本提交</li><li>保住证据、历史与分歧</li><li>治理谁可以看到什么、改动什么</li><li>提供当前状态 —— 连同它的历史</li></ul>
       <p class="kwd" style="margin-top:4px">Vault 让这些结果跨越一次次运行、跨越时间被保住。</p></div>
@@ -183,7 +183,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">增量循环</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Knowledge 读取 Vault 当前状态</span><span class="a">→</span><span class="fc" style="animation-delay:3s">比对新进来的证据</span><span class="a">→</span><span class="fc" style="animation-delay:4s">提出 新增 · 确认 · 细化 · 更新 · 反驳</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault 提交一个新版本</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove 读取 Vault 当前状态</span><span class="a">→</span><span class="fc" style="animation-delay:3s">比对新进来的证据</span><span class="a">→</span><span class="fc" style="animation-delay:4s">提出 新增 · 确认 · 细化 · 更新 · 反驳</span><span class="a">→</span><span class="fc" style="animation-delay:5s">Vault 提交一个新版本</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">当前状态、证据与历史始终可查 —— 不会盲目追加，也不会悄悄覆盖。</p>
@@ -193,7 +193,7 @@
 <section class="center" id="disagreement">
   <span class="eye">分歧，被保住</span>
 <h2>矛盾是知识，不是错误。</h2>
-<p class="lead center">两家机构对同一个指标做出预测，结论不一致。Knowledge 把两条主张关联起来；Vault 把两条都保住 —— 连同作者、日期与证据 —— 而不是取平均、覆盖其中一条，或制造出一个共识。</p>
+<p class="lead center">两家机构对同一个指标做出预测，结论不一致。Prove 把两条主张关联起来；Vault 把两条都保住 —— 连同作者、日期与证据 —— 而不是取平均、覆盖其中一条，或制造出一个共识。</p>
   
   
   
@@ -211,7 +211,7 @@
 ├── <span class="s">two independent claims</span>
 ├── <span class="s">same subject · same reference period</span>
 ├── <span class="s">different authors and dates</span>
-├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Knowledge</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· proposed by Prove</span>
 └── <span class="g">evidence preserved for both</span></pre></div>
   </div>
   
@@ -219,7 +219,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">关系词汇表</span>
-  <p class="lead center rv" style="margin-top:12px">后来的来源可能更新更早的立场、反驳另一家机构、细化先前的主张，或就同一主题引入一个不相干的看法。Knowledge 提出关系，Vault 保住这些区别 —— 绝不悄悄合并。</p>
+  <p class="lead center rv" style="margin-top:12px">后来的来源可能更新更早的立场、反驳另一家机构、细化先前的主张，或就同一主题引入一个不相干的看法。Prove 提出关系，Vault 保住这些区别 —— 绝不悄悄合并。</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -237,8 +237,8 @@
   <div class="g3 rv" style="margin-top:26px">
     <div class="card"><h4>来源</h4>
     <ul class="kwl"><li>文档</li><li>音频</li><li>视频</li><li>API</li><li>系统</li></ul><p class="kwd">按策略保留的原件 —— 上面这一切都始终链接回它们。</p>
-    </div><div class="card"><h4>Knowledge</h4>
-    <ul class="kwl"><li>主张</li><li>实体</li><li>关系</li><li>证据</li><li>时间上下文</li><li>冲突</li></ul><p class="kwd">Knowledge 产出的东西 —— 版本化、可查询，并且对变化保持开放。</p>
+    </div><div class="card"><h4>知识</h4>
+    <ul class="kwl"><li>主张</li><li>实体</li><li>关系</li><li>证据</li><li>时间上下文</li><li>冲突</li></ul><p class="kwd">Prove 产出的东西 —— 版本化、可查询，并且对变化保持开放。</p>
     </div><div class="card"><h4>基础设施</h4>
     <ul class="kwl"><li>搜索索引</li><li>知识图谱</li><li>版本</li><li>权限</li><li>审计日志</li><li>连接</li></ul><p class="kwd">让知识在大规模下可用、可治理的那些东西。</p>
     </div>
@@ -380,7 +380,7 @@
     </div>
     <div class="ftcol"><div class="h">产品</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/knowledge">Knowledge</a>
+      <a href="../products/prove">Prove</a>
       <a href="../products/vault">Vault</a>
     </div>
     <div class="ftcol"><div class="h">资源</div>
