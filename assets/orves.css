@@ -319,7 +319,11 @@ html.js .flowart.rv.in{transform:translateX(-50%) translateY(0)}
 .flowart .fnode{fill:var(--panel);stroke:var(--line2)}
 .flowart .fnode.main{stroke:var(--acc)}
 .flowart .flbl{font-family:var(--mono);font-size:12px;fill:var(--fg2)}
-.flowart .flbl.b{font-family:var(--disp);font-size:15px;font-weight:600;fill:var(--fg)}
+/* Os três nomes da camada saem TODOS daqui — tamanho único, sem override
+   inline. "Knowledge" é a palavra mais longa e por isso parece maior; dar a
+   ela um corpo diferente para "compensar" cria a única inconsistência real
+   que existiria nos três cards (ordem BP 30-jul). */
+.flowart .flbl.b{font-family:var(--disp);font-size:15px;font-weight:600;letter-spacing:-.02em;fill:var(--fg)}
 .flowart .flbl.dim{fill:var(--fg3);font-size:10.5px}
 .flowart .flbl.acc{fill:var(--acc2)}
 .flowart .fpath{fill:none;stroke:var(--line2);stroke-width:1}
