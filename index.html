@@ -76,7 +76,7 @@
 <section class="hero solo" style="padding:100px 0 52px;border-top:0">
   <div>
     <p class="mono" style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin:0 0 18px">The Verifiable Knowledge Layer</p>
-    <h1 class="h1b" style="margin-left:auto;margin-right:auto">Turn evidence into<br>knowledge you can prove.</h1>
+    <h1 class="h1b" style="margin-left:auto;margin-right:auto">Turn evidence into<br>knowledge you can <span class="pmorph">prove.</span></h1>
     <p class="sub" style="max-width:88ch;margin-top:18px">Structure your sources, connects every fact to provenance, versions and relationships, and serves governed knowledge to people, applications and intelligent systems.</p>
     <div class="cta" style="margin-top:6px">
       <a class="btn" href="products/parse">Start with Parse</a>
@@ -376,6 +376,128 @@
   </div>
   <p class="mono" style="margin-top:26px;font-size:12px;color:var(--fg3)">The Verifiable Knowledge Layer.</p>
 </section>
+
+
+<style>
+.pmorph{position:relative;display:inline-block;white-space:pre;font-kerning:none}
+.pmorph .pmg{color:transparent}
+.pmorph .pml{position:absolute;inset:0 auto 0 0}
+/* letras animadas via content:attr() — ficam fora do texto do documento */
+.pmorph .pmc{position:absolute;top:0;left:0;display:inline-block;line-height:1.06;will-change:transform}
+.pmorph .pmc::after{content:attr(data-c)}
+.pmorph .pmy{position:absolute;top:0;left:0;display:inline-block;line-height:1.06}
+.pmorph .pmy::after{content:attr(data-c)}
+.pmorph .pmy.b{opacity:0}
+.pmorph .pmc.lit{color:var(--acc2)}
+</style>
+<script>
+(function(){
+  var host = document.querySelector('.hero .pmorph');
+  if (!host || host.textContent !== 'prove.') return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!host.animate || !document.fonts) return;
+
+  var SRC = ['p','r','o','v','e','.'], DST = ['o','r','v','e','s','.'];
+  var MAP = [4,1,0,2,3,5];                     // origem → destino
+  var HOLD = 2667, MORPH = 1433, LIT = 1467, LITMS = 1033, BACK = 3333;
+  var EOUT = 'cubic-bezier(.72,.02,.2,1)';
+
+  function medir(w){
+    var p = document.createElement('span'), i, s;
+    p.style.cssText = 'position:absolute;top:0;left:0;visibility:hidden;white-space:pre;font-kerning:none';
+    for (i = 0; i < w.length; i++) {
+      s = document.createElement('span');
+      s.style.cssText = 'display:inline-block;line-height:1.06';
+      s.textContent = w[i]; p.appendChild(s);
+    }
+    host.appendChild(p);
+    var base = p.getBoundingClientRect().left, xs = [], k;
+    for (k = 0; k < p.children.length; k++) xs.push(p.children[k].getBoundingClientRect().left - base);
+    var largura = p.getBoundingClientRect().width;
+    p.parentNode.removeChild(p);
+    return { xs: xs, w: largura };
+  }
+
+  var letras = [], anims = [], src, dst, em;
+
+  function montar(){
+    src = medir(SRC); dst = medir(DST);
+    em = parseFloat(getComputedStyle(host).fontSize);
+    host.textContent = '';
+    var g = document.createElement('span');
+    g.className = 'pmg'; g.textContent = SRC.join('');
+    var lyr = document.createElement('span');
+    lyr.className = 'pml'; lyr.setAttribute('aria-hidden', 'true');
+    host.appendChild(g); host.appendChild(lyr);
+    host.style.width = src.w + 'px';
+    SRC.forEach(function(ch, i){
+      var el = document.createElement('span');
+      el.className = 'pmc'; el.style.left = src.xs[i] + 'px';
+      if (ch === 'p') el.innerHTML = '<span class="pmy a" data-c="p"></span><span class="pmy b" data-c="s"></span>';
+      else el.setAttribute('data-c', ch);
+      lyr.appendChild(el);
+      letras.push({ el: el, ch: ch, dx: dst.xs[MAP[i]] - src.xs[i] });
+    });
+  }
+
+  function quadros(u){
+    var dx = u.dx;
+    if (u.ch === 'p') return { dur: MORPH, atraso: 0, kf: [
+      { transform: 'translateX(0) rotate(0deg)', easing: 'cubic-bezier(.4,0,.7,.45)' },
+      { transform: 'translateX(' + (dx * .10).toFixed(2) + 'px) rotate(-5deg)', offset: .24,
+        easing: 'cubic-bezier(.35,0,.65,1)' },
+      { transform: 'translateX(' + (dx * .80).toFixed(2) + 'px) rotate(-2deg)', offset: .64,
+        easing: 'cubic-bezier(.3,.5,.2,1)' },
+      { transform: 'translateX(' + dx.toFixed(2) + 'px) rotate(0deg)' }] };
+    if (u.ch === 'o') return { dur: 933, atraso: 283, kf: [
+      { transform: 'translateX(0)', easing: 'cubic-bezier(.35,0,.6,.5)' },
+      { transform: 'translateX(' + (dx * .5).toFixed(2) + 'px)', offset: .5,
+        easing: 'cubic-bezier(.4,.5,.2,1)' },
+      { transform: 'translateX(' + dx.toFixed(2) + 'px)' }] };
+    var stg = { r: 333, v: 383, e: 450, '.': 500 }[u.ch] || 0;
+    return { dur: 833, atraso: stg, ease: EOUT,
+      kf: [{ transform: 'translateX(0)' }, { transform: 'translateX(' + dx.toFixed(2) + 'px)' }] };
+  }
+
+  function tocar(volta){
+    anims.forEach(function(a){ a.cancel(); }); anims = [];
+    var borrao = 'blur(' + (1.2 / 46 * em).toFixed(2) + 'px)';
+    letras.forEach(function(u){
+      if (Math.abs(u.dx) < .01 && u.ch !== 'p') return;
+      var d = quadros(u);
+      var opt = { duration: d.dur, delay: d.atraso, easing: d.ease || 'linear',
+                  fill: 'both', direction: volta ? 'reverse' : 'normal' };
+      anims.push(u.el.animate(d.kf, opt));
+      if (u.ch === 'p') {
+        var troca = function(de, para){ return [
+          { opacity: de, filter: 'blur(0px)' },
+          { opacity: de, filter: borrao, offset: .34 },
+          { opacity: para, filter: borrao, offset: .52 },
+          { opacity: para, filter: 'blur(0px)', offset: .70 },
+          { opacity: para, filter: 'blur(0px)' }]; };
+        anims.push(u.el.querySelector('.pmy.a').animate(troca(1, 0), opt));
+        anims.push(u.el.querySelector('.pmy.b').animate(troca(0, 1), opt));
+      }
+    });
+    anims.push(host.animate([{ width: src.w + 'px' }, { width: dst.w + 'px' }],
+      { duration: 1333, easing: EOUT, fill: 'both', direction: volta ? 'reverse' : 'normal' }));
+  }
+
+  function acender(on){
+    letras.forEach(function(u){ u.el.classList[on ? 'add' : 'remove']('lit'); });
+  }
+
+  document.fonts.ready.then(function(){
+    if (host.textContent !== 'prove.') return;
+    montar();
+    setTimeout(function(){
+      tocar(false);
+      setTimeout(function(){ acender(true); setTimeout(function(){ acender(false); }, LITMS); }, LIT);
+      setTimeout(function(){ tocar(true); }, BACK);
+    }, HOLD);
+  });
+})();
+</script>
 
 
 
