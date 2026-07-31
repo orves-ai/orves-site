@@ -40,8 +40,8 @@
       <a class="" style="cursor:default">제품 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="products/parse">Parse <em>문서에서 구조화된 데이터로</em></a>
-        <a href="products/prove">Prove <em>증거에서 검증 가능한 지식으로</em></a>
-        <a href="products/vault">Vault <em>그 지식을 위한 지속적인 공간</em></a>
+        <a href="products/prove">Prove <em>하나의 출처가 말하고 뒷받침하는 모든 것</em></a>
+        <a href="products/neuro">Neuro <em>모든 출처의 관계</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -105,7 +105,7 @@
 <div class="mnav">
   <a href="products/parse">Parse</a>
   <a href="products/prove">Prove</a>
-  <a href="products/vault">Vault</a>
+  <a href="products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
@@ -137,7 +137,7 @@
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
     <div class="flowpan">
-    <svg viewBox="0 0 1000 400" role="img" aria-label="현실 — 문서, 웹, 이미지, 오디오, 비디오, API — 이 The Verifiable Knowledge Layer로 흘러듭니다. Parse가 구조화된 데이터를 만들고, Prove가 증거를 검증 가능한 지식으로 바꾸며, Vault가 저장하고 통제하고 제공합니다. 사람, 애플리케이션, LLM, 에이전트, AI 메모리, MCP 서버가 이 계층에서 지식을 끌어옵니다.">
+    <svg viewBox="0 0 1000 400" role="img" aria-label="현실 — 문서, 웹, 이미지, 음성, 영상, API — 이 The Verifiable Knowledge Layer로 흘러듭니다. Parse가 구조화된 데이터를 만들고, Prove가 각 출처가 말하고 뒷받침하는 바를 확정하며, Neuro가 모든 출처의 관계를 이해합니다. 사람, 애플리케이션, LLM, 에이전트, AI 메모리, MCP 서버가 이 계층에서 길어 올립니다.">
       <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">현실</text>
       <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">문서</text></g>
       <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">웹</text></g>
@@ -154,7 +154,7 @@
       <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
       <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- a camada: Parse → Prove → Vault — 3 nós do MESMO tamanho
+      <!-- a camada: Parse → Prove → Neuro — 3 nós do MESMO tamanho
            (150×98, ordem BP 30-jul); conectores e pulsos recalculados -->
       <rect class="layerbox" x="240" y="128" width="502" height="140" rx="20"/>
       <rect class="fnode main" x="246" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
@@ -164,7 +164,7 @@
       <text class="flbl b" x="486" y="200" text-anchor="middle">Prove</text>
       <path class="fpath" data-flow="p2c" d="M 561 195 L 576 195"/>
       <rect class="fnode main" x="576" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
-      <text class="flbl b" x="651" y="200" text-anchor="middle">Vault</text>
+      <text class="flbl b" x="651" y="200" text-anchor="middle">Neuro</text>
       <!-- fan-out: a camada serve a stack de IA -->
       <path class="fpath" data-flow="out" d="M 726 168 C 790 130 810 80  866 59"/>
       <path class="fpath" data-flow="out" d="M 726 178 C 790 150 810 120 866 107"/>
@@ -173,7 +173,7 @@
       <path class="fpath" data-flow="out" d="M 726 206 C 790 228 810 240 866 251"/>
       <path class="fpath" data-flow="out" d="M 726 216 C 790 260 810 285 866 299"/>
       <path class="fpath" data-flow="out" d="M 726 226 C 790 295 810 330 866 347"/>
-      <text class="m-t" x="491" y="294" text-anchor="middle" style="letter-spacing:.06em;opacity:.75">각 제품을 따로 쓰거나 — 지식 파이프라인 전체를 연결하세요</text>
+      <text class="m-t" x="491" y="294" text-anchor="middle" style="letter-spacing:.06em;opacity:.75">PARSE는 단독 · PROVE는 모든 파서 · NEURO는 PROVE 위에</text>
       <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">사용 주체</text>
       <rect class="fnode" x="866" y="44"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="63"  text-anchor="middle">사람</text>
       <rect class="fnode" x="866" y="92"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="111" text-anchor="middle">애플리케이션</text>
@@ -201,7 +201,7 @@
 <section class="center pz" id="platform-demo">
   <span class="eye">플랫폼이 작동하는 모습</span>
 <h2>날것의 증거에서 통제된 답변으로.</h2>
-<p class="lead center">하나의 원천이 구조화된 데이터가 됩니다. 여러 원천이 버전 관리된 지식이 됩니다. Vault는 그 지식을 필요한 어디서든 쓸 수 있게 유지합니다.</p>
+<p class="lead center">하나의 출처가 구조화된 데이터가 됩니다. Prove는 그 출처가 말하고 뒷받침하는 바를 확정합니다. Neuro는 출처들이 만나는 곳이자 답이 나오는 곳입니다.</p>
   <div class="hdemo rv" data-src="amendment">
     <div class="hz hsrcz">
       <span class="hzl">01 · 원천</span>
@@ -220,18 +220,18 @@
     </div>
     <div class="hz">
       <span class="hzl">03 · Prove</span>
-      <h4>이력을 가진 주장</h4>
-      <div class="hkr ok" data-hot="amendment"><span>현행</span>갱신일: 2026년 9월 1일</div>
-      <div class="hkr dim" data-hot="contract"><span>대체됨</span>갱신일: 8월 1일</div>
-      <div class="hkr hold" data-hot="meeting"><span>미확인 신호</span>갱신이 다시 연기될 수 있음</div>
-      <div class="hrel hv" data-for="amendment">현행 ← amendment_v2.pdf가 뒷받침</div>
-      <div class="hrel hv" data-for="contract">대체됨 → amendment_v2.pdf로 교체</div>
-      <div class="hrel hv" data-for="meeting">신호 ← meeting_2026-03.mp3</div>
+      <h4>이 출처가 말하는 것</h4>
+      <div class="hkr ok" data-hot="amendment"><span>주장 · 뒷받침됨</span>갱신일: 2026년 9월 1일</div>
+      <div class="hkr dim" data-hot="contract"><span>주장 · 뒷받침됨</span>갱신일: 2026년 8월 1일</div>
+      <div class="hkr hold" data-hot="meeting"><span>주장 · ABSTAINED</span>갱신이 다시 연기될 수 있음</div>
+      <div class="hrel hv" data-for="amendment">주장 ← amendment_v2.pdf · p.4 ¶3</div>
+      <div class="hrel hv" data-for="contract">주장 ← contract.pdf · p.12 ¶2</div>
+      <div class="hrel hv" data-for="meeting">주장 ← meeting_2026-03.mp3 · 00:14:32 · 유보됨</div>
     </div>
     <div class="hz">
-      <span class="hzl">04 · Vault</span>
-      <h4>통제되고 제공할 준비 완료</h4>
-      <div class="hcode hmeta">version&nbsp;&nbsp;current<br>permissions&nbsp;&nbsp;organization<br>audit trail&nbsp;&nbsp;attached<br>delivery&nbsp;&nbsp;Web · API · SDK · MCP</div>
+      <span class="hzl">04 · Neuro</span>
+      <h4>출처들의 관계</h4>
+      <div class="hcode hmeta">supersedes&nbsp;&nbsp;amendment → contract<br>scope&nbsp;&nbsp;cross_source<br>evidence&nbsp;&nbsp;both sources kept<br>delivery&nbsp;&nbsp;Web · API · SDK · MCP</div>
       <p class="hans">이 계약은 2026년 9월 1일에 갱신됩니다.</p>
       <span class="hsig">미해결 신호 1건 첨부</span>
     </div>
@@ -243,7 +243,7 @@
   <div class="hsh">
     <span class="eye">플랫폼</span>
     <h2>제품 셋. 지식 파이프라인 하나.</h2>
-    <p class="lead">Parse가 증거를 구조화하고, Prove가 그것을 지식으로 바꾸며, Vault가 통제하고 제공합니다.</p>
+    <p class="lead">Parse가 각 출처를 구조화합니다. Prove가 각 출처의 말과 뒷받침을 확정합니다. Neuro가 그 관계를 이해합니다.</p>
   </div>
   <div class="hprods rv">
     <a class="hprod" href="products/parse">
@@ -255,29 +255,29 @@
     </a>
     <a class="hprod" href="products/prove">
       <span class="hpl"><b>02 · Prove</b></span>
-      <h3>사실을 증거에 연결하세요.</h3>
-      <p>증거를 주장, 관계, 버전, 명시적 상태로 바꿉니다. 이견도 이력도 지우지 않습니다.</p>
-      <span class="hprops">근거 있음 · 버전 관리 · 충돌 인지</span>
+      <h3>모든 주장을 그 출처에 근거시키십시오.</h3>
+      <p>하나의 출처가 말하고 뒷받침하는 모든 것 — 구간, 저자 정보, 한정 조건, 내부 모순, 그리고 정직한 판단 보류.</p>
+      <span class="hprops">근거 있음 · 재현 가능 · 출처 단위</span>
       <span class="k">Prove 살펴보기 →</span>
     </a>
-    <a class="hprod" href="products/vault">
-      <span class="hpl"><b>03 · Vault</b></span>
-      <h3>지식을 통제하고 제공하세요.</h3>
-      <p>지식을 저장하고, 권한을 부여하고, 감사 가능하게 유지하며, Web·API·SDK·MCP로 사용할 수 있게 합니다.</p>
-      <span class="hprops">저장 · 통제 · 이식 가능</span>
-      <span class="k">Vault 살펴보기 →</span>
+    <a class="hprod" href="products/neuro">
+      <span class="hpl"><b>03 · Neuro</b></span>
+      <h3>출처들이 어떻게 연결되는지 이해하십시오.</h3>
+      <p>보유한 모든 출처에 걸친 일치, 충돌, 정교화, 대체 — 각 관계는 그 뒤의 근거까지 추적됩니다.</p>
+      <span class="hprops">출처 횡단 · 추적 가능 · 충돌 인지</span>
+      <span class="k">Neuro 살펴보기 →</span>
     </a>
   </div>
 </section>
 
 
 <section class="center">
-  <span class="eye">Prove 안쪽</span>
+  <span class="eye">Neuro 내부</span>
 <h2>지식은 자라고, 그 증거는 연결된 채 남습니다.</h2>
-<p class="lead center">문서를 모아 둔 것이 아니라, 증거·사실·관계·이력이 끊임없이 이어진 네트워크입니다.</p>
+<p class="lead center">문서의 모음이 아닙니다. 근거, 사실, 관계, 이력이 끊임없이 이어진 네트워크입니다. 모든 노드는 Prove의 근거를 갖추고 도착했습니다.</p>
   <p class="mono rv" style="margin-top:18px;font-size:13px;letter-spacing:.03em;color:var(--acc2)">모든 관계가 추적 가능합니다.</p>
   <div class="rv" style="max-width:820px;margin:26px auto 0">
-    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="애니메이션: Orves Prove 안에서 지식 뷰가 자랍니다 — 회사, 매출, 계약, CEO, 실적, 갱신 — 사실이 나타나며 관계를 유지합니다. 지식이 발전해도 이력은 보존됩니다.">
+    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="애니메이션: Orves Neuro 안에서 지식 뷰가 자랍니다 — Company, Revenue, Contract, CEO, Earnings, Renewal — 사실이 나타나고 그 관계가 보존되며, 지식이 진화해도 이력은 남습니다.">
         <g class="bs" style="animation-delay:0s">
           <circle cx="170" cy="92" r="7" style="fill:var(--acc)"/>
           <text class="m-t" x="170" y="76" text-anchor="middle" style="font-size:8.5px;fill:var(--fg)">회사</text>
@@ -413,7 +413,7 @@
   </div>
   <p class="mono wclosecap">처음부터 끝까지 버전 관리되고 추적 가능</p>
   <h2 style="font-size:36px;max-width:30ch;margin:18px auto 12px">증거와 연결된 채 남는 지식 위에 만드세요.</h2>
-  <p class="lead center" style="margin-bottom:26px">프라이빗 파일럿 중인 Parse로 시작하세요. Prove와 Vault는 사용할 수 있게 되는 대로 이어집니다.</p>
+  <p class="lead center" style="margin-bottom:26px">프라이빗 파일럿 중인 Parse로 시작하십시오. Prove와 Neuro가 뒤이어 따릅니다.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">무료로 시작</a>
     <a class="btn gh" href="contact">문의하기</a>
@@ -562,7 +562,7 @@
     <div class="ftcol"><div class="h">제품</div>
       <a href="products/parse">Parse</a>
       <a href="products/prove">Prove</a>
-      <a href="products/vault">Vault</a>
+      <a href="products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">리소스</div>
       <a href="/developers" hreflang="en">Developers</a>

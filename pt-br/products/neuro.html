@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Neuro | Orves</title>
+<meta name="description" content="A Orves constrói The Verifiable Knowledge Layer — três produtos, Parse, Prove e Neuro: dados estruturados, tudo o que cada fonte diz e sustenta, e como cada fonte se relaciona."/>
+<link rel="canonical" href="https://orves.ai/pt-br/products/neuro"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/neuro"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/neuro"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/neuro"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/neuro"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/neuro"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/neuro"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
+<meta property="og:title" content="Neuro | Orves"/>
+<meta property="og:description" content="A Orves constrói The Verifiable Knowledge Layer — três produtos, Parse, Prove e Neuro: dados estruturados, tudo o que cada fonte diz e sustenta, e como cada fonte se relaciona."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:url" content="https://orves.ai/pt-br/products/neuro"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">Produtos <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>De documentos a dados estruturados</em></a>
+        <a href="../products/prove">Prove <em>Tudo o que uma fonte diz e sustenta</em></a>
+        <a href="../products/neuro">Neuro <em>Como cada fonte se relaciona</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">Recursos <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API, guia rápido e exemplos</em></a>
+        <a href="../benchmarks">Benchmarks <em>Como medimos — metodologia e resultados</em></a>
+        <a href="../research">Research <em>Métodos, relatórios e achados técnicos</em></a>
+        <a href="../trust">Trust <em>Certificação e verificação</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>O que já saiu e o que vem</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">Preços</a>
+    <a href="../why-orves" class="">Por que Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="Idioma">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">PT</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>Selecionar idioma</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/neuro"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/neuro"
+         class="on" aria-current="true">Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/neuro"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/neuro"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/neuro"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/neuro"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/neuro"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/neuro"
+         >简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">Entrar</a>
+  
+  
+  <a class="btn" href="../contact?topic=neuro-beta">Entrar no beta privado</a>
+  
+  <button class="menubtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/prove">Prove</a>
+  <a href="../products/neuro">Neuro</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">Preços</a>
+  <a href="../why-orves">Por que Orves</a>
+  <a href="../login">Entrar</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>inteligência de corpus · neuro · em desenvolvimento</span>
+    <h1>Cada fonte, <span class="accent-tx">entendida em conjunto.</span></h1>
+    <p class="sub">O Orves Neuro é o único produto da Orves que mantém estado. Ele recebe os resultados por fonte que o Prove produz, avalia cada novo resultado contra o estado relevante do Corpus e descobre o que nenhum documento sozinho declara: a mesma entidade sob nomes diferentes, uma fonte posterior que substitui uma anterior, duas instituições que se contradizem. Em desenvolvimento: esta página descreve o que o Neuro está sendo construído para fazer.</p>
+    <div class="cta">
+      
+      <a class="btn" href="../contact?topic=neuro-beta">Entrar no beta privado</a>
+      <a class="btn gh" href="#why-neuro">Veja como funciona</a>
+      
+      
+    </div>
+    <div class="chips"><span class="chip">relações entre fontes</span><span class="chip">resolução de entidades</span><span class="chip">evolução temporal</span><span class="chip">divergência preservada</span><span class="chip">Web · API · SDK · MCP</span></div>
+    
+  </div>
+  <div class="code rv"><div class="codehd">dentro de um Corpus · em desenvolvimento</div>
+<pre><span class="cm"># a Corpus — the persistent collection of source-level</span>
+<span class="cm"># results analysed by Neuro</span>
+<span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
+<span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
+<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
+<span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
+<span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
+<span class="k">access/</span>         <span class="cm"># permissions · policies</span>
+
+<span class="cm"># served via Web · API · SDK · MCP — in development</span></pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">O problema</span>
+<h2>Cada documento é entendido. O conjunto, nunca.</h2>
+
+  <p class="lead center">Cada fonte é lida isoladamente e arquivada — então ninguém percebe que dois relatórios nomeiam a mesma empresa de formas diferentes, que a call de julho já substituiu a projeção de maio, ou que a conclusão que todos citam se apoia numa fonte que outra contradiz. O entendimento que importa vive entre os documentos, e nada o sustenta.</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">mesma entidade, nomes diferentes</span><span class="chip bad">posições substituídas ainda citadas</span><span class="chip bad">contradições nunca reveladas</span><span class="chip bad">nenhuma visão do conjunto</span><span class="chip bad">respostas que ninguém rastreia</span></div>
+  
+</section>
+
+
+
+
+
+<section class="center" id="why-neuro">
+  <span class="eye">Por que o Neuro existe</span>
+<h2>O Prove lê uma fonte. O Neuro lê o conjunto.</h2>
+<p class="lead center">O Parse estrutura cada fonte. O Prove analisa uma fonte por vez e nunca vê outra — que é exatamente por isso que seus resultados são reproduzíveis. O Neuro é onde esses resultados independentes se encontram: ele avalia cada novo resultado por fonte contra o estado relevante do Corpus e descobre as relações que nenhum documento sozinho declara, cada uma rastreável de volta às fontes que a sustentam.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — uma fonte</h4>
+      <ul class="kwl" style="margin-top:14px"><li>lê uma única fonte estruturada</li><li>nunca vê suas outras fontes nem estado anterior</li><li>captura afirmações, trechos, ressalvas e autoria</li><li>as relações carregam scope: within_source</li></ul>
+      <p class="kwd" style="margin-top:4px">Sem estado por construção — mesma fonte, mesmo resultado.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — o Corpus</h4>
+      <ul class="kwl" style="margin-top:14px"><li>avalia cada novo resultado contra o estado relevante do Corpus</li><li>resolve a mesma entidade em fontes diferentes</li><li>descobre concordância, conflito, refinamento e substituição</li><li>as relações carregam scope: cross_source</li></ul>
+      <p class="kwd" style="margin-top:4px">Com estado — e cada relação guarda as fontes por trás dela.</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Como uma nova fonte muda o conjunto</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">nova fonte</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — uma fonte, isolada</span><span class="a">→</span><span class="fc" style="animation-delay:3s">o resultado entra no Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">o Neuro o avalia contra o estado relevante do Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:5s">relações e estados cross_source rastreáveis</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O Neuro atualiza o Corpus com relações e estados rastreáveis — ele nunca transforma uma inferência em fato, nunca faz média de visões concorrentes e nunca sobrescreve o que uma fonte de fato disse.</p>
+  
+</section>
+
+<section class="center" id="disagreement">
+  <span class="eye">A discordância, preservada</span>
+<h2>Contradições são conhecimento, não erros.</h2>
+<p class="lead center">Duas instituições projetam o mesmo indicador e discordam. O Prove analisou cada fonte por si e nunca viu a outra; o Neuro é quem percebe que tratam do mesmo assunto. Ele registra o conflito e mantém os dois — com autor, data e evidência — em vez de fazer média, sobrescrever um ou fabricar consenso.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">duas fontes · mesmo assunto</div>
+<pre><span class="cm"># report — May 2026</span>
+<span class="k">source</span>: <span class="s">macro_outlook_may.pdf · p.8 · Institution A</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+
+<span class="cm"># audio — July 2026</span>
+<span class="k">source</span>: <span class="s">weekly_call_jul.mp3 · 14:32 · Institution B</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">o estado preservado — as duas afirmações</div>
+<pre><span class="cm"># neither claim is lost or merged</span>
+├── <span class="s">two independent claims</span>
+├── <span class="s">same subject · same reference period</span>
+├── <span class="s">different authors and dates</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: cross_source · discovered by Neuro</span>
+└── <span class="g">evidence preserved for both</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Relações entre fontes</span>
+  <p class="lead center rv" style="margin-top:12px">Uma fonte posterior pode atualizar uma posição anterior, contradizer outra instituição, refinar uma afirmação prévia ou introduzir uma visão não relacionada sobre o mesmo tema. O Prove captura essas relações dentro de cada fonte, carregando scope: within_source. O Neuro as descobre no Corpus inteiro, carregando scope: cross_source — o mesmo vocabulário em dois escopos, nunca misturados e nunca promovidos silenciosamente de um para o outro.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
+
+<section class="center" id="inside">
+  <span class="eye">Dentro de um Corpus</span>
+<h2>Mais que arquivos. Mais que vetores. Mais que um grafo.</h2>
+<p class="lead center">Um Corpus é a coleção persistente de resultados por fonte analisada pelo Neuro — as próprias fontes, o que o Prove estabeleceu sobre cada uma, e o entendimento entre fontes construído em cima. Você cria um Corpus, adiciona fontes a ele e governa quem pode alcançá-lo; o Neuro é quem o estuda. O grafo de conhecimento é uma capacidade dentro do Neuro — não o produto.</p>
+  
+  
+  
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>Fontes</h4>
+    <ul class="kwl"><li>documentos</li><li>áudio</li><li>vídeo</li><li>APIs</li><li>sistemas</li></ul><p class="kwd">Os originais, retidos conforme a política — tudo acima continua ligado a eles.</p>
+    </div><div class="card"><h4>Resultados por fonte</h4>
+    <ul class="kwl"><li>afirma</li><li>evidência</li><li>trechos</li><li>ressalvas</li><li>autoria</li><li>relações within_source</li></ul><p class="kwd">O que o Prove estabeleceu sobre cada fonte por si só — mantido intacto, nunca reescrito pelo que veio depois.</p>
+    </div><div class="card"><h4>Entendimento entre fontes</h4>
+    <ul class="kwl"><li>entidades resolvidas</li><li>relações cross_source</li><li>contexto temporal</li><li>conflitos</li><li>versões</li></ul><p class="kwd">O que só o Neuro enxerga — construído a partir desses resultados, rastreável até cada fonte por trás dele.</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Grafo de conhecimento respaldado por evidência</span>
+  <p class="lead center rv" style="margin-top:12px">Entidades e afirmações não são conectadas por parecerem semanticamente parecidas. Toda relação retém procedência, referências de origem, contexto temporal e a evidência que a produziu.</p>
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">uma afirmação dentro do grafo</div>
+<pre><span class="s">"IPCA forecast for 2026: 4.2%"</span>
+├── <span class="k">asserted_by</span>   → <span class="s">Institution A</span>
+├── <span class="k">supported_by</span>  → <span class="s">macro_outlook_may.pdf · p.8</span>
+├── <span class="k">concerns</span>      → <span class="s">Brazil · IPCA</span>
+├── <span class="k">valid_for</span>     → <span class="s">2026</span>
+├── <span class="k">contradicts</span>   → <span class="s">claim kn_517 · Institution B</span>
+└── <span class="k">created_at</span>    → <span class="s">2026-05-14</span></pre></div></div>
+  
+  
+  
+  
+</section>
+
+<section class="center" id="built-on-prove">
+  <span class="eye">Sobre o que o Neuro roda</span>
+<h2>O Neuro é construído sobre o Prove. Cada relação leva de volta à evidência.</h2>
+<p class="lead center">O Neuro não lê documentos. Ele trabalha exclusivamente sobre conhecimento ancorado pelo Prove — afirmações que já carregam seu trecho, autor, ressalvas e estado epistemológico. Essa dependência é a garantia: uma relação entre fontes só é tão defensável quanto os resultados por fonte que estão embaixo dela, por isso o Neuro nunca aceita texto cru, chunks soltos, embeddings ou afirmações sem procedência.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">O que cada produto precisa</h4>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — use sozinho</li><li>Prove — saída do Orves Parse, ou seu próprio parser compatível</li><li>Neuro — resultados ancorados pelo Prove, sempre</li></ul>
+      <p class="kwd" style="margin-top:4px">O Prove ancora as afirmações. O Neuro ancora as relações entre elas.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>O que isso lhe garante</h4>
+      <ul class="kwl" style="margin-top:14px"><li>um nível uniforme de procedência em todo o Corpus</li><li>nenhuma relação construída sobre texto que ninguém conferiu</li><li>toda relação cross_source rastreável até dois resultados por fonte</li><li>entradas reproduzíveis — a mesma fonte sempre ancora do mesmo jeito</li></ul>
+      <p class="kwd" style="margin-top:4px">A dependência não é uma limitação. É o que torna as relações defensáveis.</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Envie uma fonte, receba a cadeia inteira</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">sua fonte</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — se a fonte precisar ser estruturada</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — ancorada, uma fonte por vez</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — relacionada no Corpus</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O Neuro é um produto separado, não uma tarefa separada: envie uma fonte e a cadeia roda para você; traga a saída do seu próprio parser e ela começa no Prove; traga um resultado do Prove que você já tem e ela começa no Neuro. Você paga apenas pelas etapas que de fato rodam — o Neuro nunca cobra duas vezes por um resultado do Prove que já existe. O que nunca muda é o contrato: nada chega ao Neuro sem estar ancorado.</p>
+  
+</section>
+
+<section class="center" id="what-you-pay">
+  <span class="eye">Pelo que você paga</span>
+<h2>O Neuro nunca cobra duas vezes por um resultado do Prove que já existe.</h2>
+<p class="lead center">O Neuro roda sobre resultados ancorados pelo Prove, então a pergunta honesta é o que de fato precisa rodar para o pedido que você enviou. Você paga por essas etapas e por nenhuma outra — trabalho já feito nunca é refeito, nem recobrado.</p>
+  
+  
+  
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>Você envia um resultado do Prove que já tem</h4>
+    <ul class="kwl"><li>Operação de Corpus</li></ul><p class="kwd">Nada precisa ser reestabelecido sobre essa fonte. Só o trabalho sobre o Corpus roda.</p>
+    </div><div class="card"><h4>Você envia JSON ou Markdown que ainda não passou pelo Prove</h4>
+    <ul class="kwl"><li>Análise de fonte</li><li>Operação de Corpus</li></ul><p class="kwd">A fonte ainda precisa ser ancorada antes de poder ser relacionada a qualquer outra coisa.</p>
+    </div><div class="card"><h4>Você envia um arquivo bruto</h4>
+    <ul class="kwl"><li>Parse</li><li>Análise de fonte</li><li>Operação de Corpus</li></ul><p class="kwd">O arquivo precisa primeiro ser estruturado, depois ancorado, depois relacionado.</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Operação de Corpus</span>
+  <p class="lead center rv" style="margin-top:12px">Uma operação de Corpus é trabalho sobre o conjunto: adicionar um resultado ancorado ao Corpus, compará-lo com o estado relevante, relacioná-lo ao que já está lá, ou consultar tudo. As tarifas são publicadas na disponibilidade — nunca antes.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">add</span><span class="chip">compare</span><span class="chip">relate</span><span class="chip">query</span></div>
+  
+  
+</section>
+
+<section class="center" id="access">
+  <span class="eye">Acesso e governança · em desenvolvimento</span>
+<h2>Servido a pessoas, aplicações, modelos e agentes.</h2>
+<p class="lead center">O Neuro está sendo construído para servir conhecimento por Web, REST API, SDK e MCP — recuperação desenhada para devolver a afirmação relevante com sua evidência, visões concorrentes e histórico em uma única resposta rastreável. Nunca chunks desconectados, nunca preso a um único provedor de IA.</p>
+  
+  
+  
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">superfícies previstas · prévia conceitual</div>
+<pre><span class="cm"># how a Corpus is served — in development</span>
+<span class="k">Web</span>       <span class="cm"># explore, search, inspect evidence</span>
+<span class="k">REST API</span>  <span class="cm"># applications and pipelines</span>
+<span class="k">SDK</span>       <span class="cm"># your language, one contract</span>
+<span class="k">MCP</span>       <span class="cm"># models and agents, permission-aware</span>
+<span class="k">Export</span>    <span class="cm"># your asset, portable</span>
+
+<span class="cm"># conceptual MCP tools — subject to change</span>
+<span class="s">search_knowledge · get_claim · get_evidence</span>
+<span class="s">trace_claim · find_conflicts · list_changes</span></pre></div></div>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">texto completo</span><span class="chip">semântica</span><span class="chip">busca por entidade e afirmação</span><span class="chip">filtros temporais</span><span class="chip">busca por conflitos</span><span class="chip">percurso do grafo</span><span class="chip">consciente de permissões</span></div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O Neuro fornece o entendimento — com as fontes por trás dele. Suas aplicações e modelos decidem o que fazer com ele.</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Governança</span>
+  <p class="lead center rv" style="margin-top:12px">Isolamento por organização, permissões no nível do Corpus e da fonte, histórico completo e auditoria. Cada controle é anunciado quando entra — nunca antes.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">isolamento por organização</span><span class="chip">permissões no nível do Corpus</span><span class="chip">acesso no nível da fonte</span><span class="chip">histórico do conhecimento</span><span class="chip">versionamento</span><span class="chip">logs de auditoria</span><span class="chip">políticas de retenção</span><span class="chip">exclusão e exportação</span><span class="chip">escopos de API e MCP</span></div>
+  
+  
+</section>
+
+<section class="center" id="use-cases">
+  <span class="eye">Casos de uso</span>
+<h2>Feito para conhecimento que precisa resistir ao escrutínio.</h2>
+
+  
+  
+  
+  
+  <div class="g2 rv" style="margin-top:26px;max-width:840px;margin-left:auto;margin-right:auto">
+    <div class="card"><h4>Pesquisa institucional</h4>
+    <p>Mantenha projeções, opiniões, revisões e evidência de origem ao longo de relatórios, calls, áudio e conjuntos de dados.</p></div><div class="card"><h4>Jurídico e conformidade</h4>
+    <p>Mantenha afirmações, cláusulas, precedentes e evidência rastreáveis até suas fontes originais.</p></div><div class="card"><h4>Conhecimento corporativo</h4>
+    <p>Conecte políticas, documentos e sistemas internos sem perder propriedade, procedência ou histórico.</p></div><div class="card"><h4>IA e agentes</h4>
+    <p>Dê aos modelos um contexto persistente, consciente de permissões e respaldado por evidência, pela API ou por MCP.</p></div>
+  </div>
+  
+  
+  
+  
+</section>
+
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">Me mostra</span>
+<h2>Anatomia de uma relação entre fontes.</h2>
+<p class="lead center">Não é uma verdade consolidada: é uma relação endereçável entre afirmações que vieram de fontes diferentes — com tudo o que é preciso para conferi-la, e as duas fontes ainda por trás.</p>
+  <div class="kobj rv">
+    <div class="kohead">
+      <span class="kolab">RELAÇÃO ENTRE FONTES · rel_842 · v4</span>
+      <div class="koclaim">“A data de renovação afirmada em amendment_v2.pdf substitui a de contract_2024.pdf.”</div>
+      <span class="kostate">NÃO RESOLVIDA</span>
+    </div>
+    <div class="kogrid">
+      <div class="kocol">
+        <h5>Refs de afirmação · 2</h5>
+        <div class="koev">c_17 · “Renovação movida para 2026-09-01”<em>Prove · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · “Renovação marcada para 2026-08-01”<em>Prove · contract_2024.pdf</em></div>
+        <h5 style="margin-top:14px">Refs de fonte · 2</h5>
+        <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
+        <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
+      </div>
+      <div class="kocol">
+        <h5>A relação</h5>
+        <div class="koev">type<em>supersedes</em></div>
+        <div class="koev">scope<em>cross_source</em></div>
+        <div class="koev">discovered_by<em>Neuro</em></div>
+        <div class="koev">provenance<em>complete</em></div>
+        <div class="koev" style="border-bottom:0">status<em>unresolved</em></div>
+        <div class="kwd" style="font-size:10.5px;margin-top:6px">nenhuma das afirmações foi reescrita — as duas permanecem exatamente como a fonte as enunciou</div>
+      </div>
+      <div class="kocol">
+        <h5>Histórico</h5>
+        <div class="koev">v1 · jun · ainda sem relação</div>
+        <div class="koev">v2 · jul · related_to · mesmo assunto</div>
+        <div class="koev">v3 · ago · contradicts</div>
+        <div class="koev">v4 · set · supersedes<em>atual</em></div>
+        <h5 style="margin-top:14px">Certificado</h5>
+        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
+        <div class="kwd" style="font-size:10.5px;margin-top:4px">registra procedência, versão, escopo e integridade</div>
+      </div>
+    </div>
+    <div class="kograph">
+      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="A relação entre duas afirmações, cada uma ancorada em uma fonte diferente: amendment_v2.pdf afirma a afirmação c_17, contract_2024.pdf afirma a afirmação c_88, e rel_842 relaciona as duas com scope cross_source.">
+        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
+        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
+        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
+        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
+        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">afirma</text>
+        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">ancora</text>
+        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">ancora</text>
+        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">afirma</text>
+        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
+        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">amendment_v2.pdf</text>
+        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">afirmação c_17</text>
+        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--acc2)">rel_842 · supersedes</text>
+        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">afirmação c_88</text>
+        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">contract_2024.pdf</text>
+        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">a relação — com as duas fontes ainda por trás</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Histórico</span>
+<h2>Veja o entendimento mudar.</h2>
+<p class="lead center">Uma nova fonte chega, o Prove estabelece o que ela diz, e o Neuro reavalia o assunto contra o Corpus. Nada é sobrescrito — cada estado guarda a fonte por trás dele.</p>
+  <div class="htl rv">
+    
+    
+    <div class="hstop"><span class="tm">JUN</span><span class="tv">v1</span><p>Renovação marcada para 30 jun</p><span class="te">contract_2024.pdf · p.12</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">JUL</span><span class="tv">v2</span><p>Renovação adiada</p><span class="te">renewal_notice.eml</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">AGO</span><span class="tv">v3</span><p>Nova data proposta: 15 ago</p><span class="te">draft_amendment.pdf · p.2</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop cur"><span class="tm">SET</span><span class="tv">v4</span><p>Renovação passou para 1º set</p><span class="te">amendment_v2.pdf · p.4</span></div>
+    
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">O mesmo assunto em quatro fontes — cada estado anterior e a fonte que o produziu, preservados.</p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">Antes × depois</span>
+<h2>A recuperação encontra texto. A camada preserva por que aquilo é verdade.</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Recuperação tradicional</h4>
+      <ul class="kwl" style="margin-top:14px"><li>recupera trechos na hora da consulta</li><li>o contexto existe só naquele instante</li><li>o conhecimento não é governado de forma persistente</li><li>conflitos e versões tratados por fora</li></ul>
+      <p class="kwd" style="margin-top:4px">Quando a resposta é questionada, o pipeline já seguiu em frente.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Sobre a Verifiable Knowledge Layer</h4>
+      <ul class="kwl" style="margin-top:14px"><li>persiste as afirmações e sua evidência</li><li>preserva as relações e o histórico de decisões</li><li>toda mudança cria uma versão governada</li><li>serve objetos de conhecimento reutilizáveis</li></ul>
+      <p class="kwd" style="margin-top:4px">Quando a resposta é questionada, você mostra por quê.</p></div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">Uma propriedade, não um produto</span>
+    <h3 style="margin:8px 0 6px">Todo artefato é verificável.</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">A certificação atravessa tudo que a Orves produz. A verificação é projetada para ser pública, reproduzível e independente de uma conta na Orves.</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ procedência</span><span class="bp hot">✓ integridade</span><span class="bp">versão</span><span class="bp">evidência</span><span class="bp">estado de resolução</span><span class="bp">verificação</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API primeiro</span>
+    <h3 style="margin:8px 0 6px">Integre em minutos.</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">Tudo é entregue pela API gerenciada — nenhuma infraestrutura adicional para implantar.</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">Exemplos</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Seja o primeiro da fila do Neuro.</h2>
+  <p class="lead center" style="margin-bottom:26px">Em desenvolvimento — conte para nós o que sua organização precisa entender entre suas fontes.</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../contact?topic=neuro-beta">Entrar no beta privado</a>
+    <a class="btn gh" href="../products/parse">Comece hoje pelo Parse</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">Produtos</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/prove">Prove</a>
+      <a href="../products/neuro">Neuro</a>
+    </div>
+    <div class="ftcol"><div class="h">Recursos</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">Empresa</div>
+      <a href="../why-orves">Por que Orves</a>
+      <a href="/system" hreflang="en">Marca</a>
+      <a href="../contact">Contato</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · Todos os direitos reservados.</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

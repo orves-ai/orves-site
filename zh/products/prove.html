@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Prove | Orves</title>
-<meta name="description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta name="description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
 <link rel="canonical" href="https://orves.ai/zh/products/prove"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/prove"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/prove"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/prove"/>
 <meta property="og:title" content="Prove | Orves"/>
-<meta property="og:description" content="Orves 正在构建 The Verifiable Knowledge Layer —— Parse、Prove、Vault 三个产品，带来结构化数据、可验证的知识，以及承载并提供它的受治理空间。"/>
+<meta property="og:description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="zh_Hans"/>
 <meta property="og:url" content="https://orves.ai/zh/products/prove"/>
@@ -40,8 +40,8 @@
       <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
-        <a href="../products/prove">Prove <em>从证据到可验证的知识</em></a>
-        <a href="../products/vault">Vault <em>为这些知识提供长久的所在</em></a>
+        <a href="../products/prove">Prove <em>单一来源所陈述与所支持的一切</em></a>
+        <a href="../products/neuro">Neuro <em>所有来源如何关联</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -105,7 +105,7 @@
 <div class="mnav">
   <a href="../products/parse">Parse</a>
   <a href="../products/prove">Prove</a>
-  <a href="../products/vault">Vault</a>
+  <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
   <a href="../research" class="sub">Research</a>
@@ -122,57 +122,125 @@
 
 <section class="hero" style="border-top:0">
   <div>
-    <span class="eyepill"><span class="d"></span>知识基础设施 · knowledge · 开发中</span>
-    <h1>从证据到 <span class="accent-tx">可验证的知识。</span></h1>
-    <p class="sub">Orves Prove 把文档、数据与证据变成可验证、可追溯、可审计的知识 —— 每一条主张都保留它的来源、关系、版本与历史，随时可供人、应用与智能系统使用。目前处于开发中，API 契约正在定稿。</p>
+    <span class="eyepill"><span class="d"></span>来源分析 · prove · 开发中</span>
+    <h1>一个来源陈述的一切。<span class="accent-tx">以及它所支持的。</span></h1>
+    <p class="sub">Orves Prove 一次读取一个结构化来源——Parse 的输出，或您自己的 JSON/Markdown——并捕获其中的每一条主张：它出自的精确区段、由谁主张、附带的限定条件、其内部陈述的关系、它自相矛盾之处，以及它并不支持的主张。一个来源进，一份可验证的结果出。开发中；API 约定正在定稿。</p>
     <div class="cta">
       
       <a class="btn" href="../create-account">开始构建</a>
       <a class="btn gh" href="../pricing">查看价格</a>
       
     </div>
-    <div class="chips"><span class="chip">来源</span><span class="chip">关系</span><span class="chip">历史</span><span class="chip">治理</span></div>
-    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">不绑定模型 · 开发中 —— API 契约定义中</p>
+    <div class="chips"><span class="chip">主张与证据</span><span class="chip">精确区段</span><span class="chip">限定条件</span><span class="chip">来源内部的关系</span><span class="chip">ABSTAINED</span></div>
+    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">无状态 · 一次一个来源 · 开发中——API 约定制定中</p>
   </div>
-  <div class="code rv"><div class="codehd">知识对象 · 示意预览</div>
-<pre><span class="cm"># a knowledge object — not text</span>
+  <div class="code rv"><div class="codehd">来源分析 · 示意预览</div>
+<pre><span class="cm"># one source in · one verifiable result out</span>
 <span class="cm"># illustrative preview — the API contract is in definition</span>
-{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
-  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
-  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
-  <span class="k">"lineage"</span>: <span class="s">"amendment_v2.pdf · page 4 · bbox"</span>,
+{ <span class="k">"source"</span>: <span class="s">"macro_outlook_may.pdf"</span>, <span class="k">"scope"</span>: <span class="g">"within_source"</span>,
+  <span class="k">"claim"</span>: <span class="s">"IPCA forecast for 2026: 4.2%"</span>,
+  <span class="k">"says"</span>: <span class="g">"asserted"</span>, <span class="k">"supports"</span>: <span class="g">"SUPPORTED"</span>,
+  <span class="k">"span"</span>: <span class="s">"p.8 · para 2 · bbox[72,410,486,433]"</span>,
+  <span class="k">"asserted_by"</span>: <span class="s">"Institution A · 2026-05-14"</span>,
+  <span class="k">"qualifiers"</span>: <span class="s">["preliminary", "subject to revision"]</span>,
+  <span class="k">"contradicted_within_source"</span>: <span class="s">"claim c_31 · annex p.24"</span>,
   <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
 </section>
 
 <section class="center">
   <span class="eye">问题</span>
-<h2>AI 技术栈保存结论，丢掉证据。</h2>
+<h2>抽取返回文本，却不返回这段文本支持什么。</h2>
 
-  <p class="lead center">多数 AI 管线是为检索和生成优化的，而不是为经得起时间的知识。几个月后，团队知道答案 —— 却不知道它当初为什么被接受、什么变了、哪条证据支撑过它。</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">来源被打散</span><span class="chip bad">版本悄悄漂移</span><span class="chip bad">关系缺失</span><span class="chip bad">决策无法还原</span><span class="chip bad">更新缺乏治理</span></div>
+  <p class="lead center">流水线把语句从文档里拽出来，同时丢掉了一切让它站得住脚的东西：它究竟出自何处、由谁主张、附在其上的保留，以及两页之后与它矛盾的那一段。剩下的东西读起来像事实，却无从核对。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">区段被丢弃</span><span class="chip bad">限定条件被抹平</span><span class="chip bad">作者信息丢失</span><span class="chip bad">内部矛盾被合并</span><span class="chip bad">在缺少证据处进行猜测</span></div>
   
 </section>
 
 
 <section class="center tight">
   <span class="eye">你会得到</span>
-  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">更少的幻觉</span><span class="chip">可审计性</span><span class="chip">合规</span><span class="chip">可复现性</span><span class="chip">智能体记忆</span><span class="chip">可解释性</span><span class="chip">机构层面的信任</span></div>
+  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">更少的幻觉</span><span class="chip">可审计性</span><span class="chip">合规</span><span class="chip">可复现性</span><span class="chip">可解释性</span><span class="chip">站得住脚的引用</span><span class="chip">机构层面的信任</span></div>
 </section>
 
 
 
+
+<section class="center" id="within-source">
+  <span class="eye">在一个来源之内</span>
+<h2>Prove 读一个来源，别无其他。</h2>
+<p class="lead center">每一份结果都产自单一的结构化来源，无法访问您的其他文件，不保留先前运行的记忆，也没有可供查阅的既有状态。这一约束就是产品本身：同一个来源始终得出同样的结果，任何人都能对着文件本身核对它。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Prove 收到什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>一个结构化来源——Parse 的输出，或您自己的 JSON/Markdown</li><li>其中的文本、表格、版式与位置</li><li>该来源就自身所声明的一切——作者、日期、范围</li></ul>
+      <p class="kwd" style="margin-top:4px">一个来源进，一份可验证的结果出。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Prove 从不会收到什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>您的其他来源</li><li>先前运行的结果</li><li>当前的 Corpus 状态</li><li>该来源并不包含的任何东西</li></ul>
+      <p class="kwd" style="margin-top:4px">把来源彼此关联起来的是 Orves Neuro。</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">一个来源，自始至终</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">结构化来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">由区段定位的主张</span><span class="a">→</span><span class="fc" style="animation-delay:2s">陈述与支持</span><span class="a">→</span><span class="fc" style="animation-delay:3s">限定条件与作者信息</span><span class="a">→</span><span class="fc" style="animation-delay:4s">within_source 关系</span><span class="a">→</span><span class="fc" style="animation-delay:5s">一份可验证的结果</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">不会从文件之外推断任何东西——凡来源并不支持某条主张之处，状态即为 ABSTAINED。</p>
+  
+</section>
+
+<section class="center" id="says-supports">
+  <span class="eye">陈述 × 支持</span>
+<h2>一个来源所陈述的，并不就是它所支持的。</h2>
+<p class="lead center">一份文档可能主张它从未支撑的东西，可能用保留把一个数字修饰到毫无意义，也可能在第 8 页与附录里给出不同的数字。把这一切压平成一张事实清单，正是站不住脚的主张进入审计的方式。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">一个来源 · 两处段落</div>
+<pre><span class="cm"># macro_outlook_may.pdf · Institution A</span>
+<span class="k">p.8 para 2</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+<span class="cm">                 preliminary, subject to revision</span>
+
+<span class="k">annex p.24</span>:  <span class="s">"2026 scenario built on IPCA of 4.4%"</span>
+<span class="cm">                 no qualifier attached</span></pre></div><div class="code rv"><div class="codehd">来源级结果</div>
+<pre><span class="cm"># the same file disagrees with itself</span>
+├── <span class="s">two claims · same subject · same source</span>
+├── <span class="k">span</span>: <span class="s">p.8 para 2 · bbox</span> | <span class="s">annex p.24</span>
+├── <span class="k">qualifiers</span>: <span class="s">preliminary</span> | <span class="s">none</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: within_source</span>
+└── <span class="g">both preserved — neither averaged nor dropped</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">一个来源内部的关系</span>
+  <p class="lead center rv" style="margin-top:12px">Prove 在每个来源内部捕获这些关系，每一条都带有 scope: within_source。Orves Neuro 在整个 Corpus 范围内发现同样的关系，带有 scope: cross_source。同一套词汇，两个不同的尺度——绝不混用，也绝不从一方悄悄升格为另一方。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
 
 
 
 <section class="center">
   <span class="eye">它产出什么</span>
-<h2>一个自带证据的知识库。</h2>
+<h2>一个来源，分析到底。</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>知识对象</h4>
-    <p>带证据、矛盾、关系、版本与裁定状态的主张，而不是文本。证据不足就是 ABSTAINED，绝不猜测。</p></div><div class="card"><h4>谱系与引用</h4>
-    <p>每个事实都能追到它在来源中的精确位置 —— 页、区域、时间戳或来源事件。一旦有变化，你可以还原出改了什么、为什么改。</p></div><div class="card"><h4>随处可用</h4>
-    <p>同一份受治理的知识，提供给人、应用、智能体与模型 —— 通过 API，以及交付后通过 Orves Vault（Web · SDK · MCP）。</p></div>
+    <div class="card"><h4>带着证据的主张</h4>
+    <p>每一条主张都保留它出自的精确区段——页面、区域、段落或音频时间戳——以及来源自身所声明的、由谁在何时主张。</p></div><div class="card"><h4>陈述，以及支持</h4>
+    <p>一个来源所陈述的与它实际支撑的，是两件不同的事实。两者都被记录下来，连同区分它们的限定条件与保留。证据不足即为 ABSTAINED，而不是猜测。</p></div><div class="card"><h4>来源内部的关系</h4>
+    <p>在同一份文件之内彼此支持、细化、矛盾或取代的主张，每一条都带有 scope: within_source。跨来源的关系属于 Orves Neuro。</p></div>
   </div>
 </section>
 
@@ -180,107 +248,9 @@
 
 
 
-<section class="center">
-  <span class="eye">看看</span>
-<h2>一个知识对象的结构。</h2>
-<p class="lead center">不只是文本：一个受治理、可寻址的知识对象。下面的每一部分都能通过 API 取用。</p>
-  <div class="kobj rv">
-    <div class="kohead">
-      <span class="kolab">KNOWLEDGE OBJECT · kn_842 · v4</span>
-      <div class="koclaim">「合同续约日期改为 2026-09-01。」</div>
-      <span class="kostate">SUPPORTED</span>
-    </div>
-    <div class="kogrid">
-      <div class="kocol">
-        <h5>证据 · 支持 3 条 · 反对 1 条</h5>
-        <div class="koev">amendment_v2.pdf · 第4页 ¶3<em>支持</em></div>
-        <div class="koev">renewal_notice.eml · 2026-06-12<em>支持</em></div>
-        <div class="koev">board_minutes.pdf · 第2页<em>支持</em></div>
-        <div class="koev bad" style="border-bottom:0">contract_2024.pdf · 第12页<em>反对 · 已被取代</em></div>
-      </div>
-      <div class="kocol">
-        <h5>关系 · 21</h5>
-        <div class="koev">续约 → 合同 #442</div>
-        <div class="koev">当事方 → 供应商 XYZ</div>
-        <div class="koev">影响 → 发票 #9812</div>
-        <div class="koev" style="border-bottom:0;color:var(--fg3)">+ 另有 18 条</div>
-      </div>
-      <div class="kocol">
-        <h5>历史</h5>
-        <div class="koev">v1 · 6月 · 定于6月30日</div>
-        <div class="koev">v2 · 7月 · 推迟</div>
-        <div class="koev">v3 · 8月 · 提出新日期</div>
-        <div class="koev">v4 · 9月 · 改为9月1日<em>现行</em></div>
-        <h5 style="margin-top:14px">证书</h5>
-        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
-        <div class="kwd" style="font-size:10.5px;margin-top:4px">记录来源、版本、裁定状态与完整性</div>
-      </div>
-    </div>
-    <div class="kograph">
-      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="知识图谱中的这条主张">
-        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
-        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
-        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
-        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
-        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">当事方</text>
-        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">主张</text>
-        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">供应</text>
-        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">开票</text>
-        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
-        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Acme Corp</text>
-        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">合同 #442</text>
-        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--acc2)">kn_842 · 续约</text>
-        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">供应商 XYZ</text>
-        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">发票 #9812</text>
-        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">同一个对象，在知识图谱之中</text>
-      </svg>
-    </div>
-  </div>
-</section>
 
 
 
-<section class="center">
-  <span class="eye">历史</span>
-<h2>看一条主张如何演变。</h2>
-<p class="lead center">新证据到来；主张被重新裁定；写入一个新版本。任何东西都不会被覆盖 —— 每个状态都保留自己的证据。</p>
-  <div class="htl rv">
-    
-    
-    <div class="hstop"><span class="tm">6月</span><span class="tv">v1</span><p>续约定于6月30日</p><span class="te">contract_2024.pdf · 第12页</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">7月</span><span class="tv">v2</span><p>续约推迟</p><span class="te">renewal_notice.eml</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">8月</span><span class="tv">v3</span><p>提出新日期：8月15日</p><span class="te">draft_amendment.pdf · 第2页</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop cur"><span class="tm">9月</span><span class="tv">v4</span><p>续约改为9月1日</p><span class="te">amendment_v2.pdf · 第4页</span></div>
-    
-  </div>
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">同一个知识对象 —— 之前的每个状态与它的来源都被保住。</p>
-</section>
-
-
-
-<section class="center">
-  <span class="eye">前 × 后</span>
-<h2>检索找到的是文本。这一层保住的是「它凭什么是真的」。</h2>
-
-  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">传统检索</h4>
-      <ul class="kwl" style="margin-top:14px"><li>在查询时取回片段</li><li>上下文只存在于那一刻</li><li>知识没有被持续治理</li><li>冲突与版本在外部处理</li></ul>
-      <p class="kwd" style="margin-top:4px">等到答案被质疑时，管线早就走远了。</p></div>
-    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>在 Verifiable Knowledge Layer 上</h4>
-      <ul class="kwl" style="margin-top:14px"><li>持久保存主张及其证据</li><li>保住关系与决策历史</li><li>每一次变更都生成一个受治理的版本</li><li>提供可复用的知识对象</li></ul>
-      <p class="kwd" style="margin-top:4px">当答案被质疑时，你能拿出理由。</p></div>
-  </div>
-</section>
 
 
 
@@ -290,7 +260,7 @@
   <span class="eye">Benchmarks</span>
 <h2>先测量，再声明。</h2>
 
-  <p class="lead center rv" style="max-width:620px">我们测量的：确定性、还原保真度、主张抽取、弃答校准与依据保真度。</p>
+  <p class="lead center rv" style="max-width:620px">我们衡量的是：主张抽取、区段准确度、限定条件保真度、内部矛盾检测与判断保留的校准。</p>
   <p class="lead center rv" style="margin-top:14px;font-size:14px">公开结果只在预先登记的评估之后发布 —— 在那之前，本站不会出现任何数字。<a href="../benchmarks" style="color:var(--acc2)">我们如何做基准测试 →</a></p>
 </section>
 
@@ -323,8 +293,8 @@
 
 
 <section class="center">
-  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">在你能证明的知识上构建。</h2>
-  <p class="lead center" style="margin-bottom:26px">从 Parse 的输出开始，或接入你自己的结构化证据 —— 15,000 免费额度，无需信用卡。</p>
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">证明您的来源究竟说了什么。</h2>
+  <p class="lead center" style="margin-bottom:26px">从 Parse 的输出开始，或接入您自己的结构化来源——15,000 免费额度，无需信用卡。</p>
   <div class="cta" style="justify-content:center">
     
     <a class="btn" href="../create-account">创建免费账户</a>
@@ -345,7 +315,7 @@
     <div class="ftcol"><div class="h">产品</div>
       <a href="../products/parse">Parse</a>
       <a href="../products/prove">Prove</a>
-      <a href="../products/vault">Vault</a>
+      <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">资源</div>
       <a href="/developers" hreflang="en">Developers</a>

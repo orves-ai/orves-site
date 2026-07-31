@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Prove | Orves</title>
-<meta name="description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Vault: datos estructurados, conocimiento verificable y un hogar gobernado que lo sirve."/>
+<meta name="description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
 <link rel="canonical" href="https://orves.ai/es/products/prove"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/prove"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/prove"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/prove"/>
 <meta property="og:title" content="Prove | Orves"/>
-<meta property="og:description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Vault: datos estructurados, conocimiento verificable y un hogar gobernado que lo sirve."/>
+<meta property="og:description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="es"/>
 <meta property="og:url" content="https://orves.ai/es/products/prove"/>
@@ -40,8 +40,8 @@
       <a class="on" style="cursor:default">Productos <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>De documentos a datos estructurados</em></a>
-        <a href="../products/prove">Prove <em>De la evidencia al conocimiento verificable</em></a>
-        <a href="../products/vault">Vault <em>Un hogar persistente para ese conocimiento</em></a>
+        <a href="../products/prove">Prove <em>Todo lo que una fuente dice y sostiene</em></a>
+        <a href="../products/neuro">Neuro <em>Cómo se relaciona cada fuente</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -105,7 +105,7 @@
 <div class="mnav">
   <a href="../products/parse">Parse</a>
   <a href="../products/prove">Prove</a>
-  <a href="../products/vault">Vault</a>
+  <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
   <a href="../research" class="sub">Research</a>
@@ -122,57 +122,125 @@
 
 <section class="hero" style="border-top:0">
   <div>
-    <span class="eyepill"><span class="d"></span>infraestructura de conocimiento · knowledge · en desarrollo</span>
-    <h1>De la evidencia al <span class="accent-tx">conocimiento verificable.</span></h1>
-    <p class="sub">Orves Prove convierte documentos, datos y evidencia en conocimiento verificable, trazable y auditable — cada afirmación conserva su origen, sus relaciones, sus versiones y su historial, lista para personas, aplicaciones y sistemas inteligentes. En desarrollo; el contrato de la API se está cerrando.</p>
+    <span class="eyepill"><span class="d"></span>análisis de fuente · prove · en desarrollo</span>
+    <h1>Todo lo que una fuente dice. <span class="accent-tx">Y lo que sostiene.</span></h1>
+    <p class="sub">Orves Prove lee una fuente estructurada a la vez — la salida de Parse o su propio JSON/Markdown — y captura cada afirmación dentro de ella: el fragmento exacto del que vino, quién la afirmó, los matices adjuntos, las relaciones enunciadas dentro de ella, los puntos donde se contradice a sí misma, y las afirmaciones que no sostiene. Entra una fuente, sale un resultado verificable. En desarrollo; el contrato de la API se está finalizando.</p>
     <div class="cta">
       
       <a class="btn" href="../create-account">Empezar a construir</a>
       <a class="btn gh" href="../pricing">Ver precios</a>
       
     </div>
-    <div class="chips"><span class="chip">procedencia</span><span class="chip">relaciones</span><span class="chip">historial</span><span class="chip">gobernanza</span></div>
-    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">agnóstico de modelo · en desarrollo — contrato de la API en definición</p>
+    <div class="chips"><span class="chip">afirmaciones &amp; evidencia</span><span class="chip">fragmentos exactos</span><span class="chip">matices</span><span class="chip">relaciones dentro de la fuente</span><span class="chip">ABSTAINED</span></div>
+    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">sin estado · una fuente a la vez · en desarrollo — contrato de la API en definición</p>
   </div>
-  <div class="code rv"><div class="codehd">objeto de conocimiento · vista previa ilustrativa</div>
-<pre><span class="cm"># a knowledge object — not text</span>
+  <div class="code rv"><div class="codehd">análisis de fuente · vista previa ilustrativa</div>
+<pre><span class="cm"># one source in · one verifiable result out</span>
 <span class="cm"># illustrative preview — the API contract is in definition</span>
-{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
-  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
-  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
-  <span class="k">"lineage"</span>: <span class="s">"amendment_v2.pdf · page 4 · bbox"</span>,
+{ <span class="k">"source"</span>: <span class="s">"macro_outlook_may.pdf"</span>, <span class="k">"scope"</span>: <span class="g">"within_source"</span>,
+  <span class="k">"claim"</span>: <span class="s">"IPCA forecast for 2026: 4.2%"</span>,
+  <span class="k">"says"</span>: <span class="g">"asserted"</span>, <span class="k">"supports"</span>: <span class="g">"SUPPORTED"</span>,
+  <span class="k">"span"</span>: <span class="s">"p.8 · para 2 · bbox[72,410,486,433]"</span>,
+  <span class="k">"asserted_by"</span>: <span class="s">"Institution A · 2026-05-14"</span>,
+  <span class="k">"qualifiers"</span>: <span class="s">["preliminary", "subject to revision"]</span>,
+  <span class="k">"contradicted_within_source"</span>: <span class="s">"claim c_31 · annex p.24"</span>,
   <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
 </section>
 
 <section class="center">
   <span class="eye">El problema</span>
-<h2>Los stacks de IA guardan conclusiones y descartan la prueba.</h2>
+<h2>La extracción devuelve texto. No devuelve lo que el texto sostiene.</h2>
 
-  <p class="lead center">La mayoría de los pipelines de IA se optimizan para recuperar y generar, no para producir conocimiento duradero. Meses después, los equipos saben la respuesta — pero no por qué se aceptó, qué cambió ni qué evidencia la sostenía.</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">procedencia fragmentada</span><span class="chip bad">deriva silenciosa de versiones</span><span class="chip bad">relaciones ausentes</span><span class="chip bad">decisiones irreconstruibles</span><span class="chip bad">actualizaciones sin gobernanza</span></div>
+  <p class="lead center">Los pipelines arrancan frases de un documento y descartan todo lo que las hace defendibles: de dónde vinieron exactamente, quién las afirmó, el matiz adjunto, y el pasaje dos páginas después que las contradice. Lo que queda se lee como un hecho y no se puede comprobar.</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">fragmentos descartados</span><span class="chip bad">matices aplanados</span><span class="chip bad">autoría perdida</span><span class="chip bad">contradicciones internas fusionadas</span><span class="chip bad">conjeturas donde falta evidencia</span></div>
   
 </section>
 
 
 <section class="center tight">
   <span class="eye">Lo que obtienes</span>
-  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">menos alucinación</span><span class="chip">auditabilidad</span><span class="chip">cumplimiento</span><span class="chip">reproducibilidad</span><span class="chip">memoria de agentes</span><span class="chip">explicabilidad</span><span class="chip">confianza institucional</span></div>
+  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">menos alucinación</span><span class="chip">auditabilidad</span><span class="chip">cumplimiento</span><span class="chip">reproducibilidad</span><span class="chip">explicabilidad</span><span class="chip">citas defendibles</span><span class="chip">confianza institucional</span></div>
 </section>
 
 
 
+
+<section class="center" id="within-source">
+  <span class="eye">Dentro de una fuente</span>
+<h2>Prove lee una fuente. Nada más.</h2>
+<p class="lead center">Cada resultado se produce a partir de una única fuente estructurada, sin acceso a sus otros archivos, sin memoria de ejecuciones anteriores y sin estado previo que consultar. Esa restricción es el producto: la misma fuente siempre da el mismo resultado, y cualquiera puede comprobarlo contra el archivo mismo.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Lo que Prove recibe</h4>
+      <ul class="kwl" style="margin-top:14px"><li>una fuente estructurada — la salida de Parse o su propio JSON/Markdown</li><li>el texto, las tablas, la maquetación y las posiciones dentro de ella</li><li>lo que esa fuente declara sobre sí misma — autor, fecha, ámbito</li></ul>
+      <p class="kwd" style="margin-top:4px">Entra una fuente, sale un resultado verificable.</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Lo que Prove nunca recibe</h4>
+      <ul class="kwl" style="margin-top:14px"><li>sus otras fuentes</li><li>los resultados de ejecuciones anteriores</li><li>el estado actual del Corpus</li><li>cualquier cosa que la fuente no contenga</li></ul>
+      <p class="kwd" style="margin-top:4px">Relacionar fuentes entre sí es Orves Neuro.</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Una fuente, de principio a fin</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">fuente estructurada</span><span class="a">→</span><span class="fc" style="animation-delay:1s">afirmaciones localizadas por fragmento</span><span class="a">→</span><span class="fc" style="animation-delay:2s">dice frente a sostiene</span><span class="a">→</span><span class="fc" style="animation-delay:3s">matices y autoría</span><span class="a">→</span><span class="fc" style="animation-delay:4s">relaciones within_source</span><span class="a">→</span><span class="fc" style="animation-delay:5s">un resultado verificable</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Nada se infiere desde fuera del archivo — donde la fuente no sostiene una afirmación, el estado es ABSTAINED.</p>
+  
+</section>
+
+<section class="center" id="says-supports">
+  <span class="eye">Dice × sostiene</span>
+<h2>Lo que una fuente dice no es lo que sostiene.</h2>
+<p class="lead center">Un documento puede afirmar algo que nunca respalda, rodear una cifra de matices hasta vaciarla de sentido, o dar un número en la página 8 y otro distinto en el anexo. Aplanar todo eso en una lista de hechos es como entran las afirmaciones indefendibles en una auditoría.</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">una fuente · dos pasajes</div>
+<pre><span class="cm"># macro_outlook_may.pdf · Institution A</span>
+<span class="k">p.8 para 2</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+<span class="cm">                 preliminary, subject to revision</span>
+
+<span class="k">annex p.24</span>:  <span class="s">"2026 scenario built on IPCA of 4.4%"</span>
+<span class="cm">                 no qualifier attached</span></pre></div><div class="code rv"><div class="codehd">el resultado de la fuente</div>
+<pre><span class="cm"># the same file disagrees with itself</span>
+├── <span class="s">two claims · same subject · same source</span>
+├── <span class="k">span</span>: <span class="s">p.8 para 2 · bbox</span> | <span class="s">annex p.24</span>
+├── <span class="k">qualifiers</span>: <span class="s">preliminary</span> | <span class="s">none</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: within_source</span>
+└── <span class="g">both preserved — neither averaged nor dropped</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Relaciones dentro de una fuente</span>
+  <p class="lead center rv" style="margin-top:12px">Prove captura estas relaciones dentro de cada fuente, cada una llevando scope: within_source. Orves Neuro descubre las mismas relaciones en todo el Corpus, llevando scope: cross_source. Mismo vocabulario, dos ámbitos distintos — nunca mezclados, nunca promovidos en silencio de uno a otro.</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
 
 
 
 <section class="center">
   <span class="eye">Lo que produce</span>
-<h2>Una base de conocimiento que lleva consigo su propia prueba.</h2>
+<h2>Una fuente, analizada hasta el fondo.</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>Objetos de conocimiento</h4>
-    <p>Afirmaciones con evidencia, contradicciones, relaciones, versiones y estados de resolución — no texto. Evidencia insuficiente significa ABSTAINED, nunca una suposición.</p></div><div class="card"><h4>Linaje y citas</h4>
-    <p>Cada hecho se rastrea hasta su posición exacta en el origen — página, región, marca de tiempo o evento de origen. Cuando algo cambia, puedes reconstruir qué cambió y por qué.</p></div><div class="card"><h4>Servido en todas partes</h4>
-    <p>El mismo conocimiento gobernado para personas, aplicaciones, agentes y modelos — a través de la API, y a través de Orves Vault (Web · SDK · MCP) a medida que se publique.</p></div>
+    <div class="card"><h4>Afirmaciones con su evidencia</h4>
+    <p>Cada afirmación conserva el fragmento exacto del que vino — página, región, párrafo o marca de tiempo de audio — más quién la afirmó y cuándo, según lo declara la propia fuente.</p></div><div class="card"><h4>Dice, y sostiene</h4>
+    <p>Lo que una fuente enuncia y lo que realmente respalda son hechos distintos. Ambos quedan registrados, con los matices y las reservas que los separan. Evidencia insuficiente significa ABSTAINED, nunca una conjetura.</p></div><div class="card"><h4>Relaciones dentro de la fuente</h4>
+    <p>Afirmaciones que se sostienen, refinan, contradicen o reemplazan entre sí dentro del mismo archivo, cada una llevando scope: within_source. Las relaciones entre fuentes pertenecen a Orves Neuro.</p></div>
   </div>
 </section>
 
@@ -180,107 +248,9 @@
 
 
 
-<section class="center">
-  <span class="eye">Enséñamelo</span>
-<h2>Anatomía de un objeto de conocimiento.</h2>
-<p class="lead center">Más que texto: un objeto de conocimiento gobernado y direccionable. Cada parte de abajo está disponible a través de la API.</p>
-  <div class="kobj rv">
-    <div class="kohead">
-      <span class="kolab">KNOWLEDGE OBJECT · kn_842 · v4</span>
-      <div class="koclaim">“La fecha de renovación del contrato pasa a 2026-09-01.”</div>
-      <span class="kostate">SUPPORTED</span>
-    </div>
-    <div class="kogrid">
-      <div class="kocol">
-        <h5>Evidencia · 3 a favor · 1 en contra</h5>
-        <div class="koev">amendment_v2.pdf · p.4 ¶3<em>a favor</em></div>
-        <div class="koev">renewal_notice.eml · 2026-06-12<em>a favor</em></div>
-        <div class="koev">board_minutes.pdf · p.2<em>a favor</em></div>
-        <div class="koev bad" style="border-bottom:0">contract_2024.pdf · p.12<em>en contra · reemplazado</em></div>
-      </div>
-      <div class="kocol">
-        <h5>Relaciones · 21</h5>
-        <div class="koev">renueva → Contrato #442</div>
-        <div class="koev">parte → Proveedor XYZ</div>
-        <div class="koev">afecta a → Factura #9812</div>
-        <div class="koev" style="border-bottom:0;color:var(--fg3)">+ 18 más</div>
-      </div>
-      <div class="kocol">
-        <h5>Historial</h5>
-        <div class="koev">v1 · jun · programada para el 30 jun</div>
-        <div class="koev">v2 · jul · aplazada</div>
-        <div class="koev">v3 · ago · nueva fecha propuesta</div>
-        <div class="koev">v4 · sep · pasa al 1 sep<em>vigente</em></div>
-        <h5 style="margin-top:14px">Certificado</h5>
-        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
-        <div class="kwd" style="font-size:10.5px;margin-top:4px">registra procedencia, versión, estado de resolución e integridad</div>
-      </div>
-    </div>
-    <div class="kograph">
-      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="La afirmación dentro del grafo de conocimiento">
-        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
-        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
-        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
-        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
-        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">parte</text>
-        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">afirma</text>
-        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">suministra</text>
-        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">factura</text>
-        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
-        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Acme Corp</text>
-        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Contrato #442</text>
-        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--acc2)">kn_842 · renovación</text>
-        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Proveedor XYZ</text>
-        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Factura #9812</text>
-        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">el mismo objeto, dentro del grafo de conocimiento</text>
-      </svg>
-    </div>
-  </div>
-</section>
 
 
 
-<section class="center">
-  <span class="eye">Historial</span>
-<h2>Mira evolucionar una afirmación.</h2>
-<p class="lead center">Llega nueva evidencia; la afirmación se readjudica; se escribe una nueva versión. Nada se sobrescribe jamás — cada estado conserva su evidencia.</p>
-  <div class="htl rv">
-    
-    
-    <div class="hstop"><span class="tm">JUN</span><span class="tv">v1</span><p>Renovación programada para el 30 jun</p><span class="te">contract_2024.pdf · p.12</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">JUL</span><span class="tv">v2</span><p>Renovación aplazada</p><span class="te">renewal_notice.eml</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">AGO</span><span class="tv">v3</span><p>Nueva fecha propuesta: 15 ago</p><span class="te">draft_amendment.pdf · p.2</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop cur"><span class="tm">SEP</span><span class="tv">v4</span><p>Renovación pasa al 1 sep</p><span class="te">amendment_v2.pdf · p.4</span></div>
-    
-  </div>
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">El mismo objeto de conocimiento — cada estado anterior y su origen, preservados.</p>
-</section>
-
-
-
-<section class="center">
-  <span class="eye">Antes × después</span>
-<h2>La recuperación encuentra texto. La capa preserva por qué es verdad.</h2>
-
-  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Recuperación tradicional</h4>
-      <ul class="kwl" style="margin-top:14px"><li>recupera pasajes en el momento de la consulta</li><li>el contexto existe solo en ese instante</li><li>el conocimiento no se gobierna de forma persistente</li><li>conflictos y versiones gestionados por fuera</li></ul>
-      <p class="kwd" style="margin-top:4px">Cuando la respuesta se cuestiona, el pipeline ya siguió adelante.</p></div>
-    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Sobre la Verifiable Knowledge Layer</h4>
-      <ul class="kwl" style="margin-top:14px"><li>persiste las afirmaciones y su evidencia</li><li>preserva las relaciones y el historial de decisiones</li><li>cada cambio crea una versión gobernada</li><li>sirve objetos de conocimiento reutilizables</li></ul>
-      <p class="kwd" style="margin-top:4px">Cuando la respuesta se cuestiona, enseñas por qué.</p></div>
-  </div>
-</section>
 
 
 
@@ -290,7 +260,7 @@
   <span class="eye">Benchmarks</span>
 <h2>Medido antes de afirmado.</h2>
 
-  <p class="lead center rv" style="max-width:620px">Lo que medimos: determinismo, fidelidad de reconstrucción, extracción de afirmaciones, calibración de la abstención y fidelidad de la fundamentación.</p>
+  <p class="lead center rv" style="max-width:620px">Lo que medimos: extracción de afirmaciones, precisión de fragmento, fidelidad de matiz, detección de contradicción interna y calibración de abstención.</p>
   <p class="lead center rv" style="margin-top:14px;font-size:14px">Los resultados públicos solo se publican tras una evaluación preregistrada — hasta entonces, ningún número aparece en este sitio. <a href="../benchmarks" style="color:var(--acc2)">Cómo hacemos benchmark →</a></p>
 </section>
 
@@ -323,8 +293,8 @@
 
 
 <section class="center">
-  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Construye sobre conocimiento que puedes probar.</h2>
-  <p class="lead center" style="margin-bottom:26px">Empieza con la salida de Parse o conecta tu propia evidencia estructurada — 15.000 créditos gratis, sin tarjeta de crédito.</p>
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">Pruebe lo que sus fuentes dicen realmente.</h2>
+  <p class="lead center" style="margin-bottom:26px">Empiece con la salida de Parse o conecte su propia fuente estructurada — 15.000 créditos gratuitos, sin tarjeta de crédito.</p>
   <div class="cta" style="justify-content:center">
     
     <a class="btn" href="../create-account">Crear cuenta gratuita</a>
@@ -345,7 +315,7 @@
     <div class="ftcol"><div class="h">Productos</div>
       <a href="../products/parse">Parse</a>
       <a href="../products/prove">Prove</a>
-      <a href="../products/vault">Vault</a>
+      <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">Recursos</div>
       <a href="/developers" hreflang="en">Developers</a>

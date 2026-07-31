@@ -40,8 +40,8 @@
       <a class="" style="cursor:default">Produkte <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="products/parse">Parse <em>Von Dokumenten zu strukturierten Daten</em></a>
-        <a href="products/prove">Prove <em>Von Belegen zu überprüfbarem Wissen</em></a>
-        <a href="products/vault">Vault <em>Ein dauerhafter Ort für dieses Wissen</em></a>
+        <a href="products/prove">Prove <em>Alles, was eine Quelle aussagt und belegt</em></a>
+        <a href="products/neuro">Neuro <em>Wie jede Quelle mit den anderen zusammenhängt</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -105,7 +105,7 @@
 <div class="mnav">
   <a href="products/parse">Parse</a>
   <a href="products/prove">Prove</a>
-  <a href="products/vault">Vault</a>
+  <a href="products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
   <a href="research" class="sub">Research</a>
@@ -137,7 +137,7 @@
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
     <div class="flowpan">
-    <svg viewBox="0 0 1000 400" role="img" aria-label="Die Realität — Dokumente, Web, Bilder, Audio, Video und APIs — fließt in The Verifiable Knowledge Layer: Parse erzeugt strukturierte Daten, Prove macht aus Belegen überprüfbares Wissen, und Vault speichert, regelt und stellt es bereit. Menschen, Anwendungen, LLMs, Agenten, KI-Gedächtnis und MCP-Server schöpfen aus der Schicht.">
+    <svg viewBox="0 0 1000 400" role="img" aria-label="Die Wirklichkeit — Dokumente, Web, Bilder, Audio, Video und APIs — fließt in The Verifiable Knowledge Layer: Parse erzeugt strukturierte Daten, Prove stellt fest, was jede Quelle aussagt und belegt, und Neuro versteht, wie die Quellen zusammenhängen. Menschen, Anwendungen, LLMs, Agenten, KI-Gedächtnis und MCP-Server schöpfen aus dieser Schicht.">
       <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">REALITÄT</text>
       <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">Dokumente</text></g>
       <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">Web</text></g>
@@ -154,7 +154,7 @@
       <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
       <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- a camada: Parse → Prove → Vault — 3 nós do MESMO tamanho
+      <!-- a camada: Parse → Prove → Neuro — 3 nós do MESMO tamanho
            (150×98, ordem BP 30-jul); conectores e pulsos recalculados -->
       <rect class="layerbox" x="240" y="128" width="502" height="140" rx="20"/>
       <rect class="fnode main" x="246" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
@@ -164,7 +164,7 @@
       <text class="flbl b" x="486" y="200" text-anchor="middle">Prove</text>
       <path class="fpath" data-flow="p2c" d="M 561 195 L 576 195"/>
       <rect class="fnode main" x="576" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
-      <text class="flbl b" x="651" y="200" text-anchor="middle">Vault</text>
+      <text class="flbl b" x="651" y="200" text-anchor="middle">Neuro</text>
       <!-- fan-out: a camada serve a stack de IA -->
       <path class="fpath" data-flow="out" d="M 726 168 C 790 130 810 80  866 59"/>
       <path class="fpath" data-flow="out" d="M 726 178 C 790 150 810 120 866 107"/>
@@ -173,7 +173,7 @@
       <path class="fpath" data-flow="out" d="M 726 206 C 790 228 810 240 866 251"/>
       <path class="fpath" data-flow="out" d="M 726 216 C 790 260 810 285 866 299"/>
       <path class="fpath" data-flow="out" d="M 726 226 C 790 295 810 330 866 347"/>
-      <text class="m-t" x="491" y="294" text-anchor="middle" style="letter-spacing:.06em;opacity:.75">JEDES PRODUKT EINZELN NUTZEN — ODER DIE GANZE WISSENS-PIPELINE VERBINDEN</text>
+      <text class="m-t" x="491" y="294" text-anchor="middle" style="letter-spacing:.06em;opacity:.75">PARSE STEHT FÜR SICH · PROVE NIMMT JEDEN PARSER · NEURO BAUT AUF PROVE</text>
       <text class="m-t" x="921" y="26" text-anchor="middle" style="letter-spacing:.12em">ABNEHMER</text>
       <rect class="fnode" x="866" y="44"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="63"  text-anchor="middle">Menschen</text>
       <rect class="fnode" x="866" y="92"  width="110" height="30" rx="8"/><text class="flbl" x="921" y="111" text-anchor="middle">Anwendungen</text>
@@ -201,7 +201,7 @@
 <section class="center pz" id="platform-demo">
   <span class="eye">Sehen Sie die Plattform arbeiten</span>
 <h2>Vom rohen Beleg zur geregelten Antwort.</h2>
-<p class="lead center">Eine Quelle wird zu strukturierten Daten. Mehrere Quellen werden zu versioniertem Wissen. Vault hält dieses Wissen überall dort verfügbar, wo es gebraucht wird.</p>
+<p class="lead center">Aus einer Quelle werden strukturierte Daten. Prove stellt fest, was diese Quelle aussagt und belegt. Neuro ist der Ort, an dem die Quellen zusammentreffen — und aus dem die Antwort kommt.</p>
   <div class="hdemo rv" data-src="amendment">
     <div class="hz hsrcz">
       <span class="hzl">01 · Quelle</span>
@@ -220,18 +220,18 @@
     </div>
     <div class="hz">
       <span class="hzl">03 · Prove</span>
-      <h4>Eine Aussage mit Historie</h4>
-      <div class="hkr ok" data-hot="amendment"><span>aktuell</span>Verlängerungsdatum: 1. September 2026</div>
-      <div class="hkr dim" data-hot="contract"><span>abgelöst</span>Verlängerungsdatum: 1. August</div>
-      <div class="hkr hold" data-hot="meeting"><span>unbestätigtes Signal</span>Die Verlängerung könnte erneut verschoben werden</div>
-      <div class="hrel hv" data-for="amendment">aktuell ← gestützt durch amendment_v2.pdf</div>
-      <div class="hrel hv" data-for="contract">abgelöst → ersetzt durch amendment_v2.pdf</div>
-      <div class="hrel hv" data-for="meeting">Signal ← meeting_2026-03.mp3</div>
+      <h4>Was diese Quelle aussagt</h4>
+      <div class="hkr ok" data-hot="amendment"><span>behauptet · belegt</span>Verlängerungsdatum: 1. September 2026</div>
+      <div class="hkr dim" data-hot="contract"><span>behauptet · belegt</span>Verlängerungsdatum: 1. August 2026</div>
+      <div class="hkr hold" data-hot="meeting"><span>behauptet · ABSTAINED</span>Die Verlängerung könnte erneut verschoben werden</div>
+      <div class="hrel hv" data-for="amendment">Aussage ← amendment_v2.pdf · S.4 ¶3</div>
+      <div class="hrel hv" data-for="contract">Aussage ← contract.pdf · S.12 ¶2</div>
+      <div class="hrel hv" data-for="meeting">Aussage ← meeting_2026-03.mp3 · 00:14:32 · abgeschwächt</div>
     </div>
     <div class="hz">
-      <span class="hzl">04 · Vault</span>
-      <h4>Geregelt und bereit zur Auslieferung</h4>
-      <div class="hcode hmeta">version&nbsp;&nbsp;current<br>permissions&nbsp;&nbsp;organization<br>audit trail&nbsp;&nbsp;attached<br>delivery&nbsp;&nbsp;Web · API · SDK · MCP</div>
+      <span class="hzl">04 · Neuro</span>
+      <h4>Wie die Quellen zusammenhängen</h4>
+      <div class="hcode hmeta">supersedes&nbsp;&nbsp;amendment → contract<br>scope&nbsp;&nbsp;cross_source<br>evidence&nbsp;&nbsp;both sources kept<br>delivery&nbsp;&nbsp;Web · API · SDK · MCP</div>
       <p class="hans">Der Vertrag verlängert sich am 1. September 2026.</p>
       <span class="hsig">1 ungelöstes Signal angehängt</span>
     </div>
@@ -243,7 +243,7 @@
   <div class="hsh">
     <span class="eye">Die Plattform</span>
     <h2>Drei Produkte. Eine Wissens-Pipeline.</h2>
-    <p class="lead">Parse strukturiert die Belege. Prove macht daraus Wissen. Vault regelt und stellt es bereit.</p>
+    <p class="lead">Parse strukturiert jede Quelle. Prove stellt fest, was jede Quelle aussagt und belegt. Neuro versteht, wie sie zusammenhängen.</p>
   </div>
   <div class="hprods rv">
     <a class="hprod" href="products/parse">
@@ -255,29 +255,29 @@
     </a>
     <a class="hprod" href="products/prove">
       <span class="hpl"><b>02 · Prove</b></span>
-      <h3>Fakten mit ihrem Beweis verbinden.</h3>
-      <p>Machen Sie aus Belegen Aussagen, Beziehungen, Versionen und ausdrückliche Zustände, ohne Widerspruch oder Historie zu löschen.</p>
-      <span class="hprops">Verankert · Versioniert · Konfliktbewusst</span>
+      <h3>Verankern Sie jede Aussage in ihrer Quelle.</h3>
+      <p>Alles, was eine Quelle aussagt und belegt — Spans, Urheberschaft, Qualifikatoren, interne Widersprüche und ehrliche Enthaltung.</p>
+      <span class="hprops">Belegt · Reproduzierbar · Auf eine Quelle begrenzt</span>
       <span class="k">Prove erkunden →</span>
     </a>
-    <a class="hprod" href="products/vault">
-      <span class="hpl"><b>03 · Vault</b></span>
-      <h3>Wissen regeln und bereitstellen.</h3>
-      <p>Halten Sie Wissen gespeichert, berechtigt, prüfbar und verfügbar über Web, API, SDK und MCP.</p>
-      <span class="hprops">Gespeichert · Geregelt · Portabel</span>
-      <span class="k">Vault erkunden →</span>
+    <a class="hprod" href="products/neuro">
+      <span class="hpl"><b>03 · Neuro</b></span>
+      <h3>Verstehen Sie, wie Quellen zusammenhängen.</h3>
+      <p>Übereinstimmung, Konflikt, Präzisierung und Ablösung über alle Ihre Quellen hinweg — jede Beziehung rückverfolgbar bis zum Beleg dahinter.</p>
+      <span class="hprops">Quellenübergreifend · Rückverfolgbar · Konfliktbewusst</span>
+      <span class="k">Neuro entdecken →</span>
     </a>
   </div>
 </section>
 
 
 <section class="center">
-  <span class="eye">In Prove hinein</span>
+  <span class="eye">Innerhalb von Neuro</span>
 <h2>Wissen wächst. Sein Beleg bleibt verbunden.</h2>
-<p class="lead center">Keine Sammlung von Dokumenten — ein durchgehend verbundenes Netz aus Belegen, Fakten, Beziehungen und Historie.</p>
+<p class="lead center">Keine Sammlung von Dokumenten — ein fortlaufend verbundenes Netz aus Belegen, Fakten, Beziehungen und Historie. Jeder Knoten kam von Prove belegt hier an.</p>
   <p class="mono rv" style="margin-top:18px;font-size:13px;letter-spacing:.03em;color:var(--acc2)">Jede Beziehung ist nachvollziehbar.</p>
   <div class="rv" style="max-width:820px;margin:26px auto 0">
-    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="Animation: Eine Wissensansicht wächst in Orves Prove — Unternehmen, Umsatz, Vertrag, CEO, Ergebnis, Verlängerung — Fakten erscheinen und bewahren ihre Beziehungen; die Historie bleibt erhalten, während das Wissen sich entwickelt.">
+    <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="Animation: eine Wissensansicht wächst innerhalb von Orves Neuro — Unternehmen, Umsatz, Vertrag, CEO, Ergebnisse, Verlängerung — Fakten erscheinen und behalten ihre Beziehungen; die Historie bleibt erhalten, während das Wissen sich entwickelt.">
         <g class="bs" style="animation-delay:0s">
           <circle cx="170" cy="92" r="7" style="fill:var(--acc)"/>
           <text class="m-t" x="170" y="76" text-anchor="middle" style="font-size:8.5px;fill:var(--fg)">Unternehmen</text>
@@ -413,7 +413,7 @@
   </div>
   <p class="mono wclosecap">versioniert und nachvollziehbar, durchgängig</p>
   <h2 style="font-size:36px;max-width:30ch;margin:18px auto 12px">Bauen Sie auf Wissen, das mit seinem Beleg verbunden bleibt.</h2>
-  <p class="lead center" style="margin-bottom:26px">Beginnen Sie mit Parse im privaten Pilot. Prove und Vault folgen, sobald sie verfügbar sind.</p>
+  <p class="lead center" style="margin-bottom:26px">Beginnen Sie mit Parse im privaten Pilotbetrieb. Prove und Neuro folgen, sobald sie verfügbar werden.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">Kostenlos starten</a>
     <a class="btn gh" href="contact">Sprechen Sie mit uns</a>
@@ -562,7 +562,7 @@
     <div class="ftcol"><div class="h">Produkte</div>
       <a href="products/parse">Parse</a>
       <a href="products/prove">Prove</a>
-      <a href="products/vault">Vault</a>
+      <a href="products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">Ressourcen</div>
       <a href="/developers" hreflang="en">Developers</a>

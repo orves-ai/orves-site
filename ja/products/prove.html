@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Prove | Orves</title>
-<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
 <link rel="canonical" href="https://orves.ai/ja/products/prove"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/prove"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/prove"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/prove"/>
 <meta property="og:title" content="Prove | Orves"/>
-<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Vault という3つの製品が、構造化データ、検証可能な知識、そしてそれを提供する統制された場所を実現します。"/>
+<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="ja"/>
 <meta property="og:url" content="https://orves.ai/ja/products/prove"/>
@@ -40,8 +40,8 @@
       <a class="on" style="cursor:default">製品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>文書から構造化データへ</em></a>
-        <a href="../products/prove">Prove <em>証跡から検証可能な知識へ</em></a>
-        <a href="../products/vault">Vault <em>その知識のための永続的な場所</em></a>
+        <a href="../products/prove">Prove <em>1つのソースが述べ、裏付けるすべて</em></a>
+        <a href="../products/neuro">Neuro <em>すべてのソースの関係</em></a>
       </span></span>
     </span>
     <span class="ndd">
@@ -105,7 +105,7 @@
 <div class="mnav">
   <a href="../products/parse">Parse</a>
   <a href="../products/prove">Prove</a>
-  <a href="../products/vault">Vault</a>
+  <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
   <a href="../research" class="sub">Research</a>
@@ -122,57 +122,125 @@
 
 <section class="hero" style="border-top:0">
   <div>
-    <span class="eyepill"><span class="d"></span>ナレッジインフラ · knowledge · 開発中</span>
-    <h1>証跡から <span class="accent-tx">検証可能な知識へ。</span></h1>
-    <p class="sub">Orves Prove は、文書・データ・証跡を、検証可能で追跡可能かつ監査可能な知識に変えます。すべての主張が出どころ、関係、バージョン、履歴を保持し、人・アプリケーション・知的システムに向けて用意されます。開発中で、API 契約を確定させているところです。</p>
+    <span class="eyepill"><span class="d"></span>ソース解析 · prove · 開発中</span>
+    <h1>ソースが述べるすべて。<span class="accent-tx">そして裏付けるもの。</span></h1>
+    <p class="sub">Orves Prove は構造化されたソースを一度に1つ読みます。Parse の出力でも、独自の JSON／Markdown でも構いません。そして内部のすべての主張を捉えます。由来する正確なスパン、誰が主張したか、付随する限定条件、内部で述べられた関係、自己矛盾している箇所、そして裏付けられていない主張です。1つのソースを入れ、検証可能な結果を1つ得ます。開発中。API 契約は最終調整中です。</p>
     <div class="cta">
       
       <a class="btn" href="../create-account">構築を始める</a>
       <a class="btn gh" href="../pricing">料金を見る</a>
       
     </div>
-    <div class="chips"><span class="chip">来歴</span><span class="chip">関係</span><span class="chip">履歴</span><span class="chip">統制</span></div>
-    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">モデル非依存 · 開発中 — API 契約を定義中</p>
+    <div class="chips"><span class="chip">主張と根拠</span><span class="chip">正確なスパン</span><span class="chip">限定条件</span><span class="chip">ソース内の関係</span><span class="chip">ABSTAINED</span></div>
+    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">ステートレス · 一度に1つのソース · 開発中 — API 契約は定義中</p>
   </div>
-  <div class="code rv"><div class="codehd">ナレッジオブジェクト · 説明用プレビュー</div>
-<pre><span class="cm"># a knowledge object — not text</span>
+  <div class="code rv"><div class="codehd">ソース解析 · 説明用プレビュー</div>
+<pre><span class="cm"># one source in · one verifiable result out</span>
 <span class="cm"># illustrative preview — the API contract is in definition</span>
-{ <span class="k">"claim"</span>: <span class="s">"Contract renewal date moved to 2026-09-01"</span>,
-  <span class="k">"state"</span>: <span class="g">"SUPPORTED"</span>, <span class="k">"version"</span>: <span class="g">4</span>,
-  <span class="k">"evidence"</span>: <span class="g">3</span>, <span class="k">"contradictions"</span>: <span class="g">1</span>, <span class="k">"relationships"</span>: <span class="g">21</span>,
-  <span class="k">"lineage"</span>: <span class="s">"amendment_v2.pdf · page 4 · bbox"</span>,
+{ <span class="k">"source"</span>: <span class="s">"macro_outlook_may.pdf"</span>, <span class="k">"scope"</span>: <span class="g">"within_source"</span>,
+  <span class="k">"claim"</span>: <span class="s">"IPCA forecast for 2026: 4.2%"</span>,
+  <span class="k">"says"</span>: <span class="g">"asserted"</span>, <span class="k">"supports"</span>: <span class="g">"SUPPORTED"</span>,
+  <span class="k">"span"</span>: <span class="s">"p.8 · para 2 · bbox[72,410,486,433]"</span>,
+  <span class="k">"asserted_by"</span>: <span class="s">"Institution A · 2026-05-14"</span>,
+  <span class="k">"qualifiers"</span>: <span class="s">["preliminary", "subject to revision"]</span>,
+  <span class="k">"contradicted_within_source"</span>: <span class="s">"claim c_31 · annex p.24"</span>,
   <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
 </section>
 
 <section class="center">
   <span class="eye">課題</span>
-<h2>AI スタックは結論を保存し、証拠を捨てます。</h2>
+<h2>抽出はテキストを返します。そのテキストが何を裏付けるかは返しません。</h2>
 
-  <p class="lead center">多くの AI パイプラインは検索と生成のために最適化されていて、長持ちする知識のためではありません。数か月後、チームは答えを知っていても、なぜそれが受け入れられたのか、何が変わったのか、どの証跡が支えていたのかは分かりません。</p>
-  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">断片化した来歴</span><span class="chip bad">静かなバージョンのずれ</span><span class="chip bad">欠落した関係</span><span class="chip bad">再構成できない判断</span><span class="chip bad">統制されない更新</span></div>
+  <p class="lead center">パイプラインは文書から文を抜き出し、それを説明可能にしているものをすべて捨てます。正確にどこから来たのか、誰が主張したのか、付いていた留保、そして2ページ先でそれと矛盾する一節。残るのは事実のように読めて、確認できないものです。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">スパンが失われる</span><span class="chip bad">限定条件が平板化する</span><span class="chip bad">著者情報が消える</span><span class="chip bad">内部の矛盾が混ざる</span><span class="chip bad">根拠がない場所を推測する</span></div>
   
 </section>
 
 
 <section class="center tight">
   <span class="eye">得られるもの</span>
-  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">幻覚の低減</span><span class="chip">監査可能性</span><span class="chip">コンプライアンス</span><span class="chip">再現性</span><span class="chip">エージェントの記憶</span><span class="chip">説明可能性</span><span class="chip">組織的な信頼</span></div>
+  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">幻覚の低減</span><span class="chip">監査可能性</span><span class="chip">コンプライアンス</span><span class="chip">再現性</span><span class="chip">説明可能性</span><span class="chip">説明可能な引用</span><span class="chip">組織的な信頼</span></div>
 </section>
 
 
 
+
+<section class="center" id="within-source">
+  <span class="eye">1つのソースの内側で</span>
+<h2>Prove は1つのソースを読む。それだけ。</h2>
+<p class="lead center">すべての結果は、構造化された単一のソースから生成されます。他のファイルへのアクセスも、過去の実行の記憶も、参照する事前の状態もありません。その制約こそが製品です。同じソースは常に同じ結果を返し、誰でもファイル自体と照合して確認できます。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Prove が受け取るもの</h4>
+      <ul class="kwl" style="margin-top:14px"><li>構造化されたソース1つ — Parse の出力、または独自の JSON／Markdown</li><li>その内部のテキスト、表、レイアウト、位置</li><li>そのソースが自身について宣言する内容 — 著者、日付、範囲</li></ul>
+      <p class="kwd" style="margin-top:4px">1つのソースを入れ、検証可能な結果を1つ得る。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Prove が決して受け取らないもの</h4>
+      <ul class="kwl" style="margin-top:14px"><li>他のソース</li><li>過去の実行の結果</li><li>現在の Corpus の状態</li><li>そのソースに含まれていないもの</li></ul>
+      <p class="kwd" style="margin-top:4px">ソース同士を関連付けるのは Orves Neuro です。</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">1つのソースを端から端まで</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">構造化されたソース</span><span class="a">→</span><span class="fc" style="animation-delay:1s">スパンで位置づけられた主張</span><span class="a">→</span><span class="fc" style="animation-delay:2s">述べる内容と裏付ける内容</span><span class="a">→</span><span class="fc" style="animation-delay:3s">限定条件と著者情報</span><span class="a">→</span><span class="fc" style="animation-delay:4s">within_source の関係</span><span class="a">→</span><span class="fc" style="animation-delay:5s">検証可能な結果1つ</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">ファイルの外から推論することはありません。ソースが主張を裏付けない場合、状態は ABSTAINED です。</p>
+  
+</section>
+
+<section class="center" id="says-supports">
+  <span class="eye">述べる × 裏付ける</span>
+<h2>ソースが述べることは、裏付けることではありません。</h2>
+<p class="lead center">文書は裏付けのないことを主張することも、数値を無意味なほど留保で包むことも、8ページ目と付録で異なる数字を述べることもあります。それらをすべて事実の一覧に平板化することが、説明できない主張が監査に入り込む道です。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">1つのソース · 2つの箇所</div>
+<pre><span class="cm"># macro_outlook_may.pdf · Institution A</span>
+<span class="k">p.8 para 2</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+<span class="cm">                 preliminary, subject to revision</span>
+
+<span class="k">annex p.24</span>:  <span class="s">"2026 scenario built on IPCA of 4.4%"</span>
+<span class="cm">                 no qualifier attached</span></pre></div><div class="code rv"><div class="codehd">ソース単位の結果</div>
+<pre><span class="cm"># the same file disagrees with itself</span>
+├── <span class="s">two claims · same subject · same source</span>
+├── <span class="k">span</span>: <span class="s">p.8 para 2 · bbox</span> | <span class="s">annex p.24</span>
+├── <span class="k">qualifiers</span>: <span class="s">preliminary</span> | <span class="s">none</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: within_source</span>
+└── <span class="g">both preserved — neither averaged nor dropped</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">ソース内の関係</span>
+  <p class="lead center rv" style="margin-top:12px">Prove はこれらの関係を各ソース内で捉え、そのすべてに scope: within_source を付与します。Orves Neuro は同じ関係を Corpus 全体で発見し、scope: cross_source を付与します。同じ語彙、2つの異なるスコープ。混ざることも、黙って一方から他方へ昇格することもありません。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
 
 
 
 <section class="center">
   <span class="eye">生み出すもの</span>
-<h2>自らの証拠を携えたナレッジベース。</h2>
+<h2>1つのソースを、底まで解析する。</h2>
 
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>ナレッジオブジェクト</h4>
-    <p>証跡、矛盾、関係、バージョン、解決状態を伴う主張であって、テキストではありません。証跡が足りなければ ABSTAINED であり、推測はしません。</p></div><div class="card"><h4>系譜と引用</h4>
-    <p>すべての事実が、出典の正確な位置 — ページ、領域、タイムスタンプ、または元イベント — までたどれます。何かが変われば、何がなぜ変わったのかを再構成できます。</p></div><div class="card"><h4>どこにでも提供</h4>
-    <p>同じ統制された知識を、人・アプリケーション・エージェント・モデルへ — API 経由で、そして提供が始まり次第 Orves Vault（Web · SDK · MCP）経由で。</p></div>
+    <div class="card"><h4>根拠を伴う主張</h4>
+    <p>すべての主張が、由来する正確なスパン — ページ、領域、段落、音声のタイムスタンプ — を保ち、さらにソース自身が宣言するとおり、誰がいつ主張したかを保ちます。</p></div><div class="card"><h4>述べる、そして裏付ける</h4>
+    <p>ソースが述べることと、実際に裏付けることは別の事実です。両方が、それらを分ける限定条件や留保とともに記録されます。根拠が不十分なら ABSTAINED であって、推測ではありません。</p></div><div class="card"><h4>ソース内の関係</h4>
+    <p>同じファイルの内側で互いを裏付け、精緻化し、矛盾し、置き換える主張。そのそれぞれが scope: within_source を持ちます。ソース横断の関係は Orves Neuro に属します。</p></div>
   </div>
 </section>
 
@@ -180,107 +248,9 @@
 
 
 
-<section class="center">
-  <span class="eye">見てみる</span>
-<h2>ナレッジオブジェクトの構造。</h2>
-<p class="lead center">テキスト以上のもの。統制され、アドレス指定できるナレッジオブジェクトです。以下のすべての部分が API から利用できます。</p>
-  <div class="kobj rv">
-    <div class="kohead">
-      <span class="kolab">KNOWLEDGE OBJECT · kn_842 · v4</span>
-      <div class="koclaim">「契約の更新日が 2026-09-01 に変更された。」</div>
-      <span class="kostate">SUPPORTED</span>
-    </div>
-    <div class="kogrid">
-      <div class="kocol">
-        <h5>証跡 · 支持 3 件 · 反証 1 件</h5>
-        <div class="koev">amendment_v2.pdf · p.4 ¶3<em>支持</em></div>
-        <div class="koev">renewal_notice.eml · 2026-06-12<em>支持</em></div>
-        <div class="koev">board_minutes.pdf · p.2<em>支持</em></div>
-        <div class="koev bad" style="border-bottom:0">contract_2024.pdf · p.12<em>反証 · 置き換え済み</em></div>
-      </div>
-      <div class="kocol">
-        <h5>関係 · 21</h5>
-        <div class="koev">更新する → 契約 #442</div>
-        <div class="koev">当事者 → サプライヤー XYZ</div>
-        <div class="koev">影響する → 請求書 #9812</div>
-        <div class="koev" style="border-bottom:0;color:var(--fg3)">+ 他 18 件</div>
-      </div>
-      <div class="kocol">
-        <h5>履歴</h5>
-        <div class="koev">v1 · 6月 · 6月30日に予定</div>
-        <div class="koev">v2 · 7月 · 延期</div>
-        <div class="koev">v3 · 8月 · 新しい日付を提案</div>
-        <div class="koev">v4 · 9月 · 9月1日に変更<em>現行</em></div>
-        <h5 style="margin-top:14px">証明書</h5>
-        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
-        <div class="kwd" style="font-size:10.5px;margin-top:4px">来歴、バージョン、解決状態、完全性を記録</div>
-      </div>
-    </div>
-    <div class="kograph">
-      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="ナレッジグラフの中の主張">
-        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
-        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
-        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
-        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
-        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">当事者</text>
-        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">主張する</text>
-        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">供給する</text>
-        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">請求する</text>
-        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
-        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
-        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">Acme Corp</text>
-        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">契約 #442</text>
-        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--acc2)">kn_842 · 更新</text>
-        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">サプライヤー XYZ</text>
-        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="var(--fg2)">請求書 #9812</text>
-        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">同じオブジェクトを、ナレッジグラフの中で</text>
-      </svg>
-    </div>
-  </div>
-</section>
 
 
 
-<section class="center">
-  <span class="eye">履歴</span>
-<h2>主張が変わっていく様子。</h2>
-<p class="lead center">新しい証跡が届き、主張は再裁定され、新しいバージョンが書かれます。上書きは決して起きません — どの状態も自分の証跡を保ちます。</p>
-  <div class="htl rv">
-    
-    
-    <div class="hstop"><span class="tm">6月</span><span class="tv">v1</span><p>更新は6月30日に予定</p><span class="te">contract_2024.pdf · p.12</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">7月</span><span class="tv">v2</span><p>更新が延期</p><span class="te">renewal_notice.eml</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop"><span class="tm">8月</span><span class="tv">v3</span><p>新しい日付を提案: 8月15日</p><span class="te">draft_amendment.pdf · p.2</span></div>
-    
-    <span class="harr">→</span>
-    <div class="hstop cur"><span class="tm">9月</span><span class="tv">v4</span><p>更新が9月1日に変更</p><span class="te">amendment_v2.pdf · p.4</span></div>
-    
-  </div>
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">同じナレッジオブジェクト — すべての過去の状態とその出典が保持されます。</p>
-</section>
-
-
-
-<section class="center">
-  <span class="eye">前 × 後</span>
-<h2>検索はテキストを見つけます。この層は、なぜそれが真なのかを守ります。</h2>
-
-  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">従来の検索</h4>
-      <ul class="kwl" style="margin-top:14px"><li>クエリ時に文章を取り出す</li><li>文脈はその瞬間にしか存在しない</li><li>知識が継続的に統制されていない</li><li>矛盾とバージョンは外部で処理</li></ul>
-      <p class="kwd" style="margin-top:4px">回答が問われた頃には、パイプラインは先に進んでいます。</p></div>
-    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Verifiable Knowledge Layer の上では</h4>
-      <ul class="kwl" style="margin-top:14px"><li>主張とその証跡を永続化する</li><li>関係と判断の履歴を保持する</li><li>変更のたびに統制されたバージョンを作る</li><li>再利用できるナレッジオブジェクトを提供する</li></ul>
-      <p class="kwd" style="margin-top:4px">回答が問われたとき、その理由を示せます。</p></div>
-  </div>
-</section>
 
 
 
@@ -290,7 +260,7 @@
   <span class="eye">Benchmarks</span>
 <h2>主張の前に、測定を。</h2>
 
-  <p class="lead center rv" style="max-width:620px">測定するもの: 決定性、再構成の忠実度、主張の抽出、棄権の較正、根拠づけの忠実度。</p>
+  <p class="lead center rv" style="max-width:620px">測定する対象: 主張の抽出、スパンの正確さ、限定条件の忠実さ、内部矛盾の検出、判断保留の較正。</p>
   <p class="lead center rv" style="margin-top:14px;font-size:14px">公開される結果は、事前登録された評価を経た後にのみ出されます — それまでこのサイトに数値は現れません。<a href="../benchmarks" style="color:var(--acc2)">ベンチマークの方法 →</a></p>
 </section>
 
@@ -323,8 +293,8 @@
 
 
 <section class="center">
-  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">証明できる知識の上に構築を。</h2>
-  <p class="lead center" style="margin-bottom:26px">Parse の出力から始めても、ご自身の構造化された証跡をつないでも構いません — 15,000 の無料クレジット、クレジットカード不要。</p>
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">ソースが実際に述べていることを証明する。</h2>
+  <p class="lead center" style="margin-bottom:26px">Parse の出力から始めるか、独自の構造化ソースを接続してください — 15,000 の無料クレジット、クレジットカード不要。</p>
   <div class="cta" style="justify-content:center">
     
     <a class="btn" href="../create-account">無料アカウントを作成</a>
@@ -345,7 +315,7 @@
     <div class="ftcol"><div class="h">製品</div>
       <a href="../products/parse">Parse</a>
       <a href="../products/prove">Prove</a>
-      <a href="../products/vault">Vault</a>
+      <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">リソース</div>
       <a href="/developers" hreflang="en">Developers</a>

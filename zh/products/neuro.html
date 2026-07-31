@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Neuro | Orves</title>
+<meta name="description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<link rel="canonical" href="https://orves.ai/zh/products/neuro"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/neuro"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/neuro"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/neuro"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/neuro"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/neuro"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/neuro"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
+<meta property="og:title" content="Neuro | Orves"/>
+<meta property="og:description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_Hans"/>
+<meta property="og:url" content="https://orves.ai/zh/products/neuro"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
+        <a href="../products/prove">Prove <em>单一来源所陈述与所支持的一切</em></a>
+        <a href="../products/neuro">Neuro <em>所有来源如何关联</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">资源 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、快速上手与示例</em></a>
+        <a href="../benchmarks">Benchmarks <em>我们如何测量 —— 方法与结果</em></a>
+        <a href="../research">Research <em>方法、报告与技术发现</em></a>
+        <a href="../trust">Trust <em>认证与验证</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>已交付的与接下来的</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">价格</a>
+    <a href="../why-orves" class="">为什么选 Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="语言">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">ZH</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>选择语言</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/neuro"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/neuro"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/neuro"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/neuro"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/neuro"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/neuro"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/neuro"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/neuro"
+         class="on" aria-current="true">简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">登录</a>
+  
+  
+  <a class="btn" href="../contact?topic=neuro-beta">加入私有测试</a>
+  
+  <button class="menubtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/prove">Prove</a>
+  <a href="../products/neuro">Neuro</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">价格</a>
+  <a href="../why-orves">为什么选 Orves</a>
+  <a href="../login">登录</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>语料智能 · neuro · 开发中</span>
+    <h1>每一个来源，<span class="accent-tx">被一并理解。</span></h1>
+    <p class="sub">Orves Neuro 是唯一持有状态的 Orves 产品。它接收 Prove 产出的来源级结果，将每一份新结果与相关的 Corpus 状态相互印证，并发现任何单一文档都不会声明的事情：同一实体在不同名称之下、后出的来源取代先前的来源、两家机构彼此矛盾。开发中：本页描述 Neuro 正在被建造成什么样子。</p>
+    <div class="cta">
+      
+      <a class="btn" href="../contact?topic=neuro-beta">加入私有测试</a>
+      <a class="btn gh" href="#why-neuro">看看它怎么运作</a>
+      
+      
+    </div>
+    <div class="chips"><span class="chip">跨来源关系</span><span class="chip">实体消歧</span><span class="chip">随时间的演变</span><span class="chip">被保留的分歧</span><span class="chip">Web · API · SDK · MCP</span></div>
+    
+  </div>
+  <div class="code rv"><div class="codehd">在 Corpus 内部 · 开发中</div>
+<pre><span class="cm"># a Corpus — the persistent collection of source-level</span>
+<span class="cm"># results analysed by Neuro</span>
+<span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
+<span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
+<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
+<span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
+<span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
+<span class="k">access/</span>         <span class="cm"># permissions · policies</span>
+
+<span class="cm"># served via Web · API · SDK · MCP — in development</span></pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">问题</span>
+<h2>每一份文档都被理解，整体却从来没有。</h2>
+
+  <p class="lead center">每个来源都被单独阅读，然后归档了事——于是没有人看见：两份报告用不同名称指同一家公司，七月的通话早已取代五月的预测，或者人人都在引用的结论，其实建立在另一个来源所反驳的来源之上。真正要紧的理解存在于文档与文档之间，而没有任何东西托着它。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">同一实体，不同名称</span><span class="chip bad">已被取代的立场仍在被引用</span><span class="chip bad">从未浮现的矛盾</span><span class="chip bad">没有整体视角</span><span class="chip bad">无人能追溯的答案</span></div>
+  
+</section>
+
+
+
+
+
+<section class="center" id="why-neuro">
+  <span class="eye">Neuro 为何存在</span>
+<h2>Prove 读一个来源。Neuro 读整体。</h2>
+<p class="lead center">Parse 结构化每个来源。Prove 一次只分析一个来源，从不看见另一个——这正是它的结果可复现的原因。Neuro 是这些独立结果交汇之处：它把每一份新的来源级结果与相关的 Corpus 状态相互印证，发现任何单一文档都不会声明的关系，而每一条都可回溯到支持它的那些来源。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — 单一来源</h4>
+      <ul class="kwl" style="margin-top:14px"><li>读取一个结构化来源</li><li>从不看见您的其他来源或先前状态</li><li>捕获主张、区段、限定条件与作者信息</li><li>关系带有 scope: within_source</li></ul>
+      <p class="kwd" style="margin-top:4px">按构造无状态——同样的来源，同样的结果。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — Corpus</h4>
+      <ul class="kwl" style="margin-top:14px"><li>将每份新结果与相关的 Corpus 状态相互印证</li><li>在不同来源之间消解同一实体</li><li>发现一致、冲突、细化与取代</li><li>关系带有 scope: cross_source</li></ul>
+      <p class="kwd" style="margin-top:4px">有状态——每一条关系都保留其背后的来源。</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">一个新来源如何改变整体</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 单一来源，独立进行</span><span class="a">→</span><span class="fc" style="animation-delay:3s">结果进入 Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro 将其与相关的 Corpus 状态相互印证</span><span class="a">→</span><span class="fc" style="animation-delay:5s">可追溯的 cross_source 关系与状态</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 以可追溯的关系与状态更新 Corpus——它从不把推断变成事实，从不对相互竞争的观点取平均，也从不覆盖来源实际所述。</p>
+  
+</section>
+
+<section class="center" id="disagreement">
+  <span class="eye">分歧，被保住</span>
+<h2>矛盾是知识，不是错误。</h2>
+<p class="lead center">两家机构预测同一指标而结论相左。Prove 各自独立分析了每个来源，谁也没看见对方；察觉它们谈的是同一主题的，是 Neuro。它记录这一冲突，并连同作者、日期与证据一并保留两者，而不是取平均、覆盖其一，或制造出一个共识。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">两个来源 · 同一主题</div>
+<pre><span class="cm"># report — May 2026</span>
+<span class="k">source</span>: <span class="s">macro_outlook_may.pdf · p.8 · Institution A</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+
+<span class="cm"># audio — July 2026</span>
+<span class="k">source</span>: <span class="s">weekly_call_jul.mp3 · 14:32 · Institution B</span>
+<span class="k">claim</span>:  <span class="s">"IPCA forecast for 2026: 5.1%"</span></pre></div><div class="code rv"><div class="codehd">被保住的状态 —— 两条主张都在</div>
+<pre><span class="cm"># neither claim is lost or merged</span>
+├── <span class="s">two independent claims</span>
+├── <span class="s">same subject · same reference period</span>
+├── <span class="s">different authors and dates</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: cross_source · discovered by Neuro</span>
+└── <span class="g">evidence preserved for both</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">跨来源的关系</span>
+  <p class="lead center rv" style="margin-top:12px">后出的来源可能更新先前的立场、与另一家机构相矛盾、细化早先的主张，或就同一主题引入互不相干的观点。Prove 在每个来源内部捕获这些关系，带有 scope: within_source。Neuro 在整个 Corpus 范围内发现它们，带有 scope: cross_source——同一套词汇用于两个尺度，绝不混用，也绝不从一方悄悄升格为另一方。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
+
+<section class="center" id="inside">
+  <span class="eye">Corpus 内部</span>
+<h2>不只是文件。不只是向量。也不只是一张图。</h2>
+<p class="lead center">Corpus 是由 Neuro 分析的来源级结果的持久集合——来源本身、Prove 就每个来源所确定的内容，以及在其之上构建的跨来源理解。您创建 Corpus、向其中添加来源并治理谁可以访问；研究它的是 Neuro。知识图谱是 Neuro 内部的一项能力，而不是产品。</p>
+  
+  
+  
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>来源</h4>
+    <ul class="kwl"><li>文档</li><li>音频</li><li>视频</li><li>API</li><li>系统</li></ul><p class="kwd">按策略保留的原件 —— 上面这一切都始终链接回它们。</p>
+    </div><div class="card"><h4>来源级结果</h4>
+    <ul class="kwl"><li>主张</li><li>证据</li><li>区段</li><li>限定条件</li><li>作者信息</li><li>within_source 关系</li></ul><p class="kwd">Prove 就每个来源独立确定的内容——原样保留，绝不被后来的东西改写。</p>
+    </div><div class="card"><h4>跨来源的理解</h4>
+    <ul class="kwl"><li>已消解的实体</li><li>cross_source 关系</li><li>时间上下文</li><li>冲突</li><li>版本</li></ul><p class="kwd">只有 Neuro 能看见的东西——由那些结果构建，并可回溯到其背后的每一个来源。</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">有证据支撑的知识图谱</span>
+  <p class="lead center rv" style="margin-top:12px">实体与主张不是因为语义相近才被连起来。每一条关系都保留来源、出处引用、时间上下文，以及产生它的那条证据。</p>
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">图谱中的一条主张</div>
+<pre><span class="s">"IPCA forecast for 2026: 4.2%"</span>
+├── <span class="k">asserted_by</span>   → <span class="s">Institution A</span>
+├── <span class="k">supported_by</span>  → <span class="s">macro_outlook_may.pdf · p.8</span>
+├── <span class="k">concerns</span>      → <span class="s">Brazil · IPCA</span>
+├── <span class="k">valid_for</span>     → <span class="s">2026</span>
+├── <span class="k">contradicts</span>   → <span class="s">claim kn_517 · Institution B</span>
+└── <span class="k">created_at</span>    → <span class="s">2026-05-14</span></pre></div></div>
+  
+  
+  
+  
+</section>
+
+<section class="center" id="built-on-prove">
+  <span class="eye">Neuro 运行的基础</span>
+<h2>Neuro 构建在 Prove 之上。每一条关系都通向证据。</h2>
+<p class="lead center">Neuro 不读文档。它只处理由 Prove 提供依据的知识——那些已经带着区段、作者、限定条件与认知状态的主张。这一依赖正是保证所在：一条跨来源关系的可辩护程度，不会超过它下面那些来源级结果。因此 Neuro 从不接受原始文本、松散切片、向量嵌入，或没有溯源信息的主张。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">每款产品需要什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — 可单独使用</li><li>Prove — Orves Parse 的输出，或您自己的兼容解析器</li><li>Neuro — 始终是由 Prove 提供依据的结果</li></ul>
+      <p class="kwd" style="margin-top:4px">Prove 为主张提供依据，Neuro 为主张之间的关系提供依据。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>这换来什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>整个 Corpus 拥有统一的溯源水平</li><li>不会在无人核对的文本之上建立关系</li><li>每一条 cross_source 关系都可追溯到两份来源级结果</li><li>可复现的输入——同一个来源，依据方式始终相同</li></ul>
+      <p class="kwd" style="margin-top:4px">这一依赖不是限制，而正是关系得以站得住脚的原因。</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">发来一个来源，整条链路为您运行</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">您的来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — 如果来源需要被结构化</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 提供依据，一次一个来源</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — 在整个 Corpus 范围内关联</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 是一款独立的产品，却不是一件额外的差事：发来一个来源，链路就为您运行；带来您自己的解析器输出，就从 Prove 开始；带来一份您已有的 Prove 结果，就从 Neuro 开始。您只为实际运行的步骤付费——对已有的 Prove 结果，Neuro 绝不重复计费。始终不变的是那条约定：没有依据的东西不会抵达 Neuro。</p>
+  
+</section>
+
+<section class="center" id="what-you-pay">
+  <span class="eye">您为什么付费</span>
+<h2>对已有的 Prove 结果，Neuro 绝不重复计费。</h2>
+<p class="lead center">Neuro 运行在由 Prove 提供依据的结果之上，所以诚实的问题是：为了您发来的这个请求，究竟有什么必须运行。您只为这些步骤付费，别无其他——已经做过的工作绝不重做，也绝不重复计费。</p>
+  
+  
+  
+  
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>您发来一份已有的 Prove 结果</h4>
+    <ul class="kwl"><li>Corpus 操作</li></ul><p class="kwd">关于那个来源无需重新确定任何事情，只有针对 Corpus 的工作会运行。</p>
+    </div><div class="card"><h4>您发来尚未经过 Prove 的 JSON 或 Markdown</h4>
+    <ul class="kwl"><li>来源分析</li><li>Corpus 操作</li></ul><p class="kwd">在能与其他任何东西关联之前，该来源仍须先获得依据。</p>
+    </div><div class="card"><h4>您发来一个原始文件</h4>
+    <ul class="kwl"><li>Parse</li><li>来源分析</li><li>Corpus 操作</li></ul><p class="kwd">文件必须先被结构化，再获得依据，然后才能被关联。</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">Corpus 操作</span>
+  <p class="lead center rv" style="margin-top:12px">Corpus 操作是针对整体的工作：把一份有依据的结果加入 Corpus、将其与相关状态比对、把它与已有内容关联，或跨全部内容进行查询。费率在可提供时公布——绝不提前。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">添加</span><span class="chip">比较</span><span class="chip">关联</span><span class="chip">查询</span></div>
+  
+  
+</section>
+
+<section class="center" id="access">
+  <span class="eye">访问与治理 · 开发中</span>
+<h2>提供给人、应用、模型与智能体。</h2>
+<p class="lead center">Neuro 正在被建造成通过 Web、REST API、SDK 与 MCP 提供知识——这种检索的设计目标，是在一次可追溯的响应里返回相关主张及其证据、相互竞争的观点与历史。绝不是彼此脱节的切片，也绝不锁定在单一 AI 供应商上。</p>
+  
+  
+  
+  
+  <div class="rv" style="max-width:640px;margin:26px auto 0;text-align:left"><div class="code rv"><div class="codehd">计划中的接口 · 概念预览</div>
+<pre><span class="cm"># how a Corpus is served — in development</span>
+<span class="k">Web</span>       <span class="cm"># explore, search, inspect evidence</span>
+<span class="k">REST API</span>  <span class="cm"># applications and pipelines</span>
+<span class="k">SDK</span>       <span class="cm"># your language, one contract</span>
+<span class="k">MCP</span>       <span class="cm"># models and agents, permission-aware</span>
+<span class="k">Export</span>    <span class="cm"># your asset, portable</span>
+
+<span class="cm"># conceptual MCP tools — subject to change</span>
+<span class="s">search_knowledge · get_claim · get_evidence</span>
+<span class="s">trace_claim · find_conflicts · list_changes</span></pre></div></div>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">全文</span><span class="chip">语义</span><span class="chip">实体与主张检索</span><span class="chip">时间过滤</span><span class="chip">冲突检索</span><span class="chip">图谱遍历</span><span class="chip">感知权限</span></div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 提供理解——连同其背后的来源。至于如何使用，由您的应用与模型决定。</p>
+  
+  <span class="eye rv" style="display:block;margin-top:40px">治理</span>
+  <p class="lead center rv" style="margin-top:12px">按组织隔离，Corpus 与来源两级权限，完整历史与审计。每一项控制都在其交付时才宣布——绝不提前。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">按组织隔离</span><span class="chip">Corpus 级权限</span><span class="chip">来源级访问</span><span class="chip">知识历史</span><span class="chip">版本管理</span><span class="chip">审计日志</span><span class="chip">留存策略</span><span class="chip">删除与导出</span><span class="chip">API 与 MCP 作用域</span></div>
+  
+  
+</section>
+
+<section class="center" id="use-cases">
+  <span class="eye">应用场景</span>
+<h2>为必须经得起审视的知识而造。</h2>
+
+  
+  
+  
+  
+  <div class="g2 rv" style="margin-top:26px;max-width:840px;margin-left:auto;margin-right:auto">
+    <div class="card"><h4>机构研究</h4>
+    <p>在报告、电话会议、音频与数据集之间，维护预测、观点、修订与来源证据。</p></div><div class="card"><h4>法务与合规</h4>
+    <p>让主张、条款、先例与证据始终可以追回原始出处。</p></div><div class="card"><h4>企业知识</h4>
+    <p>把政策、文档与内部系统连起来，同时不丢掉所有权、来源与历史。</p></div><div class="card"><h4>AI 与智能体</h4>
+    <p>通过 API 或 MCP，为模型提供持久、感知权限、有证据支撑的上下文。</p></div>
+  </div>
+  
+  
+  
+  
+</section>
+
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">看看</span>
+<h2>一条跨来源关系的解剖。</h2>
+<p class="lead center">这不是被统一后的真相：而是来自不同来源的主张之间一条可寻址的关系——带着核对它所需的一切，两个来源都仍在其后。</p>
+  <div class="kobj rv">
+    <div class="kohead">
+      <span class="kolab">CROSS-SOURCE RELATIONSHIP · rel_842 · v4</span>
+      <div class="koclaim">“amendment_v2.pdf 中主张的续约日期取代了 contract_2024.pdf 中的日期。”</div>
+      <span class="kostate">UNRESOLVED</span>
+    </div>
+    <div class="kogrid">
+      <div class="kocol">
+        <h5>主张引用 · 2</h5>
+        <div class="koev">c_17 · “续约改至 2026-09-01”<em>Prove · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · “续约定于 2026-08-01”<em>Prove · contract_2024.pdf</em></div>
+        <h5 style="margin-top:14px">来源引用 · 2</h5>
+        <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
+        <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
+      </div>
+      <div class="kocol">
+        <h5>这条关系</h5>
+        <div class="koev">type<em>supersedes</em></div>
+        <div class="koev">scope<em>cross_source</em></div>
+        <div class="koev">discovered_by<em>Neuro</em></div>
+        <div class="koev">provenance<em>complete</em></div>
+        <div class="koev" style="border-bottom:0">status<em>unresolved</em></div>
+        <div class="kwd" style="font-size:10.5px;margin-top:6px">两条主张都没有被改写——它们仍与各自来源所述的一模一样</div>
+      </div>
+      <div class="kocol">
+        <h5>历史</h5>
+        <div class="koev">v1 · 六月 · 尚无关系</div>
+        <div class="koev">v2 · 七月 · related_to · 同一主题</div>
+        <div class="koev">v3 · 八月 · contradicts</div>
+        <div class="koev">v4 · 九月 · supersedes<em>当前</em></div>
+        <h5 style="margin-top:14px">证书</h5>
+        <div class="koev" style="border-bottom:0">cert_9f2… · kb@2026.07</div>
+        <div class="kwd" style="font-size:10.5px;margin-top:4px">记录溯源信息、版本、尺度与完整性</div>
+      </div>
+    </div>
+    <div class="kograph">
+      <svg viewBox="0 0 760 66" width="100%" fill="none" role="img" aria-label="两条主张之间的关系，各自以不同来源为依据：amendment_v2.pdf 主张 c_17，contract_2024.pdf 主张 c_88，而 rel_842 以 scope cross_source 将两者关联起来。">
+        <line x1="120" y1="30" x2="160" y2="30" stroke="var(--line2)"/>
+        <line x1="280" y1="30" x2="320" y2="30" stroke="var(--line2)"/>
+        <line x1="440" y1="30" x2="480" y2="30" stroke="var(--line2)"/>
+        <line x1="600" y1="30" x2="640" y2="30" stroke="var(--line2)"/>
+        <text x="140" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">断言</text>
+        <text x="300" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">支撑</text>
+        <text x="460" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">支撑</text>
+        <text x="620" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="var(--fg3)">断言</text>
+        <rect x="0" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="160" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="320" y="15" width="120" height="30" rx="8" stroke="var(--acc)" stroke-width="1.4"/>
+        <rect x="480" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <rect x="640" y="15" width="120" height="30" rx="8" stroke="var(--line2)"/>
+        <text x="60" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">amendment_v2.pdf</text>
+        <text x="220" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">主张 c_17</text>
+        <text x="380" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--acc2)">rel_842 · 取代</text>
+        <text x="540" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">主张 c_88</text>
+        <text x="700" y="34" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="var(--fg2)">contract_2024.pdf</text>
+        <text x="380" y="60" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="var(--fg3)">该关系 — 两个来源仍在其后</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">历史</span>
+<h2>看着理解发生改变。</h2>
+<p class="lead center">一个新来源到达，Prove 确定它陈述了什么，Neuro 再把这一主题与 Corpus 相互印证。没有任何东西被覆盖——每一个状态都保留其背后的来源。</p>
+  <div class="htl rv">
+    
+    
+    <div class="hstop"><span class="tm">6月</span><span class="tv">v1</span><p>续约定于6月30日</p><span class="te">contract_2024.pdf · 第12页</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">7月</span><span class="tv">v2</span><p>续约推迟</p><span class="te">renewal_notice.eml</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop"><span class="tm">8月</span><span class="tv">v3</span><p>提出新日期：8月15日</p><span class="te">draft_amendment.pdf · 第2页</span></div>
+    
+    <span class="harr">→</span>
+    <div class="hstop cur"><span class="tm">9月</span><span class="tv">v4</span><p>续约改为9月1日</p><span class="te">amendment_v2.pdf · 第4页</span></div>
+    
+  </div>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">同一主题横跨四个来源——此前的每一个状态，以及产生它的那个来源，都被保留。</p>
+</section>
+
+
+
+<section class="center">
+  <span class="eye">前 × 后</span>
+<h2>检索找到的是文本。这一层保住的是「它凭什么是真的」。</h2>
+
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">传统检索</h4>
+      <ul class="kwl" style="margin-top:14px"><li>在查询时取回片段</li><li>上下文只存在于那一刻</li><li>知识没有被持续治理</li><li>冲突与版本在外部处理</li></ul>
+      <p class="kwd" style="margin-top:4px">等到答案被质疑时，管线早就走远了。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>在 Verifiable Knowledge Layer 上</h4>
+      <ul class="kwl" style="margin-top:14px"><li>持久保存主张及其证据</li><li>保住关系与决策历史</li><li>每一次变更都生成一个受治理的版本</li><li>提供可复用的知识对象</li></ul>
+      <p class="kwd" style="margin-top:4px">当答案被质疑时，你能拿出理由。</p></div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">这是一种性质，不是一个产品</span>
+    <h3 style="margin:8px 0 6px">每一个产物都可验证。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">认证贯穿 Orves 产出的一切。验证被设计成公开、可复现，并且不依赖 Orves 账户。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ 来源</span><span class="bp hot">✓ 完整性</span><span class="bp">版本</span><span class="bp">证据</span><span class="bp">裁定状态</span><span class="bp">验证</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API 优先</span>
+    <h3 style="margin:8px 0 6px">几分钟完成集成。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">一切都通过托管 API 提供 —— 无需再部署额外的基础设施。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">示例</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">抢先体验 Neuro。</h2>
+  <p class="lead center" style="margin-bottom:26px">开发中——告诉我们，贵组织需要在其各个来源之间理解什么。</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../contact?topic=neuro-beta">加入私有测试</a>
+    <a class="btn gh" href="../products/parse">今天就从 Parse 开始</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">产品</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/prove">Prove</a>
+      <a href="../products/neuro">Neuro</a>
+    </div>
+    <div class="ftcol"><div class="h">资源</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">公司</div>
+      <a href="../why-orves">为什么选 Orves</a>
+      <a href="/system" hreflang="en">品牌</a>
+      <a href="../contact">联系</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · 保留所有权利。</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>
