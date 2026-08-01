@@ -84,6 +84,16 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ink) 80%
    qualquer diferença de altura de linha entre os itens vira desalinhamento
    visível. É o que o caret ▾ provocava: ele engorda a linha de Products e
    Resources, e só esses dois desciam em relação a Pricing e Why Orves. */
+/* Gatilho do dropdown: BOTAO, nunca <a> sem href. Sem href o elemento nao
+   entra na ordem de tabulacao; e como `.nmenu` fica display:none ate
+   `:focus-within`, nada dentro dele podia receber foco para DISPARAR o
+   `:focus-within`. Resultado: os 8 destinos de Products/Resources eram
+   inalcancaveis por teclado acima de 960px (abaixo o `.mnav` cobre, por
+   isso o teste de celular nunca pegou). `aria-expanded` fica de FORA de
+   proposito: sem JS ele nao acompanha o estado, e um valor sempre-falso
+   mente para o leitor de tela — pior que a ausencia. */
+.nlinks .ndt{font:inherit;font-size:14px;color:var(--fg2);background:none;border:0;padding:0;cursor:default;display:inline-flex;align-items:center}
+.nlinks .ndt:hover,.nlinks .ndt.on{color:var(--fg)}
 .nlinks{display:flex;align-items:center;gap:24px;margin-left:6px}
 .nlinks a{font-size:14px;color:var(--fg2)}.nlinks a:hover{color:var(--fg)}.nlinks a.on{color:var(--fg)}
 @media(max-width:960px){.nlinks{display:none}}

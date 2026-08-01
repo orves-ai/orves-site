@@ -37,7 +37,7 @@
   <a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
   <div class="nlinks">
     <span class="ndd">
-      <a class="" style="cursor:default">제품 <span class="caret">▾</span></a>
+      <button type="button" class="ndt ">제품 <span class="caret">▾</span></button>
       <span class="nmenu"><span class="in">
         <a href="products/parse">Parse <em>문서에서 구조화된 데이터로</em></a>
         <a href="products/trace">Trace <em>하나의 출처가 말하고 뒷받침하는 모든 것</em></a>
@@ -45,7 +45,7 @@
       </span></span>
     </span>
     <span class="ndd">
-      <a class="" style="cursor:default">리소스 <span class="caret">▾</span></a>
+      <button type="button" class="ndt ">리소스 <span class="caret">▾</span></button>
       <span class="nmenu"><span class="in">
         <a href="/developers" hreflang="en">Developers <em>API, 빠른 시작, 예제</em></a>
         <a href="benchmarks">Benchmarks <em>측정 방식 — 방법론과 결과</em></a>
@@ -153,13 +153,18 @@
   // ?topic=<slug>-beta | <slug>-pilot: chegada por CTA de produto em beta/
   // pilot — pré-preenche a mensagem sem prometer nada indisponível.
   var topic = p.get('topic');
-  var tm = topic && /^([a-z-]{1,36})-(beta|pilot)$/.exec(topic);
+  // `-beta` continua ACEITO (links historicos, incluindo `prove-beta` de antes
+  // do rename) mas e' NORMALIZADO para early access: nao existe coorte externa
+  // usando Trace ou Neuro, entao a copy visivel nunca promete um beta.
+  // O slug nao tem hifen (parse/trace/neuro) — por isso `[a-z]+` e nao `[a-z-]+`,
+  // que engoliria o `early` de `trace-early-access` para dentro do produto.
+  var tm = topic && /^([a-z]{1,24})-(early-access|beta|pilot)$/.exec(topic);
   if (tm) {
     var ta = document.querySelector('.cform textarea[name="message"]');
     var prod = tm[1].charAt(0).toUpperCase() + tm[1].slice(1);
-    if (ta && !ta.value) ta.value = tm[2] === 'beta'
-      ? "I'd like to join the Orves " + prod + " private beta."
-      : "I'd like to request access to the Orves " + prod + " private pilot.";
+    if (ta && !ta.value) ta.value = tm[2] === 'pilot'
+      ? "I'd like to request access to the Orves " + prod + " private pilot."
+      : "I'd like to request early access to Orves " + prod + ".";
   }
 })();
 </script>
