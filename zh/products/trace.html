@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
+<title>Trace | Orves</title>
+<meta name="description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Trace 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<link rel="canonical" href="https://orves.ai/zh/products/trace"/>
+
+<link rel="alternate" hreflang="en" href="https://orves.ai/products/trace"/>
+<link rel="alternate" hreflang="pt-BR" href="https://orves.ai/pt-br/products/trace"/>
+<link rel="alternate" hreflang="es" href="https://orves.ai/es/products/trace"/>
+<link rel="alternate" hreflang="fr" href="https://orves.ai/fr/products/trace"/>
+<link rel="alternate" hreflang="de" href="https://orves.ai/de/products/trace"/>
+<link rel="alternate" hreflang="ja" href="https://orves.ai/ja/products/trace"/>
+<link rel="alternate" hreflang="ko" href="https://orves.ai/ko/products/trace"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/trace"/>
+<link rel="alternate" hreflang="x-default" href="https://orves.ai/products/trace"/>
+<meta property="og:title" content="Trace | Orves"/>
+<meta property="og:description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Trace 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_Hans"/>
+<meta property="og:url" content="https://orves.ai/zh/products/trace"/>
+<meta property="og:site_name" content="Orves"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"/>
+<link rel="icon" href="/assets/favicon.ico" sizes="16x16 32x32 48x48"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/orves.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="page">
+
+<nav><div class="wrap navin">
+  <a class="brand" href="../"><svg width="26" height="26" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></a>
+  <div class="nlinks">
+    <span class="ndd">
+      <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
+        <a href="../products/trace">Trace <em>单一来源所陈述与所支持的一切</em></a>
+        <a href="../products/neuro">Neuro <em>所有来源如何关联</em></a>
+      </span></span>
+    </span>
+    <span class="ndd">
+      <a class="" style="cursor:default">资源 <span class="caret">▾</span></a>
+      <span class="nmenu"><span class="in">
+        <a href="/developers" hreflang="en">Developers <em>API、快速上手与示例</em></a>
+        <a href="../benchmarks">Benchmarks <em>我们如何测量 —— 方法与结果</em></a>
+        <a href="../research">Research <em>方法、报告与技术发现</em></a>
+        <a href="../trust">Trust <em>认证与验证</em></a>
+        <a href="../roadmap" style="border-top:1px solid var(--line2);margin-top:4px;padding-top:12px">Roadmap <em>已交付的与接下来的</em></a>
+      </span></span>
+    </span>
+    <a href="../pricing" class="">价格</a>
+    <a href="../why-orves" class="">为什么选 Orves</a>
+  </div>
+  <span class="sp"></span>
+  <div class="lngdd">
+  <button class="lngbtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lngmenu" aria-label="语言">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 2.6 15.8 0 18.4M12 2.8c-2.6 2.6-2.6 15.8 0 18.4" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="lngcur" translate="no">ZH</span>
+  </button>
+  
+  <div class="lngmenu" id="lngmenu" role="menu" hidden>
+    <div class="lngsheet">
+      <div class="lnghd"><span>选择语言</span>
+        <button class="lngx" type="button" aria-label="Close" translate="no">&times;</button></div>
+      <a role="menuitem" translate="no" hreflang="en" lang="en"
+         href="https://orves.ai/products/trace"
+         >English</a>
+      <a role="menuitem" translate="no" hreflang="pt-BR" lang="pt-BR"
+         href="https://orves.ai/pt-br/products/trace"
+         >Português (Brasil)</a>
+      <a role="menuitem" translate="no" hreflang="es" lang="es"
+         href="https://orves.ai/es/products/trace"
+         >Español</a>
+      <a role="menuitem" translate="no" hreflang="fr" lang="fr"
+         href="https://orves.ai/fr/products/trace"
+         >Français</a>
+      <a role="menuitem" translate="no" hreflang="de" lang="de"
+         href="https://orves.ai/de/products/trace"
+         >Deutsch</a>
+      <a role="menuitem" translate="no" hreflang="ja" lang="ja"
+         href="https://orves.ai/ja/products/trace"
+         >日本語</a>
+      <a role="menuitem" translate="no" hreflang="ko" lang="ko"
+         href="https://orves.ai/ko/products/trace"
+         >한국어</a>
+      <a role="menuitem" translate="no" hreflang="zh-Hans" lang="zh-Hans"
+         href="https://orves.ai/zh/products/trace"
+         class="on" aria-current="true">简体中文</a>
+    </div>
+  </div>
+</div>
+  <a class="si" href="../login">登录</a>
+  
+  
+  <a class="btn" href="../create-account">免费开始</a>
+  
+  <button class="menubtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="mnav">
+  <a href="../products/parse">Parse</a>
+  <a href="../products/trace">Trace</a>
+  <a href="../products/neuro">Neuro</a>
+  <a href="/developers" hreflang="en" class="sub">Developers</a>
+  <a href="../benchmarks" class="sub">Benchmarks</a>
+  <a href="../research" class="sub">Research</a>
+  <a href="../trust" class="sub">Trust</a>
+  <a href="../roadmap" class="sub">Roadmap</a>
+  <a href="../pricing">价格</a>
+  <a href="../why-orves">为什么选 Orves</a>
+  <a href="../login">登录</a>
+</div></nav>
+
+
+<main class="wrap">
+
+
+<section class="hero" style="border-top:0">
+  <div>
+    <span class="eyepill"><span class="d"></span>来源分析 · trace · 开发中</span>
+    <h1>一个来源陈述的一切。<span class="accent-tx">以及它所支持的。</span></h1>
+    <p class="sub">Orves Trace 一次读取一个结构化来源——Parse 的输出，或您自己的 JSON/Markdown——并捕获其中的每一条主张：它出自的精确区段、由谁主张、附带的限定条件、其内部陈述的关系、它自相矛盾之处，以及它并不支持的主张。一个来源进，一份可验证的结果出。开发中；API 约定正在定稿。</p>
+    <div class="cta">
+      
+      <a class="btn" href="../create-account">开始构建</a>
+      <a class="btn gh" href="../pricing">查看价格</a>
+      
+    </div>
+    <div class="chips"><span class="chip">主张与证据</span><span class="chip">精确区段</span><span class="chip">限定条件</span><span class="chip">来源内部的关系</span><span class="chip">ABSTAINED</span></div>
+    <p class="mono" style="margin-top:12px;font-size:11.5px;color:var(--fg3)">无状态 · 一次一个来源 · 开发中——API 约定制定中</p>
+  </div>
+  <div class="code rv"><div class="codehd">来源分析 · 示意预览</div>
+<pre><span class="cm"># one source in · one verifiable result out</span>
+<span class="cm"># illustrative preview — the API contract is in definition</span>
+{ <span class="k">"source"</span>: <span class="s">"macro_outlook_may.pdf"</span>, <span class="k">"scope"</span>: <span class="g">"within_source"</span>,
+  <span class="k">"claim"</span>: <span class="s">"IPCA forecast for 2026: 4.2%"</span>,
+  <span class="k">"says"</span>: <span class="g">"asserted"</span>, <span class="k">"supports"</span>: <span class="g">"SUPPORTED"</span>,
+  <span class="k">"span"</span>: <span class="s">"p.8 · para 2 · bbox[72,410,486,433]"</span>,
+  <span class="k">"asserted_by"</span>: <span class="s">"Institution A · 2026-05-14"</span>,
+  <span class="k">"qualifiers"</span>: <span class="s">["preliminary", "subject to revision"]</span>,
+  <span class="k">"contradicted_within_source"</span>: <span class="s">"claim c_31 · annex p.24"</span>,
+  <span class="k">"abstains_when"</span>: <span class="r">"insufficient_evidence"</span> }</pre></div>
+</section>
+
+<section class="center">
+  <span class="eye">问题</span>
+<h2>抽取返回文本，却不返回这段文本支持什么。</h2>
+
+  <p class="lead center">流水线把语句从文档里拽出来，同时丢掉了一切让它站得住脚的东西：它究竟出自何处、由谁主张、附在其上的保留，以及两页之后与它矛盾的那一段。剩下的东西读起来像事实，却无从核对。</p>
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip bad">区段被丢弃</span><span class="chip bad">限定条件被抹平</span><span class="chip bad">作者信息丢失</span><span class="chip bad">内部矛盾被合并</span><span class="chip bad">在缺少证据处进行猜测</span></div>
+  
+</section>
+
+
+<section class="center tight">
+  <span class="eye">你会得到</span>
+  <div class="chips rv" style="justify-content:center;margin-top:16px"><span class="chip">更少的幻觉</span><span class="chip">可审计性</span><span class="chip">合规</span><span class="chip">可复现性</span><span class="chip">可解释性</span><span class="chip">站得住脚的引用</span><span class="chip">机构层面的信任</span></div>
+</section>
+
+
+
+
+<section class="center" id="within-source">
+  <span class="eye">在一个来源之内</span>
+<h2>Trace 读一个来源，别无其他。</h2>
+<p class="lead center">每一份结果都产自单一的结构化来源，无法访问您的其他文件，不保留先前运行的记忆，也没有可供查阅的既有状态。这一约束就是产品本身：同一个来源始终得出同样的结果，任何人都能对着文件本身核对它。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
+    <div class="card"><h4 style="color:var(--fg2)">Trace 收到什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>一个结构化来源——Parse 的输出，或您自己的 JSON/Markdown</li><li>其中的文本、表格、版式与位置</li><li>该来源就自身所声明的一切——作者、日期、范围</li></ul>
+      <p class="kwd" style="margin-top:4px">一个来源进，一份可验证的结果出。</p></div>
+    <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Trace 从不会收到什么</h4>
+      <ul class="kwl" style="margin-top:14px"><li>您的其他来源</li><li>先前运行的结果</li><li>当前的 Corpus 状态</li><li>该来源并不包含的任何东西</li></ul>
+      <p class="kwd" style="margin-top:4px">把来源彼此关联起来的是 Orves Neuro。</p></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">一个来源，自始至终</span>
+  
+  
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">结构化来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">由区段定位的主张</span><span class="a">→</span><span class="fc" style="animation-delay:2s">陈述与支持</span><span class="a">→</span><span class="fc" style="animation-delay:3s">限定条件与作者信息</span><span class="a">→</span><span class="fc" style="animation-delay:4s">within_source 关系</span><span class="a">→</span><span class="fc" style="animation-delay:5s">一份可验证的结果</span></div>
+  
+  
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">不会从文件之外推断任何东西——凡来源并不支持某条主张之处，状态即为 ABSTAINED。</p>
+  
+</section>
+
+<section class="center" id="says-supports">
+  <span class="eye">陈述 × 支持</span>
+<h2>一个来源所陈述的，并不就是它所支持的。</h2>
+<p class="lead center">一份文档可能主张它从未支撑的东西，可能用保留把一个数字修饰到毫无意义，也可能在第 8 页与附录里给出不同的数字。把这一切压平成一张事实清单，正是站不住脚的主张进入审计的方式。</p>
+  
+  
+  
+  
+  <div class="g2 rv" style="max-width:920px;margin:26px auto 0">
+    <div class="code rv"><div class="codehd">一个来源 · 两处段落</div>
+<pre><span class="cm"># macro_outlook_may.pdf · Institution A</span>
+<span class="k">p.8 para 2</span>:  <span class="s">"IPCA forecast for 2026: 4.2%"</span>
+<span class="cm">                 preliminary, subject to revision</span>
+
+<span class="k">annex p.24</span>:  <span class="s">"2026 scenario built on IPCA of 4.4%"</span>
+<span class="cm">                 no qualifier attached</span></pre></div><div class="code rv"><div class="codehd">来源级结果</div>
+<pre><span class="cm"># the same file disagrees with itself</span>
+├── <span class="s">two claims · same subject · same source</span>
+├── <span class="k">span</span>: <span class="s">p.8 para 2 · bbox</span> | <span class="s">annex p.24</span>
+├── <span class="k">qualifiers</span>: <span class="s">preliminary</span> | <span class="s">none</span>
+├── <span class="k">relationship</span>: <span class="r">contradicts</span> <span class="cm">· scope: within_source</span>
+└── <span class="g">both preserved — neither averaged nor dropped</span></pre></div>
+  </div>
+  
+  
+  
+  
+  <span class="eye rv" style="display:block;margin-top:40px">一个来源内部的关系</span>
+  <p class="lead center rv" style="margin-top:12px">Trace 在每个来源内部捕获这些关系，每一条都带有 scope: within_source。Orves Neuro 在整个 Corpus 范围内发现同样的关系，带有 scope: cross_source。同一套词汇，两个不同的尺度——绝不混用，也绝不从一方悄悄升格为另一方。</p>
+  
+  <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
+  
+  
+</section>
+
+
+
+<section class="center">
+  <span class="eye">它产出什么</span>
+<h2>一个来源，分析到底。</h2>
+
+  <div class="g3 rv" style="margin-top:26px">
+    <div class="card"><h4>带着证据的主张</h4>
+    <p>每一条主张都保留它出自的精确区段——页面、区域、段落或音频时间戳——以及来源自身所声明的、由谁在何时主张。</p></div><div class="card"><h4>陈述，以及支持</h4>
+    <p>一个来源所陈述的与它实际支撑的，是两件不同的事实。两者都被记录下来，连同区分它们的限定条件与保留。证据不足即为 ABSTAINED，而不是猜测。</p></div><div class="card"><h4>来源内部的关系</h4>
+    <p>在同一份文件之内彼此支持、细化、矛盾或取代的主张，每一条都带有 scope: within_source。跨来源的关系属于 Orves Neuro。</p></div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="center">
+  <span class="eye">Benchmarks</span>
+<h2>先测量，再声明。</h2>
+
+  <p class="lead center rv" style="max-width:620px">我们衡量的是：主张抽取、区段准确度、限定条件保真度、内部矛盾检测与判断保留的校准。</p>
+  <p class="lead center rv" style="margin-top:14px;font-size:14px">公开结果只在预先登记的评估之后发布 —— 在那之前，本站不会出现任何数字。<a href="../benchmarks" style="color:var(--acc2)">我们如何做基准测试 →</a></p>
+</section>
+
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:260px"><span class="eye">这是一种性质，不是一个产品</span>
+    <h3 style="margin:8px 0 6px">每一个产物都可验证。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">认证贯穿 Orves 产出的一切。验证被设计成公开、可复现，并且不依赖 Orves 账户。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">✓ 来源</span><span class="bp hot">✓ 完整性</span><span class="bp">版本</span><span class="bp">证据</span><span class="bp">裁定状态</span><span class="bp">验证</span><a class="bp" href="../trust" style="color:var(--acc2)">trust →</a>
+  </div>
+</div>
+</section>
+
+<section class="center tight">
+  <div class="band rv">
+  <div style="min-width:230px"><span class="eye">API 优先</span>
+    <h3 style="margin:8px 0 6px">几分钟完成集成。</h3>
+    <p style="font-size:13.5px;color:var(--fg2)">一切都通过托管 API 提供 —— 无需再部署额外的基础设施。</p></div>
+  <div class="bandpills">
+    <span class="bp hot">REST API</span><span class="bp">Python</span><span class="bp">TypeScript</span><span class="bp">Go</span><span class="bp">Java</span><span class="bp">OpenAPI</span><span class="bp">示例</span>
+  </div>
+</div>
+</section>
+
+
+</main>
+
+
+
+<section class="center">
+  <h2 style="font-size:38px;max-width:22ch;margin:0 auto 14px">证明您的来源究竟说了什么。</h2>
+  <p class="lead center" style="margin-bottom:26px">从 Parse 的输出开始，或接入您自己的结构化来源——15,000 免费额度，无需信用卡。</p>
+  <div class="cta" style="justify-content:center">
+    
+    <a class="btn" href="../create-account">创建免费账户</a>
+    <a class="btn gh" href="/developers" hreflang="en">阅读文档</a>
+    
+  </div>
+</section>
+
+
+
+
+<footer><div class="wrap">
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="brand ftlogo"><svg width="38" height="38" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15.3" stroke="var(--brand)" stroke-width="1.5"/><circle cx="17" cy="17" r="8.6" stroke="var(--brand2)" stroke-width="3"/><circle cx="17" cy="17" r="2" fill="var(--fg)"/></svg><span class="word">Orves</span></span>
+      <p class="ftsig">The Verifiable Knowledge Layer.</p>
+    </div>
+    <div class="ftcol"><div class="h">产品</div>
+      <a href="../products/parse">Parse</a>
+      <a href="../products/trace">Trace</a>
+      <a href="../products/neuro">Neuro</a>
+    </div>
+    <div class="ftcol"><div class="h">资源</div>
+      <a href="/developers" hreflang="en">Developers</a>
+      <a href="../benchmarks">Benchmarks</a>
+      <a href="../research">Research</a>
+      <a href="../trust">Trust</a>
+      <a href="../roadmap">Roadmap</a>
+    </div>
+    <div class="ftcol"><div class="h">公司</div>
+      <a href="../why-orves">为什么选 Orves</a>
+      <a href="/system" hreflang="en">品牌</a>
+      <a href="../contact">联系</a>
+    </div>
+  </div>
+  <div class="ftbar"><span>© 2026 Orves · 保留所有权利。</span></div>
+</div></footer>
+
+
+</div>
+<script src="/assets/orves.js"></script>
+</body></html>

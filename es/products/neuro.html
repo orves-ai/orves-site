@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Neuro | Orves</title>
-<meta name="description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
+<meta name="description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Trace y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
 <link rel="canonical" href="https://orves.ai/es/products/neuro"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
 <meta property="og:title" content="Neuro | Orves"/>
-<meta property="og:description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Prove y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
+<meta property="og:description" content="Orves construye The Verifiable Knowledge Layer — tres productos, Parse, Trace y Neuro: datos estructurados, todo lo que cada fuente dice y sostiene, y cómo se relaciona cada fuente."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="es"/>
 <meta property="og:url" content="https://orves.ai/es/products/neuro"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">Productos <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>De documentos a datos estructurados</em></a>
-        <a href="../products/prove">Prove <em>Todo lo que una fuente dice y sostiene</em></a>
+        <a href="../products/trace">Trace <em>Todo lo que una fuente dice y sostiene</em></a>
         <a href="../products/neuro">Neuro <em>Cómo se relaciona cada fuente</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/prove">Prove</a>
+  <a href="../products/trace">Trace</a>
   <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -124,7 +124,7 @@
   <div>
     <span class="eyepill"><span class="d"></span>inteligencia de corpus · neuro · en desarrollo</span>
     <h1>Cada fuente, <span class="accent-tx">entendida en conjunto.</span></h1>
-    <p class="sub">Orves Neuro es el único producto de Orves que mantiene estado. Recibe los resultados por fuente que produce Prove, evalúa cada nuevo resultado contra el estado relevante del Corpus y descubre lo que ningún documento declara por sí solo: la misma entidad bajo nombres distintos, una fuente posterior que reemplaza a una anterior, dos instituciones que se contradicen. En desarrollo: esta página describe lo que Neuro se está construyendo para hacer.</p>
+    <p class="sub">Orves Neuro es el único producto de Orves que mantiene estado. Recibe los resultados por fuente que produce Trace, evalúa cada nuevo resultado contra el estado relevante del Corpus y descubre lo que ningún documento declara por sí solo: la misma entidad bajo nombres distintos, una fuente posterior que reemplaza a una anterior, dos instituciones que se contradicen. En desarrollo: esta página describe lo que Neuro se está construyendo para hacer.</p>
     <div class="cta">
       
       <a class="btn" href="../contact?topic=neuro-beta">Únete a la beta privada</a>
@@ -140,7 +140,7 @@
 <span class="cm"># results analysed by Neuro</span>
 <span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
 <span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
-<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">trace-results/</span>  <span class="cm"># one verifiable result per source</span>
 <span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
 <span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
 <span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
@@ -164,14 +164,14 @@
 
 <section class="center" id="why-neuro">
   <span class="eye">Por qué existe Neuro</span>
-<h2>Prove lee una fuente. Neuro lee el conjunto.</h2>
-<p class="lead center">Parse estructura cada fuente. Prove analiza una fuente a la vez y nunca ve otra — que es justamente por lo que sus resultados son reproducibles. Neuro es donde esos resultados independientes se encuentran: evalúa cada nuevo resultado por fuente contra el estado relevante del Corpus y descubre las relaciones que ningún documento declara por sí solo, cada una rastreable hasta las fuentes que la sostienen.</p>
+<h2>Trace lee una fuente. Neuro lee el conjunto.</h2>
+<p class="lead center">Parse estructura cada fuente. Trace analiza una fuente a la vez y nunca ve otra — que es justamente por lo que sus resultados son reproducibles. Neuro es donde esos resultados independientes se encuentran: evalúa cada nuevo resultado por fuente contra el estado relevante del Corpus y descubre las relaciones que ningún documento declara por sí solo, cada una rastreable hasta las fuentes que la sostienen.</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — una fuente</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Trace — una fuente</h4>
       <ul class="kwl" style="margin-top:14px"><li>lee una única fuente estructurada</li><li>nunca ve sus otras fuentes ni el estado previo</li><li>captura afirmaciones, fragmentos, matices y autoría</li><li>las relaciones llevan scope: within_source</li></ul>
       <p class="kwd" style="margin-top:4px">Sin estado por construcción — misma fuente, mismo resultado.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — el Corpus</h4>
@@ -185,7 +185,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">Cómo una fuente nueva cambia el conjunto</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">nueva fuente</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — una fuente, en aislamiento</span><span class="a">→</span><span class="fc" style="animation-delay:3s">el resultado entra en el Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro lo evalúa contra el estado relevante del Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:5s">relaciones y estados cross_source rastreables</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">nueva fuente</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — una fuente, en aislamiento</span><span class="a">→</span><span class="fc" style="animation-delay:3s">el resultado entra en el Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro lo evalúa contra el estado relevante del Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:5s">relaciones y estados cross_source rastreables</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro actualiza el Corpus con relaciones y estados rastreables — nunca convierte una inferencia en un hecho, nunca promedia visiones en competencia y nunca sobrescribe lo que una fuente dijo realmente.</p>
@@ -195,7 +195,7 @@
 <section class="center" id="disagreement">
   <span class="eye">El desacuerdo, preservado</span>
 <h2>Las contradicciones son conocimiento, no errores.</h2>
-<p class="lead center">Dos instituciones proyectan el mismo indicador y discrepan. Prove analizó cada fuente por separado y nunca vio la otra; Neuro es quien nota que tratan del mismo asunto. Registra el conflicto y conserva ambas — con autor, fecha y evidencia — en lugar de promediarlas, sobrescribir una o fabricar consenso.</p>
+<p class="lead center">Dos instituciones proyectan el mismo indicador y discrepan. Trace analizó cada fuente por separado y nunca vio la otra; Neuro es quien nota que tratan del mismo asunto. Registra el conflicto y conserva ambas — con autor, fecha y evidencia — en lugar de promediarlas, sobrescribir una o fabricar consenso.</p>
   
   
   
@@ -221,7 +221,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">Relaciones entre fuentes</span>
-  <p class="lead center rv" style="margin-top:12px">Una fuente posterior puede actualizar una posición anterior, contradecir a otra institución, refinar una afirmación previa o introducir una visión no relacionada sobre el mismo tema. Prove captura estas relaciones dentro de cada fuente, llevando scope: within_source. Neuro las descubre en todo el Corpus, llevando scope: cross_source — el mismo vocabulario en dos ámbitos, nunca mezclados y nunca promovidos en silencio de uno a otro.</p>
+  <p class="lead center rv" style="margin-top:12px">Una fuente posterior puede actualizar una posición anterior, contradecir a otra institución, refinar una afirmación previa o introducir una visión no relacionada sobre el mismo tema. Trace captura estas relaciones dentro de cada fuente, llevando scope: within_source. Neuro las descubre en todo el Corpus, llevando scope: cross_source — el mismo vocabulario en dos ámbitos, nunca mezclados y nunca promovidos en silencio de uno a otro.</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -231,7 +231,7 @@
 <section class="center" id="inside">
   <span class="eye">Dentro de un Corpus</span>
 <h2>Más que archivos. Más que vectores. Más que un grafo.</h2>
-<p class="lead center">Un Corpus es la colección persistente de resultados por fuente que Neuro analiza — las fuentes mismas, lo que Prove estableció sobre cada una, y el entendimiento entre fuentes construido encima. Usted crea un Corpus, le añade fuentes y gobierna quién puede alcanzarlo; Neuro es quien lo estudia. El grafo de conocimiento es una capacidad dentro de Neuro — no el producto.</p>
+<p class="lead center">Un Corpus es la colección persistente de resultados por fuente que Neuro analiza — las fuentes mismas, lo que Trace estableció sobre cada una, y el entendimiento entre fuentes construido encima. Usted crea un Corpus, le añade fuentes y gobierna quién puede alcanzarlo; Neuro es quien lo estudia. El grafo de conocimiento es una capacidad dentro de Neuro — no el producto.</p>
   
   
   
@@ -240,7 +240,7 @@
     <div class="card"><h4>Fuentes</h4>
     <ul class="kwl"><li>documentos</li><li>audio</li><li>vídeo</li><li>APIs</li><li>sistemas</li></ul><p class="kwd">Los originales, conservados según la política — todo lo de arriba sigue enlazado a ellos.</p>
     </div><div class="card"><h4>Resultados por fuente</h4>
-    <ul class="kwl"><li>afirma</li><li>evidencia</li><li>fragmentos</li><li>matices</li><li>autoría</li><li>relaciones within_source</li></ul><p class="kwd">Lo que Prove estableció sobre cada fuente por sí sola — conservado intacto, nunca reescrito por lo que vino después.</p>
+    <ul class="kwl"><li>afirma</li><li>evidencia</li><li>fragmentos</li><li>matices</li><li>autoría</li><li>relaciones within_source</li></ul><p class="kwd">Lo que Trace estableció sobre cada fuente por sí sola — conservado intacto, nunca reescrito por lo que vino después.</p>
     </div><div class="card"><h4>Entendimiento entre fuentes</h4>
     <ul class="kwl"><li>entidades resueltas</li><li>relaciones cross_source</li><li>contexto temporal</li><li>conflictos</li><li>versiones</li></ul><p class="kwd">Lo que solo Neuro puede ver — construido a partir de esos resultados, rastreable hasta cada fuente que hay detrás.</p>
     </div>
@@ -266,18 +266,18 @@
   
 </section>
 
-<section class="center" id="built-on-prove">
+<section class="center" id="built-on-trace">
   <span class="eye">Sobre qué corre Neuro</span>
-<h2>Neuro está construido sobre Prove. Cada relación conduce de vuelta a la evidencia.</h2>
-<p class="lead center">Neuro no lee documentos. Trabaja exclusivamente sobre conocimiento anclado por Prove — afirmaciones que ya llevan su fragmento, autor, matices y estado epistemológico. Esa dependencia es la garantía: una relación entre fuentes solo es tan defendible como los resultados por fuente que hay debajo, por eso Neuro nunca acepta texto crudo, chunks sueltos, embeddings ni afirmaciones sin procedencia.</p>
+<h2>Neuro está construido sobre Trace. Cada relación conduce de vuelta a la evidencia.</h2>
+<p class="lead center">Neuro no lee documentos. Trabaja exclusivamente sobre conocimiento anclado por Trace — afirmaciones que ya llevan su fragmento, autor, matices y estado epistemológico. Esa dependencia es la garantía: una relación entre fuentes solo es tan defendible como los resultados por fuente que hay debajo, por eso Neuro nunca acepta texto crudo, chunks sueltos, embeddings ni afirmaciones sin procedencia.</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
     <div class="card"><h4 style="color:var(--fg2)">Qué necesita cada producto</h4>
-      <ul class="kwl" style="margin-top:14px"><li>Parse — úselo por sí solo</li><li>Prove — la salida de Orves Parse, o su propio parser compatible</li><li>Neuro — resultados anclados por Prove, siempre</li></ul>
-      <p class="kwd" style="margin-top:4px">Prove ancla las afirmaciones. Neuro ancla las relaciones entre ellas.</p></div>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — úselo por sí solo</li><li>Trace — la salida de Orves Parse, o su propio parser compatible</li><li>Neuro — resultados anclados por Trace, siempre</li></ul>
+      <p class="kwd" style="margin-top:4px">Trace ancla las afirmaciones. Neuro ancla las relaciones entre ellas.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Lo que eso le aporta</h4>
       <ul class="kwl" style="margin-top:14px"><li>un nivel uniforme de procedencia en todo el Corpus</li><li>ninguna relación construida sobre texto que nadie revisó</li><li>toda relación cross_source rastreable hasta dos resultados por fuente</li><li>entradas reproducibles — la misma fuente siempre se ancla igual</li></ul>
       <p class="kwd" style="margin-top:4px">La dependencia no es una limitación. Es lo que hace defendibles a las relaciones.</p></div>
@@ -289,25 +289,25 @@
   <span class="eye rv" style="display:block;margin-top:40px">Envíe una fuente, reciba la cadena completa</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">su fuente</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — si la fuente necesita estructurarse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — anclada, una fuente a la vez</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — relacionada en el Corpus</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">su fuente</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — si la fuente necesita estructurarse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — anclada, una fuente a la vez</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — relacionada en el Corpus</span></div>
   
   
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro es un producto aparte, no un trámite aparte: envíe una fuente y la cadena corre por usted; traiga la salida de su propio parser y empieza en Prove; traiga un resultado de Prove que ya tiene y empieza en Neuro. Solo se le cobra por los pasos que realmente corren — Neuro nunca cobra dos veces por un resultado de Prove que ya existe. Lo que nunca cambia es el contrato: nada llega a Neuro sin estar anclado.</p>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro es un producto aparte, no un trámite aparte: envíe una fuente y la cadena corre por usted; traiga la salida de su propio parser y empieza en Trace; traiga un resultado de Trace que ya tiene y empieza en Neuro. Solo se le cobra por los pasos que realmente corren — Neuro nunca cobra dos veces por un resultado de Trace que ya existe. Lo que nunca cambia es el contrato: nada llega a Neuro sin estar anclado.</p>
   
 </section>
 
 <section class="center" id="what-you-pay">
   <span class="eye">Por qué paga</span>
-<h2>Neuro nunca cobra dos veces por un resultado de Prove que ya existe.</h2>
-<p class="lead center">Neuro corre sobre resultados anclados por Prove, así que la pregunta honesta es qué tiene que correr realmente para la petición que envió. Se le cobra por esos pasos y por ningún otro — el trabajo ya hecho nunca se rehace, ni se vuelve a facturar.</p>
+<h2>Neuro nunca cobra dos veces por un resultado de Trace que ya existe.</h2>
+<p class="lead center">Neuro corre sobre resultados anclados por Trace, así que la pregunta honesta es qué tiene que correr realmente para la petición que envió. Se le cobra por esos pasos y por ningún otro — el trabajo ya hecho nunca se rehace, ni se vuelve a facturar.</p>
   
   
   
   
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>Usted envía un resultado de Prove que ya tiene</h4>
+    <div class="card"><h4>Usted envía un resultado de Trace que ya tiene</h4>
     <ul class="kwl"><li>Operación de Corpus</li></ul><p class="kwd">No hay nada que reestablecer sobre esa fuente. Solo corre el trabajo sobre el Corpus.</p>
-    </div><div class="card"><h4>Usted envía JSON o Markdown que aún no pasó por Prove</h4>
+    </div><div class="card"><h4>Usted envía JSON o Markdown que aún no pasó por Trace</h4>
     <ul class="kwl"><li>Análisis de fuente</li><li>Operación de Corpus</li></ul><p class="kwd">La fuente todavía tiene que anclarse antes de poder relacionarse con cualquier otra cosa.</p>
     </div><div class="card"><h4>Usted envía un archivo en bruto</h4>
     <ul class="kwl"><li>Parse</li><li>Análisis de fuente</li><li>Operación de Corpus</li></ul><p class="kwd">El archivo tiene que estructurarse primero, luego anclarse, luego relacionarse.</p>
@@ -396,8 +396,8 @@
     <div class="kogrid">
       <div class="kocol">
         <h5>Refs de afirmación · 2</h5>
-        <div class="koev">c_17 · “Renovación movida al 2026-09-01”<em>Prove · amendment_v2.pdf</em></div>
-        <div class="koev bad" style="border-bottom:0">c_88 · “Renovación prevista para el 2026-08-01”<em>Prove · contract_2024.pdf</em></div>
+        <div class="koev">c_17 · “Renovación movida al 2026-09-01”<em>Trace · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · “Renovación prevista para el 2026-08-01”<em>Trace · contract_2024.pdf</em></div>
         <h5 style="margin-top:14px">Refs de fuente · 2</h5>
         <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
         <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
@@ -453,7 +453,7 @@
 <section class="center">
   <span class="eye">Historial</span>
 <h2>Vea cambiar el entendimiento.</h2>
-<p class="lead center">Llega una fuente nueva, Prove establece lo que dice, y Neuro reevalúa el asunto contra el Corpus. Nada se sobrescribe — cada estado conserva la fuente que hay detrás.</p>
+<p class="lead center">Llega una fuente nueva, Trace establece lo que dice, y Neuro reevalúa el asunto contra el Corpus. Nada se sobrescribe — cada estado conserva la fuente que hay detrás.</p>
   <div class="htl rv">
     
     
@@ -542,7 +542,7 @@
     </div>
     <div class="ftcol"><div class="h">Productos</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/prove">Prove</a>
+      <a href="../products/trace">Trace</a>
       <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">Recursos</div>

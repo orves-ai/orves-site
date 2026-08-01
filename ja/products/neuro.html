@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Neuro | Orves</title>
-<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
+<meta name="description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Trace、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
 <link rel="canonical" href="https://orves.ai/ja/products/neuro"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
 <meta property="og:title" content="Neuro | Orves"/>
-<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Prove、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
+<meta property="og:description" content="Orves は The Verifiable Knowledge Layer を構築しています。Parse、Trace、Neuro の3製品で、構造化データ、各ソースが述べ裏付ける内容のすべて、そしてすべてのソースの関係を扱います。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="ja"/>
 <meta property="og:url" content="https://orves.ai/ja/products/neuro"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">製品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>文書から構造化データへ</em></a>
-        <a href="../products/prove">Prove <em>1つのソースが述べ、裏付けるすべて</em></a>
+        <a href="../products/trace">Trace <em>1つのソースが述べ、裏付けるすべて</em></a>
         <a href="../products/neuro">Neuro <em>すべてのソースの関係</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/prove">Prove</a>
+  <a href="../products/trace">Trace</a>
   <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -124,7 +124,7 @@
   <div>
     <span class="eyepill"><span class="d"></span>コーパスインテリジェンス · neuro · 開発中</span>
     <h1>すべてのソースを、<span class="accent-tx">まとめて理解する。</span></h1>
-    <p class="sub">Orves Neuro は状態を保持する唯一の Orves 製品です。Prove が生成するソース単位の結果を受け取り、新しい結果を関連する Corpus の状態と照合し、単一の文書だけでは分からないことを発見します。異なる名称で現れる同一のエンティティ、先行するソースを置き換える後発のソース、互いに矛盾する2つの機関などです。開発中: このページは Neuro が何をするために作られているかを説明しています。</p>
+    <p class="sub">Orves Neuro は状態を保持する唯一の Orves 製品です。Trace が生成するソース単位の結果を受け取り、新しい結果を関連する Corpus の状態と照合し、単一の文書だけでは分からないことを発見します。異なる名称で現れる同一のエンティティ、先行するソースを置き換える後発のソース、互いに矛盾する2つの機関などです。開発中: このページは Neuro が何をするために作られているかを説明しています。</p>
     <div class="cta">
       
       <a class="btn" href="../contact?topic=neuro-beta">プライベートベータに参加</a>
@@ -140,7 +140,7 @@
 <span class="cm"># results analysed by Neuro</span>
 <span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
 <span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
-<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">trace-results/</span>  <span class="cm"># one verifiable result per source</span>
 <span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
 <span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
 <span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
@@ -164,14 +164,14 @@
 
 <section class="center" id="why-neuro">
   <span class="eye">Neuro が存在する理由</span>
-<h2>Prove は1つのソースを読む。Neuro は全体を読む。</h2>
-<p class="lead center">Parse が各ソースを構造化します。Prove は一度に1つのソースだけを解析し、他のソースを決して見ません。だからこそ結果は再現可能です。Neuro はそれらの独立した結果が出会う場所です。新しいソース単位の結果を関連する Corpus の状態と照合し、単一の文書だけでは分からない関係を発見します。そのひとつひとつが、裏付けるソースまで辿れます。</p>
+<h2>Trace は1つのソースを読む。Neuro は全体を読む。</h2>
+<p class="lead center">Parse が各ソースを構造化します。Trace は一度に1つのソースだけを解析し、他のソースを決して見ません。だからこそ結果は再現可能です。Neuro はそれらの独立した結果が出会う場所です。新しいソース単位の結果を関連する Corpus の状態と照合し、単一の文書だけでは分からない関係を発見します。そのひとつひとつが、裏付けるソースまで辿れます。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — 1つのソース</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Trace — 1つのソース</h4>
       <ul class="kwl" style="margin-top:14px"><li>構造化された単一のソースを読む</li><li>他のソースや過去の状態を決して見ない</li><li>主張、スパン、限定条件、著者情報を捉える</li><li>関係は scope: within_source を持つ</li></ul>
       <p class="kwd" style="margin-top:4px">構造上ステートレス — 同じソースなら同じ結果。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — Corpus</h4>
@@ -185,7 +185,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">新しいソースが全体をどう変えるか</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新しい情報源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 1つのソース、単独で</span><span class="a">→</span><span class="fc" style="animation-delay:3s">結果が Corpus に入る</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro が関連する Corpus の状態と照合する</span><span class="a">→</span><span class="fc" style="animation-delay:5s">追跡可能な cross_source の関係と状態</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新しい情報源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 1つのソース、単独で</span><span class="a">→</span><span class="fc" style="animation-delay:3s">結果が Corpus に入る</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro が関連する Corpus の状態と照合する</span><span class="a">→</span><span class="fc" style="animation-delay:5s">追跡可能な cross_source の関係と状態</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro は追跡可能な関係と状態で Corpus を更新します。推論を事実に変えることはなく、対立する見解を平均することもなく、ソースが実際に述べた内容を上書きすることもありません。</p>
@@ -195,7 +195,7 @@
 <section class="center" id="disagreement">
   <span class="eye">相違を、保持する</span>
 <h2>矛盾は誤りではなく、知識です。</h2>
-<p class="lead center">2つの機関が同じ指標を予測し、見解が食い違います。Prove は各ソースを単独で解析し、もう一方を見ていません。両者が同じ主題についてだと気づくのが Neuro です。矛盾を記録し、著者、日付、根拠とともに両方を保持します。平均することも、一方を上書きすることも、合意を作り出すこともありません。</p>
+<p class="lead center">2つの機関が同じ指標を予測し、見解が食い違います。Trace は各ソースを単独で解析し、もう一方を見ていません。両者が同じ主題についてだと気づくのが Neuro です。矛盾を記録し、著者、日付、根拠とともに両方を保持します。平均することも、一方を上書きすることも、合意を作り出すこともありません。</p>
   
   
   
@@ -221,7 +221,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">ソース横断の関係</span>
-  <p class="lead center rv" style="margin-top:12px">後発のソースは、先行する見解を更新することも、別の機関と矛盾することも、以前の主張を精緻化することも、同じ主題に無関係な見解を持ち込むこともあります。Prove はこれらの関係を各ソース内で捉え、scope: within_source を付与します。Neuro は Corpus 全体でそれらを発見し、scope: cross_source を付与します。同じ語彙を2つのスコープで扱い、混ぜることも、一方から他方へ黙って昇格させることもありません。</p>
+  <p class="lead center rv" style="margin-top:12px">後発のソースは、先行する見解を更新することも、別の機関と矛盾することも、以前の主張を精緻化することも、同じ主題に無関係な見解を持ち込むこともあります。Trace はこれらの関係を各ソース内で捉え、scope: within_source を付与します。Neuro は Corpus 全体でそれらを発見し、scope: cross_source を付与します。同じ語彙を2つのスコープで扱い、混ぜることも、一方から他方へ黙って昇格させることもありません。</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -231,7 +231,7 @@
 <section class="center" id="inside">
   <span class="eye">Corpus の内部</span>
 <h2>ファイル以上。ベクトル以上。グラフ以上。</h2>
-<p class="lead center">Corpus とは、Neuro が解析するソース単位の結果の永続的な集まりです。ソースそのもの、Prove が各ソースについて確定した内容、そしてその上に築かれるソース横断の理解を含みます。Corpus を作成し、ソースを追加し、誰がアクセスできるかを統治します。それを研究するのが Neuro です。ナレッジグラフは Neuro の内部にある機能であり、製品ではありません。</p>
+<p class="lead center">Corpus とは、Neuro が解析するソース単位の結果の永続的な集まりです。ソースそのもの、Trace が各ソースについて確定した内容、そしてその上に築かれるソース横断の理解を含みます。Corpus を作成し、ソースを追加し、誰がアクセスできるかを統治します。それを研究するのが Neuro です。ナレッジグラフは Neuro の内部にある機能であり、製品ではありません。</p>
   
   
   
@@ -240,7 +240,7 @@
     <div class="card"><h4>情報源</h4>
     <ul class="kwl"><li>文書</li><li>音声</li><li>動画</li><li>API</li><li>システム</li></ul><p class="kwd">ポリシーにもとづき保持される原本 — 上にあるすべてがそこへ結びついたままです。</p>
     </div><div class="card"><h4>ソース単位の結果</h4>
-    <ul class="kwl"><li>主張する</li><li>証跡</li><li>スパン</li><li>限定条件</li><li>著者情報</li><li>within_source の関係</li></ul><p class="kwd">Prove が各ソースについて単独で確定した内容 — そのまま保たれ、後から来たものに書き換えられません。</p>
+    <ul class="kwl"><li>主張する</li><li>証跡</li><li>スパン</li><li>限定条件</li><li>著者情報</li><li>within_source の関係</li></ul><p class="kwd">Trace が各ソースについて単独で確定した内容 — そのまま保たれ、後から来たものに書き換えられません。</p>
     </div><div class="card"><h4>ソース横断の理解</h4>
     <ul class="kwl"><li>解決されたエンティティ</li><li>cross_source の関係</li><li>時間的文脈</li><li>矛盾</li><li>バージョン</li></ul><p class="kwd">Neuro だけが見えるもの — それらの結果から築かれ、背後のすべてのソースまで辿れます。</p>
     </div>
@@ -266,18 +266,18 @@
   
 </section>
 
-<section class="center" id="built-on-prove">
+<section class="center" id="built-on-trace">
   <span class="eye">Neuro が動く土台</span>
-<h2>Neuro は Prove の上に築かれます。すべての関係が根拠に行き着きます。</h2>
-<p class="lead center">Neuro は文書を読みません。Prove によって根拠づけられた知識だけを扱います。つまり、すでにスパン、著者、限定条件、認識状態を伴う主張です。この依存関係こそが保証です。ソース横断の関係は、その下にあるソース単位の結果と同じだけしか説明可能になりません。だから Neuro は、生のテキスト、緩いチャンク、埋め込み、来歴のない主張を決して受け付けません。</p>
+<h2>Neuro は Trace の上に築かれます。すべての関係が根拠に行き着きます。</h2>
+<p class="lead center">Neuro は文書を読みません。Trace によって根拠づけられた知識だけを扱います。つまり、すでにスパン、著者、限定条件、認識状態を伴う主張です。この依存関係こそが保証です。ソース横断の関係は、その下にあるソース単位の結果と同じだけしか説明可能になりません。だから Neuro は、生のテキスト、緩いチャンク、埋め込み、来歴のない主張を決して受け付けません。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
     <div class="card"><h4 style="color:var(--fg2)">各製品に必要なもの</h4>
-      <ul class="kwl" style="margin-top:14px"><li>Parse — 単独で使える</li><li>Prove — Orves Parse の出力、または互換性のある独自パーサー</li><li>Neuro — 常に Prove で根拠づけられた結果</li></ul>
-      <p class="kwd" style="margin-top:4px">Prove が主張を根拠づけ、Neuro がその間の関係を根拠づけます。</p></div>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — 単独で使える</li><li>Trace — Orves Parse の出力、または互換性のある独自パーサー</li><li>Neuro — 常に Trace で根拠づけられた結果</li></ul>
+      <p class="kwd" style="margin-top:4px">Trace が主張を根拠づけ、Neuro がその間の関係を根拠づけます。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>それがもたらすもの</h4>
       <ul class="kwl" style="margin-top:14px"><li>Corpus 全体で一様な来歴の水準</li><li>誰も確認していないテキストの上に関係を築かない</li><li>すべての cross_source の関係が2つのソース単位の結果まで辿れる</li><li>再現可能な入力 — 同じソースは常に同じように根拠づけられる</li></ul>
       <p class="kwd" style="margin-top:4px">この依存は制約ではありません。関係を説明可能にしているものです。</p></div>
@@ -289,25 +289,25 @@
   <span class="eye rv" style="display:block;margin-top:40px">ソースを送れば、連鎖のすべてが動く</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">あなたのソース</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — ソースに構造化が必要な場合</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 根拠づけ、一度に1つのソース</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — Corpus 全体で関連付け</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">あなたのソース</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — ソースに構造化が必要な場合</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 根拠づけ、一度に1つのソース</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — Corpus 全体で関連付け</span></div>
   
   
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro は別の製品であって、別の手間ではありません。ソースを送れば連鎖が動きます。独自のパーサー出力を持ち込めば Prove から始まります。すでにある Prove の結果を持ち込めば Neuro から始まります。実際に動いた工程だけが課金されます。既存の Prove の結果に対して Neuro が二重に課金することはありません。変わらないのは契約です。根拠のないものが Neuro に届くことはありません。</p>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro は別の製品であって、別の手間ではありません。ソースを送れば連鎖が動きます。独自のパーサー出力を持ち込めば Trace から始まります。すでにある Trace の結果を持ち込めば Neuro から始まります。実際に動いた工程だけが課金されます。既存の Trace の結果に対して Neuro が二重に課金することはありません。変わらないのは契約です。根拠のないものが Neuro に届くことはありません。</p>
   
 </section>
 
 <section class="center" id="what-you-pay">
   <span class="eye">何に対して支払うか</span>
-<h2>既存の Prove の結果に Neuro が二重課金することはありません。</h2>
-<p class="lead center">Neuro は Prove で根拠づけられた結果の上で動きます。だから誠実な問いは、送られた要求のために実際に何が動く必要があるかです。その工程だけが課金されます。すでに終えた作業がやり直されることも、再び課金されることもありません。</p>
+<h2>既存の Trace の結果に Neuro が二重課金することはありません。</h2>
+<p class="lead center">Neuro は Trace で根拠づけられた結果の上で動きます。だから誠実な問いは、送られた要求のために実際に何が動く必要があるかです。その工程だけが課金されます。すでに終えた作業がやり直されることも、再び課金されることもありません。</p>
   
   
   
   
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>すでにある Prove の結果を送る</h4>
+    <div class="card"><h4>すでにある Trace の結果を送る</h4>
     <ul class="kwl"><li>Corpus 操作</li></ul><p class="kwd">そのソースについて確定し直すものはありません。Corpus に対する作業だけが動きます。</p>
-    </div><div class="card"><h4>Prove を通していない JSON または Markdown を送る</h4>
+    </div><div class="card"><h4>Trace を通していない JSON または Markdown を送る</h4>
     <ul class="kwl"><li>ソース解析</li><li>Corpus 操作</li></ul><p class="kwd">他と関連付ける前に、そのソースを根拠づける必要があります。</p>
     </div><div class="card"><h4>生のファイルを送る</h4>
     <ul class="kwl"><li>Parse</li><li>ソース解析</li><li>Corpus 操作</li></ul><p class="kwd">まず構造化し、次に根拠づけ、それから関連付ける必要があります。</p>
@@ -396,8 +396,8 @@
     <div class="kogrid">
       <div class="kocol">
         <h5>主張参照 · 2</h5>
-        <div class="koev">c_17 · 「更新は 2026-09-01 に移動」<em>Prove · amendment_v2.pdf</em></div>
-        <div class="koev bad" style="border-bottom:0">c_88 · 「更新は 2026-08-01 に予定」<em>Prove · contract_2024.pdf</em></div>
+        <div class="koev">c_17 · 「更新は 2026-09-01 に移動」<em>Trace · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · 「更新は 2026-08-01 に予定」<em>Trace · contract_2024.pdf</em></div>
         <h5 style="margin-top:14px">ソース参照 · 2</h5>
         <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
         <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
@@ -453,7 +453,7 @@
 <section class="center">
   <span class="eye">履歴</span>
 <h2>理解が変わる様子を見る。</h2>
-<p class="lead center">新しいソースが届き、Prove がその内容を確定し、Neuro が主題を Corpus と照らして再評価します。何も上書きされません。すべての状態が背後のソースを保ちます。</p>
+<p class="lead center">新しいソースが届き、Trace がその内容を確定し、Neuro が主題を Corpus と照らして再評価します。何も上書きされません。すべての状態が背後のソースを保ちます。</p>
   <div class="htl rv">
     
     
@@ -542,7 +542,7 @@
     </div>
     <div class="ftcol"><div class="h">製品</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/prove">Prove</a>
+      <a href="../products/trace">Trace</a>
       <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">リソース</div>

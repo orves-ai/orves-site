@@ -40,7 +40,7 @@
       <a class="" style="cursor:default">产品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="products/parse">Parse <em>从文档到结构化数据</em></a>
-        <a href="products/prove">Prove <em>单一来源所陈述与所支持的一切</em></a>
+        <a href="products/trace">Trace <em>单一来源所陈述与所支持的一切</em></a>
         <a href="products/neuro">Neuro <em>所有来源如何关联</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="products/parse">Parse</a>
-  <a href="products/prove">Prove</a>
+  <a href="products/trace">Trace</a>
   <a href="products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
@@ -137,7 +137,7 @@
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
     <div class="flowpan">
-    <svg viewBox="0 0 1000 400" role="img" aria-label="现实——文档、网页、图像、音频、视频与 API——汇入 The Verifiable Knowledge Layer：Parse 产出结构化数据，Prove 确定每个来源陈述并支持什么，Neuro 理解所有来源如何关联。人、应用、LLM、智能体、AI 记忆与 MCP 服务器都从这一层取用。">
+    <svg viewBox="0 0 1000 400" role="img" aria-label="现实——文档、网页、图像、音频、视频与 API——汇入 The Verifiable Knowledge Layer：Parse 产出结构化数据，Trace 确定每个来源陈述并支持什么，Neuro 理解所有来源如何关联。人、应用、LLM、智能体、AI 记忆与 MCP 服务器都从这一层取用。">
       <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">现实</text>
       <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">文档</text></g>
       <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">网页</text></g>
@@ -154,14 +154,14 @@
       <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
       <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- a camada: Parse → Prove → Neuro — 3 nós do MESMO tamanho
+      <!-- a camada: Parse → Trace → Neuro — 3 nós do MESMO tamanho
            (150×98, ordem BP 30-jul); conectores e pulsos recalculados -->
       <rect class="layerbox" x="240" y="128" width="502" height="140" rx="20"/>
       <rect class="fnode main" x="246" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
       <text class="flbl b" x="321" y="200" text-anchor="middle">Parse</text>
       <path class="fpath" data-flow="p2c" d="M 396 195 L 411 195"/>
       <rect class="fnode main" x="411" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
-      <text class="flbl b" x="486" y="200" text-anchor="middle">Prove</text>
+      <text class="flbl b" x="486" y="200" text-anchor="middle">Trace</text>
       <path class="fpath" data-flow="p2c" d="M 561 195 L 576 195"/>
       <rect class="fnode main" x="576" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
       <text class="flbl b" x="651" y="200" text-anchor="middle">Neuro</text>
@@ -201,7 +201,7 @@
 <section class="center pz" id="platform-demo">
   <span class="eye">看这个平台如何运作</span>
 <h2>从原始证据，到受治理的答案。</h2>
-<p class="lead center">一个来源成为结构化数据。Prove 确定该来源陈述并支持什么。Neuro 是各来源交汇之处，也是答案产生之处。</p>
+<p class="lead center">一个来源成为结构化数据。Trace 确定该来源陈述并支持什么。Neuro 是各来源交汇之处，也是答案产生之处。</p>
   <div class="hdemo rv" data-src="amendment">
     <div class="hz hsrcz">
       <span class="hzl">01 · 来源</span>
@@ -219,7 +219,7 @@
       <div class="hv hcode" data-for="meeting">utterance&nbsp;&nbsp;“renewal may be<br>postponed again”<br>timestamp&nbsp;&nbsp;00:14:32<br><b>provenance ✓</b></div>
     </div>
     <div class="hz">
-      <span class="hzl">03 · Prove</span>
+      <span class="hzl">03 · Trace</span>
       <h4>这个来源陈述了什么</h4>
       <div class="hkr ok" data-hot="amendment"><span>已主张 · 有支持</span>续约日期：2026 年 9 月 1 日</div>
       <div class="hkr dim" data-hot="contract"><span>已主张 · 有支持</span>续约日期：2026 年 8 月 1 日</div>
@@ -243,7 +243,7 @@
   <div class="hsh">
     <span class="eye">这个平台</span>
     <h2>三个产品。一条知识管线。</h2>
-    <p class="lead">Parse 结构化每个来源。Prove 确定每个来源陈述并支持什么。Neuro 理解它们如何关联。</p>
+    <p class="lead">Parse 结构化每个来源。Trace 确定每个来源陈述并支持什么。Neuro 理解它们如何关联。</p>
   </div>
   <div class="hprods rv">
     <a class="hprod" href="products/parse">
@@ -253,12 +253,12 @@
       <span class="hprops">结构化 · 可追溯 · 可复现</span>
       <span class="k">了解 Parse →</span>
     </a>
-    <a class="hprod" href="products/prove">
-      <span class="hpl"><b>02 · Prove</b></span>
+    <a class="hprod" href="products/trace">
+      <span class="hpl"><b>02 · Trace</b></span>
       <h3>让每一条主张都落在它的来源上。</h3>
       <p>单一来源所陈述与所支持的一切——区段、作者信息、限定条件、内部矛盾，以及诚实的判断保留。</p>
       <span class="hprops">有据可依 · 可复现 · 以来源为界</span>
-      <span class="k">了解 Prove →</span>
+      <span class="k">了解 Trace →</span>
     </a>
     <a class="hprod" href="products/neuro">
       <span class="hpl"><b>03 · Neuro</b></span>
@@ -274,7 +274,7 @@
 <section class="center">
   <span class="eye">Neuro 内部</span>
 <h2>知识在生长，它的证据始终相连。</h2>
-<p class="lead center">这不是文档的集合，而是由证据、事实、关系与历史持续连接而成的网络。每一个节点抵达时都已由 Prove 提供依据。</p>
+<p class="lead center">这不是文档的集合，而是由证据、事实、关系与历史持续连接而成的网络。每一个节点抵达时都已由 Trace 提供依据。</p>
   <p class="mono rv" style="margin-top:18px;font-size:13px;letter-spacing:.03em;color:var(--acc2)">每一条关系都可追溯。</p>
   <div class="rv" style="max-width:820px;margin:26px auto 0">
     <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="动画：在 Orves Neuro 内部，一个知识视图不断生长——Company、Revenue、Contract、CEO、Earnings、Renewal——事实出现并保留彼此的关系；知识演进，历史仍被保存。">
@@ -413,7 +413,7 @@
   </div>
   <p class="mono wclosecap">端到端版本化且可追溯</p>
   <h2 style="font-size:36px;max-width:30ch;margin:18px auto 12px">在与证据始终相连的知识上构建。</h2>
-  <p class="lead center" style="margin-bottom:26px">从处于私有试点的 Parse 开始。Prove 与 Neuro 将随后跟进。</p>
+  <p class="lead center" style="margin-bottom:26px">从处于私有试点的 Parse 开始。Trace 与 Neuro 将随后跟进。</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">免费开始</a>
     <a class="btn gh" href="contact">与我们联系</a>
@@ -561,7 +561,7 @@
     </div>
     <div class="ftcol"><div class="h">产品</div>
       <a href="products/parse">Parse</a>
-      <a href="products/prove">Prove</a>
+      <a href="products/trace">Trace</a>
       <a href="products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">资源</div>

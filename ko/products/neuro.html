@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Neuro | Orves</title>
-<meta name="description" content="Orves는 The Verifiable Knowledge Layer를 구축합니다. Parse, Prove, Neuro 세 가지 제품으로 구조화된 데이터, 각 출처가 말하고 뒷받침하는 모든 것, 그리고 모든 출처가 어떻게 연결되는지를 다룹니다."/>
+<meta name="description" content="Orves는 The Verifiable Knowledge Layer를 구축합니다. Parse, Trace, Neuro 세 가지 제품으로 구조화된 데이터, 각 출처가 말하고 뒷받침하는 모든 것, 그리고 모든 출처가 어떻게 연결되는지를 다룹니다."/>
 <link rel="canonical" href="https://orves.ai/ko/products/neuro"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
 <meta property="og:title" content="Neuro | Orves"/>
-<meta property="og:description" content="Orves는 The Verifiable Knowledge Layer를 구축합니다. Parse, Prove, Neuro 세 가지 제품으로 구조화된 데이터, 각 출처가 말하고 뒷받침하는 모든 것, 그리고 모든 출처가 어떻게 연결되는지를 다룹니다."/>
+<meta property="og:description" content="Orves는 The Verifiable Knowledge Layer를 구축합니다. Parse, Trace, Neuro 세 가지 제품으로 구조화된 데이터, 각 출처가 말하고 뒷받침하는 모든 것, 그리고 모든 출처가 어떻게 연결되는지를 다룹니다."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="ko"/>
 <meta property="og:url" content="https://orves.ai/ko/products/neuro"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">제품 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>문서에서 구조화된 데이터로</em></a>
-        <a href="../products/prove">Prove <em>하나의 출처가 말하고 뒷받침하는 모든 것</em></a>
+        <a href="../products/trace">Trace <em>하나의 출처가 말하고 뒷받침하는 모든 것</em></a>
         <a href="../products/neuro">Neuro <em>모든 출처의 관계</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/prove">Prove</a>
+  <a href="../products/trace">Trace</a>
   <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -124,7 +124,7 @@
   <div>
     <span class="eyepill"><span class="d"></span>코퍼스 인텔리전스 · neuro · 개발 중</span>
     <h1>모든 출처를, <span class="accent-tx">함께 이해합니다.</span></h1>
-    <p class="sub">Orves Neuro는 상태를 보유하는 유일한 Orves 제품입니다. Prove가 만들어내는 출처 단위 결과를 받아, 새 결과를 관련 Corpus 상태와 대조하고, 어떤 문서도 홀로 선언하지 않는 것을 발견합니다. 다른 이름으로 나타난 같은 개체, 앞선 출처를 대체하는 나중의 출처, 서로 모순되는 두 기관 같은 것들입니다. 개발 중: 이 페이지는 Neuro가 무엇을 하도록 만들어지고 있는지를 설명합니다.</p>
+    <p class="sub">Orves Neuro는 상태를 보유하는 유일한 Orves 제품입니다. Trace가 만들어내는 출처 단위 결과를 받아, 새 결과를 관련 Corpus 상태와 대조하고, 어떤 문서도 홀로 선언하지 않는 것을 발견합니다. 다른 이름으로 나타난 같은 개체, 앞선 출처를 대체하는 나중의 출처, 서로 모순되는 두 기관 같은 것들입니다. 개발 중: 이 페이지는 Neuro가 무엇을 하도록 만들어지고 있는지를 설명합니다.</p>
     <div class="cta">
       
       <a class="btn" href="../contact?topic=neuro-beta">프라이빗 베타 참여</a>
@@ -140,7 +140,7 @@
 <span class="cm"># results analysed by Neuro</span>
 <span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
 <span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
-<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">trace-results/</span>  <span class="cm"># one verifiable result per source</span>
 <span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
 <span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
 <span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
@@ -164,14 +164,14 @@
 
 <section class="center" id="why-neuro">
   <span class="eye">Neuro가 존재하는 이유</span>
-<h2>Prove는 한 출처를 읽습니다. Neuro는 전체를 읽습니다.</h2>
-<p class="lead center">Parse가 각 출처를 구조화합니다. Prove는 한 번에 하나의 출처만 분석하며 다른 출처를 결코 보지 않습니다. 바로 그래서 그 결과가 재현 가능합니다. Neuro는 그 독립된 결과들이 만나는 곳입니다. 새 출처 단위 결과를 관련 Corpus 상태와 대조해, 어떤 문서도 홀로 선언하지 않는 관계를 발견하며, 그 하나하나가 뒷받침하는 출처까지 추적됩니다.</p>
+<h2>Trace는 한 출처를 읽습니다. Neuro는 전체를 읽습니다.</h2>
+<p class="lead center">Parse가 각 출처를 구조화합니다. Trace는 한 번에 하나의 출처만 분석하며 다른 출처를 결코 보지 않습니다. 바로 그래서 그 결과가 재현 가능합니다. Neuro는 그 독립된 결과들이 만나는 곳입니다. 새 출처 단위 결과를 관련 Corpus 상태와 대조해, 어떤 문서도 홀로 선언하지 않는 관계를 발견하며, 그 하나하나가 뒷받침하는 출처까지 추적됩니다.</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — 하나의 출처</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Trace — 하나의 출처</h4>
       <ul class="kwl" style="margin-top:14px"><li>구조화된 단일 출처를 읽습니다</li><li>다른 출처나 이전 상태를 결코 보지 않습니다</li><li>주장, 구간, 한정 조건, 저자 정보를 포착합니다</li><li>관계는 scope: within_source를 지닙니다</li></ul>
       <p class="kwd" style="margin-top:4px">구조상 무상태 — 같은 출처면 같은 결과.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — Corpus</h4>
@@ -185,7 +185,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">새 출처가 전체를 어떻게 바꾸는가</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">새 원천</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 하나의 출처, 홀로</span><span class="a">→</span><span class="fc" style="animation-delay:3s">결과가 Corpus에 들어갑니다</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro가 관련 Corpus 상태와 대조합니다</span><span class="a">→</span><span class="fc" style="animation-delay:5s">추적 가능한 cross_source 관계와 상태</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">새 원천</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 하나의 출처, 홀로</span><span class="a">→</span><span class="fc" style="animation-delay:3s">결과가 Corpus에 들어갑니다</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro가 관련 Corpus 상태와 대조합니다</span><span class="a">→</span><span class="fc" style="animation-delay:5s">추적 가능한 cross_source 관계와 상태</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro는 추적 가능한 관계와 상태로 Corpus를 갱신합니다. 추론을 사실로 바꾸지 않고, 경쟁하는 견해를 평균 내지 않으며, 출처가 실제로 말한 바를 덮어쓰지 않습니다.</p>
@@ -195,7 +195,7 @@
 <section class="center" id="disagreement">
   <span class="eye">이견을, 그대로</span>
 <h2>모순은 오류가 아니라 지식입니다.</h2>
-<p class="lead center">두 기관이 같은 지표를 전망하며 서로 어긋납니다. Prove는 각 출처를 홀로 분석했고 다른 쪽을 보지 못했습니다. 두 전망이 같은 주제에 관한 것임을 알아채는 것이 Neuro입니다. 충돌을 기록하고 저자, 날짜, 근거와 함께 둘 다 보존합니다. 평균 내지도, 하나를 덮어쓰지도, 합의를 지어내지도 않습니다.</p>
+<p class="lead center">두 기관이 같은 지표를 전망하며 서로 어긋납니다. Trace는 각 출처를 홀로 분석했고 다른 쪽을 보지 못했습니다. 두 전망이 같은 주제에 관한 것임을 알아채는 것이 Neuro입니다. 충돌을 기록하고 저자, 날짜, 근거와 함께 둘 다 보존합니다. 평균 내지도, 하나를 덮어쓰지도, 합의를 지어내지도 않습니다.</p>
   
   
   
@@ -221,7 +221,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">출처를 가로지르는 관계</span>
-  <p class="lead center rv" style="margin-top:12px">나중의 출처는 앞선 견해를 갱신할 수도, 다른 기관과 모순될 수도, 이전 주장을 정교화할 수도, 같은 주제에 무관한 견해를 들여올 수도 있습니다. Prove는 이런 관계를 각 출처 안에서 포착하며 scope: within_source를 부여합니다. Neuro는 Corpus 전체에서 그것들을 발견하며 scope: cross_source를 부여합니다. 같은 어휘를 두 범위에서 쓰되, 섞지 않고 한쪽에서 다른 쪽으로 조용히 승격시키지 않습니다.</p>
+  <p class="lead center rv" style="margin-top:12px">나중의 출처는 앞선 견해를 갱신할 수도, 다른 기관과 모순될 수도, 이전 주장을 정교화할 수도, 같은 주제에 무관한 견해를 들여올 수도 있습니다. Trace는 이런 관계를 각 출처 안에서 포착하며 scope: within_source를 부여합니다. Neuro는 Corpus 전체에서 그것들을 발견하며 scope: cross_source를 부여합니다. 같은 어휘를 두 범위에서 쓰되, 섞지 않고 한쪽에서 다른 쪽으로 조용히 승격시키지 않습니다.</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -231,7 +231,7 @@
 <section class="center" id="inside">
   <span class="eye">Corpus 내부</span>
 <h2>파일 그 이상. 벡터 그 이상. 그래프 그 이상.</h2>
-<p class="lead center">Corpus는 Neuro가 분석하는 출처 단위 결과의 지속적인 모음입니다. 출처 자체, Prove가 각 출처에 대해 확정한 것, 그리고 그 위에 세워진 출처 횡단 이해를 담습니다. Corpus를 만들고, 출처를 더하고, 누가 접근할 수 있는지를 다스립니다. 그것을 연구하는 것이 Neuro입니다. 지식 그래프는 Neuro 안의 기능이지 제품이 아닙니다.</p>
+<p class="lead center">Corpus는 Neuro가 분석하는 출처 단위 결과의 지속적인 모음입니다. 출처 자체, Trace가 각 출처에 대해 확정한 것, 그리고 그 위에 세워진 출처 횡단 이해를 담습니다. Corpus를 만들고, 출처를 더하고, 누가 접근할 수 있는지를 다스립니다. 그것을 연구하는 것이 Neuro입니다. 지식 그래프는 Neuro 안의 기능이지 제품이 아닙니다.</p>
   
   
   
@@ -240,7 +240,7 @@
     <div class="card"><h4>원천</h4>
     <ul class="kwl"><li>문서</li><li>오디오</li><li>비디오</li><li>API</li><li>시스템</li></ul><p class="kwd">정책에 따라 보관되는 원본 — 위의 모든 것이 거기에 연결된 채 남습니다.</p>
     </div><div class="card"><h4>출처 단위 결과</h4>
-    <ul class="kwl"><li>주장함</li><li>증거</li><li>구간</li><li>한정 조건</li><li>저자 정보</li><li>within_source 관계</li></ul><p class="kwd">Prove가 각 출처에 대해 홀로 확정한 것 — 그대로 보존되며, 나중에 온 것이 다시 쓰지 않습니다.</p>
+    <ul class="kwl"><li>주장함</li><li>증거</li><li>구간</li><li>한정 조건</li><li>저자 정보</li><li>within_source 관계</li></ul><p class="kwd">Trace가 각 출처에 대해 홀로 확정한 것 — 그대로 보존되며, 나중에 온 것이 다시 쓰지 않습니다.</p>
     </div><div class="card"><h4>출처 횡단 이해</h4>
     <ul class="kwl"><li>해소된 개체</li><li>cross_source 관계</li><li>시간적 맥락</li><li>충돌</li><li>버전</li></ul><p class="kwd">Neuro만이 볼 수 있는 것 — 그 결과들로 세워지고, 뒤의 모든 출처까지 추적됩니다.</p>
     </div>
@@ -266,18 +266,18 @@
   
 </section>
 
-<section class="center" id="built-on-prove">
+<section class="center" id="built-on-trace">
   <span class="eye">Neuro가 딛는 토대</span>
-<h2>Neuro는 Prove 위에 세워집니다. 모든 관계가 근거로 되돌아갑니다.</h2>
-<p class="lead center">Neuro는 문서를 읽지 않습니다. Prove가 근거를 부여한 지식만 다룹니다. 이미 구간, 저자, 한정 조건, 인식 상태를 지닌 주장들입니다. 그 의존이 곧 보장입니다. 출처를 가로지르는 관계는 그 아래의 출처 단위 결과만큼만 방어 가능하므로, Neuro는 날 텍스트, 느슨한 청크, 임베딩, 출처 이력 없는 주장을 결코 받아들이지 않습니다.</p>
+<h2>Neuro는 Trace 위에 세워집니다. 모든 관계가 근거로 되돌아갑니다.</h2>
+<p class="lead center">Neuro는 문서를 읽지 않습니다. Trace가 근거를 부여한 지식만 다룹니다. 이미 구간, 저자, 한정 조건, 인식 상태를 지닌 주장들입니다. 그 의존이 곧 보장입니다. 출처를 가로지르는 관계는 그 아래의 출처 단위 결과만큼만 방어 가능하므로, Neuro는 날 텍스트, 느슨한 청크, 임베딩, 출처 이력 없는 주장을 결코 받아들이지 않습니다.</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
     <div class="card"><h4 style="color:var(--fg2)">각 제품에 필요한 것</h4>
-      <ul class="kwl" style="margin-top:14px"><li>Parse — 단독으로 사용</li><li>Prove — Orves Parse 출력 또는 호환되는 자체 파서</li><li>Neuro — 언제나 Prove로 근거를 갖춘 결과</li></ul>
-      <p class="kwd" style="margin-top:4px">Prove가 주장에 근거를 주고, Neuro가 그 사이의 관계에 근거를 줍니다.</p></div>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — 단독으로 사용</li><li>Trace — Orves Parse 출력 또는 호환되는 자체 파서</li><li>Neuro — 언제나 Trace로 근거를 갖춘 결과</li></ul>
+      <p class="kwd" style="margin-top:4px">Trace가 주장에 근거를 주고, Neuro가 그 사이의 관계에 근거를 줍니다.</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>그것이 주는 것</h4>
       <ul class="kwl" style="margin-top:14px"><li>Corpus 전체에 걸친 한결같은 출처 이력 수준</li><li>아무도 확인하지 않은 텍스트 위에 관계를 세우지 않음</li><li>모든 cross_source 관계가 두 개의 출처 단위 결과까지 추적됨</li><li>재현 가능한 입력 — 같은 출처는 언제나 같은 방식으로 근거를 얻음</li></ul>
       <p class="kwd" style="margin-top:4px">이 의존은 한계가 아닙니다. 관계를 방어 가능하게 만드는 것입니다.</p></div>
@@ -289,25 +289,25 @@
   <span class="eye rv" style="display:block;margin-top:40px">출처를 보내면 사슬 전체가 돕니다</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">당신의 출처</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — 출처에 구조화가 필요하다면</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 근거 부여, 한 번에 한 출처씩</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — Corpus 전체에 걸쳐 연결</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">당신의 출처</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — 출처에 구조화가 필요하다면</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 근거 부여, 한 번에 한 출처씩</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — Corpus 전체에 걸쳐 연결</span></div>
   
   
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro는 별개의 제품이지 별개의 수고가 아닙니다. 출처를 보내면 사슬이 돌고, 자체 파서 출력을 가져오면 Prove에서 시작하며, 이미 가진 Prove 결과를 가져오면 Neuro에서 시작합니다. 실제로 돌아간 단계에만 과금됩니다. 이미 있는 Prove 결과에 Neuro가 두 번 과금하는 일은 없습니다. 결코 변하지 않는 것은 계약입니다. 근거 없는 것은 Neuro에 닿지 않습니다.</p>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro는 별개의 제품이지 별개의 수고가 아닙니다. 출처를 보내면 사슬이 돌고, 자체 파서 출력을 가져오면 Trace에서 시작하며, 이미 가진 Trace 결과를 가져오면 Neuro에서 시작합니다. 실제로 돌아간 단계에만 과금됩니다. 이미 있는 Trace 결과에 Neuro가 두 번 과금하는 일은 없습니다. 결코 변하지 않는 것은 계약입니다. 근거 없는 것은 Neuro에 닿지 않습니다.</p>
   
 </section>
 
 <section class="center" id="what-you-pay">
   <span class="eye">무엇에 지불하는가</span>
-<h2>이미 있는 Prove 결과에 Neuro가 두 번 과금하지 않습니다.</h2>
-<p class="lead center">Neuro는 Prove로 근거를 갖춘 결과 위에서 돕니다. 그래서 정직한 질문은, 보낸 요청을 위해 실제로 무엇이 돌아야 하는가입니다. 그 단계에만 과금되고 다른 것에는 과금되지 않습니다. 이미 끝난 일은 다시 하지 않고, 다시 청구하지도 않습니다.</p>
+<h2>이미 있는 Trace 결과에 Neuro가 두 번 과금하지 않습니다.</h2>
+<p class="lead center">Neuro는 Trace로 근거를 갖춘 결과 위에서 돕니다. 그래서 정직한 질문은, 보낸 요청을 위해 실제로 무엇이 돌아야 하는가입니다. 그 단계에만 과금되고 다른 것에는 과금되지 않습니다. 이미 끝난 일은 다시 하지 않고, 다시 청구하지도 않습니다.</p>
   
   
   
   
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>이미 가진 Prove 결과를 보냅니다</h4>
+    <div class="card"><h4>이미 가진 Trace 결과를 보냅니다</h4>
     <ul class="kwl"><li>Corpus 작업</li></ul><p class="kwd">그 출처에 대해 다시 확정할 것은 없습니다. Corpus에 대한 작업만 돌아갑니다.</p>
-    </div><div class="card"><h4>Prove를 거치지 않은 JSON 또는 Markdown을 보냅니다</h4>
+    </div><div class="card"><h4>Trace를 거치지 않은 JSON 또는 Markdown을 보냅니다</h4>
     <ul class="kwl"><li>출처 분석</li><li>Corpus 작업</li></ul><p class="kwd">다른 것과 연결하기 전에 그 출처는 먼저 근거를 갖춰야 합니다.</p>
     </div><div class="card"><h4>원본 파일을 보냅니다</h4>
     <ul class="kwl"><li>Parse</li><li>출처 분석</li><li>Corpus 작업</li></ul><p class="kwd">파일은 먼저 구조화되고, 그다음 근거를 갖추고, 그다음 연결되어야 합니다.</p>
@@ -396,8 +396,8 @@
     <div class="kogrid">
       <div class="kocol">
         <h5>주장 참조 · 2</h5>
-        <div class="koev">c_17 · “갱신이 2026-09-01로 이동”<em>Prove · amendment_v2.pdf</em></div>
-        <div class="koev bad" style="border-bottom:0">c_88 · “갱신이 2026-08-01로 예정”<em>Prove · contract_2024.pdf</em></div>
+        <div class="koev">c_17 · “갱신이 2026-09-01로 이동”<em>Trace · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · “갱신이 2026-08-01로 예정”<em>Trace · contract_2024.pdf</em></div>
         <h5 style="margin-top:14px">출처 참조 · 2</h5>
         <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
         <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
@@ -453,7 +453,7 @@
 <section class="center">
   <span class="eye">이력</span>
 <h2>이해가 변하는 것을 보십시오.</h2>
-<p class="lead center">새 출처가 도착하고, Prove가 그것이 말하는 바를 확정하며, Neuro가 그 주제를 Corpus에 비추어 다시 평가합니다. 어떤 것도 덮어쓰이지 않으며, 모든 상태가 그 뒤의 출처를 지킵니다.</p>
+<p class="lead center">새 출처가 도착하고, Trace가 그것이 말하는 바를 확정하며, Neuro가 그 주제를 Corpus에 비추어 다시 평가합니다. 어떤 것도 덮어쓰이지 않으며, 모든 상태가 그 뒤의 출처를 지킵니다.</p>
   <div class="htl rv">
     
     
@@ -542,7 +542,7 @@
     </div>
     <div class="ftcol"><div class="h">제품</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/prove">Prove</a>
+      <a href="../products/trace">Trace</a>
       <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">리소스</div>

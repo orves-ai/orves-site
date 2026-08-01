@@ -40,7 +40,7 @@
       <a class="" style="cursor:default">Produits <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="products/parse">Parse <em>Des documents aux données structurées</em></a>
-        <a href="products/prove">Prove <em>Tout ce qu'une source dit et étaye</em></a>
+        <a href="products/trace">Trace <em>Tout ce qu'une source dit et étaye</em></a>
         <a href="products/neuro">Neuro <em>Comment chaque source se relie aux autres</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="products/parse">Parse</a>
-  <a href="products/prove">Prove</a>
+  <a href="products/trace">Trace</a>
   <a href="products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="benchmarks" class="sub">Benchmarks</a>
@@ -137,7 +137,7 @@
 <section class="center" style="border-top:0;padding-top:26px">
   <div class="flowart rv">
     <div class="flowpan">
-    <svg viewBox="0 0 1000 400" role="img" aria-label="Le réel — documents, web, images, audio, vidéo et API — alimente The Verifiable Knowledge Layer : Parse produit des données structurées, Prove établit ce que chaque source dit et étaye, et Neuro comprend comment les sources se relient. Personnes, applications, LLM, agents, mémoire d&#x27;IA et serveurs MCP puisent dans cette couche.">
+    <svg viewBox="0 0 1000 400" role="img" aria-label="Le réel — documents, web, images, audio, vidéo et API — alimente The Verifiable Knowledge Layer : Parse produit des données structurées, Trace établit ce que chaque source dit et étaye, et Neuro comprend comment les sources se relient. Personnes, applications, LLM, agents, mémoire d&#x27;IA et serveurs MCP puisent dans cette couche.">
       <text class="m-t" x="84" y="26" text-anchor="middle" style="letter-spacing:.12em">RÉALITÉ</text>
       <g class="schip" style="animation-delay:.1s"><rect class="fnode" x="36" y="44"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="63" text-anchor="middle">Documents</text></g>
       <g class="schip" style="animation-delay:.2s"><rect class="fnode" x="36" y="92"  width="96" height="30" rx="8"/><text class="flbl" x="84" y="111" text-anchor="middle">Web</text></g>
@@ -154,14 +154,14 @@
       <path class="fpath" data-flow="in" d="M 132 251 C 200 251 230 220 258 204"/>
       <path class="fpath" data-flow="in" d="M 132 299 C 200 299 230 235 258 212"/>
       <path class="fpath" data-flow="in" d="M 132 347 C 200 347 230 250 258 220"/>
-      <!-- a camada: Parse → Prove → Neuro — 3 nós do MESMO tamanho
+      <!-- a camada: Parse → Trace → Neuro — 3 nós do MESMO tamanho
            (150×98, ordem BP 30-jul); conectores e pulsos recalculados -->
       <rect class="layerbox" x="240" y="128" width="502" height="140" rx="20"/>
       <rect class="fnode main" x="246" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
       <text class="flbl b" x="321" y="200" text-anchor="middle">Parse</text>
       <path class="fpath" data-flow="p2c" d="M 396 195 L 411 195"/>
       <rect class="fnode main" x="411" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
-      <text class="flbl b" x="486" y="200" text-anchor="middle">Prove</text>
+      <text class="flbl b" x="486" y="200" text-anchor="middle">Trace</text>
       <path class="fpath" data-flow="p2c" d="M 561 195 L 576 195"/>
       <rect class="fnode main" x="576" y="146" width="150" height="98" rx="14" style="fill:color-mix(in srgb,var(--acc) 4%,var(--panel));filter:drop-shadow(0 0 12px color-mix(in srgb,var(--acc) 14%,transparent))"/>
       <text class="flbl b" x="651" y="200" text-anchor="middle">Neuro</text>
@@ -201,7 +201,7 @@
 <section class="center pz" id="platform-demo">
   <span class="eye">Voyez la plateforme à l'œuvre</span>
 <h2>De la preuve brute à une réponse gouvernée.</h2>
-<p class="lead center">Une source devient des données structurées. Prove établit ce que cette source dit et étaye. Neuro est là où les sources se rencontrent — et d'où vient la réponse.</p>
+<p class="lead center">Une source devient des données structurées. Trace établit ce que cette source dit et étaye. Neuro est là où les sources se rencontrent — et d'où vient la réponse.</p>
   <div class="hdemo rv" data-src="amendment">
     <div class="hz hsrcz">
       <span class="hzl">01 · Source</span>
@@ -219,7 +219,7 @@
       <div class="hv hcode" data-for="meeting">utterance&nbsp;&nbsp;“renewal may be<br>postponed again”<br>timestamp&nbsp;&nbsp;00:14:32<br><b>provenance ✓</b></div>
     </div>
     <div class="hz">
-      <span class="hzl">03 · Prove</span>
+      <span class="hzl">03 · Trace</span>
       <h4>Ce que dit cette source</h4>
       <div class="hkr ok" data-hot="amendment"><span>affirmé · étayé</span>Date de renouvellement : 1er septembre 2026</div>
       <div class="hkr dim" data-hot="contract"><span>affirmé · étayé</span>Date de renouvellement : 1er août 2026</div>
@@ -243,7 +243,7 @@
   <div class="hsh">
     <span class="eye">La plateforme</span>
     <h2>Trois produits. Un seul pipeline de savoir.</h2>
-    <p class="lead">Parse structure chaque source. Prove établit ce que chaque source dit et étaye. Neuro comprend comment elles se relient.</p>
+    <p class="lead">Parse structure chaque source. Trace établit ce que chaque source dit et étaye. Neuro comprend comment elles se relient.</p>
   </div>
   <div class="hprods rv">
     <a class="hprod" href="products/parse">
@@ -253,12 +253,12 @@
       <span class="hprops">Structuré · Traçable · Reproductible</span>
       <span class="k">Explorer Parse →</span>
     </a>
-    <a class="hprod" href="products/prove">
-      <span class="hpl"><b>02 · Prove</b></span>
+    <a class="hprod" href="products/trace">
+      <span class="hpl"><b>02 · Trace</b></span>
       <h3>Ancrez chaque assertion dans sa source.</h3>
       <p>Tout ce qu'une source dit et étaye — spans, auteurs, qualificatifs, contradictions internes et abstention honnête.</p>
       <span class="hprops">Ancré · Reproductible · À l'échelle d'une source</span>
-      <span class="k">Explorer Prove →</span>
+      <span class="k">Explorer Trace →</span>
     </a>
     <a class="hprod" href="products/neuro">
       <span class="hpl"><b>03 · Neuro</b></span>
@@ -274,7 +274,7 @@
 <section class="center">
   <span class="eye">À l'intérieur de Neuro</span>
 <h2>Le savoir grandit. Sa preuve reste reliée.</h2>
-<p class="lead center">Pas une collection de documents — un réseau continuellement connecté de preuves, de faits, de relations et d'historique. Chaque nœud est arrivé ancré par Prove.</p>
+<p class="lead center">Pas une collection de documents — un réseau continuellement connecté de preuves, de faits, de relations et d'historique. Chaque nœud est arrivé ancré par Trace.</p>
   <p class="mono rv" style="margin-top:18px;font-size:13px;letter-spacing:.03em;color:var(--acc2)">Chaque relation est traçable.</p>
   <div class="rv" style="max-width:820px;margin:26px auto 0">
     <svg class="mo-know" style="width:100%;height:auto" viewBox="0 0 340 210" role="img" aria-label="Animation : une vue de savoir grandit à l&#x27;intérieur d&#x27;Orves Neuro — Entreprise, Chiffre d&#x27;affaires, Contrat, CEO, Résultats, Renouvellement — les faits apparaissent et conservent leurs relations ; l&#x27;historique est conservé à mesure que le savoir évolue.">
@@ -413,7 +413,7 @@
   </div>
   <p class="mono wclosecap">versionné et traçable, de bout en bout</p>
   <h2 style="font-size:36px;max-width:30ch;margin:18px auto 12px">Construisez sur un savoir qui reste relié à sa preuve.</h2>
-  <p class="lead center" style="margin-bottom:26px">Commencez par Parse en pilote privé. Prove et Neuro suivront dès qu'ils seront disponibles.</p>
+  <p class="lead center" style="margin-bottom:26px">Commencez par Parse en pilote privé. Trace et Neuro suivront dès qu'ils seront disponibles.</p>
   <div class="cta" style="justify-content:center">
     <a class="btn" href="create-account">Commencer gratuitement</a>
     <a class="btn gh" href="contact">Parlez-nous</a>
@@ -561,7 +561,7 @@
     </div>
     <div class="ftcol"><div class="h">Produits</div>
       <a href="products/parse">Parse</a>
-      <a href="products/prove">Prove</a>
+      <a href="products/trace">Trace</a>
       <a href="products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">Ressources</div>

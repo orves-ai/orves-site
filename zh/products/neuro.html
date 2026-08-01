@@ -3,7 +3,7 @@
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://dashboard.orves.ai; object-src 'none'; base-uri 'none'; form-action 'self' https://dashboard.orves.ai"/>
 <title>Neuro | Orves</title>
-<meta name="description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<meta name="description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Trace 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
 <link rel="canonical" href="https://orves.ai/zh/products/neuro"/>
 
 <link rel="alternate" hreflang="en" href="https://orves.ai/products/neuro"/>
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://orves.ai/zh/products/neuro"/>
 <link rel="alternate" hreflang="x-default" href="https://orves.ai/products/neuro"/>
 <meta property="og:title" content="Neuro | Orves"/>
-<meta property="og:description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Prove 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
+<meta property="og:description" content="Orves 构建 The Verifiable Knowledge Layer — Parse、Trace 与 Neuro 三款产品：结构化数据、每个来源所陈述与所支持的一切，以及所有来源之间的关系。"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="zh_Hans"/>
 <meta property="og:url" content="https://orves.ai/zh/products/neuro"/>
@@ -40,7 +40,7 @@
       <a class="on" style="cursor:default">产品 <span class="caret">▾</span></a>
       <span class="nmenu"><span class="in">
         <a href="../products/parse">Parse <em>从文档到结构化数据</em></a>
-        <a href="../products/prove">Prove <em>单一来源所陈述与所支持的一切</em></a>
+        <a href="../products/trace">Trace <em>单一来源所陈述与所支持的一切</em></a>
         <a href="../products/neuro">Neuro <em>所有来源如何关联</em></a>
       </span></span>
     </span>
@@ -104,7 +104,7 @@
 </div>
 <div class="mnav">
   <a href="../products/parse">Parse</a>
-  <a href="../products/prove">Prove</a>
+  <a href="../products/trace">Trace</a>
   <a href="../products/neuro">Neuro</a>
   <a href="/developers" hreflang="en" class="sub">Developers</a>
   <a href="../benchmarks" class="sub">Benchmarks</a>
@@ -124,7 +124,7 @@
   <div>
     <span class="eyepill"><span class="d"></span>语料智能 · neuro · 开发中</span>
     <h1>每一个来源，<span class="accent-tx">被一并理解。</span></h1>
-    <p class="sub">Orves Neuro 是唯一持有状态的 Orves 产品。它接收 Prove 产出的来源级结果，将每一份新结果与相关的 Corpus 状态相互印证，并发现任何单一文档都不会声明的事情：同一实体在不同名称之下、后出的来源取代先前的来源、两家机构彼此矛盾。开发中：本页描述 Neuro 正在被建造成什么样子。</p>
+    <p class="sub">Orves Neuro 是唯一持有状态的 Orves 产品。它接收 Trace 产出的来源级结果，将每一份新结果与相关的 Corpus 状态相互印证，并发现任何单一文档都不会声明的事情：同一实体在不同名称之下、后出的来源取代先前的来源、两家机构彼此矛盾。开发中：本页描述 Neuro 正在被建造成什么样子。</p>
     <div class="cta">
       
       <a class="btn" href="../contact?topic=neuro-beta">加入私有测试</a>
@@ -140,7 +140,7 @@
 <span class="cm"># results analysed by Neuro</span>
 <span class="k">sources/</span>        <span class="cm"># originals, retained under policy</span>
 <span class="k">parse-output/</span>   <span class="cm"># structured data, source-linked</span>
-<span class="k">prove-results/</span>  <span class="cm"># one verifiable result per source</span>
+<span class="k">trace-results/</span>  <span class="cm"># one verifiable result per source</span>
 <span class="k">relationships/</span>  <span class="cm"># cross_source — agreement · conflict · supersession</span>
 <span class="k">entities/</span>       <span class="cm"># the same subject across different sources</span>
 <span class="k">history/</span>        <span class="cm"># versions · what changed · why</span>
@@ -164,14 +164,14 @@
 
 <section class="center" id="why-neuro">
   <span class="eye">Neuro 为何存在</span>
-<h2>Prove 读一个来源。Neuro 读整体。</h2>
-<p class="lead center">Parse 结构化每个来源。Prove 一次只分析一个来源，从不看见另一个——这正是它的结果可复现的原因。Neuro 是这些独立结果交汇之处：它把每一份新的来源级结果与相关的 Corpus 状态相互印证，发现任何单一文档都不会声明的关系，而每一条都可回溯到支持它的那些来源。</p>
+<h2>Trace 读一个来源。Neuro 读整体。</h2>
+<p class="lead center">Parse 结构化每个来源。Trace 一次只分析一个来源，从不看见另一个——这正是它的结果可复现的原因。Neuro 是这些独立结果交汇之处：它把每一份新的来源级结果与相关的 Corpus 状态相互印证，发现任何单一文档都不会声明的关系，而每一条都可回溯到支持它的那些来源。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
-    <div class="card"><h4 style="color:var(--fg2)">Orves Prove — 单一来源</h4>
+    <div class="card"><h4 style="color:var(--fg2)">Orves Trace — 单一来源</h4>
       <ul class="kwl" style="margin-top:14px"><li>读取一个结构化来源</li><li>从不看见您的其他来源或先前状态</li><li>捕获主张、区段、限定条件与作者信息</li><li>关系带有 scope: within_source</li></ul>
       <p class="kwd" style="margin-top:4px">按构造无状态——同样的来源，同样的结果。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>Orves Neuro — Corpus</h4>
@@ -185,7 +185,7 @@
   <span class="eye rv" style="display:block;margin-top:40px">一个新来源如何改变整体</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 单一来源，独立进行</span><span class="a">→</span><span class="fc" style="animation-delay:3s">结果进入 Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro 将其与相关的 Corpus 状态相互印证</span><span class="a">→</span><span class="fc" style="animation-delay:5s">可追溯的 cross_source 关系与状态</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">新来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 单一来源，独立进行</span><span class="a">→</span><span class="fc" style="animation-delay:3s">结果进入 Corpus</span><span class="a">→</span><span class="fc" style="animation-delay:4s">Neuro 将其与相关的 Corpus 状态相互印证</span><span class="a">→</span><span class="fc" style="animation-delay:5s">可追溯的 cross_source 关系与状态</span></div>
   
   
   <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 以可追溯的关系与状态更新 Corpus——它从不把推断变成事实，从不对相互竞争的观点取平均，也从不覆盖来源实际所述。</p>
@@ -195,7 +195,7 @@
 <section class="center" id="disagreement">
   <span class="eye">分歧，被保住</span>
 <h2>矛盾是知识，不是错误。</h2>
-<p class="lead center">两家机构预测同一指标而结论相左。Prove 各自独立分析了每个来源，谁也没看见对方；察觉它们谈的是同一主题的，是 Neuro。它记录这一冲突，并连同作者、日期与证据一并保留两者，而不是取平均、覆盖其一，或制造出一个共识。</p>
+<p class="lead center">两家机构预测同一指标而结论相左。Trace 各自独立分析了每个来源，谁也没看见对方；察觉它们谈的是同一主题的，是 Neuro。它记录这一冲突，并连同作者、日期与证据一并保留两者，而不是取平均、覆盖其一，或制造出一个共识。</p>
   
   
   
@@ -221,7 +221,7 @@
   
   
   <span class="eye rv" style="display:block;margin-top:40px">跨来源的关系</span>
-  <p class="lead center rv" style="margin-top:12px">后出的来源可能更新先前的立场、与另一家机构相矛盾、细化早先的主张，或就同一主题引入互不相干的观点。Prove 在每个来源内部捕获这些关系，带有 scope: within_source。Neuro 在整个 Corpus 范围内发现它们，带有 scope: cross_source——同一套词汇用于两个尺度，绝不混用，也绝不从一方悄悄升格为另一方。</p>
+  <p class="lead center rv" style="margin-top:12px">后出的来源可能更新先前的立场、与另一家机构相矛盾、细化早先的主张，或就同一主题引入互不相干的观点。Trace 在每个来源内部捕获这些关系，带有 scope: within_source。Neuro 在整个 Corpus 范围内发现它们，带有 scope: cross_source——同一套词汇用于两个尺度，绝不混用，也绝不从一方悄悄升格为另一方。</p>
   
   <div class="chips rv" style="justify-content:center;margin-top:18px"><span class="chip">supports</span><span class="chip">contradicts</span><span class="chip">supersedes</span><span class="chip">refines</span><span class="chip">explains</span><span class="chip">depends_on</span><span class="chip">derived_from</span><span class="chip">related_to</span></div>
   
@@ -231,7 +231,7 @@
 <section class="center" id="inside">
   <span class="eye">Corpus 内部</span>
 <h2>不只是文件。不只是向量。也不只是一张图。</h2>
-<p class="lead center">Corpus 是由 Neuro 分析的来源级结果的持久集合——来源本身、Prove 就每个来源所确定的内容，以及在其之上构建的跨来源理解。您创建 Corpus、向其中添加来源并治理谁可以访问；研究它的是 Neuro。知识图谱是 Neuro 内部的一项能力，而不是产品。</p>
+<p class="lead center">Corpus 是由 Neuro 分析的来源级结果的持久集合——来源本身、Trace 就每个来源所确定的内容，以及在其之上构建的跨来源理解。您创建 Corpus、向其中添加来源并治理谁可以访问；研究它的是 Neuro。知识图谱是 Neuro 内部的一项能力，而不是产品。</p>
   
   
   
@@ -240,7 +240,7 @@
     <div class="card"><h4>来源</h4>
     <ul class="kwl"><li>文档</li><li>音频</li><li>视频</li><li>API</li><li>系统</li></ul><p class="kwd">按策略保留的原件 —— 上面这一切都始终链接回它们。</p>
     </div><div class="card"><h4>来源级结果</h4>
-    <ul class="kwl"><li>主张</li><li>证据</li><li>区段</li><li>限定条件</li><li>作者信息</li><li>within_source 关系</li></ul><p class="kwd">Prove 就每个来源独立确定的内容——原样保留，绝不被后来的东西改写。</p>
+    <ul class="kwl"><li>主张</li><li>证据</li><li>区段</li><li>限定条件</li><li>作者信息</li><li>within_source 关系</li></ul><p class="kwd">Trace 就每个来源独立确定的内容——原样保留，绝不被后来的东西改写。</p>
     </div><div class="card"><h4>跨来源的理解</h4>
     <ul class="kwl"><li>已消解的实体</li><li>cross_source 关系</li><li>时间上下文</li><li>冲突</li><li>版本</li></ul><p class="kwd">只有 Neuro 能看见的东西——由那些结果构建，并可回溯到其背后的每一个来源。</p>
     </div>
@@ -266,18 +266,18 @@
   
 </section>
 
-<section class="center" id="built-on-prove">
+<section class="center" id="built-on-trace">
   <span class="eye">Neuro 运行的基础</span>
-<h2>Neuro 构建在 Prove 之上。每一条关系都通向证据。</h2>
-<p class="lead center">Neuro 不读文档。它只处理由 Prove 提供依据的知识——那些已经带着区段、作者、限定条件与认知状态的主张。这一依赖正是保证所在：一条跨来源关系的可辩护程度，不会超过它下面那些来源级结果。因此 Neuro 从不接受原始文本、松散切片、向量嵌入，或没有溯源信息的主张。</p>
+<h2>Neuro 构建在 Trace 之上。每一条关系都通向证据。</h2>
+<p class="lead center">Neuro 不读文档。它只处理由 Trace 提供依据的知识——那些已经带着区段、作者、限定条件与认知状态的主张。这一依赖正是保证所在：一条跨来源关系的可辩护程度，不会超过它下面那些来源级结果。因此 Neuro 从不接受原始文本、松散切片、向量嵌入，或没有溯源信息的主张。</p>
   
   
   
   
   <div class="g2 rv" style="max-width:840px;margin:26px auto 0;text-align:left">
     <div class="card"><h4 style="color:var(--fg2)">每款产品需要什么</h4>
-      <ul class="kwl" style="margin-top:14px"><li>Parse — 可单独使用</li><li>Prove — Orves Parse 的输出，或您自己的兼容解析器</li><li>Neuro — 始终是由 Prove 提供依据的结果</li></ul>
-      <p class="kwd" style="margin-top:4px">Prove 为主张提供依据，Neuro 为主张之间的关系提供依据。</p></div>
+      <ul class="kwl" style="margin-top:14px"><li>Parse — 可单独使用</li><li>Trace — Orves Parse 的输出，或您自己的兼容解析器</li><li>Neuro — 始终是由 Trace 提供依据的结果</li></ul>
+      <p class="kwd" style="margin-top:4px">Trace 为主张提供依据，Neuro 为主张之间的关系提供依据。</p></div>
     <div class="card" style="border-color:color-mix(in srgb,var(--acc) 40%,transparent)"><h4>这换来什么</h4>
       <ul class="kwl" style="margin-top:14px"><li>整个 Corpus 拥有统一的溯源水平</li><li>不会在无人核对的文本之上建立关系</li><li>每一条 cross_source 关系都可追溯到两份来源级结果</li><li>可复现的输入——同一个来源，依据方式始终相同</li></ul>
       <p class="kwd" style="margin-top:4px">这一依赖不是限制，而正是关系得以站得住脚的原因。</p></div>
@@ -289,25 +289,25 @@
   <span class="eye rv" style="display:block;margin-top:40px">发来一个来源，整条链路为您运行</span>
   
   
-  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">您的来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — 如果来源需要被结构化</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Prove — 提供依据，一次一个来源</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — 在整个 Corpus 范围内关联</span></div>
+  <div class="flowchain rv" style="margin-top:8px"><span class="fc" style="animation-delay:0s">您的来源</span><span class="a">→</span><span class="fc" style="animation-delay:1s">Parse — 如果来源需要被结构化</span><span class="a">→</span><span class="fc" style="animation-delay:2s">Trace — 提供依据，一次一个来源</span><span class="a">→</span><span class="fc" style="animation-delay:3s">Neuro — 在整个 Corpus 范围内关联</span></div>
   
   
-  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 是一款独立的产品，却不是一件额外的差事：发来一个来源，链路就为您运行；带来您自己的解析器输出，就从 Prove 开始；带来一份您已有的 Prove 结果，就从 Neuro 开始。您只为实际运行的步骤付费——对已有的 Prove 结果，Neuro 绝不重复计费。始终不变的是那条约定：没有依据的东西不会抵达 Neuro。</p>
+  <p class="lead center rv" style="margin-top:16px;font-size:13px">Neuro 是一款独立的产品，却不是一件额外的差事：发来一个来源，链路就为您运行；带来您自己的解析器输出，就从 Trace 开始；带来一份您已有的 Trace 结果，就从 Neuro 开始。您只为实际运行的步骤付费——对已有的 Trace 结果，Neuro 绝不重复计费。始终不变的是那条约定：没有依据的东西不会抵达 Neuro。</p>
   
 </section>
 
 <section class="center" id="what-you-pay">
   <span class="eye">您为什么付费</span>
-<h2>对已有的 Prove 结果，Neuro 绝不重复计费。</h2>
-<p class="lead center">Neuro 运行在由 Prove 提供依据的结果之上，所以诚实的问题是：为了您发来的这个请求，究竟有什么必须运行。您只为这些步骤付费，别无其他——已经做过的工作绝不重做，也绝不重复计费。</p>
+<h2>对已有的 Trace 结果，Neuro 绝不重复计费。</h2>
+<p class="lead center">Neuro 运行在由 Trace 提供依据的结果之上，所以诚实的问题是：为了您发来的这个请求，究竟有什么必须运行。您只为这些步骤付费，别无其他——已经做过的工作绝不重做，也绝不重复计费。</p>
   
   
   
   
   <div class="g3 rv" style="margin-top:26px">
-    <div class="card"><h4>您发来一份已有的 Prove 结果</h4>
+    <div class="card"><h4>您发来一份已有的 Trace 结果</h4>
     <ul class="kwl"><li>Corpus 操作</li></ul><p class="kwd">关于那个来源无需重新确定任何事情，只有针对 Corpus 的工作会运行。</p>
-    </div><div class="card"><h4>您发来尚未经过 Prove 的 JSON 或 Markdown</h4>
+    </div><div class="card"><h4>您发来尚未经过 Trace 的 JSON 或 Markdown</h4>
     <ul class="kwl"><li>来源分析</li><li>Corpus 操作</li></ul><p class="kwd">在能与其他任何东西关联之前，该来源仍须先获得依据。</p>
     </div><div class="card"><h4>您发来一个原始文件</h4>
     <ul class="kwl"><li>Parse</li><li>来源分析</li><li>Corpus 操作</li></ul><p class="kwd">文件必须先被结构化，再获得依据，然后才能被关联。</p>
@@ -396,8 +396,8 @@
     <div class="kogrid">
       <div class="kocol">
         <h5>主张引用 · 2</h5>
-        <div class="koev">c_17 · “续约改至 2026-09-01”<em>Prove · amendment_v2.pdf</em></div>
-        <div class="koev bad" style="border-bottom:0">c_88 · “续约定于 2026-08-01”<em>Prove · contract_2024.pdf</em></div>
+        <div class="koev">c_17 · “续约改至 2026-09-01”<em>Trace · amendment_v2.pdf</em></div>
+        <div class="koev bad" style="border-bottom:0">c_88 · “续约定于 2026-08-01”<em>Trace · contract_2024.pdf</em></div>
         <h5 style="margin-top:14px">来源引用 · 2</h5>
         <div class="koev">amendment_v2.pdf · p.4 ¶3</div>
         <div class="koev" style="border-bottom:0">contract_2024.pdf · p.12 ¶2</div>
@@ -453,7 +453,7 @@
 <section class="center">
   <span class="eye">历史</span>
 <h2>看着理解发生改变。</h2>
-<p class="lead center">一个新来源到达，Prove 确定它陈述了什么，Neuro 再把这一主题与 Corpus 相互印证。没有任何东西被覆盖——每一个状态都保留其背后的来源。</p>
+<p class="lead center">一个新来源到达，Trace 确定它陈述了什么，Neuro 再把这一主题与 Corpus 相互印证。没有任何东西被覆盖——每一个状态都保留其背后的来源。</p>
   <div class="htl rv">
     
     
@@ -542,7 +542,7 @@
     </div>
     <div class="ftcol"><div class="h">产品</div>
       <a href="../products/parse">Parse</a>
-      <a href="../products/prove">Prove</a>
+      <a href="../products/trace">Trace</a>
       <a href="../products/neuro">Neuro</a>
     </div>
     <div class="ftcol"><div class="h">资源</div>

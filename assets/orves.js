@@ -648,7 +648,7 @@
   io.observe(box);
 })();
 
-// ── home: demo Source→Parse→Prove→Neuro ──
+// ── home: demo Source→Parse→Trace→Neuro ──
 // Seleção de fonte atualiza as zonas via data-src no container (o CSS
 // mostra as variantes .hv correspondentes e acende a linha do claim).
 // Sem loading artificial, sem reiniciar a progressão de reveal; botões
